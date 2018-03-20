@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.caoxin.smarthome.domain.mapper.family.FamilyMapper">
+
+  <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.Family">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="family_unique_code" jdbcType="VARCHAR" property="familyUniqueCode" />
+    <result column="family_name" jdbcType="VARCHAR" property="familyName" />
+    <result column="family_address" jdbcType="VARCHAR" property="familyAddress" />
+    <result column="lat" jdbcType="VARCHAR" property="lat" />
+    <result column="lon" jdbcType="VARCHAR" property="lon" />
+    <result column="temperature" jdbcType="VARCHAR" property="temperature" />
+    <result column="humidity" jdbcType="VARCHAR" property="humidity" />
+    <result column="infrared" jdbcType="VARCHAR" property="infrared" />
+    <result column="smoke" jdbcType="VARCHAR" property="smoke" />
+    <result column="light_intensity" jdbcType="VARCHAR" property="lightIntensity" />
+    <result column="control_mode" jdbcType="VARCHAR" property="controlMode" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="registerTime" />
+  </resultMap>
+
+  <resultMap id="SelectResultMap" extends="BaseResultMap" type="it.caoxin.smarthome.domain.model.Family">
+      <collection property="deviceList"
+                   ofType="it.caoxin.smarthome.domain.model.Device"
+                   resultMap="it.caoxin.smarthome.domain.mapper.device.DeviceMapper.QueryResultMap"></collection>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, family_unique_code, family_name, family_address, lat, lon, temperature, humidity, 
+    infrared, smoke, light_intensity, control_mode, status, register_time
+  </sql>
+
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="SelectResultMap">
+    select
+    f.id AS id, family_unique_code, family_name, family_address, lat, lon, temperature, humidity,
+    infrared, smoke, light_intensity, f.control_mode AS  control_mode, f.status AS status, f.register_time AS register_time,d.id AS device_id ,
+    family_id ,name, description, location info, d.registert_time AS device_register_time,
+    d.status AS device_status, d.control_mode AS device_control_mode
+    from family f LEFT JOIN device d
+    ON f.id = d.family_id
+    WHERE f.id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByUniqueCode" parameterType="java.lang.String" resultMap="SelectResultMap">
+    select
+    f.id AS id, family_unique_code, family_name, family_address, lat, lon, temperature, humidity,
+    infrared, smoke, light_intensity, f.control_mode AS  control_mode, f.status AS status, f.register_time AS register_time,d.id AS device_id ,
+    family_id ,name, description, location info, d.registert_time AS device_register_time,
+    d.status AS device_status, d.control_mode AS device_control_mode
+    from family f LEFT JOIN device d
+    ON f.id = d.family_id
+    WHERE f.family_unique_code = #{uniqueCode,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from family
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="it.caoxin.smarthome.domain.model.Family">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into family (family_unique_code, family_name, family_address, 
+      lat, lon, temperature, 
+      humidity, infrared, smoke, 
+      light_intensity, control_mode, status, 
+      register_time)
+    values (#{familyUniqueCode,jdbcType=VARCHAR}, #{familyName,jdbcType=VARCHAR}, #{familyAddress,jdbcType=VARCHAR}, 
+      #{lat,jdbcType=VARCHAR}, #{lon,jdbcType=VARCHAR}, #{temperature,jdbcType=VARCHAR}, 
+      #{humidity,jdbcType=VARCHAR}, #{infrared,jdbcType=VARCHAR}, #{smoke,jdbcType=VARCHAR}, 
+      #{lightIntensity,jdbcType=VARCHAR}, #{controlMode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{registerTime,jdbcType=TIMESTAMP})
+  </insert>
+
+  <insert id="insertSelective" parameterType="it.caoxin.smarthome.domain.model.Family">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into family
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="familyUniqueCode != null">
+        family_unique_code,
+      </if>
+      <if test="familyName != null">
+        family_name,
+      </if>
+      <if test="familyAddress != null">
+        family_address,
+      </if>
+      <if test="lat != null">
+        lat,
+      </if>
+      <if test="lon != null">
+        lon,
+      </if>
+      <if test="temperature != null">
+        temperature,
+      </if>
+      <if test="humidity != null">
+        humidity,
+      </if>
+      <if test="infrared != null">
+        infrared,
+      </if>
+      <if test="smoke != null">
+        smoke,
+      </if>
+      <if test="lightIntensity != null">
+        light_intensity,
+      </if>
+      <if test="controlMode != null">
+        control_mode,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="registerTime != null">
+        register_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="familyUniqueCode != null">
+        #{familyUniqueCode,jdbcType=VARCHAR},
+      </if>
+      <if test="familyName != null">
+        #{familyName,jdbcType=VARCHAR},
+      </if>
+      <if test="familyAddress != null">
+        #{familyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="lat != null">
+        #{lat,jdbcType=VARCHAR},
+      </if>
+      <if test="lon != null">
+        #{lon,jdbcType=VARCHAR},
+      </if>
+      <if test="temperature != null">
+        #{temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="humidity != null">
+        #{humidity,jdbcType=VARCHAR},
+      </if>
+      <if test="infrared != null">
+        #{infrared,jdbcType=VARCHAR},
+      </if>
+      <if test="smoke != null">
+        #{smoke,jdbcType=VARCHAR},
+      </if>
+      <if test="lightIntensity != null">
+        #{lightIntensity,jdbcType=VARCHAR},
+      </if>
+      <if test="controlMode != null">
+        #{controlMode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="registerTime != null">
+        #{registerTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByIdSelective" parameterType="it.caoxin.smarthome.domain.model.Family">
+    update family
+    <set>
+      <if test="familyUniqueCode != null">
+        family_unique_code = #{familyUniqueCode,jdbcType=VARCHAR},
+      </if>
+      <if test="familyName != null">
+        family_name = #{familyName,jdbcType=VARCHAR},
+      </if>
+      <if test="familyAddress != null">
+        family_address = #{familyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="lat != null">
+        lat = #{lat,jdbcType=VARCHAR},
+      </if>
+      <if test="lon != null">
+        lon = #{lon,jdbcType=VARCHAR},
+      </if>
+      <if test="temperature != null">
+        temperature = #{temperature,jdbcType=VARCHAR},
+      </if>
+      <if test="humidity != null">
+        humidity = #{humidity,jdbcType=VARCHAR},
+      </if>
+      <if test="infrared != null">
+        infrared = #{infrared,jdbcType=VARCHAR},
+      </if>
+      <if test="smoke != null">
+        smoke = #{smoke,jdbcType=VARCHAR},
+      </if>
+      <if test="lightIntensity != null">
+        light_intensity = #{lightIntensity,jdbcType=VARCHAR},
+      </if>
+      <if test="controlMode != null">
+        control_mode = #{controlMode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="registerTime != null">
+        register_time = #{registerTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateById" parameterType="it.caoxin.smarthome.domain.model.Family">
+    update family
+    set family_unique_code = #{familyUniqueCode,jdbcType=VARCHAR},
+      family_name = #{familyName,jdbcType=VARCHAR},
+      family_address = #{familyAddress,jdbcType=VARCHAR},
+      lat = #{lat,jdbcType=VARCHAR},
+      lon = #{lon,jdbcType=VARCHAR},
+      temperature = #{temperature,jdbcType=VARCHAR},
+      humidity = #{humidity,jdbcType=VARCHAR},
+      infrared = #{infrared,jdbcType=VARCHAR},
+      smoke = #{smoke,jdbcType=VARCHAR},
+      light_intensity = #{lightIntensity,jdbcType=VARCHAR},
+      control_mode = #{controlMode,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      register_time = #{registerTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

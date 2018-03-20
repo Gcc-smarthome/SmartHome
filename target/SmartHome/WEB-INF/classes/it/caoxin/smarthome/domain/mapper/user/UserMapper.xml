@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.caoxin.smarthome.domain.mapper.user.UserMapper">
+  
+  <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="family_id" jdbcType="INTEGER" property="familyId" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="photo" jdbcType="VARCHAR" property="photo" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="registerTime" />
+  </resultMap>
+  
+  
+  <sql id="Base_Column_List">
+    id, family_id, username, password, nickname,email, phone, photo, role, code, status, register_time
+  </sql>
+  
+  
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByUsernameAndPassword" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where username = #{username,jdbcType=VARCHAR} AND password = #{password,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  
+  <insert id="insert" parameterType="it.caoxin.smarthome.domain.model.User">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into user (family_id, username, password,nickname,
+      email, phone, photo, 
+      role, code, status, 
+      register_time)
+    values (#{familyId,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{nickname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR},
+      #{role,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{registerTime,jdbcType=TIMESTAMP})
+  </insert>
+  
+  
+  <insert id="insertSelective" parameterType="it.caoxin.smarthome.domain.model.User">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="familyId != null">
+        family_id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="nickname != null">
+        nickname,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="photo != null">
+        photo,
+      </if>
+      <if test="role != null">
+        role,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="registerTime != null">
+        register_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="familyId != null">
+        #{familyId,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null">
+        #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null">
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="registerTime != null">
+        #{registerTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  
+  <update id="updateByIdSelective" parameterType="it.caoxin.smarthome.domain.model.User">
+    update user
+    <set>
+      <if test="familyId != null">
+        family_id = #{familyId,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="nickname != null">
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null">
+        photo = #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null">
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="registerTime != null">
+        register_time = #{registerTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  <update id="updateById" parameterType="it.caoxin.smarthome.domain.model.User">
+    update user
+    set family_id = #{familyId,jdbcType=INTEGER},
+      username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      nickname = #{nickname,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      photo = #{photo,jdbcType=VARCHAR},
+      role = #{role,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      register_time = #{registerTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectUserByFamilyId" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where family_id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectUserByFamilyPhone" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where phone = #{phone,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectByPhoneAndPassword" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where phone = #{phone,jdbcType=VARCHAR} AND password = #{password,jdbcType=VARCHAR}
+  </select>
+</mapper>

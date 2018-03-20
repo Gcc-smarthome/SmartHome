@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.caoxin.smarthome.domain.mapper.deviceoperator.DeviceOperatorMapper">
+
+  <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.DeviceOperator">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+    <result column="operator_name" jdbcType="VARCHAR" property="operatorName" />
+    <result column="operator_code" jdbcType="VARCHAR" property="operatorCode" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="registerTime" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+
+  <resultMap id="DeviceOperatorResultMap" type="it.caoxin.smarthome.domain.model.DeviceOperator">
+    <id column="operator_id" jdbcType="INTEGER" property="id" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+    <result column="operator_name" jdbcType="VARCHAR" property="operatorName" />
+    <result column="operator_code" jdbcType="VARCHAR" property="operatorCode" />
+    <result column="operator_description" jdbcType="VARCHAR" property="description" />
+    <result column="operator_register_time" jdbcType="TIMESTAMP" property="registerTime" />
+    <result column="operator_status" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, device_id, operator_name, operator_code, description, register_time, status
+  </sql>
+
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from device_operator
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from device_operator
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="it.caoxin.smarthome.domain.model.DeviceOperator">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into device_operator (device_id, operator_name, operator_code, 
+      description, register_time, status
+      )
+    values (#{deviceId,jdbcType=INTEGER}, #{operatorName,jdbcType=VARCHAR}, #{operatorCode,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR}, #{registerTime,jdbcType=TIMESTAMP}, #{status,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="it.caoxin.smarthome.domain.model.DeviceOperator">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into device_operator
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deviceId != null">
+        device_id,
+      </if>
+      <if test="operatorName != null">
+        operator_name,
+      </if>
+      <if test="operatorCode != null">
+        operator_code,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="registerTime != null">
+        register_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="operatorName != null">
+        #{operatorName,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorCode != null">
+        #{operatorCode,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="registerTime != null">
+        #{registerTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByIdSelective" parameterType="it.caoxin.smarthome.domain.model.DeviceOperator">
+    update device_operator
+    <set>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="operatorName != null">
+        operator_name = #{operatorName,jdbcType=VARCHAR},
+      </if>
+      <if test="operatorCode != null">
+        operator_code = #{operatorCode,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="registerTime != null">
+        register_time = #{registerTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateById" parameterType="it.caoxin.smarthome.domain.model.DeviceOperator">
+    update device_operator
+    set device_id = #{deviceId,jdbcType=INTEGER},
+      operator_name = #{operatorName,jdbcType=VARCHAR},
+      operator_code = #{operatorCode,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      register_time = #{registerTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

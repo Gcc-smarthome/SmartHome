@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.caoxin.smarthome.domain.mapper.device.DeviceMapper">
+
+  <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.Device">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="family_id" jdbcType="INTEGER" property="familyId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+    <result column="info" jdbcType="VARCHAR" property="info" />
+    <result column="registert_time" jdbcType="TIMESTAMP" property="registertTime" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="control_mode" jdbcType="VARCHAR" property="controlMode" />
+  </resultMap>
+
+  <resultMap id="QueryResultMap" type="it.caoxin.smarthome.domain.model.Device">
+    <id column="device_id" jdbcType="INTEGER" property="id" />
+    <result column="family_id" jdbcType="INTEGER" property="familyId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="location" jdbcType="VARCHAR" property="location" />
+    <result column="info" jdbcType="VARCHAR" property="info" />
+    <result column="device_register_time" jdbcType="TIMESTAMP" property="registertTime" />
+    <result column="device_status" jdbcType="VARCHAR" property="status" />
+    <result column="device_control_mode" jdbcType="VARCHAR" property="controlMode" />
+  </resultMap>
+
+  <resultMap id="SelectResultMap" type="it.caoxin.smarthome.domain.model.Device" extends="BaseResultMap">
+    <collection property="operatorList"
+                 ofType="it.caoxin.smarthome.domain.model.DeviceOperator"
+                 resultMap="it.caoxin.smarthome.domain.mapper.deviceoperator.DeviceOperatorMapper.DeviceOperatorResultMap"></collection>
+
+    <collection property="sensorList"
+                ofType="it.caoxin.smarthome.domain.model.Sensor"
+                resultMap="it.caoxin.smarthome.domain.mapper.sensor.SensorMapper.DeviceSensorResultMap"></collection>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, family_id, name, description, location, info, registert_time, status, control_mode
+  </sql>
+
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="SelectResultMap">
+  SELECT
+       d.id AS id, family_id, d.name AS NAME, d.description AS description, location, d.info AS info, d.registert_time AS register_time, d.status AS STATUS, d.control_mode AS control_mode,
+       s.id AS sensor_id, s.device_id AS device_id, sensor_type_id, s.name AS sensor_name, s.info AS sensor_info, s.description AS sensor_description, s.status AS sensor_status, s.register_time AS sensor_register_time,
+       do.id AS operator_id, operator_name, operator_code, do.description AS operator_description, do.register_time AS operator_register_time, do.status AS operator_status
+    FROM device d INNER JOIN device_operator DO INNER JOIN sensor s
+    ON d.id = do.device_id AND d.id =  s.device_id
+    WHERE d.id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from device
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="it.caoxin.smarthome.domain.model.Device">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into device (family_id, name, description, 
+      location, info, registert_time, 
+      status, control_mode)
+    values (#{familyId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
+      #{location,jdbcType=VARCHAR}, #{info,jdbcType=VARCHAR}, #{registertTime,jdbcType=TIMESTAMP}, 
+      #{status,jdbcType=VARCHAR}, #{controlMode,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="it.caoxin.smarthome.domain.model.Device">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into device
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="familyId != null">
+        family_id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="location != null">
+        location,
+      </if>
+      <if test="info != null">
+        info,
+      </if>
+      <if test="registertTime != null">
+        registert_time,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="controlMode != null">
+        control_mode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="familyId != null">
+        #{familyId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="location != null">
+        #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="info != null">
+        #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="registertTime != null">
+        #{registertTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="controlMode != null">
+        #{controlMode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByIdSelective" parameterType="it.caoxin.smarthome.domain.model.Device">
+    update device
+    <set>
+      <if test="familyId != null">
+        family_id = #{familyId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="location != null">
+        location = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="info != null">
+        info = #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="registertTime != null">
+        registert_time = #{registertTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="controlMode != null">
+        control_mode = #{controlMode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateById" parameterType="it.caoxin.smarthome.domain.model.Device">
+    update device
+    set family_id = #{familyId,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      location = #{location,jdbcType=VARCHAR},
+      info = #{info,jdbcType=VARCHAR},
+      registert_time = #{registertTime,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=VARCHAR},
+      control_mode = #{controlMode,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+</mapper>

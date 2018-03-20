@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.caoxin.smarthome.domain.mapper.sensordata.SensorDataMapper">
+  <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.SensorData">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sensor_id" jdbcType="INTEGER" property="sensorId" />
+    <result column="data_name" jdbcType="VARCHAR" property="dataName" />
+    <result column="data_value" jdbcType="VARCHAR" property="dataValue" />
+    <result column="collection_time" jdbcType="TIMESTAMP" property="collectionTime" />
+    <result column="info" jdbcType="VARCHAR" property="info" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+    id, sensor_id, data_name, data_value, collection_time, info, status
+  </sql>
+  
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sensor_data
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from sensor_data
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="it.caoxin.smarthome.domain.model.SensorData">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sensor_data (sensor_id, data_name, data_value, 
+      collection_time, info, status
+      )
+    values (#{sensorId,jdbcType=INTEGER}, #{dataName,jdbcType=VARCHAR}, #{dataValue,jdbcType=VARCHAR}, 
+      #{collectionTime,jdbcType=TIMESTAMP}, #{info,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}
+      )
+  </insert>
+  
+  <insert id="insertSelective" parameterType="it.caoxin.smarthome.domain.model.SensorData">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sensor_data
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sensorId != null">
+        sensor_id,
+      </if>
+      <if test="dataName != null">
+        data_name,
+      </if>
+      <if test="dataValue != null">
+        data_value,
+      </if>
+      <if test="collectionTime != null">
+        collection_time,
+      </if>
+      <if test="info != null">
+        info,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sensorId != null">
+        #{sensorId,jdbcType=INTEGER},
+      </if>
+      <if test="dataName != null">
+        #{dataName,jdbcType=VARCHAR},
+      </if>
+      <if test="dataValue != null">
+        #{dataValue,jdbcType=VARCHAR},
+      </if>
+      <if test="collectionTime != null">
+        #{collectionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="info != null">
+        #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByIdSelective" parameterType="it.caoxin.smarthome.domain.model.SensorData">
+    update sensor_data
+    <set>
+      <if test="sensorId != null">
+        sensor_id = #{sensorId,jdbcType=INTEGER},
+      </if>
+      <if test="dataName != null">
+        data_name = #{dataName,jdbcType=VARCHAR},
+      </if>
+      <if test="dataValue != null">
+        data_value = #{dataValue,jdbcType=VARCHAR},
+      </if>
+      <if test="collectionTime != null">
+        collection_time = #{collectionTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="info != null">
+        info = #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <update id="updateById" parameterType="it.caoxin.smarthome.domain.model.SensorData">
+    update sensor_data
+    set sensor_id = #{sensorId,jdbcType=INTEGER},
+      data_name = #{dataName,jdbcType=VARCHAR},
+      data_value = #{dataValue,jdbcType=VARCHAR},
+      collection_time = #{collectionTime,jdbcType=TIMESTAMP},
+      info = #{info,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

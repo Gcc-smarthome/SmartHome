@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.caoxin.smarthome.domain.mapper.sensor.SensorMapper">
+  
+  <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.Sensor">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+    <result column="sensor_type_id" jdbcType="INTEGER" property="sensorTypeId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="info" jdbcType="VARCHAR" property="info" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="registerTime" />
+  </resultMap>
+
+
+  <resultMap id="DeviceSensorResultMap" type="it.caoxin.smarthome.domain.model.Sensor">
+    <id column="sensor_id" jdbcType="INTEGER" property="id" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+    <result column="sensor_type_id" jdbcType="INTEGER" property="sensorTypeId" />
+    <result column="sensor_name" jdbcType="VARCHAR" property="name" />
+    <result column="sensor_info" jdbcType="VARCHAR" property="info" />
+    <result column="sensor_description" jdbcType="VARCHAR" property="description" />
+    <result column="sensor_status" jdbcType="VARCHAR" property="status" />
+    <result column="sensor_register_time" jdbcType="TIMESTAMP" property="registerTime" />
+  </resultMap>
+
+
+  <resultMap id="QueryResultMap" type="it.caoxin.smarthome.domain.model.Sensor" extends="BaseResultMap">
+    <association property="sensorType"
+                  resultMap="it.caoxin.smarthome.domain.mapper.sensortype.SensorTypeMapper.QueryResultMap"></association>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, device_id, sensor_type_id, name, info, description, status, register_time
+  </sql>
+  
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="QueryResultMap">
+    select 
+      s.id AS id, device_id, sensor_type_id, s.name AS name, s.info AS info, s.description AS description, s.status AS status, register_time,
+      st.name AS sensor_type_name, st.info AS sensor_type_info, st.description AS sensor_type_description, st.status AS sensor_type_status
+    from sensor s INNER JOIN sensor_type st
+    ON  s.sensor_type_id = st.id
+    where s.id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from sensor
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  
+  <insert id="insert" parameterType="it.caoxin.smarthome.domain.model.Sensor">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sensor (device_id, sensor_type_id, name, 
+      info, description, status, 
+      register_time)
+    values (#{deviceId,jdbcType=INTEGER}, #{sensorTypeId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{info,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{registerTime,jdbcType=TIMESTAMP})
+  </insert>
+  
+  
+  <insert id="insertSelective" parameterType="it.caoxin.smarthome.domain.model.Sensor">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sensor
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="deviceId != null">
+        device_id,
+      </if>
+      <if test="sensorTypeId != null">
+        sensor_type_id,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="info != null">
+        info,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="registerTime != null">
+        register_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="sensorTypeId != null">
+        #{sensorTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="info != null">
+        #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="registerTime != null">
+        #{registerTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  <update id="updateByIdSelective" parameterType="it.caoxin.smarthome.domain.model.Sensor">
+    update sensor
+    <set>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="sensorTypeId != null">
+        sensor_type_id = #{sensorTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="info != null">
+        info = #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="registerTime != null">
+        register_time = #{registerTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  <update id="updateById" parameterType="it.caoxin.smarthome.domain.model.Sensor">
+    update sensor
+    set device_id = #{deviceId,jdbcType=INTEGER},
+      sensor_type_id = #{sensorTypeId,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      info = #{info,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      register_time = #{registerTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

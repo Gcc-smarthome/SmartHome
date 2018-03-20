@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.caoxin.smarthome.domain.mapper.log.LogMapper">
+  <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.Log">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="family_id" jdbcType="INTEGER" property="familyId" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="info" jdbcType="VARCHAR" property="info" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="generate_time" jdbcType="TIMESTAMP" property="generateTime" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+    id, family_id, type, info, status, generate_time
+  </sql>
+  
+  <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from log
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="it.caoxin.smarthome.domain.model.Log">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into log (family_id, type, info, 
+      status, generate_time)
+    values (#{familyId,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{info,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{generateTime,jdbcType=TIMESTAMP})
+  </insert>
+  
+  <insert id="insertSelective" parameterType="it.caoxin.smarthome.domain.model.Log">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="familyId != null">
+        family_id,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="info != null">
+        info,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="generateTime != null">
+        generate_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="familyId != null">
+        #{familyId,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="info != null">
+        #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="generateTime != null">
+        #{generateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  
+  <update id="updateByIdSelective" parameterType="it.caoxin.smarthome.domain.model.Log">
+    update log
+    <set>
+      <if test="familyId != null">
+        family_id = #{familyId,jdbcType=INTEGER},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="info != null">
+        info = #{info,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="generateTime != null">
+        generate_time = #{generateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  
+  <update id="updateById" parameterType="it.caoxin.smarthome.domain.model.Log">
+    update log
+    set family_id = #{familyId,jdbcType=INTEGER},
+      type = #{type,jdbcType=VARCHAR},
+      info = #{info,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      generate_time = #{generateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

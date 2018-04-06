@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class User implements Serializable {
-    public static final String MAIN_MEMBER = "主成员";
-    public static final String MEMBER = "成员";
+    public static final String MEMBER = "用户";
     public static final String MAMAGER = "管理员";
 
     private Integer id;

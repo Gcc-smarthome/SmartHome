@@ -17,15 +17,17 @@ public class TestFamily {
     @Test
     public void testFamilyAdd(){
         Family family = new Family();
-        family.setFamilyUniqueCode("test0003");
+        family.setFamilyUniqueCode("test0004");
         family.setFamilyName("曹欣");
         family.setControlMode("testMode");
         family.setStatus("testStatus");
         family.setFamilyAddress("1213132");
-        familyMapper.insert(family);
+        familyMapper.insertSelective(family);
+
+        System.out.println("id"+family.getId()+",,,,,,,,,,,,,,,,,,,,,");
 
 
-       familyMapper.selectByUniqueCode(family.getFamilyUniqueCode());
+      // familyMapper.selectByUniqueCode(family.getFamilyUniqueCode());
 
 
     }

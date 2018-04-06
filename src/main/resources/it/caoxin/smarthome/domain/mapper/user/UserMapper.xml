@@ -32,6 +32,13 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
 
+  <select id="selectUserByPhone" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where phone = #{phone,jdbcType=VARCHAR}
+  </select>
+
   <select id="selectByUsernameAndPassword" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />

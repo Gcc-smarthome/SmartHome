@@ -17,4 +17,6 @@ public interface FamilyImgMapper {
     int updateSelect(@Param("familyImg") FamilyImg familyImg);
 
     FamilyImg selectById(Integer id);
+
+    List<FamilyImg> selectByFamilyId(Integer familyId);
 }

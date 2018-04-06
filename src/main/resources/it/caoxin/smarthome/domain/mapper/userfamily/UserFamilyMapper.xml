@@ -97,5 +97,12 @@
         from userfamily
         where id = #{id,jdbcType=INTEGER}
     </select>
+
+    <select id="selectByUserIdAndFamilyId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from userfamily
+        where user_id = #{arg0,jdbcType=INTEGER} AND family_id = #{arg1,jdbcType=INTEGER};
+    </select>
 </mapper>
 

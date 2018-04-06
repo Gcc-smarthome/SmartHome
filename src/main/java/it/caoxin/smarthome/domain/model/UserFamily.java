@@ -1,6 +1,13 @@
 package it.caoxin.smarthome.domain.model;
 
 public class UserFamily {
+
+    public static final String ROLE_MANAGER = "管理员";
+    public static final String ROLE_MEMBER ="普通成员";
+
+    public static final String STATUS_NORMAL = "正常";
+    public static final String STATUS_DELETE = "删除";
+
     private Integer id;
     private Integer familyId;
     private Integer userId;

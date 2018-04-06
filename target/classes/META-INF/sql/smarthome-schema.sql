@@ -165,9 +165,7 @@ CREATE TABLE `user` (
   `code` varchar(255) DEFAULT NULL,
   `status` varchar(255) NOT NULL DEFAULT '正常',
   `register_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `FK_family_user` (`family_id`),
-  CONSTRAINT `FK_family_user` FOREIGN KEY (`family_id`) REFERENCES `family` (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `user_family`;

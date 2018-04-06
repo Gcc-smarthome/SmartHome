@@ -45,4 +45,11 @@ public class TestUserFamily {
         userFamily.setFamilyRole("123");
         userFamilyMapper.updateSelect(userFamily);
     }
+
+    @Test
+    public void testSelectByUserIdAndFamilyId(){
+        UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(1, 1);
+        System.out.println("userFamily：0------------------"+userFamily);
+    }
+
 }

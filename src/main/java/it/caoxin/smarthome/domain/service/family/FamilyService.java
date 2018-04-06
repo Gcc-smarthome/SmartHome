@@ -1,24 +1,61 @@
 package it.caoxin.smarthome.domain.service.family;
 
+import com.sun.org.apache.bcel.internal.generic.FADD;
 import it.caoxin.smarthome.domain.model.Family;
+import it.caoxin.smarthome.domain.model.FamilyImg;
 import it.caoxin.smarthome.domain.model.User;
 
 public interface FamilyService {
-    int deleteById(Integer id);
+    /*
+    创建家庭
+     */
+    String createFamily(User user,Family family);
 
-    int insert(Family family);
+    /*
+    加入家庭:管理员
+     */
+    String joinFaimlyOfManager(User user,Family family);
 
-    int insertSelective(Family family);
+    /*
+    加入家庭:用户
+     */
+    String joinFamilyOfMember(User user,String uniqueCode);
 
-    int updateByIdSelective(Family family);
+    /*
+    修改家庭信息
+     */
+    String updateFamilyInfo(User user,Family family);
 
-    int updateById(Family family);
+    /*
+    判断是否是一个家庭管理员
+     */
+    boolean isFamilyManager(User user,Family family);
 
-    String SelectFamilyById(Integer id);
+    /*
+    删除家庭
+     */
+    String deleteFamily(User user,Family family);
 
-//    String createFaimily(Integer userId,Family faimly);
+    /*
+    添加家庭图片
+     */
+    String addFamilyImg(User user, Family family, FamilyImg familyImg);
 
-//    String joinFaimly(Integer userId,String familyUniqueCode);
+    /*
+    删除家庭图片
+     */
+    String deleteFamilyImg(User user, Family family, FamilyImg familyImg);
 
-    String updateFaimly(Family family);
+    /*
+    查看家庭图片
+     */
+    String familyImgs(Family family);
+
+    /*
+    增加家庭管理员
+     */
+    String addFamilyManager(User user,Family family,Integer userId);
+//    String SelectFamilyById(Integer id);
+
+
 }

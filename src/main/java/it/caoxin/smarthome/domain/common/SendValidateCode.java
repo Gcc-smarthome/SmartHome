@@ -55,14 +55,14 @@ public class SendValidateCode {
     }
 
 
-    public  String testCode(){
+    public static String testCode(){
         String validateCode = "";
         Random random = new Random();
         for(int i = 0; i < 4; i++){
             int randomNumber = random.nextInt(10);
             validateCode += randomNumber;
         }
-        System.out.println("验证码为："+validateCode);
+        System.out.println("验证码为：-----------------"+validateCode);
 
         return validateCode;
     }

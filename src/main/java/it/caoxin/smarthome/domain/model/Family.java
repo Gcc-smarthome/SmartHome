@@ -14,6 +14,8 @@ import java.util.List;
 public class Family implements Serializable {
 
     public static final String MANAGER_UNIQUE_CODE = "manager";
+    public static final String STATUS_DELETE = "删除";
+    public static final String STATUS_NORMAL = "正常";
     //家庭id
     private Integer id;
 

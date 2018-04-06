@@ -5,25 +5,49 @@ import it.caoxin.smarthome.domain.model.User;
 import javax.servlet.http.HttpSession;
 
 public interface UserService {
-    int deleteById(Integer id);
+    /*
+        判断该手机是否已被注册
+     */
+     String isRegister(String phone);
+     /*
+     用户注册
+      */
+     String userRegister(User user);
 
-    int insert(User user);
+     /*
+     用户登录方式一：手机和密码登录
+      */
+   String userLoginUsePassword(User user,HttpSession session);
 
-    int insertSelective(User user);
+   /*
+   登录方式二：验证码登录
+    */
 
-    User selectById(Integer id);
+   String userLoginUseValidateCode(User user,HttpSession session);
+   /*
+   发送验证码
+    */
+   String sendValidateCode();
 
-    int updateByIdSelective(User user);
+    /*
+     用户退出
+    * */
 
-    int updateById(User user);
+   String userLogOut(HttpSession session);
 
-//    String userLogin(User user,HttpSession session);
+    /*
+    找回密码
+     */
+   String getBackPassword(String phone);
 
-    String userLogOut(HttpSession session);
+    /*
+    修改资料
+     */
+    String updateUserInfo(User user);
 
-//    String sendValidateCode(String phone);
+    /*
+    通过手机获得验证码
+     */
+    String getValidateCodeByPhone(String phone);
 
-    String userRegister(User user);
-
-    String getUserInfo(Integer userId);
 }

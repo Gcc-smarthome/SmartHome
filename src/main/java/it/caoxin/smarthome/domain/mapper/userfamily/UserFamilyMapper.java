@@ -17,4 +17,6 @@ public interface UserFamilyMapper {
     int updateSelect(@Param("userFamily") UserFamily userFamily);
 
     UserFamily selectById(Integer id);
+
+    UserFamily selectByUserIdAndFamilyId(Integer userId,Integer familyId);
 }

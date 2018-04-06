@@ -14,11 +14,13 @@ public interface UserMapper {
 
     User selectById(Integer id);
 
-    User selectByUsernameAndPassword(User user);
-
     int updateByIdSelective(User user);
 
     int updateById(User user);
 
+    User selectUserByPhone(String phone);
+
     User selectByPhoneAndPassword(User user);
+
+    User selectByUsernameAndPassword(User user);
 }

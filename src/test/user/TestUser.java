@@ -133,4 +133,10 @@ public class TestUser {
 //       userMapper.selectByPhoneAndPassword()
 //        System.out.println("user:"+user);
     }
+
+    @Test
+    public void testSelectByPhone(){
+        User user = userMapper.selectUserByPhone("1");
+        System.out.println("user"+user);
+    }
 }

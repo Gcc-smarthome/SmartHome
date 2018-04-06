@@ -84,7 +84,14 @@
         select
         <include refid="Base_Column_List" />
         from family_img
-        where id = #{id,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER};
+    </select>
+
+    <select id="selectByFamilyId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from family_img
+        where family_id = #{familyId,jdbcType=INTEGER} AND status = '正常';
     </select>
 </mapper>
 

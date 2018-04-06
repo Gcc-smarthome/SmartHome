@@ -1,6 +1,9 @@
 package it.caoxin.smarthome.domain.model;
 
 public class FamilyImg {
+    public static final String STATUS_NORMAL = "正常";
+    public static final String STATUS_DELETE = "删除";
+
     private Integer id;
     private Integer familyId;
     private String imgUrl;

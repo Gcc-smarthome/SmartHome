@@ -61,12 +61,12 @@ public class UserController {
         return userService.userRegister(user);
     }
 
-    @RequestMapping(value = "/user/{userId}",method = RequestMethod.GET)
-    @ResponseBody
-    public String getUserInfo(@PathVariable Integer userId){
-
-        return userService.getUserInfo(userId);
-    }
+//    @RequestMapping(value = "/user/{userId}",method = RequestMethod.GET)
+//    @ResponseBody
+//    public String getUserInfo(@PathVariable Integer userId){
+//
+//        return userService.getUserInfo(userId);
+//    }
 
 
 

@@ -35,7 +35,7 @@
     f.id AS id, family_unique_code, family_name, family_address, lat, lon, temperature, humidity,
     infrared, smoke, light_intensity, f.control_mode AS  control_mode, f.status AS status, f.register_time AS register_time,d.id AS device_id ,
     family_id ,name, description, location info, d.registert_time AS device_register_time,
-    d.status AS device_status, d.control_mode AS device_control_mode
+    d.status AS device_status, d.control_mode AS device_control_mode,d.img AS device_img
     from family f LEFT JOIN device d
     ON f.id = d.family_id
     WHERE f.id = #{id,jdbcType=INTEGER}
@@ -46,7 +46,7 @@
     f.id AS id, family_unique_code, family_name, family_address, lat, lon, temperature, humidity,
     infrared, smoke, light_intensity, f.control_mode AS  control_mode, f.status AS status, f.register_time AS register_time,d.id AS device_id ,
     family_id ,name, description, location info, d.registert_time AS device_register_time,
-    d.status AS device_status, d.control_mode AS device_control_mode
+    d.status AS device_status, d.control_mode AS device_control_mode,d.img AS device_img
     from family f LEFT JOIN device d
     ON f.id = d.family_id
     WHERE f.family_unique_code = #{uniqueCode,jdbcType=VARCHAR}

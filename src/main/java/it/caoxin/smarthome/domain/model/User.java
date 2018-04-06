@@ -10,8 +10,6 @@ public class User implements Serializable {
 
     private Integer id;
 
-    private Integer familyId;
-
     private String username;
 
     private String password;
@@ -26,6 +24,12 @@ public class User implements Serializable {
 
     private String role;
 
+    private String birthday;
+
+    private String sex;
+
+    private String address;
+
     private String code;
 
     private String status;
@@ -37,9 +41,8 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(Integer id, Integer familyId, String username, String password, String nickname, String email, String phone, String photo, String role, String code, String status, Date registerTime) {
+    public User(Integer id, String username, String password, String nickname, String email, String phone, String photo, String role, String birthday, String sex, String address, String code, String status, Date registerTime) {
         this.id = id;
-        this.familyId = familyId;
         this.username = username;
         this.password = password;
         this.nickname = nickname;
@@ -47,9 +50,36 @@ public class User implements Serializable {
         this.phone = phone;
         this.photo = photo;
         this.role = role;
+        this.birthday = birthday;
+        this.sex = sex;
+        this.address = address;
         this.code = code;
         this.status = status;
         this.registerTime = registerTime;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public Integer getId() {
@@ -58,14 +88,6 @@ public class User implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Integer getFamilyId() {
-        return familyId;
-    }
-
-    public void setFamilyId(Integer familyId) {
-        this.familyId = familyId;
     }
 
     public String getUsername() {
@@ -148,11 +170,11 @@ public class User implements Serializable {
         this.nickname = nickname;
     }
 
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", familyId=" + familyId +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", nickname='" + nickname + '\'' +
@@ -160,6 +182,9 @@ public class User implements Serializable {
                 ", phone='" + phone + '\'' +
                 ", photo='" + photo + '\'' +
                 ", role='" + role + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", sex='" + sex + '\'' +
+                ", address='" + address + '\'' +
                 ", code='" + code + '\'' +
                 ", status='" + status + '\'' +
                 ", registerTime=" + registerTime +

@@ -19,7 +19,7 @@ public class TestDevice {
     @Test
     public void test2Add(){
         Device device = new Device();
-        device.setFamilyId(4);
+        device.setFamilyId(1);
         device.setName("test3");
         device.setStatus("test3");
         device.setControlMode("test3");
@@ -30,7 +30,7 @@ public class TestDevice {
     @Test
     public void testUpdate(){
         Device device = new Device();
-        device.setId(1);
+        device.setId(11);
         device.setName("testupdate");
         device.setStatus("testupdate");
         device.setControlMode("testupdate");
@@ -41,7 +41,7 @@ public class TestDevice {
     @Test
     public void testUpdateSelect(){
         Device device = new Device();
-        device.setId(1);
+        device.setId(11);
         device.setName("testupdate111");
         deviceMapper.updateByIdSelective(device);
 

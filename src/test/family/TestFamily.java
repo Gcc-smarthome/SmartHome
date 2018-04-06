@@ -18,13 +18,14 @@ public class TestFamily {
     public void testFamilyAdd(){
         Family family = new Family();
         family.setFamilyUniqueCode("test0003");
-        family.setFamilyName("testName");
+        family.setFamilyName("曹欣");
         family.setControlMode("testMode");
         family.setStatus("testStatus");
+        family.setFamilyAddress("1213132");
         familyMapper.insert(family);
 
 
-        familyMapper.selectByUniqueCode(family.getFamilyUniqueCode());
+       familyMapper.selectByUniqueCode(family.getFamilyUniqueCode());
 
 
     }
@@ -37,8 +38,8 @@ public class TestFamily {
     @Test
     public void testUpdate(){
         Family family = new Family();
-        family.setId(2);
-        family.setFamilyUniqueCode("test0002");
+        family.setId(4);
+        family.setFamilyUniqueCode("曹欣");
         family.setFamilyName("testName2");
         family.setFamilyAddress("testAddress2");
         family.setControlMode("testMode2");
@@ -48,7 +49,7 @@ public class TestFamily {
     @Test
     public void testUpdateSelective(){
         Family family = new Family();
-        family.setId(2);
+        family.setId(4);
         family.setFamilyUniqueCode("test0005");
         familyMapper.updateByIdSelective(family);
 
@@ -62,7 +63,7 @@ public class TestFamily {
 
     @Test
     public void testSelectByUniqueCode(){
-        Family family = familyMapper.selectById(42);
+        Family family = familyMapper.selectById(1);
         System.out.println("family:"+family.toString());
     }
 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="it.caoxin.smarthome.domain.mapper.userfamily.UserFamilyMapper">
+    
+    <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.UserFamily">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="family_id" property="familyId" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="family_role" property="familyRole" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    
+    <sql id="Base_Column_List">
+        id,
+        family_id,
+        user_id,
+        family_role,
+        status
+    </sql>
+
+    
+    <insert id="insert" useGeneratedKeys="true" keyProperty="userFamily.id">
+        INSERT INTO userfamily (
+            id,
+            family_id,
+            user_id,
+            family_role,
+            status
+        ) VALUES (
+            #{userFamily.id,jdbcType=INTEGER},
+            #{userFamily.familyId,jdbcType=INTEGER},
+            #{userFamily.userId,jdbcType=INTEGER},
+            #{userFamily.familyRole,jdbcType=VARCHAR},
+            #{userFamily.status,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="userFamily.id">
+        INSERT INTO userfamily
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userFamily.id!=null"> id,</if>
+            <if test="userFamily.familyId!=null"> family_id,</if>
+            <if test="userFamily.userId!=null"> user_id,</if>
+            <if test="userFamily.familyRole!=null"> family_role,</if>
+            <if test="userFamily.status!=null"> status,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userFamily.id!=null">#{userFamily.id,jdbcType=INTEGER},
+            </if>
+            <if test="userFamily.familyId!=null">#{userFamily.familyId,jdbcType=INTEGER},
+            </if>
+            <if test="userFamily.userId!=null">#{userFamily.userId,jdbcType=INTEGER},
+            </if>
+            <if test="userFamily.familyRole!=null">#{userFamily.familyRole,jdbcType=VARCHAR},
+            </if>
+            <if test="userFamily.status!=null">#{userFamily.status,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    
+    <insert id="insertList">
+        INSERT INTO userfamily (
+        <include refid="Base_Column_List"/>
+        )VALUES
+        <foreach collection="userFamilys" item="userFamily" index="index" separator=",">
+            (
+            #{userFamily.id,jdbcType=INTEGER},
+            #{userFamily.familyId,jdbcType=INTEGER},
+            #{userFamily.userId,jdbcType=INTEGER},
+            #{userFamily.familyRole,jdbcType=VARCHAR},
+            #{userFamily.status,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+
+    
+    <update id="updateSelect">
+        UPDATE userfamily
+        <set>
+            <if test="userFamily.id != null"> id= #{userFamily.id,jdbcType=INTEGER},</if>
+            <if test="userFamily.familyId != null"> family_id= #{userFamily.familyId,jdbcType=INTEGER},</if>
+            <if test="userFamily.userId != null"> user_id= #{userFamily.userId,jdbcType=INTEGER},</if>
+            <if test="userFamily.familyRole != null"> family_role= #{userFamily.familyRole,jdbcType=VARCHAR},</if>
+            <if test="userFamily.status != null"> status= #{userFamily.status,jdbcType=VARCHAR}</if>
+        </set>
+        WHERE id = #{userFamily.id,jdbcType=INTEGER}
+    </update>
+
+
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from userfamily
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+</mapper>
+

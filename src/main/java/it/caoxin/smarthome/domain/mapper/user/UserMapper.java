@@ -20,9 +20,5 @@ public interface UserMapper {
 
     int updateById(User user);
 
-    List<User> selectUserByFamilyId(Integer id);
-
-    User selectUserByFamilyPhone(String phone);
-
     User selectByPhoneAndPassword(User user);
 }

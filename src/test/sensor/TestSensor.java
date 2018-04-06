@@ -27,7 +27,7 @@ public class TestSensor {
     @Test
     public void testUpdate(){
         Sensor sensor = new Sensor();
-        sensor.setId(1);
+        sensor.setId(5);
         sensor.setDeviceId(3);
         sensor.setName("test");
         sensor.setSensorTypeId(3);
@@ -38,7 +38,7 @@ public class TestSensor {
     @Test
     public void testUpateSelect(){
         Sensor sensor = new Sensor();
-        sensor.setId(1);
+        sensor.setId(5);
         sensor.setStatus("update2");
         sensorMapper.updateByIdSelective(sensor);
 

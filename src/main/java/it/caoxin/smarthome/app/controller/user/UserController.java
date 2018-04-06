@@ -26,7 +26,8 @@ public class UserController {
         System.out.println("用户登录...");
         System.out.println("username:"+user.getUsername());
         System.out.println("passoword:"+user.getPassword());
-        return userService.userLogin(user,session);
+//        return userService.userLogin(user,session);
+        return "";
     }
 
     /**
@@ -47,7 +48,8 @@ public class UserController {
     @ResponseBody
     public String validateCode(@RequestParam String phone){
         System.out.println("发送验证码...");
-        return userService.sendValidateCode(phone);
+//        return userService.sendValidateCode(phone);
+        return "";
     }
 
     @RequestMapping(value = "/register",method = RequestMethod.POST)

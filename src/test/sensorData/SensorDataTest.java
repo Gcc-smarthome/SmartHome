@@ -27,7 +27,7 @@ public class SensorDataTest {
     @Test
     public void testUpdate(){
         SensorData sensorData = new SensorData();
-        sensorData.setId(1);
+        sensorData.setId(13);
         sensorData.setSensorId(3);
         sensorData.setDataName("test");
         sensorData.setDataValue("test");
@@ -40,7 +40,7 @@ public class SensorDataTest {
     @Test
     public void testUpateSelect(){
         SensorData sensorData = new SensorData();
-        sensorData.setId(1);
+        sensorData.setId(13);
         sensorData.setSensorId(3);
         sensorData.setDataName("test");
         sensorData.setDataValue("test");

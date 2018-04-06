@@ -37,14 +37,14 @@ public class FamilyController {
                                 Family family){
         System.out.println("userId:"+userId);
         System.out.println("family:"+family);
-        return familyService.createFaimily(userId,family);
+        return "familyService.createFaimily(userId,family)";
     }
 
     @RequestMapping(value = "/family/{userId}",method = RequestMethod.PUT)
     @ResponseBody
     public String joinFamily(@PathVariable Integer userId,
                                @RequestParam String familyUniqueCode){
-        return familyService.joinFaimly(userId,familyUniqueCode);
+        return "familyService.joinFaimly(userId,familyUniqueCode)";
     }
 
     @RequestMapping(value = "/family",method = RequestMethod.PUT)

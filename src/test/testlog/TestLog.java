@@ -17,7 +17,7 @@ public class TestLog {
     @Test
     public void testAdd(){
         Log log = new Log();
-        log.setFamilyId(4);
+        log.setFamilyId(3);
         log.setType("testLog");
         log.setStatus("testStatus");
         logMapper.insert(log);

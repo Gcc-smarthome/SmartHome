@@ -33,6 +33,7 @@ CREATE TABLE `device` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `family_id` int(11) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
+  `img`  varchar(255) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `location` varchar(255) DEFAULT NULL,
   `info` varchar(255) DEFAULT NULL,
@@ -151,13 +152,15 @@ DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `family_id` int(11),
   `username` varchar(255),
   `password` varchar(255) NOT NULL,
   `nickname` varchar(255) DEFAULT NULL,/*用户昵称*/
+  `sex`   varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `phone` varchar(255) NOT NULL,
   `photo` varchar(255) DEFAULT NULL,
+  `birthday` varchar(255) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
   `role` varchar(255) DEFAULT NULL,
   `code` varchar(255) DEFAULT NULL,
   `status` varchar(255) NOT NULL DEFAULT '正常',
@@ -165,4 +168,29 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`),
   KEY `FK_family_user` (`family_id`),
   CONSTRAINT `FK_family_user` FOREIGN KEY (`family_id`) REFERENCES `family` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `user_family`;
+CREATE TABLE `userfamily` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `family_id` int(11) NOT NULL,
+  `user_id`  int(11) NOT NULL,
+  `family_role` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '正常',
+  PRIMARY KEY (`id`),
+  KEY `FK_family_userfamily` (`family_id`),
+  CONSTRAINT `FK_family_userfamily` FOREIGN KEY (`family_id`) REFERENCES `family` (`id`),
+  KEY `FK_user_userfamily` (`user_id`),
+  CONSTRAINT `FK_user_userfamily` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `family_img`;
+CREATE TABLE `family_img` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `family_id` int(11) NOT NULL,
+  `img_url`  varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '正常',
+  PRIMARY KEY (`id`),
+  KEY `FK_family_family_img` (`family_id`),
+  CONSTRAINT `FK_family_family_img` FOREIGN KEY (`family_id`) REFERENCES `family` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

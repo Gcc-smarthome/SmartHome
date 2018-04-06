@@ -30,7 +30,6 @@ public class TestUser {
         user.setUsername("test");
         user.setPassword("test");
         user.setPhone("test");
-        user.setFamilyId(3);
         user.setStatus("正常");
 
 
@@ -39,19 +38,19 @@ public class TestUser {
 
     @Test
     public void testSelect(){
-        User user = userMapper.selectById(6);
+        User user = userMapper.selectById(1);
         System.out.println("user:"+user);
     }
 
     @Test
     public void testUpdate(){
         User user = new User();
-        user.setId(6);
+        user.setId(1);
         user.setUsername("update");
         user.setPassword("update");
         user.setPhone("update");
         user.setStatus("正常");
-        user.setFamilyId(2);
+
 
 
         userMapper.updateById(user);
@@ -60,7 +59,7 @@ public class TestUser {
     @Test
     public void testUpdateSelect(){
         User user = new User();
-        user.setId(3);
+        user.setId(1);
         user.setUsername("update2");
         user.setPassword("update2");
         user.setPhone("update2");
@@ -80,10 +79,10 @@ public class TestUser {
 
     @Test
     public void testSelectUserByFamilyId(){
-        List<User> users = userMapper.selectUserByFamilyId(1);
-        System.out.println("users:"+users);
-        logger.info("I will kill you !!!!");
-        logger.error("I deading");
+
+//        System.out.println("users:"+users);
+//        logger.info("I will kill you !!!!");
+//        logger.error("I deading");
     }
 
     @Test
@@ -125,8 +124,8 @@ public class TestUser {
 
     @Test
     public void testSelectIdByPhone(){
-        User user = userMapper.selectUserByFamilyPhone("13002090126");
-        System.out.println("user:"+user);
+//        User user = userMapper.selectUserByFamilyPhone("13002090126");
+//        System.out.println("user:"+user);
     }
 
     @Test

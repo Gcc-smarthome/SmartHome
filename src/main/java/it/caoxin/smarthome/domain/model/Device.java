@@ -21,6 +21,8 @@ public class Device implements Serializable {
 
     private String status;
 
+    private String img;
+
     private String controlMode;
 
     private static final long serialVersionUID = 1L;
@@ -32,7 +34,7 @@ public class Device implements Serializable {
     public Device() {
     }
 
-    public Device(Integer id, Integer familyId, String name, String description, String location, String info, Date registertTime, String status, String controlMode, List<DeviceOperator> operatorList, List<Sensor> sensorList) {
+    public Device(Integer id, Integer familyId, String name, String description, String location, String info, Date registertTime, String status, String img, String controlMode) {
         this.id = id;
         this.familyId = familyId;
         this.name = name;
@@ -41,9 +43,8 @@ public class Device implements Serializable {
         this.info = info;
         this.registertTime = registertTime;
         this.status = status;
+        this.img = img;
         this.controlMode = controlMode;
-        this.operatorList = operatorList;
-        this.sensorList = sensorList;
     }
 
     public Integer getId() {
@@ -76,6 +77,14 @@ public class Device implements Serializable {
 
     public void setDescription(String description) {
         this.description = description == null ? null : description.trim();
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getLocation() {
@@ -145,6 +154,7 @@ public class Device implements Serializable {
                 ", info='" + info + '\'' +
                 ", registertTime=" + registertTime +
                 ", status='" + status + '\'' +
+                ", img='" + img + '\'' +
                 ", controlMode='" + controlMode + '\'' +
                 ", operatorList=" + operatorList +
                 ", sensorList=" + sensorList +

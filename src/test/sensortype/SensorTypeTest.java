@@ -26,7 +26,7 @@ public class SensorTypeTest {
     @Test
     public void update(){
         SensorType sensorType = new SensorType();
-        sensorType.setId(1);
+        sensorType.setId(4);
         sensorType.setName("test3");
         sensorType.setStatus("update");
 
@@ -35,7 +35,7 @@ public class SensorTypeTest {
     @Test
     public void updateSelect(){
         SensorType sensorType = new SensorType();
-        sensorType.setId(1);
+        sensorType.setId(4);
         sensorType.setName("test3");
         sensorType.setStatus("update1");
 

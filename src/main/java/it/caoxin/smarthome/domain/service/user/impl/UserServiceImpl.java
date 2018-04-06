@@ -59,39 +59,39 @@ public class UserServiceImpl implements UserService {
 
 
 
-    @Override
-    public String userLogin(User user, HttpSession session) {
-        //返回值对象
-        Map valueStack = new HashMap<String,Object>();
-
-        User validateUser = userMapper.selectByPhoneAndPassword(user);
-        if (validateUser != null){
-            JSONArray jsonUser = JSONArray.fromObject(validateUser);
-            //查询对应的家庭信息并添加到Map中
-            Integer familyId = validateUser.getFamilyId();
-
-            //如果有家庭
-            if(familyId != null){
-                Family family = familyMapper.selectById(familyId);
-                JSONArray jsonFamily = JSONArray.fromObject(family);
-
-                valueStack.put("family",family);
-                session.setAttribute("family",jsonFamily);
-            }
-            //将查询到的用户信息并添加到Map中
-            valueStack.put("user",validateUser);
-
-            //将对应用户信息传到session中
-            session.setAttribute("user",jsonUser);
-
-            //将值对象转换成json并返回
-            JSONArray jsonMap = JSONArray.fromObject(valueStack);
-            return jsonMap.toString();
-
-        }else {
-            return "loginFail";
-        }
-    }
+//    @Override
+//    public String userLogin(User user, HttpSession session) {
+//        //返回值对象
+//        Map valueStack = new HashMap<String,Object>();
+//
+//        User validateUser = userMapper.selectByPhoneAndPassword(user);
+//        if (validateUser != null){
+//            JSONArray jsonUser = JSONArray.fromObject(validateUser);
+//            //查询对应的家庭信息并添加到Map中
+////            Integer familyId = validateUser.getFamilyId();
+//
+//            //如果有家庭
+//            if(familyId != null){
+//                Family family = familyMapper.selectById(familyId);
+//                JSONArray jsonFamily = JSONArray.fromObject(family);
+//
+//                valueStack.put("family",family);
+//                session.setAttribute("family",jsonFamily);
+//            }
+//            //将查询到的用户信息并添加到Map中
+//            valueStack.put("user",validateUser);
+//
+//            //将对应用户信息传到session中
+//            session.setAttribute("user",jsonUser);
+//
+//            //将值对象转换成json并返回
+//            JSONArray jsonMap = JSONArray.fromObject(valueStack);
+//            return jsonMap.toString();
+//
+//        }else {
+//            return "loginFail";
+//        }
+//    }
 
     @Override
     public String userLogOut(HttpSession session) {
@@ -100,13 +100,13 @@ public class UserServiceImpl implements UserService {
         return "logoutSuccess";
     }
 
-    @Override
-    public String sendValidateCode(String phone) {
-        if (userMapper.selectUserByFamilyPhone(phone) != null){
-            return"this phone has registered";
-        }
-        return new SendValidateCode().testCode();
-    }
+//    @Override
+//    public String sendValidateCode(String phone) {
+//        if (userMapper.selectUserByFamilyPhone(phone) != null){
+//            return"this phone has registered";
+//        }
+//        return new SendValidateCode().testCode();
+//    }
 
     @Override
     public String userRegister(User user) {

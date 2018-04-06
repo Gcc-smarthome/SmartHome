@@ -17,11 +17,11 @@ public interface UserService {
 
     int updateById(User user);
 
-    String userLogin(User user,HttpSession session);
+//    String userLogin(User user,HttpSession session);
 
     String userLogOut(HttpSession session);
 
-    String sendValidateCode(String phone);
+//    String sendValidateCode(String phone);
 
     String userRegister(User user);
 

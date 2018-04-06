@@ -16,9 +16,9 @@ public interface FamilyService {
 
     String SelectFamilyById(Integer id);
 
-    String createFaimily(Integer userId,Family faimly);
+//    String createFaimily(Integer userId,Family faimly);
 
-    String joinFaimly(Integer userId,String familyUniqueCode);
+//    String joinFaimly(Integer userId,String familyUniqueCode);
 
     String updateFaimly(Family family);
 }

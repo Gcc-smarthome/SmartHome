@@ -8,24 +8,24 @@ values('3','uniqueCode0003','幸福','广州市天河区','40','40',NULL,NULL,NU
 
 
 /*设备数据表*/
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('1','1','curtain','智能窗帘','屋子北边','会动的窗帘','2018-02-01 00:14:05','正常','手动');
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('2','1','door','智能门禁','门口','有人脸识别的门禁','2018-02-01 00:09:24','正常','手动');
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('3','1','kettle','智能水壶','屋子里面','智能控制的水壶','2018-02-01 00:09:39','正常','手动');
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('4','1','light','智能灯','屋子里面','比神灯还厉害','2018-02-01 00:10:00','正常','手动');
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('5','2','door','智能门禁','门口','有人脸识别的门禁','2018-02-01 00:10:15','正常','手动');
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('6','2','kettle','智能水壶','屋子里面','智能控制的水壶','2018-02-01 00:10:24','正常','手动');
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('7','3','door','智能门禁','门口','有人脸识别的门禁','2018-02-01 00:10:41','正常','手动');
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('8','3','kettle','智能水壶','屋子里面','智能控制的水壶','2018-02-01 00:10:49','正常','手动');
-insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`)
-values('9','3','light','智能灯','屋子里面','比神灯还厉害','2018-02-01 00:10:59','正常','手动');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('1','1','curtain','智能窗帘','屋子北边','会动的窗帘','2018-02-01 00:14:05','正常','手动','img123');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('2','1','door','智能门禁','门口','有人脸识别的门禁','2018-02-01 00:09:24','正常','手动','img123');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('3','1','kettle','智能水壶','屋子里面','智能控制的水壶','2018-02-01 00:09:39','正常','手动','img123');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('4','1','light','智能灯','屋子里面','比神灯还厉害','2018-02-01 00:10:00','正常','手动','img123');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('5','2','door','智能门禁','门口','有人脸识别的门禁','2018-02-01 00:10:15','正常','手动','img123');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('6','2','kettle','智能水壶','屋子里面','智能控制的水壶','2018-02-01 00:10:24','正常','手动','img123');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('7','3','door','智能门禁','门口','有人脸识别的门禁','2018-02-01 00:10:41','正常','手动','img123');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('8','3','kettle','智能水壶','屋子里面','智能控制的水壶','2018-02-01 00:10:49','正常','手动','img123');
+insert into `device` (`id`, `family_id`, `name`, `description`, `location`, `info`, `registert_time`, `status`, `control_mode`,`img`)
+values('9','3','light','智能灯','屋子里面','比神灯还厉害','2018-02-01 00:10:59','正常','手动','img123');
 
 /*设备操作数据*/
 insert into `device_operator` (`id`, `device_id`, `operator_name`, `operator_code`, `description`, `register_time`, `status`)

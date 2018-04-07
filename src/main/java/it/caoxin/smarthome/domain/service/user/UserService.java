@@ -23,7 +23,7 @@ public interface UserService {
    登录方式二：验证码登录
     */
 
-   String userLoginUseValidateCode(User user,HttpSession session);
+   String userLoginUseValidateCode(User user,HttpSession session,String code);
    /*
    发送验证码
     */
@@ -40,6 +40,10 @@ public interface UserService {
      */
    String getBackPassword(String phone);
 
+   /*
+   用户修改密码
+    */
+   String updatePwd(User user,String code);
     /*
     修改资料
      */

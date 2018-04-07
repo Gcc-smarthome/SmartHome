@@ -12,6 +12,7 @@
     <result column="registert_time" jdbcType="TIMESTAMP" property="registertTime" />
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="control_mode" jdbcType="VARCHAR" property="controlMode" />
+    <result column="img" jdbcType="VARCHAR" property="img"/>
   </resultMap>
 
   <resultMap id="QueryResultMap" type="it.caoxin.smarthome.domain.model.Device">
@@ -24,6 +25,7 @@
     <result column="device_register_time" jdbcType="TIMESTAMP" property="registertTime" />
     <result column="device_status" jdbcType="VARCHAR" property="status" />
     <result column="device_control_mode" jdbcType="VARCHAR" property="controlMode" />
+    <result column="device_img" jdbcType="VARCHAR" property="img" />
   </resultMap>
 
   <resultMap id="SelectResultMap" type="it.caoxin.smarthome.domain.model.Device" extends="BaseResultMap">
@@ -37,16 +39,16 @@
   </resultMap>
 
   <sql id="Base_Column_List">
-    id, family_id, name, description, location, info, registert_time, status, control_mode
+    id, family_id, name, description, location, info, registert_time, status, control_mode,img
   </sql>
 
   <select id="selectById" parameterType="java.lang.Integer" resultMap="SelectResultMap">
-  SELECT
-       d.id AS id, family_id, d.name AS NAME, d.description AS description, location, d.info AS info, d.registert_time AS register_time, d.status AS STATUS, d.control_mode AS control_mode,
-       s.id AS sensor_id, s.device_id AS device_id, sensor_type_id, s.name AS sensor_name, s.info AS sensor_info, s.description AS sensor_description, s.status AS sensor_status, s.register_time AS sensor_register_time,
-       do.id AS operator_id, operator_name, operator_code, do.description AS operator_description, do.register_time AS operator_register_time, do.status AS operator_status
-    FROM device d INNER JOIN device_operator DO INNER JOIN sensor s
-    ON d.id = do.device_id AND d.id =  s.device_id
+ SELECT
+  d.id AS id, family_id, d.name AS NAME, d.description AS description, location, d.info AS info, d.registert_time AS register_time, d.status AS STATUS, d.control_mode AS control_mode,d.img AS img,
+  s.id AS sensor_id, s.device_id AS device_id, sensor_type_id, s.name AS sensor_name, s.info AS sensor_info, s.description AS sensor_description, s.status AS sensor_status, s.register_time AS sensor_register_time,
+  do.id AS operator_id, operator_name, operator_code, do.description AS operator_description, do.register_time AS operator_register_time, do.status AS operator_status
+  FROM device d LEFT JOIN device_operator DO ON d.id = do.device_id
+	             LEFT JOIN sensor s  ON do.device_id = s.device_id
     WHERE d.id = #{id,jdbcType=INTEGER}
   </select>
 
@@ -61,10 +63,10 @@
     </selectKey>
     insert into device (family_id, name, description, 
       location, info, registert_time, 
-      status, control_mode)
+      status, control_mode,img)
     values (#{familyId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
       #{location,jdbcType=VARCHAR}, #{info,jdbcType=VARCHAR}, #{registertTime,jdbcType=TIMESTAMP}, 
-      #{status,jdbcType=VARCHAR}, #{controlMode,jdbcType=VARCHAR})
+      #{status,jdbcType=VARCHAR}, #{controlMode,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR})
   </insert>
 
   <insert id="insertSelective" parameterType="it.caoxin.smarthome.domain.model.Device">
@@ -81,6 +83,9 @@
       </if>
       <if test="description != null">
         description,
+      </if>
+      <if test="img != null">
+        img,
       </if>
       <if test="location != null">
         location,
@@ -123,6 +128,9 @@
       <if test="controlMode != null">
         #{controlMode,jdbcType=VARCHAR},
       </if>
+      <if test="img != null">
+        #{controlMode,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
 
@@ -153,6 +161,9 @@
       <if test="controlMode != null">
         control_mode = #{controlMode,jdbcType=VARCHAR},
       </if>
+      <if test="img != null">
+        description = #{img,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -166,7 +177,8 @@
       info = #{info,jdbcType=VARCHAR},
       registert_time = #{registertTime,jdbcType=TIMESTAMP},
       status = #{status,jdbcType=VARCHAR},
-      control_mode = #{controlMode,jdbcType=VARCHAR}
+      control_mode = #{controlMode,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 

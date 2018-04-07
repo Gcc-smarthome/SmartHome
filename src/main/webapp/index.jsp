@@ -70,4 +70,7 @@
 <script type=text/javascript src=${pageContext.request.contextPath}/static/js/vendor.72582d43fe200e4416bc.js></script>
 <script type=text/javascript src=${pageContext.request.contextPath}/static/js/app.58112d6ad2450c22229b.js></script>
 </body>
+<script>
+    var user = session.getAddressName("user");
+</script>
 </html>

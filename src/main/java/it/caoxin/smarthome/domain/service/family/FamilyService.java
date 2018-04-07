@@ -55,6 +55,11 @@ public interface FamilyService {
     增加家庭管理员
      */
     String addFamilyManager(User user,Family family,Integer userId);
+
+    /*
+    查看家庭用户
+     */
+//    String familyMember(String)
 //    String SelectFamilyById(Integer id);
 
 

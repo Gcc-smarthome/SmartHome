@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * @author caoxin
@@ -27,7 +28,13 @@ public class UserServiceImpl implements UserService {
     //手机验证
     @Override
     public String isRegister(String phone) {
-        User user = userMapper.selectUserByPhone(phone);
+        System.out.println("phone:"+phone);
+        User user = null;
+        if (phone != null){
+            user = userMapper.selectUserByPhone(phone);
+        }
+
+        System.out.println("user:"+user);
         if (user != null){
             //代表该账号已存在，不能注册。
             return "validFailure";
@@ -55,6 +62,7 @@ public class UserServiceImpl implements UserService {
     //用户登录方式一
     @Override
     public String userLoginUsePassword(User user, HttpSession session) {
+        Map valueStack = new HashMap();
         //拿到登录对象
         User loginUser = null;
         if (user.getPhone() != null && user.getPhone().length() == 11
@@ -67,8 +75,9 @@ public class UserServiceImpl implements UserService {
             //处理密码为空
             loginUser.setPassword("");
             //将值对象转换成json并返回
-
-            JSONArray json = JSONArray.fromObject(loginUser);
+            valueStack.put("user",loginUser);
+            valueStack.put("session", UUID.randomUUID().toString());
+            JSONArray json = JSONArray.fromObject(valueStack);
             return json.toString();//登录成功返回User对象
         }
 
@@ -78,19 +87,28 @@ public class UserServiceImpl implements UserService {
 
     //用户登录方式二
     @Override
-    public String userLoginUseValidateCode(User user,HttpSession session) {
+    public String userLoginUseValidateCode(User user,HttpSession session,String code) {
+        Map valueStack = new HashMap();
         if(user.getPhone() != null && user.getPhone().length() > 0){
             //判断该用户是否存在
             User loginUser = userMapper.selectUserByPhone(user.getPhone());
-            if(loginUser != null){
-                //将对象放入session中
-                session.setAttribute("user",loginUser);
-                //处理密码为空
-                loginUser.setPassword("");
-                //将值对象转换成json并返回
 
-                JSONArray json = JSONArray.fromObject(loginUser);
-                return json.toString();//登录成功返回User对象
+            if(loginUser != null){
+                if (loginUser.getCode().equals(code)){
+                    //将对象放入session中
+                    session.setAttribute("user",loginUser);
+                    //去除code
+                    loginUser.setCode("");
+                    userMapper.updateByIdSelective(loginUser);
+                    //处理密码为空
+                    loginUser.setPassword("");
+                    //将值对象转换成json并返回
+                    valueStack.put("user",loginUser);
+                    valueStack.put("session", UUID.randomUUID().toString());
+                    JSONArray json = JSONArray.fromObject(valueStack);
+                    return json.toString();//登录成功返回User对象
+                }
+
             }
         }
         //前端获取验证码成功时，请求登录，如果用户不存在则cann't login提示用户需要注册
@@ -100,7 +118,7 @@ public class UserServiceImpl implements UserService {
     //发送验证码
     @Override
     public String sendValidateCode() {
-        return new SendValidateCode().testCode();
+        return SendValidateCode.testCode();
     }
 
     //用户退出
@@ -114,26 +132,52 @@ public class UserServiceImpl implements UserService {
     @Override
     public String getBackPassword(String phone) {
         //用户输入手机后
-        getValidateCodeByPhone(phone);
-        return "getFailure";//没有对应手机的的用户
+
+        return getValidateCodeByPhone(phone);//没有对应手机的的用户
     }
+    //用户修改密码
+    @Override
+    public String updatePwd(User user, String code) {
+        //
+        if (user.getPhone() != null && user.getPassword() != null && code != null){
+            User updateUser = userMapper.selectUserByPhone(user.getPhone());
+            if (updateUser.getCode().equals(code)){
+                updateUser.setPassword(user.getPassword());
+
+                userMapper.updateByIdSelective(updateUser);
+                return "updatePwdSuccess";
+            }
+        }
+        return "updatePwdFailure";
+    }
+
     //用户信息修改
     @Override
     public String updateUserInfo(User user) {
         if (user != null && user.getId() != null){
             userMapper.updateByIdSelective(user);
-            return "updateUserInfoSuccess";
+
+            User updateUser = userMapper.selectById(user.getId());
+            return JSONArray.fromObject(updateUser).toString();
         }
         return "updateUserInfoFailure";//提示无用户标识
     }
     //通过手机获取验证码
     @Override
     public String getValidateCodeByPhone(String phone) {
+        System.out.println("phone:"+phone);
         //用户输入手机后
         if (phone != null && phone.length() > 0){
             User getValidateCodeUser = userMapper.selectUserByPhone(phone);
+            System.out.println("user:"+getValidateCodeUser);
             if (getValidateCodeUser != null){
-                return sendValidateCode();
+
+                String code = sendValidateCode();
+                getValidateCodeUser.setCode(code);
+
+                userMapper.updateByIdSelective(getValidateCodeUser);
+
+                return code;
             }
         }
         return "getValidateCodeFailure";//提示没有对应的手机用户

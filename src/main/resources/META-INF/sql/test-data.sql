@@ -65,12 +65,13 @@ values('6','3','报警日志','湿度过高','正常','2018-01-31 20:50:37');
 
 
 /*用户表*/
-insert into `user` (`id`, `family_id`, `username`, `nickname`,`password`, `email`, `phone`, `photo`, `role`, `code`, `status`, `register_time`)
-values('1','1','caoxin','caoxin','111111','123456@qq.com','13535570616','img/cjk1.jpg','管理员',NULL,'正常','2018-01-31 21:03:17');
-insert into `user` (`id`, `family_id`, `username`, `password`, `email`, `phone`, `photo`, `role`, `code`, `status`, `register_time`)
-values('2','2','weisheng','111111','123798@qq.com','13514561284','img/cjk2.jpg','管理员',NULL,'正常','2018-02-01 16:58:46');
-insert into `user` (`id`, `family_id`, `username`, `password`, `email`, `phone`, `photo`, `role`, `code`, `status`, `register_time`)
-values('3','3','tianzhao','111111','123654@qq.com','13002090126','img/cjk3.jpg','管理员',NULL,'正常','2018-01-31 21:10:04');
+/*用户表*/
+INSERT INTO `user` (`id`,  `username`, `nickname`,`password`, `email`, `phone`, `photo`, `role`, `code`, `status`, `register_time`)
+VALUES('1','caoxin','caoxin','111111','123456@qq.com','13535570616','img/cjk1.jpg','管理员',NULL,'正常','2018-01-31 21:03:17');
+INSERT INTO `user` (`id`, `username`, `password`, `email`, `phone`, `photo`, `role`, `code`, `status`, `register_time`)
+VALUES('2','weisheng','111111','123798@qq.com','13514561284','img/cjk2.jpg','管理员',NULL,'正常','2018-02-01 16:58:46');
+INSERT INTO `user` (`id`, `username`, `password`, `email`, `phone`, `photo`, `role`, `code`, `status`, `register_time`)
+VALUES('3','tianzhao','111111','123654@qq.com','13002090126','img/cjk3.jpg','管理员',NULL,'正常','2018-01-31 21:10:04');
 
 
 /*传感器数据 1.光照传感器 2.温度传感器 3.容量传感器*/

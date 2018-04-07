@@ -18,11 +18,11 @@ public class FamilyController {
      * @param
      * @return
      */
-    @RequestMapping(value = "/family/{familyId}",method = RequestMethod.GET)
-    @ResponseBody
-    public String selectFamilyById(@PathVariable Integer familyId){
-        return familyService.SelectFamilyById(familyId);
-    }
+//    @RequestMapping(value = "/family/{familyId}",method = RequestMethod.GET)
+//    @ResponseBody
+//    public String selectFamilyById(@PathVariable Integer familyId){
+//        return familyService.SelectFamilyById(familyId);
+//    }
 
 
     /**
@@ -47,9 +47,9 @@ public class FamilyController {
         return "familyService.joinFaimly(userId,familyUniqueCode)";
     }
 
-    @RequestMapping(value = "/family",method = RequestMethod.PUT)
-    @ResponseBody
-    public String joinFamily(@RequestParam Family family){
-        return familyService.updateFaimly(family);
-    }
+//    @RequestMapping(value = "/family",method = RequestMethod.PUT)
+//    @ResponseBody
+//    public String joinFamily(@RequestParam Family family){
+//        return familyService.updateFaimly(family);
+//    }
 }

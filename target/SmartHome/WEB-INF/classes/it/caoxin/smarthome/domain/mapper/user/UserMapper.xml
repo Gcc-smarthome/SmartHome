@@ -4,9 +4,12 @@
   
   <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.User">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="family_id" jdbcType="INTEGER" property="familyId" />
     <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
     <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="birthday" jdbcType="VARCHAR" property="birthday" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="photo" jdbcType="VARCHAR" property="photo" />
@@ -18,7 +21,7 @@
   
   
   <sql id="Base_Column_List">
-    id, family_id, username, password, nickname,email, phone, photo, role, code, status, register_time
+    id, nickname username, password,sex,address,birthday, nickname,email, phone, photo, role, code, status, register_time
   </sql>
   
   
@@ -27,6 +30,13 @@
     <include refid="Base_Column_List" />
     from user
     where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectUserByPhone" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where phone = #{arg0,jdbcType=VARCHAR}
   </select>
 
   <select id="selectByUsernameAndPassword" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
@@ -46,14 +56,14 @@
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into user (family_id, username, password,nickname,
+    insert into user ( username, password,nickname,
       email, phone, photo, 
       role, code, status, 
-      register_time)
-    values (#{familyId,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      register_time,sex,birthday,address)
+    values ( #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
       #{nickname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR},
       #{role,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
-      #{registerTime,jdbcType=TIMESTAMP})
+      #{registerTime,jdbcType=TIMESTAMP},#{sex,jdbcType=VARCHAR},#{birthday,jdbcType=VARCHAR},#{address,jdbcType=VARCHAR})
   </insert>
   
   
@@ -63,9 +73,6 @@
     </selectKey>
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="familyId != null">
-        family_id,
-      </if>
       <if test="username != null">
         username,
       </if>
@@ -96,11 +103,17 @@
       <if test="registerTime != null">
         register_time,
       </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="familyId != null">
-        #{familyId,jdbcType=INTEGER},
-      </if>
       <if test="username != null">
         #{username,jdbcType=VARCHAR},
       </if>
@@ -131,6 +144,15 @@
       <if test="registerTime != null">
         #{registerTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
     </trim>
   </insert>
   
@@ -138,9 +160,6 @@
   <update id="updateByIdSelective" parameterType="it.caoxin.smarthome.domain.model.User">
     update user
     <set>
-      <if test="familyId != null">
-        family_id = #{familyId,jdbcType=INTEGER},
-      </if>
       <if test="username != null">
         username = #{username,jdbcType=VARCHAR},
       </if>
@@ -171,6 +190,15 @@
       <if test="registerTime != null">
         register_time = #{registerTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -178,7 +206,7 @@
   
   <update id="updateById" parameterType="it.caoxin.smarthome.domain.model.User">
     update user
-    set family_id = #{familyId,jdbcType=INTEGER},
+    set
       username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       nickname = #{nickname,jdbcType=VARCHAR},
@@ -188,23 +216,14 @@
       role = #{role,jdbcType=VARCHAR},
       code = #{code,jdbcType=VARCHAR},
       status = #{status,jdbcType=VARCHAR},
-      register_time = #{registerTime,jdbcType=TIMESTAMP}
+      register_time = #{registerTime,jdbcType=TIMESTAMP},
+      sex = #{sex,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <select id="selectUserByFamilyId" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from user
-    where family_id = #{id,jdbcType=INTEGER}
-  </select>
 
-  <select id="selectUserByFamilyPhone" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from user
-    where phone = #{phone,jdbcType=VARCHAR}
-  </select>
 
   <select id="selectByPhoneAndPassword" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
     select

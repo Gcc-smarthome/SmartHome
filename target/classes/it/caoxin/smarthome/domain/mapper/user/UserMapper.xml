@@ -36,7 +36,7 @@
     select
     <include refid="Base_Column_List" />
     from user
-    where phone = #{phone,jdbcType=VARCHAR}
+    where phone = #{arg0,jdbcType=VARCHAR}
   </select>
 
   <select id="selectByUsernameAndPassword" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">

@@ -233,6 +233,7 @@ public class FamilyServiceImpl implements FamilyService {
         return "you are no a manager";
     }
 
+
     //增加家庭管理员
 
 //    //修改家庭信息

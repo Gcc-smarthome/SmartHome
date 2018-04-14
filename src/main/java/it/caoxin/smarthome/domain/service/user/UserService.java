@@ -1,7 +1,9 @@
 package it.caoxin.smarthome.domain.service.user;
 
 import it.caoxin.smarthome.domain.model.User;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public interface UserService {
@@ -53,5 +55,10 @@ public interface UserService {
     通过手机获得验证码
      */
     String getValidateCodeByPhone(String phone);
+
+    /*
+    用户上传图片
+     */
+    String uploadUserPhoto(MultipartFile file, HttpServletRequest request,User user);
 
 }

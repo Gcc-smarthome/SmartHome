@@ -102,7 +102,21 @@
         select
         <include refid="Base_Column_List" />
         from userfamily
-        where user_id = #{arg0,jdbcType=INTEGER} AND family_id = #{arg1,jdbcType=INTEGER};
+        where user_id = #{arg0,jdbcType=INTEGER} AND family_id = #{arg1,jdbcType=INTEGER} AND status ='正常';
+    </select>
+
+    <select id="selectByUserId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from userfamily
+        where user_id = #{arg0,jdbcType=INTEGER} AND status = '正常';
+    </select>
+
+    <select id="selectByFamilyId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from userfamily
+        where family_id = #{arg0,jdbcType=INTEGER} AND status = '正常';
     </select>
 </mapper>
 

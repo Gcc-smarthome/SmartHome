@@ -15,12 +15,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.json.Json;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 @Service("familyService")
@@ -34,14 +32,39 @@ public class FamilyServiceImpl implements FamilyService {
     @Autowired
     private FamilyImgMapper  familyImgMapper;
 
+    @Autowired
+    private UserMapper userMapper;
+
     private  SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd hh:mm;ss");
+
+    //查看所有家庭
+    @Override
+    public String getFaimlysByUser(User user) {
+        List<Family> families = new ArrayList<Family>();
+        List<UserFamily> userFamilies = null;
+        if (user != null) {
+             userFamilies = userFamilyMapper.selectByUserId(user.getId());
+        }
+        for (UserFamily userFamily : userFamilies){
+            Family family = familyMapper.selectById(userFamily.getFamilyId());
+            FamilyImg img = familyImgMapper.selectByDefaultFamilyId(family.getId());
+            if (img != null){
+                family.setPhoto(img.getImgUrl());
+            }
+            families.add(family);
+        }
+
+
+        return JSONArray.fromObject(families).toString();
+    }
+
     //创建家庭
     @Override
     public String createFamily(User user, Family family) {
-        if (user.getId() != null){
+        if (user.getId() == null){
             return "无法获取用户主标识";
         }
-        if (family.getFamilyName() != null){
+        if (family.getFamilyName() == null){
             return "家庭信息不能为空";
         }
         familyMapper.insertSelective(family);
@@ -154,9 +177,13 @@ public class FamilyServiceImpl implements FamilyService {
     public boolean isFamilyManager(User user, Family family) {
         if (user.getId() != null && family.getId() != null){
             UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), family.getId());
-            if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER)){
-                return true;
+            System.out.println("userFamily:------------"+userFamily);
+            if(userFamily != null){
+                if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER)){
+                    return true;
+                }
             }
+
         }
         return false;
     }
@@ -167,8 +194,12 @@ public class FamilyServiceImpl implements FamilyService {
         if (isFamilyManager(user,family)){
             Family deleteFamily = familyMapper.selectById(family.getId());
             deleteFamily.setStatus(Family.STATUS_DELETE);
-
             familyMapper.updateByIdSelective(deleteFamily);
+
+            UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), family.getId());
+            userFamily.setStatus(UserFamily.STATUS_DELETE);
+            userFamilyMapper.updateSelect(userFamily);
+
             return "deleteFamilySuccess";
         }
         return "deleteFamilyFailure";
@@ -234,6 +265,36 @@ public class FamilyServiceImpl implements FamilyService {
     }
 
 
+
+
+    //查看家庭中的成员
+    @Override
+    public String getAllFamilyMember(Family family){
+        List<User> users = new ArrayList<User>();
+        List<UserFamily> userFamilies = null;
+        if (family != null) {
+            userFamilies = userFamilyMapper.selectByFamilyId(family.getId());
+
+            for (UserFamily userFamily : userFamilies){
+                User Selectuser = userMapper.selectById(userFamily.getUserId());
+
+                users.add(Selectuser);
+            }
+
+            return JSONArray.fromObject(users).toString();
+        }
+        return  "getUserFail";
+    }
+
+    @Override
+    public String getFamilyById(Family family) {
+        Family familyInfo = familyMapper.selectById(family.getId());
+        FamilyImg img = familyImgMapper.selectByDefaultFamilyId(family.getId());
+        if (img != null) {
+            familyInfo.setPhoto(img.getImgUrl());
+        }
+        return JSONArray.fromObject(familyInfo).toString();
+    }
     //增加家庭管理员
 
 //    //修改家庭信息

@@ -19,4 +19,6 @@ public interface FamilyImgMapper {
     FamilyImg selectById(Integer id);
 
     List<FamilyImg> selectByFamilyId(Integer familyId);
+
+    FamilyImg selectByDefaultFamilyId(Integer familyId);
 }

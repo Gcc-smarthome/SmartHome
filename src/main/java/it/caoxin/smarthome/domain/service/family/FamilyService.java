@@ -7,6 +7,10 @@ import it.caoxin.smarthome.domain.model.User;
 
 public interface FamilyService {
     /*
+    查看家庭
+     */
+    String getFaimlysByUser(User user);
+    /*
     创建家庭
      */
     String createFamily(User user,Family family);
@@ -59,7 +63,13 @@ public interface FamilyService {
     /*
     查看家庭用户
      */
-//    String familyMember(String)
+    String getAllFamilyMember(Family family);
+
+
+    /*
+    通过id查看家庭
+     */
+    String getFamilyById(Family family);
 //    String SelectFamilyById(Integer id);
 
 

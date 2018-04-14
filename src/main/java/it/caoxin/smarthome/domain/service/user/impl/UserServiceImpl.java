@@ -9,10 +9,15 @@ import it.caoxin.smarthome.domain.model.Family;
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.user.UserService;
 import net.sf.json.JSONArray;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -25,6 +30,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
+    private static final String userPhotoPath = "/upload/user/";
     //手机验证
     @Override
     public String isRegister(String phone) {
@@ -181,6 +187,32 @@ public class UserServiceImpl implements UserService {
             }
         }
         return "getValidateCodeFailure";//提示没有对应的手机用户
+    }
+
+    //用户上传图片
+    @Override
+    public String uploadUserPhoto(MultipartFile file, HttpServletRequest request, User user) {
+        //上传文件：
+        String uploadPath = request.getServletContext().getRealPath("/upload/user");
+        String fileName = UUID.randomUUID()+file.getOriginalFilename();
+
+        try {
+            FileUtils.copyInputStreamToFile(file.getInputStream(),new File(uploadPath,fileName));
+            System.out.print("上传路径是："+uploadPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("添加图片出错。。。");
+        }
+
+        String photoUrl = userPhotoPath + fileName;
+        user.setPhoto(photoUrl);
+        userMapper.updateByIdSelective(user);
+
+        Map valueStack = new HashMap();
+        User updateUser = userMapper.selectById(user.getId());
+        valueStack.put("user",updateUser);
+        return JSONArray.fromObject(valueStack).toString();
+
     }
 
 

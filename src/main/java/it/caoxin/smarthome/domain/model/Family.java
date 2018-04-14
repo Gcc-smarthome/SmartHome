@@ -60,6 +60,16 @@ public class Family implements Serializable {
 
     private List<Device> deviceList;
 
+    private String photo;
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
     private static final long serialVersionUID = 1L;
 
     public Family() {
@@ -221,6 +231,7 @@ public class Family implements Serializable {
                 ", status='" + status + '\'' +
                 ", registerTime=" + registerTime +
                 ", deviceList=" + deviceList +
+                ", photo='" + photo + '\'' +
                 '}';
     }
 }

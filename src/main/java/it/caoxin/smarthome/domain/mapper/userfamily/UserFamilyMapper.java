@@ -1,5 +1,6 @@
 package it.caoxin.smarthome.domain.mapper.userfamily;
 
+import it.caoxin.smarthome.domain.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -19,4 +20,8 @@ public interface UserFamilyMapper {
     UserFamily selectById(Integer id);
 
     UserFamily selectByUserIdAndFamilyId(Integer userId,Integer familyId);
+
+    List<UserFamily> selectByUserId(Integer userId);
+
+    List<UserFamily> selectByFamilyId(Integer userId);
 }

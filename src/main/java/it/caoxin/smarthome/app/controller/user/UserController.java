@@ -5,7 +5,9 @@ import it.caoxin.smarthome.domain.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -94,7 +96,13 @@ public class UserController {
         System.out.println("用户退出...");
         return userService.userLogOut(session);
     }
-
+    //用户上传图片
+    @RequestMapping(value = "/uploadUserPhoto",method = RequestMethod.POST)
+    @ResponseBody
+    public String logout(MultipartFile file, HttpServletRequest request, User user){
+        System.out.println("用户上传图片...");
+        return userService.uploadUserPhoto(file,request,user);
+    }
 
 
 //    @RequestMapping(value = "/register",method = RequestMethod.POST)

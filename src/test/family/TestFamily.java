@@ -65,7 +65,7 @@ public class TestFamily {
 
     @Test
     public void testSelectByUniqueCode(){
-        Family family = familyMapper.selectById(1);
+        Family family = familyMapper.selectByUniqueCodeForUpdate("test0003");
         System.out.println("family:"+family.toString());
     }
 

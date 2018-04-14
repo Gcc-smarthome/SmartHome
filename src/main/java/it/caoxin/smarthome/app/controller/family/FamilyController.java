@@ -76,13 +76,6 @@ public class FamilyController {
         return familyService.updateFamilyInfo(user,family);
     }
 
-    /**
-     *
-     */
 
-//    @RequestMapping(value = "/family",method = RequestMethod.PUT)
-//    @ResponseBody
-//    public String joinFamily(@RequestParam Family family){
-//        return familyService.updateFaimly(family);
-//    }
+
 }

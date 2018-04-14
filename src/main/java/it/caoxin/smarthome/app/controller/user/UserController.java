@@ -105,21 +105,7 @@ public class UserController {
     }
 
 
-//    @RequestMapping(value = "/register",method = RequestMethod.POST)
-//    @ResponseBody
-//    public String register(User user){
-//        //需要发送手机号和密码
-//        System.out.println("用户注册...");
-//        System.out.println("user:"+user);
-//        return userService.userRegister(user);
-//    }
 
-//    @RequestMapping(value = "/user/{userId}",method = RequestMethod.GET)
-//    @ResponseBody
-//    public String getUserInfo(@PathVariable Integer userId){
-//
-//        return userService.getUserInfo(userId);
-//    }
 
 
 

@@ -11,6 +11,10 @@ public interface FamilyMapper {
 
     Family selectById(Integer id);
 
+    Family selectByIdForUpdate(Integer id);
+
+    Family selectByUniqueCodeForUpdate(String uniqueCode);
+
     int updateByIdSelective(Family family);
 
     int updateById(Family family);

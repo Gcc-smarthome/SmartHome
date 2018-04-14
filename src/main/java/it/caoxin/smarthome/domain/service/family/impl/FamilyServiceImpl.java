@@ -20,7 +20,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-
+@Transactional
 @Service("familyService")
 public class FamilyServiceImpl implements FamilyService {
     @Autowired
@@ -82,82 +82,88 @@ public class FamilyServiceImpl implements FamilyService {
         return "createFamilySuccess";
     }
 
-    //加入家庭管理员
+
+
+    //加入家庭 管理员
     @Override
-    public String joinFaimlyOfManager(User user, Family family) {
+    public String joinFaimlyOfManager(User user, Family family,String validateCode) {
 
         if (user.getId() != null && family.getId() != null){
             UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), family.getId());
 
+            Family validateFamily = familyMapper.selectByIdForUpdate(family.getId());
             //如果该用户是管理员。
-            if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER)){
-                //判断这个家庭的特殊码是否为空
-                Family validateFamily = familyMapper.selectById(family.getId());
-                if (validateFamily.getFamilyUniqueCode() == null){
-                    //获取当前时间
-                    String dateTime = sf.format(new Date());
-                    System.out.println("dateTime"+dateTime);
+            if (userFamily != null){
+                if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER)){
+                    //判断这个家庭的特殊码是否为空
+                    if (validateFamily.getFamilyUniqueCode() == null){
+                        //放入数据库
+                        validateFamily.setFamilyUniqueCode(validateCode);
+                        familyMapper.updateByIdSelective(validateFamily);
+                    }else {
 
-                    //获取验证码
-                    String validateCode = SendValidateCode.testCode();
+                        //添加一个验证码
+                        validateFamily.setFamilyUniqueCode(validateFamily.getFamilyUniqueCode()+","+validateCode);
+                        familyMapper.updateByIdSelective(validateFamily);
 
-                    //组装成特殊码
-                    String uniqueCode = dateTime+":"+validateCode;
+                    }
 
-                    //放入数据库
-                    validateFamily.setFamilyUniqueCode(uniqueCode);
-                    familyMapper.updateByIdSelective(validateFamily);
+                    return "addVaildateCodeSuccess";
                 }else {
-                    return "getValidateFailure";//提示另外的管理员正在操做，暂时无法加入该家庭
+                    return "this user is not a manager";
                 }
-            }else {
-                return "this user is not a manager";
             }
+
         }
         return "joinFailure";
     }
 
-    //加入家庭成员
+    //加入家庭 成员
     @Override
     public String joinFamilyOfMember(User user,String uniqueCode)  {
-        //拿到当前时间
-        Date dateTimeOfMember = new Date();
-        Family joinFamily = familyMapper.selectByUniqueCode(uniqueCode);
 
-        String dateTime = null;
-        //解析家庭中的uniqueCode
-        if (joinFamily.getFamilyUniqueCode() != null && joinFamily.getFamilyUniqueCode().length() > 0){
 
-            String familyUniqueCode = joinFamily.getFamilyUniqueCode();
-            String[] fields = familyUniqueCode.split(":");
-            dateTime = fields[0];
+        Family joinFamily = null;
+        if (uniqueCode != null && uniqueCode.length() > 0){
+             joinFamily = familyMapper.selectByUniqueCodeForUpdate(uniqueCode);
+
+             if(user.getId() != null && joinFamily.getId() != null){
+                 UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), joinFamily.getId());
+
+                 if (userFamily != null){
+                     return "已加入家庭，不能重复加入";
+                 }
+             }
+
         }
+        if (joinFamily != null){
+            //解析家庭中的uniqueCode
+            if (joinFamily.getFamilyUniqueCode() != null && joinFamily.getFamilyUniqueCode().length() > 0){
 
-        Date dateTimeOfManager = null;
-        try {
-             dateTimeOfManager = sf.parse(dateTime);
-            long time = (dateTimeOfMember.getTime() - dateTimeOfManager.getTime()) / (1000 * 60);
-            System.out.println("time:"+time);
-            if (time <= 6){
-                if (joinFamily.getFamilyUniqueCode().equals(uniqueCode)){
-                    if (user.getId() != null){
-                        UserFamily userFamily = new UserFamily();
-                        userFamily.setFamilyId(joinFamily.getId());
-                        userFamily.setUserId(user.getId());
-                        userFamily.setFamilyRole(UserFamily.ROLE_MEMBER);
-                        userFamily.setStatus(UserFamily.STATUS_NORMAL);
+                String familyUniqueCode = joinFamily.getFamilyUniqueCode();
 
-                        userFamilyMapper.insertSelective(userFamily);
-                        return "joinFamilySuccess";
+                String[]  fields = familyUniqueCode.split(",");
+
+                if(fields != null){
+                    for (String validateCode : fields){
+                        if (validateCode.equals(uniqueCode)){
+                            UserFamily userFamily = new UserFamily();
+                            userFamily.setFamilyId(joinFamily.getId());
+                            userFamily.setUserId(user.getId());
+                            userFamily.setFamilyRole(UserFamily.ROLE_MEMBER);
+                            userFamily.setStatus(UserFamily.STATUS_NORMAL);
+
+                            userFamilyMapper.insertSelective(userFamily);
+
+
+                            return "joinFamilySuccess";
+                        }
                     }
-                }else{
-                    return "validateCodenotTrue";//验证码不正确
+                } else{
+                    //验证码不正确
+                    return "validateCodenotTrue";
                 }
-            }else {
-                return "valudateCodeOverDue";//验证码过期
             }
-        } catch (ParseException e) {
-            e.printStackTrace();
         }
 
         return "joinFamilyFailure";
@@ -175,11 +181,13 @@ public class FamilyServiceImpl implements FamilyService {
     //判断是否是一个家庭管理员
     @Override
     public boolean isFamilyManager(User user, Family family) {
+
         if (user.getId() != null && family.getId() != null){
             UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), family.getId());
-            System.out.println("userFamily:------------"+userFamily);
+//            System.out.println("userFamily:------------"+userFamily);
             if(userFamily != null){
-                if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER)){
+                if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER) ||
+                        userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER_SECOND)){
                     return true;
                 }
             }
@@ -265,23 +273,36 @@ public class FamilyServiceImpl implements FamilyService {
     }
 
 
-
-
     //查看家庭中的成员
     @Override
     public String getAllFamilyMember(Family family){
-        List<User> users = new ArrayList<User>();
+
+        Map valueStack = new HashMap<String,List>();
+        List creator = new ArrayList<User>();
+        List member = new ArrayList<User>();
+        List mamager = new ArrayList<User>();
         List<UserFamily> userFamilies = null;
-        if (family != null) {
+        if (family.getId() != null) {
             userFamilies = userFamilyMapper.selectByFamilyId(family.getId());
 
             for (UserFamily userFamily : userFamilies){
-                User Selectuser = userMapper.selectById(userFamily.getUserId());
+               User selectUser = userMapper.selectById(userFamily.getUserId());
+                if (selectUser != null){
+                    if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER)){
+                        creator.add(selectUser);
+                        valueStack.put("创建者",creator);
 
-                users.add(Selectuser);
+                    }else if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER_SECOND)){
+                        mamager.add(selectUser);
+                        valueStack.put("管理员",mamager);
+                    }else{
+                        member.add(selectUser);
+                        valueStack.put("普通成员",member);
+                    }
+                }
             }
 
-            return JSONArray.fromObject(users).toString();
+            return JSONArray.fromObject(valueStack).toString();
         }
         return  "getUserFail";
     }
@@ -295,6 +316,31 @@ public class FamilyServiceImpl implements FamilyService {
         }
         return JSONArray.fromObject(familyInfo).toString();
     }
+
+    @Override
+    public String getAllNormalMember(User user, Family family) {
+        if(isFamilyManager(user,family)) {
+            List member = new ArrayList<User>();
+            List<UserFamily> userFamilies = null;
+            if (family.getId() != null) {
+                userFamilies = userFamilyMapper.selectByFamilyId(family.getId());
+
+                for (UserFamily userFamily : userFamilies) {
+                    User selectUser = userMapper.selectById(userFamily.getUserId());
+                    if (selectUser != null) {
+                        if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MEMBER)) {
+                            member.add(selectUser);
+                        }
+                    }
+                }
+
+                return JSONArray.fromObject(member).toString();
+            }
+        }
+        return  "getUserFail";
+    }
+
+
     //增加家庭管理员
 
 //    //修改家庭信息

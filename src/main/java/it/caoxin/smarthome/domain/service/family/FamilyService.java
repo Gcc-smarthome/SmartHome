@@ -18,7 +18,7 @@ public interface FamilyService {
     /*
     加入家庭:管理员
      */
-    String joinFaimlyOfManager(User user,Family family);
+    String joinFaimlyOfManager(User user,Family family,String validateCode);
 
     /*
     加入家庭:用户
@@ -70,7 +70,12 @@ public interface FamilyService {
     通过id查看家庭
      */
     String getFamilyById(Family family);
-//    String SelectFamilyById(Integer id);
+
+    /*
+    查看这个家庭的普通成员
+     */
+    String getAllNormalMember(User user,Family family);
+
 
 
 }

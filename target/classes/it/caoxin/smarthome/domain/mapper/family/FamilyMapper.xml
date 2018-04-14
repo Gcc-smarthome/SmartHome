@@ -41,6 +41,14 @@
     WHERE f.id = #{id,jdbcType=INTEGER}
   </select>
 
+  <select id="selectByIdForUpdate" parameterType="java.lang.Integer" resultMap="SelectResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM family
+    WHERE id = #{id,jdbcType=INTEGER}
+    for UPDATE;
+  </select>
+
   <select id="selectByUniqueCode" parameterType="java.lang.String" resultMap="SelectResultMap">
     select
     f.id AS id, family_unique_code, family_name, family_address, lat, lon, temperature, humidity,
@@ -50,6 +58,13 @@
     from family f LEFT JOIN device d
     ON f.id = d.family_id
     WHERE f.family_unique_code = #{uniqueCode,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectByUniqueCodeForUpdate" parameterType="java.lang.String" resultMap="SelectResultMap">
+    select
+    <include refid="Base_Column_List" />
+    FROM family
+    WHERE family_unique_code LIKE #{uniqueCode,jdbcType=VARCHAR}
   </select>
 
   <delete id="deleteById" parameterType="java.lang.Integer">

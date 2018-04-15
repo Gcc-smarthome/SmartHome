@@ -13,16 +13,18 @@ public class UserFamily {
     private Integer familyId;
     private Integer userId;
     private String familyRole;
+//    private String uniqueCode;
     private String status;
 
     public UserFamily() {
     }
 
-    public UserFamily(Integer id, Integer familyId, Integer userId, String familyRole, String status) {
+    public UserFamily(Integer id, Integer familyId, Integer userId, String familyRole, String uniqueCode, String status) {
         this.id = id;
         this.familyId = familyId;
         this.userId = userId;
         this.familyRole = familyRole;
+//        this.uniqueCode = uniqueCode;
         this.status = status;
     }
 
@@ -65,6 +67,14 @@ public class UserFamily {
     public void setStatus(String status) {
         this.status = status;
     }
+
+//    public String getUniqueCode() {
+//        return uniqueCode;
+//    }
+//
+//    public void setUniqueCode(String uniqueCode) {
+//        this.uniqueCode = uniqueCode;
+//    }
 
     @Override
     public String toString() {

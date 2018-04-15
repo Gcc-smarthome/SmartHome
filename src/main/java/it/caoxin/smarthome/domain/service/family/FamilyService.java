@@ -4,6 +4,9 @@ import com.sun.org.apache.bcel.internal.generic.FADD;
 import it.caoxin.smarthome.domain.model.Family;
 import it.caoxin.smarthome.domain.model.FamilyImg;
 import it.caoxin.smarthome.domain.model.User;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
 
 public interface FamilyService {
     /*
@@ -41,21 +44,6 @@ public interface FamilyService {
     String deleteFamily(User user,Family family);
 
     /*
-    添加家庭图片
-     */
-    String addFamilyImg(User user, Family family, FamilyImg familyImg);
-
-    /*
-    删除家庭图片
-     */
-    String deleteFamilyImg(User user, Family family, FamilyImg familyImg);
-
-    /*
-    查看家庭图片
-     */
-    String familyImgs(Family family);
-
-    /*
     增加家庭管理员
      */
     String addFamilyManager(User user,Family family,Integer userId);
@@ -76,6 +64,9 @@ public interface FamilyService {
      */
     String getAllNormalMember(User user,Family family);
 
-
+    /*
+    删除成员
+     */
+    String deleteNormalMember(User user,Family family,Integer delUserId);
 
 }

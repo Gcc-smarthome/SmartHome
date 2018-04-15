@@ -7,6 +7,7 @@
         <result column="family_id" property="familyId" jdbcType="INTEGER"/>
         <result column="user_id" property="userId" jdbcType="INTEGER"/>
         <result column="family_role" property="familyRole" jdbcType="VARCHAR"/>
+        <!--<result column="uniquecode" property="uniqueCode" jdbcType="VARCHAR"/>-->
         <result column="status" property="status" jdbcType="VARCHAR"/>
     </resultMap>
 
@@ -16,6 +17,7 @@
         family_id,
         user_id,
         family_role,
+--        uniquecode,
         status
     </sql>
 
@@ -26,12 +28,14 @@
             family_id,
             user_id,
             family_role,
+            uniquecode,
             status
         ) VALUES (
             #{userFamily.id,jdbcType=INTEGER},
             #{userFamily.familyId,jdbcType=INTEGER},
             #{userFamily.userId,jdbcType=INTEGER},
             #{userFamily.familyRole,jdbcType=VARCHAR},
+--              #{userFamily.uniqueCode,jdbcType=VARCHAR}
             #{userFamily.status,jdbcType=VARCHAR}
         )
     </insert>
@@ -44,6 +48,7 @@
             <if test="userFamily.familyId!=null"> family_id,</if>
             <if test="userFamily.userId!=null"> user_id,</if>
             <if test="userFamily.familyRole!=null"> family_role,</if>
+        <!--<if test="userFamily.uniqueCode!=null"> uniquecode,</if>-->
             <if test="userFamily.status!=null"> status,</if>
         </trim>
         VALUES
@@ -56,6 +61,8 @@
             </if>
             <if test="userFamily.familyRole!=null">#{userFamily.familyRole,jdbcType=VARCHAR},
             </if>
+            <!--<if test="userFamily.uniqueCode!=null">#{userFamily.uniqueCode,jdbcType=VARCHAR},-->
+            <!--</if>-->
             <if test="userFamily.status!=null">#{userFamily.status,jdbcType=VARCHAR},
             </if>
         </trim>
@@ -98,7 +105,7 @@
         where id = #{id,jdbcType=INTEGER}
     </select>
 
-    <select id="selectByUserIdAndFamilyId" resultMap="BaseResultMap">
+        <select id="selectByUserIdAndFamilyId" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List" />
         from userfamily

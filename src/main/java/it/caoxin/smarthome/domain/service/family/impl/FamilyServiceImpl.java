@@ -11,11 +11,16 @@ import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.model.UserFamily;
 import it.caoxin.smarthome.domain.service.family.FamilyService;
 import net.sf.json.JSONArray;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.json.Json;
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -23,6 +28,8 @@ import java.util.*;
 @Transactional
 @Service("familyService")
 public class FamilyServiceImpl implements FamilyService {
+
+
     @Autowired
     private FamilyMapper familyMapper;
 
@@ -82,8 +89,6 @@ public class FamilyServiceImpl implements FamilyService {
         return "createFamilySuccess";
     }
 
-
-
     //加入家庭 管理员
     @Override
     public String joinFaimlyOfManager(User user, Family family,String validateCode) {
@@ -121,50 +126,56 @@ public class FamilyServiceImpl implements FamilyService {
     //加入家庭 成员
     @Override
     public String joinFamilyOfMember(User user,String uniqueCode)  {
-
-
+        System.out.println("user:"+user.getId());
+        System.out.println("uniqueCode:"+uniqueCode);
         Family joinFamily = null;
         if (uniqueCode != null && uniqueCode.length() > 0){
+            System.out.println("--------------------");
              joinFamily = familyMapper.selectByUniqueCodeForUpdate(uniqueCode);
 
-             if(user.getId() != null && joinFamily.getId() != null){
-                 UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), joinFamily.getId());
+           if (joinFamily != null){
+               if(user.getId() != null && joinFamily.getId() != null){
+                   UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), joinFamily.getId());
 
-                 if (userFamily != null){
-                     return "已加入家庭，不能重复加入";
-                 }
-             }
+                   if (userFamily != null){
+                       return "已加入家庭，不能重复加入";
+                   }
+               }
 
-        }
-        if (joinFamily != null){
-            //解析家庭中的uniqueCode
-            if (joinFamily.getFamilyUniqueCode() != null && joinFamily.getFamilyUniqueCode().length() > 0){
+               if (joinFamily != null){
+                   //解析家庭中的uniqueCode
+                   if (joinFamily.getFamilyUniqueCode() != null && joinFamily.getFamilyUniqueCode().length() > 0){
 
-                String familyUniqueCode = joinFamily.getFamilyUniqueCode();
+                       String familyUniqueCode = joinFamily.getFamilyUniqueCode();
 
-                String[]  fields = familyUniqueCode.split(",");
+                       String[]  fields = familyUniqueCode.split(",");
 
-                if(fields != null){
-                    for (String validateCode : fields){
-                        if (validateCode.equals(uniqueCode)){
-                            UserFamily userFamily = new UserFamily();
-                            userFamily.setFamilyId(joinFamily.getId());
-                            userFamily.setUserId(user.getId());
-                            userFamily.setFamilyRole(UserFamily.ROLE_MEMBER);
-                            userFamily.setStatus(UserFamily.STATUS_NORMAL);
+                       if(fields != null){
+                           for (String validateCode : fields){
+                               if (validateCode.equals(uniqueCode)){
+                                   UserFamily userFamily = new UserFamily();
+                                   userFamily.setFamilyId(joinFamily.getId());
+                                   userFamily.setUserId(user.getId());
+                                   userFamily.setFamilyRole(UserFamily.ROLE_MEMBER);
+                                   userFamily.setStatus(UserFamily.STATUS_NORMAL);
 
-                            userFamilyMapper.insertSelective(userFamily);
+                                   userFamilyMapper.insertSelective(userFamily);
 
 
-                            return "joinFamilySuccess";
-                        }
-                    }
-                } else{
-                    //验证码不正确
-                    return "validateCodenotTrue";
-                }
+                                   return "joinFamilySuccess";
+                               }
+                           }
+                       } else{
+                           //验证码不正确
+                           return "validateCodenotTrue";
+                       }
+                   }
+               }
+
             }
-        }
+           }
+
+
 
         return "joinFamilyFailure";
     }
@@ -204,55 +215,21 @@ public class FamilyServiceImpl implements FamilyService {
             deleteFamily.setStatus(Family.STATUS_DELETE);
             familyMapper.updateByIdSelective(deleteFamily);
 
-            UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), family.getId());
-            userFamily.setStatus(UserFamily.STATUS_DELETE);
-            userFamilyMapper.updateSelect(userFamily);
-
+            List<UserFamily> userFamilyList = userFamilyMapper.selectByFamilyId(family.getId());
+            if (userFamilyList != null){
+                for (UserFamily userfamily:userFamilyList
+                     ) {
+                    userfamily.setStatus(UserFamily.STATUS_DELETE);
+                    userFamilyMapper.updateSelect(userfamily);
+                }
+            }
             return "deleteFamilySuccess";
         }
         return "deleteFamilyFailure";
     }
 
-    //添加家庭图片
-    @Override
-    public String addFamilyImg(User user, Family family, FamilyImg familyImg) {
-        if (isFamilyManager(user,family)){
-            if (familyImg != null){
-                familyImg.setFamilyId(family.getId());
-                familyImg.setStatus(FamilyImg.STATUS_NORMAL);
 
-                familyImgMapper.insertSelective(familyImg);
-                return "addFamilyImgSuccess";
-            }
-        }
-        return "addFamilyImgFailure";
-    }
 
-    //删除家庭图片
-    @Override
-    public String deleteFamilyImg(User user, Family family, FamilyImg familyImg) {
-        if (isFamilyManager(user,family)){
-            if (familyImg.getId() != null){
-                familyImg.setStatus(FamilyImg.STATUS_DELETE);
-
-                familyImgMapper.updateSelect(familyImg);
-            }else {
-                return "familyImg id is Null";
-            }
-        }
-        return null;
-    }
-
-    //查看家庭照片
-    @Override
-    public String familyImgs(Family family) {
-        if (family.getId() != null){
-            List<FamilyImg> familyImgs = familyImgMapper.selectByFamilyId(family.getId());
-
-            return JSONArray.fromObject(familyImgs).toString();
-        }
-        return "no family id";
-    }
 
     //增加家庭管理员
     @Override
@@ -271,8 +248,6 @@ public class FamilyServiceImpl implements FamilyService {
         }
         return "you are no a manager";
     }
-
-
     //查看家庭中的成员
     @Override
     public String getAllFamilyMember(Family family){
@@ -316,7 +291,7 @@ public class FamilyServiceImpl implements FamilyService {
         }
         return JSONArray.fromObject(familyInfo).toString();
     }
-
+    //获取普通成员
     @Override
     public String getAllNormalMember(User user, Family family) {
         if(isFamilyManager(user,family)) {
@@ -339,83 +314,29 @@ public class FamilyServiceImpl implements FamilyService {
         }
         return  "getUserFail";
     }
+    //删除普通成员
+    @Override
+    public String deleteNormalMember(User user, Family family, Integer delUserId) {
+        //先判断是否是管理员
+        if(isFamilyManager(user,family)){
+            UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(delUserId, family.getId());
+
+            if (userFamily != null){
+                if( userFamily.getStatus().equals(UserFamily.STATUS_NORMAL)){
+                    userFamily.setStatus(UserFamily.STATUS_DELETE);
+
+                    userFamilyMapper.updateSelect(userFamily);
+                    return "delete member success";
+                }
+            }else {
+                return "find not member";
+            }
+        }else {
+            return "you are not a member";
+        }
+        return "delete member failure";
+    }
 
 
-    //增加家庭管理员
 
-//    //修改家庭信息
-//    @Override
-//    public String SelectFamilyById(Integer id) {
-//        Family family = familyMapper.selectById(id);
-////        List<User> userList = userMapper.selectUserByFamilyId(id);
-//
-//        Map valueStack = new HashMap<String,Object>();
-//
-//        if(family != null) {
-//           valueStack.put("family",family);
-////           valueStack.put("userList",userList);
-//
-//            JSONArray jsonMap= JSONArray.fromObject(valueStack);
-//            return jsonMap.toString();
-//        }else{
-//            return "not found";
-//        }
-//    }
-
-//    @Override
-//    public String createFaimily(Integer userId,Family family) {
-//        Map<String,Object> returnMap = new HashMap<String, Object>();
-//        if (userId != null && familyMapper.selectByUniqueCode(family.getFamilyUniqueCode()) == null){
-//            User createFaimlyUser = userMapper.selectById(userId);
-//            //判断该用户家庭外键是否为空
-//            if(createFaimlyUser.getFamilyId() == null){
-//                //新建一个家庭
-//                family.setControlMode("手动");
-//                family.setStatus("正常");
-//                familyMapper.insert(family);
-//                //将用户角色改成主用户将用户外键添加上去
-//                createFaimlyUser.setRole(User.MAIN_MEMBER);
-//                createFaimlyUser.setFamilyId(family.getId());
-//                userMapper.updateByIdSelective(createFaimlyUser);
-//
-//                returnMap.put("status","添加成功");
-//                returnMap.put("family",familyMapper.selectById(family.getId()));
-//            }else{
-//                return "添加失败：该用户已经拥有家庭不能添加";
-//            }
-//        }else {
-//            return "添加失败：该用户没有传出用户主标识不能添加或家庭特定标识已经存在";
-//        }
-//        return JSONArray.fromObject(returnMap).toString();
-//    }
-
-//    @Override
-//    public String joinFaimly(Integer userId, String familyUniqueCode) {
-//        if (userId != null){
-//            User joinFaimlyUser = userMapper.selectById(userId);
-//            if(familyUniqueCode == null){
-//                //将用户角色改成用户将用户外键添加上去
-//                joinFaimlyUser.setRole(User.MEMBER);
-//                joinFaimlyUser.setFamilyId(familyMapper.selectByUniqueCode(familyUniqueCode).getId());
-//                userMapper.updateByIdSelective(joinFaimlyUser);
-//            }else{
-//                return "加入失败：家庭识别码不存在";
-//            }
-//        } else{
-//            return "加入失败：用户主标识为空";
-//        }
-//
-//        return "加入家庭成功";
-//    }
-
-//    @Override
-//    public String updateFaimly(Family family) {
-//        if (family.getId() != null){
-//            familyMapper.updateByIdSelective(family);
-//        } else {
-//            return "修改失败:家庭没有主键标识";
-//        }
-//
-//        return "修改成功";
-//    }
 }

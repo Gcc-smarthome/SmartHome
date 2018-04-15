@@ -23,5 +23,5 @@ public interface UserFamilyMapper {
 
     List<UserFamily> selectByUserId(Integer userId);
 
-    List<UserFamily> selectByFamilyId(Integer userId);
+    List<UserFamily> selectByFamilyId(Integer familyId);
 }

@@ -26,7 +26,7 @@ public class MemberContoller {
         family.setId(familyId);
         return familyService.joinFaimlyOfManager(user,family,uniqueCode);
     }
-
+    //加入家庭
     @RequestMapping(value = "/add_member",method = RequestMethod.POST)
     @ResponseBody
     public String addFamilyMember(Integer userId,String uniqueCode){
@@ -35,6 +35,7 @@ public class MemberContoller {
         return familyService.joinFamilyOfMember(user,uniqueCode);
     }
 
+    //获得所有家庭成员
     @RequestMapping(value = "/get_member",method = RequestMethod.GET)
     @ResponseBody
     public String getFamilyMember(Family family){
@@ -42,6 +43,7 @@ public class MemberContoller {
         return familyService.getAllFamilyMember(family);
     }
 
+    //获得家庭中普通成员
     @RequestMapping(value = "/get_normal_member",method = RequestMethod.GET)
     @ResponseBody
     public String getNormalMember(Integer userId,Integer familyId){
@@ -53,4 +55,20 @@ public class MemberContoller {
 
         return familyService.getAllNormalMember(user,family);
     }
+
+    //删除家庭成员
+    @RequestMapping(value = "/del_member",method = RequestMethod.POST)
+    @ResponseBody
+    public String deleteMemer(Integer userId,Integer familyId,Integer deleteUserId){
+        User user = new User();
+        user.setId(userId);
+
+        Family family = new Family();
+        family.setId(familyId);
+        System.out.println("userId:----------------------"+userId);
+        System.out.println("FamilyId:----------------------"+familyId);
+        System.out.println("delId:----------------------"+deleteUserId);
+        return familyService.deleteNormalMember(user,family,deleteUserId);
+    }
+
 }

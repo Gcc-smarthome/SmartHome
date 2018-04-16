@@ -4,6 +4,7 @@ public class DataOfCSResult {
     //需要操作的家庭id
     private Integer familyId;
     //需要操作的家庭用电器指令
+    private Integer deviceId;
     private String operatorInstruction;
     //终端返回结果
     private String returnData;
@@ -11,9 +12,10 @@ public class DataOfCSResult {
     public DataOfCSResult() {
     }
 
-    public DataOfCSResult(Integer familyId, String operatorInstruction, String returnData) {
+    public DataOfCSResult(Integer familyId, String operatorInstruction,Integer deviceId,String returnData) {
         this.familyId = familyId;
         this.operatorInstruction = operatorInstruction;
+        this.deviceId = deviceId;
         this.returnData = returnData;
     }
 
@@ -41,10 +43,19 @@ public class DataOfCSResult {
         this.returnData = returnData;
     }
 
+    public Integer getDeviceId() {
+        return deviceId;
+    }
+
+    public void setDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
+    }
+
     @Override
     public String toString() {
         return "DataOfCSResult{" +
                 "familyId=" + familyId +
+                ", deviceId=" + deviceId +
                 ", operatorInstruction='" + operatorInstruction + '\'' +
                 ", returnData='" + returnData + '\'' +
                 '}';

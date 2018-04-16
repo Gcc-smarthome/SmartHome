@@ -28,7 +28,7 @@ public class EchoClient {
 
     public void start() throws InterruptedException {
         EventLoopGroup group = new NioEventLoopGroup();
-        EchoClientHandler handler = new EchoClientHandler();
+        EchoClientHandler handler = new EchoClientHandler(dataOfCSResult);
 
 
         Bootstrap bootstrap = new Bootstrap();

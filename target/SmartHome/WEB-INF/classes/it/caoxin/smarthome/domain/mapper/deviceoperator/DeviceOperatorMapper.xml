@@ -128,4 +128,11 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
+
+  <select id="selectOperatorByDeviceId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from device_operator
+    where device_id = #{deviceId,jdbcType=INTEGER}
+  </select>
 </mapper>

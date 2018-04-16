@@ -7,7 +7,7 @@
         <result column="family_id" property="familyId" jdbcType="INTEGER"/>
         <result column="user_id" property="userId" jdbcType="INTEGER"/>
         <result column="family_role" property="familyRole" jdbcType="VARCHAR"/>
-        <!--<result column="uniquecode" property="uniqueCode" jdbcType="VARCHAR"/>-->
+        <result column="uniquecode" property="uniqueCode" jdbcType="VARCHAR"/>
         <result column="status" property="status" jdbcType="VARCHAR"/>
     </resultMap>
 
@@ -17,7 +17,7 @@
         family_id,
         user_id,
         family_role,
---        uniquecode,
+        uniquecode,
         status
     </sql>
 
@@ -35,7 +35,7 @@
             #{userFamily.familyId,jdbcType=INTEGER},
             #{userFamily.userId,jdbcType=INTEGER},
             #{userFamily.familyRole,jdbcType=VARCHAR},
---              #{userFamily.uniqueCode,jdbcType=VARCHAR}
+            #{userFamily.uniqueCode,jdbcType=VARCHAR},
             #{userFamily.status,jdbcType=VARCHAR}
         )
     </insert>
@@ -48,7 +48,7 @@
             <if test="userFamily.familyId!=null"> family_id,</if>
             <if test="userFamily.userId!=null"> user_id,</if>
             <if test="userFamily.familyRole!=null"> family_role,</if>
-        <!--<if test="userFamily.uniqueCode!=null"> uniquecode,</if>-->
+            <if test="userFamily.uniqueCode!=null"> uniquecode,</if>
             <if test="userFamily.status!=null"> status,</if>
         </trim>
         VALUES
@@ -61,8 +61,8 @@
             </if>
             <if test="userFamily.familyRole!=null">#{userFamily.familyRole,jdbcType=VARCHAR},
             </if>
-            <!--<if test="userFamily.uniqueCode!=null">#{userFamily.uniqueCode,jdbcType=VARCHAR},-->
-            <!--</if>-->
+            <if test="userFamily.uniqueCode!=null">#{userFamily.uniqueCode,jdbcType=VARCHAR},
+            </if>
             <if test="userFamily.status!=null">#{userFamily.status,jdbcType=VARCHAR},
             </if>
         </trim>
@@ -79,7 +79,9 @@
             #{userFamily.familyId,jdbcType=INTEGER},
             #{userFamily.userId,jdbcType=INTEGER},
             #{userFamily.familyRole,jdbcType=VARCHAR},
+            #{userFamily.uniqueCode,jdbcType=VARCHAR},
             #{userFamily.status,jdbcType=VARCHAR}
+
             )
         </foreach>
     </insert>
@@ -92,6 +94,7 @@
             <if test="userFamily.familyId != null"> family_id= #{userFamily.familyId,jdbcType=INTEGER},</if>
             <if test="userFamily.userId != null"> user_id= #{userFamily.userId,jdbcType=INTEGER},</if>
             <if test="userFamily.familyRole != null"> family_role= #{userFamily.familyRole,jdbcType=VARCHAR},</if>
+            <if test="userFamily.uniqueCode != null"> uniquecode= #{userFamily.uniqueCode,jdbcType=VARCHAR},</if>
             <if test="userFamily.status != null"> status= #{userFamily.status,jdbcType=VARCHAR}</if>
         </set>
         WHERE id = #{userFamily.id,jdbcType=INTEGER}
@@ -124,6 +127,13 @@
         <include refid="Base_Column_List" />
         from userfamily
         where family_id = #{arg0,jdbcType=INTEGER} AND status = '正常';
+    </select>
+
+    <select id="selectByUniqueCode" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from userfamily
+        where uniquecode = #{arg0,jdbcType=VARCHAR} AND status = '正常';
     </select>
 </mapper>
 

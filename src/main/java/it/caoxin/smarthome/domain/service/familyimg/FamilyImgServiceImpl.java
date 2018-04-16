@@ -12,6 +12,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.UUID;
 
@@ -61,16 +62,27 @@ public class FamilyImgServiceImpl implements FamilyImgService{
         String uploadPath;
         if (familyService.isFamilyManager(user,family)) {
             if (files != null) {
+
+                for (MultipartFile file:files
+                     ) {
+                    String originalFilename = file.getOriginalFilename();
+                    if (!originalFilename.endsWith(".jpg") &&
+                        !originalFilename.endsWith(".bmp") &&
+                        !originalFilename.endsWith(".jpeg")&&
+                        !originalFilename.endsWith(".png")){
+                        return "Illegal file format";
+                    }
+                }
                 uploadPath = request.getServletContext().getRealPath("/upload/family");
                 for (int i = 0; i < files.length; i++) {
-                    String fileName = UUID.randomUUID() + files[i].getOriginalFilename();
-                    System.out.println("fileName:------------------------" + fileName);
 
+
+                    String fileName = UUID.randomUUID().toString();
                     try {
                         FileUtils.copyInputStreamToFile(files[i].getInputStream(), new File(uploadPath, fileName));
                     } catch (IOException e) {
                         e.printStackTrace();
-                        System.out.println("商家上传文件失败。。。");
+                        System.out.println("家庭文件上传文件失败。。。");
                     }
 
                     String photoUrl = FamilyPhotoPath+fileName;
@@ -80,7 +92,7 @@ public class FamilyImgServiceImpl implements FamilyImgService{
                     familyImg.setImgUrl(photoUrl);
                     familyImg.setStatus(FamilyImg.STATUS_NORMAL);
 
-                    System.out.println("familyImg:"+familyImg);
+//                    System.out.println("familyImg:"+familyImg);
                     familyImgMapper.insert(familyImg);
 
 
@@ -97,9 +109,7 @@ public class FamilyImgServiceImpl implements FamilyImgService{
     public String deleteFamilyImg(User user, Family family, FamilyImg familyImg) {
         if (familyService.isFamilyManager(user,family)){
             if (familyImg.getId() != null){
-                familyImg.setStatus(FamilyImg.STATUS_DELETE);
-
-                familyImgMapper.updateSelect(familyImg);
+                familyImgMapper.deleteById(familyImg.getId());
 
                 return "delete success";
             }else {
@@ -112,12 +122,15 @@ public class FamilyImgServiceImpl implements FamilyImgService{
 
     //查看家庭照片
     @Override
-    public String familyImgs(Family family) {
-        if (family.getId() != null){
+    public String getfamilyImgs(Family family,User user) {
+        if (familyService.isFamilyManager(user,family)){
+
             List<FamilyImg> familyImgs = familyImgMapper.selectByFamilyId(family.getId());
 
             return JSONArray.fromObject(familyImgs).toString();
+
         }
-        return "no family id";
+
+        return "you have not privilege";
     }
 }

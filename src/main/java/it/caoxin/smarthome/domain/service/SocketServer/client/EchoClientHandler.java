@@ -10,16 +10,23 @@ import it.caoxin.smarthome.domain.common.DataOfCSResult;
 import javax.xml.crypto.Data;
 
 /**
- * @author Administrator
+ * @author caoxin
  */
 public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
-    private DataOfCSResult dataOfCSResult = new DataOfCSResult();
+    private DataOfCSResult dataOfCSResult;
     //    建立时被调用
+
+    public EchoClientHandler(DataOfCSResult dataOfCSResult) {
+        this.dataOfCSResult = dataOfCSResult;
+    }
+
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+
         System.out.println("连接服务器...");//familyId:operatorInstruction  1:cpt1
-        String str = dataOfCSResult.getFamilyId()+":"+dataOfCSResult.getOperatorInstruction();
+        String str = dataOfCSResult.getFamilyId()+":"+dataOfCSResult.getDeviceId()+":"+dataOfCSResult.getOperatorInstruction();
+        System.out.println("str:"+str);
         byte[] req = str.getBytes();//消息
         ByteBuf firstMessage = Unpooled.buffer(req.length);//发送类
         firstMessage.writeBytes(req);//发送

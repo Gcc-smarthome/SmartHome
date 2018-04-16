@@ -18,4 +18,5 @@ public interface DeviceMapper {
     int updateByIdSelective(Device device);
 
     int updateById(Device device);
+
 }

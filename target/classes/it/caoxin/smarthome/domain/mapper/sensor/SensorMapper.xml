@@ -157,4 +157,10 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
+  <select id="selectSensorByDeviceId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sensor
+    where device_id = #{deviceId,jdbcType=INTEGER}
+  </select>
 </mapper>

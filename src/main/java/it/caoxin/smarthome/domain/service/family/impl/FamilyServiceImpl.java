@@ -93,34 +93,18 @@ public class FamilyServiceImpl implements FamilyService {
     @Override
     public String joinFaimlyOfManager(User user, Family family,String validateCode) {
 
-        if (user.getId() != null && family.getId() != null){
+        if (isFamilyManager(user,family)){
             UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), family.getId());
-
-            Family validateFamily = familyMapper.selectByIdForUpdate(family.getId());
-            //如果该用户是管理员。
-            if (userFamily != null){
-                if (userFamily.getFamilyRole().equals(UserFamily.ROLE_MANAGER)){
-                    //判断这个家庭的特殊码是否为空
-                    if (validateFamily.getFamilyUniqueCode() == null){
-                        //放入数据库
-                        validateFamily.setFamilyUniqueCode(validateCode);
-                        familyMapper.updateByIdSelective(validateFamily);
-                    }else {
-
-                        //添加一个验证码
-                        validateFamily.setFamilyUniqueCode(validateFamily.getFamilyUniqueCode()+","+validateCode);
-                        familyMapper.updateByIdSelective(validateFamily);
-
-                    }
-
+                if (userFamily != null) {
+                    userFamily.setUniqueCode(validateCode);
+                    userFamilyMapper.updateSelect(userFamily);
                     return "addVaildateCodeSuccess";
-                }else {
-                    return "this user is not a manager";
                 }
+                return "addVaildateCodeFailure";
+            }else {
+                return "this user is not a manager";
             }
 
-        }
-        return "joinFailure";
     }
 
     //加入家庭 成员
@@ -129,54 +113,38 @@ public class FamilyServiceImpl implements FamilyService {
         System.out.println("user:"+user.getId());
         System.out.println("uniqueCode:"+uniqueCode);
         Family joinFamily = null;
-        if (uniqueCode != null && uniqueCode.length() > 0){
-            System.out.println("--------------------");
-             joinFamily = familyMapper.selectByUniqueCodeForUpdate(uniqueCode);
+        if (uniqueCode != null && uniqueCode.length() > 0) {
+            //通过查询出userFamily来拿到家庭id
+            UserFamily userFamilyUnique = userFamilyMapper.selectByUniqueCode(uniqueCode);
+            if (userFamilyUnique != null) {
+                joinFamily = familyMapper.selectById(userFamilyUnique.getFamilyId());
 
-           if (joinFamily != null){
-               if(user.getId() != null && joinFamily.getId() != null){
-                   UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), joinFamily.getId());
+                if (joinFamily != null) {
+                    if (user.getId() != null && joinFamily.getId() != null) {
+                        //在用户家庭表中查询是否存在这个用户，如果已经存在则告诉用户不能重复加入家庭
+                        UserFamily userFamily = userFamilyMapper.selectByUserIdAndFamilyId(user.getId(), joinFamily.getId());
+                        if (userFamily != null) {
+                            return "已加入家庭，不能重复加入";
+                        }
 
-                   if (userFamily != null){
-                       return "已加入家庭，不能重复加入";
-                   }
-               }
+                        if (userFamilyUnique.getUniqueCode().equals(uniqueCode)) {
+                            UserFamily newUserFamily = new UserFamily();
+                            newUserFamily.setFamilyId(joinFamily.getId());
+                            newUserFamily.setUserId(user.getId());
+                            newUserFamily.setFamilyRole(UserFamily.ROLE_MEMBER);
+                            newUserFamily.setStatus(UserFamily.STATUS_NORMAL);
 
-               if (joinFamily != null){
-                   //解析家庭中的uniqueCode
-                   if (joinFamily.getFamilyUniqueCode() != null && joinFamily.getFamilyUniqueCode().length() > 0){
-
-                       String familyUniqueCode = joinFamily.getFamilyUniqueCode();
-
-                       String[]  fields = familyUniqueCode.split(",");
-
-                       if(fields != null){
-                           for (String validateCode : fields){
-                               if (validateCode.equals(uniqueCode)){
-                                   UserFamily userFamily = new UserFamily();
-                                   userFamily.setFamilyId(joinFamily.getId());
-                                   userFamily.setUserId(user.getId());
-                                   userFamily.setFamilyRole(UserFamily.ROLE_MEMBER);
-                                   userFamily.setStatus(UserFamily.STATUS_NORMAL);
-
-                                   userFamilyMapper.insertSelective(userFamily);
-
-
-                                   return "joinFamilySuccess";
-                               }
-                           }
-                       } else{
-                           //验证码不正确
-                           return "validateCodenotTrue";
-                       }
-                   }
-               }
-
+                            userFamilyMapper.insertSelective(newUserFamily);
+                            return "joinFamilySuccess";
+                        }
+                    }
+                } else {
+                    return "can not find family";
+                }
+            }else {
+                return "can not find family by uniquecode";
             }
-           }
-
-
-
+        }
         return "joinFamilyFailure";
     }
 
@@ -227,8 +195,6 @@ public class FamilyServiceImpl implements FamilyService {
         }
         return "deleteFamilyFailure";
     }
-
-
 
 
     //增加家庭管理员

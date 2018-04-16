@@ -59,7 +59,7 @@ public class TestFamily {
 
     @Test
     public void testSelectById(){
-        Family family = familyMapper.selectById(42);
+        Family family = familyMapper.selectById(1);
         System.out.println("family:"+family.toString());
     }
 

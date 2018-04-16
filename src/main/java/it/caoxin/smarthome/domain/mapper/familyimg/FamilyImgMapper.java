@@ -21,4 +21,6 @@ public interface FamilyImgMapper {
     List<FamilyImg> selectByFamilyId(Integer familyId);
 
     FamilyImg selectByDefaultFamilyId(Integer familyId);
+
+    int deleteById(Integer id);
 }

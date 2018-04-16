@@ -22,7 +22,7 @@ public class TestOperator {
         deviceOperator.setStatus("test");
         deviceOperator.setDeviceId(3);
 
-        deviceOperatorMapper.insert(deviceOperator);
+        deviceOperatorMapper.insertSelective(deviceOperator);
     }
 
     @Test

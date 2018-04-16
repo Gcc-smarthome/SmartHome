@@ -34,7 +34,7 @@ public interface FamilyImgService{
     /*
   查看家庭图片
    */
-    String familyImgs(Family family);
+    String getfamilyImgs(Family family,User user);
 
 
 }

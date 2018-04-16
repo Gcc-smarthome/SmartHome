@@ -49,4 +49,6 @@ public class TestSensor {
         Sensor sensor = sensorMapper.selectById(1);
         System.out.println("sensor:"+sensor);
     }
+
+
 }

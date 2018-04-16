@@ -100,5 +100,10 @@
         from family_img
         where family_id = #{familyId,jdbcType=INTEGER} AND status = '默认';
     </select>
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from family_img
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
 </mapper>
 

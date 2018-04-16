@@ -36,4 +36,35 @@ public class FamilyImgController {
                 files,
                 request);
     }
+
+    //给家庭删除照片
+    @RequestMapping(value = "/del_familyimg",method = RequestMethod.POST)
+    @ResponseBody
+    public String addFamilyImg(Integer userId,Integer familyId,Integer familyImgId){
+
+        User user = new User();
+        user.setId(userId);
+
+        Family family = new Family();
+        family.setId(familyId);
+
+        FamilyImg familyImg = new FamilyImg();
+        familyImg.setId(familyImgId);
+
+        return familyImgService.deleteFamilyImg(user,family,familyImg);
+    }
+
+    //获取家庭照片
+    @RequestMapping(value = "/get_familyimg",method = RequestMethod.GET)
+    @ResponseBody
+    public String getFamilyImg(Integer userId,Integer familyId){
+
+        User user = new User();
+        user.setId(userId);
+
+        Family family = new Family();
+        family.setId(familyId);
+
+        return familyImgService.getfamilyImgs(family,user);
+    }
 }

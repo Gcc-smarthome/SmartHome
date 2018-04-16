@@ -3,6 +3,8 @@ package it.caoxin.smarthome.domain.mapper.deviceoperator;
 
 import it.caoxin.smarthome.domain.model.DeviceOperator;
 
+import java.util.List;
+
 public interface DeviceOperatorMapper {
     int deleteById(Integer id);
 
@@ -15,4 +17,6 @@ public interface DeviceOperatorMapper {
     int updateByIdSelective(DeviceOperator deviceOperator);
 
     int updateById(DeviceOperator deviceOperator);
+
+    List<DeviceOperator> selectOperatorByDeviceId(Integer deviceId);
 }

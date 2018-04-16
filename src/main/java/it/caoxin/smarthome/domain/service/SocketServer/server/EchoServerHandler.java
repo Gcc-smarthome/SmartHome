@@ -30,7 +30,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
         String ip  = (String) jsonObject.get("ip");
 
 
-        System.out.println("id:"+id);
+        System.out.println("familyid:"+id);
         System.out.println("ip:"+ip);
 
         Map clientIpPool = ClientIpPool.getClientIpPoolMap();

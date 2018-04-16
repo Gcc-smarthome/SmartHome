@@ -49,7 +49,7 @@ public class TestDevice {
 
     @Test
     public void testSelect(){
-        Device device = deviceMapper.selectById(2);
+        Device device = deviceMapper.selectById(18);
         System.out.println(device);
     }
 

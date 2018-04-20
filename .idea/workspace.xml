@@ -2,70 +2,39 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SmartHome:war exploded" />
+      <artifact name="SmartHome:war" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7828dbea-28f9-4b6e-b4dd-2bf33413e149" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome.war" afterPath="$PROJECT_DIR$/target/SmartHome.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/HelloController.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/HelloController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/device/DeviceContoller.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/device/DeviceContoller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/listener/SeverListener$ServerStart.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/listener/SeverListener$ServerStart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/common/DataOfCSResult.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/common/DataOfCSResult.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/device/DeviceService.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/device/DeviceService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/HelloController.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/HelloController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/device/DeviceContoller.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/device/DeviceContoller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/listener/SeverListener$ServerStart.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/listener/SeverListener$ServerStart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/common/DataOfCSResult.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/common/DataOfCSResult.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/device/DeviceService.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/device/DeviceService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/device/TestDevice.class" afterPath="$PROJECT_DIR$/target/test-classes/device/TestDevice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/deviceoperator/TestOperator.class" afterPath="$PROJECT_DIR$/target/test-classes/deviceoperator/TestOperator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/family/TestFamily.class" afterPath="$PROJECT_DIR$/target/test-classes/family/TestFamily.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/log4j/TestLog4j.class" afterPath="$PROJECT_DIR$/target/test-classes/log4j/TestLog4j.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/HelloController.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/HelloController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/familyImg/FamilyImgController.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/familyImg/FamilyImgController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/listener/SeverListener.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/listener/SeverListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/common/DataOfCSResult.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/common/DataOfCSResult.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/familyimg/FamilyImgMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/familyimg/FamilyImgMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/UserFamily.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/UserFamily.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgService.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/familyimg/FamilyImgMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/familyimg/FamilyImgMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/device/TestDevice.java" afterPath="$PROJECT_DIR$/src/test/device/TestDevice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/deviceoperator/TestOperator.java" afterPath="$PROJECT_DIR$/src/test/deviceoperator/TestOperator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/family/TestFamily.java" afterPath="$PROJECT_DIR$/src/test/family/TestFamily.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/sensor/TestSensor.java" afterPath="$PROJECT_DIR$/src/test/sensor/TestSensor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/log4j/TestLog4j.java" afterPath="$PROJECT_DIR$/src/test/log4j/TestLog4j.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/index.jsp" afterPath="$PROJECT_DIR$/target/SmartHome/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,32 +47,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FamilyImgService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DeviceContoller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+            <state relative-caret-position="405">
+              <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MemberContoller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/member/MemberContoller.java">
+      <file leaf-file-name="FamilyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/family/FamilyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="238">
+              <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Family.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Family.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2962">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="25" />
+              <folding>
+                <element signature="e#1105#1106#0" expanded="true" />
+                <element signature="e#1133#1134#0" expanded="true" />
+                <element signature="e#1175#1176#0" expanded="true" />
+                <element signature="e#1209#1210#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,9 +85,47 @@
       <file leaf-file-name="FamilyService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/FamilyService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+            <state relative-caret-position="187">
+              <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FamilyServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="154" column="35" lean-forward="true" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FamilyMapper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FamilyMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="837">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <marker date="1523696466240" expanded="true" signature="1994:2525" ph="select f.id family" />
+                <marker date="1523696466240" expanded="true" signature="2641:2757" ph="select FROM family" />
+                <marker date="1523696466240" expanded="true" signature="2872:3427" ph="select f.id family" />
+                <marker date="1523696466240" expanded="true" signature="3550:3678" ph="select FROM family" />
+                <marker date="1523696466240" expanded="true" signature="3757:3813" ph="delete from " />
+                <marker date="1523696466240" expanded="true" signature="7202:8579" ph="update famil... " />
+                <marker date="1523696466240" expanded="true" signature="8680:9384" ph="update famil... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,29 +133,38 @@
       <file leaf-file-name="DeviceService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+            <state relative-caret-position="241">
+              <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FamilyImgController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/familyImg/FamilyImgController.java">
+      <file leaf-file-name="DeviceServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="511">
+              <caret line="111" column="80" lean-forward="false" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="80" />
+              <folding>
+                <element signature="method#insertSelective#0;class#DeviceServiceImpl#0" expanded="false" />
+                <element signature="method#operatorDevice#0;class#DeviceServiceImpl#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FamilyImgServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java">
+      <file leaf-file-name="DeviceMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="124" column="31" lean-forward="false" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="231">
+              <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+              <folding>
+                <marker date="1524191880329" expanded="true" signature="2672:3414" ph="SELECT d.id device" />
+                <marker date="1524191880329" expanded="true" signature="3491:3547" ph="delete from " />
+                <marker date="1524191880329" expanded="true" signature="6027:6964" ph="update devic... " />
+                <marker date="1524191880329" expanded="true" signature="7065:7537" ph="update devic... " />
+                <marker date="1524191880329" expanded="true" signature="7657:8422" ph="SELECT d.id device" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,11 +257,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/testFamilyImg/TestFamilyImg.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/sql/smarthome-schema.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/user/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/test/user/TestUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/User.java" />
         <option value="$PROJECT_DIR$/src/test/testUserFamily/TestUserFamily.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/common/SendValidateCode.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/FamilyImg.java" />
@@ -252,9 +268,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/springmvc-config.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/target/SmartHome/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Family.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/user/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/family/FamilyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/FamilyService.java" />
@@ -264,15 +278,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/family/TestFamily.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/deviceoperator/TestOperator.java" />
         <option value="$PROJECT_DIR$/src/test/sensor/TestSensor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/device/TestDevice.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/common/DataOfCSResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/listener/SeverListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Device.java" />
@@ -281,12 +292,22 @@
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.java" />
         <option value="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/familyimg/FamilyImgMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/familyimg/FamilyImgMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/sql/test-data-version2.sql" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/log4j/TestLog4j.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/HelloController.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/familyImg/FamilyImgController.java" />
+        <option value="$PROJECT_DIR$/src/test/device/TestDevice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/family/FamilyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Family.java" />
       </list>
     </option>
   </component>
@@ -481,46 +502,6 @@
               <item name="smarthome" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="familyImg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="smarthome" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="smarthome" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="smarthome" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="smarthome" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="device" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -530,9 +511,28 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="smarthome" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="family" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="smarthome" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="deviceoperator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="smarthome" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
@@ -548,6 +548,32 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="sensor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
@@ -574,7 +600,7 @@
               <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="testUserFamily" type="462c0819:PsiDirectoryNode" />
+              <item name="log4j" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
@@ -593,23 +619,15 @@
               <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
               <item name="upload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHome" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="SmartHome" type="462c0819:PsiDirectoryNode" />
-              <item name="upload" type="462c0819:PsiDirectoryNode" />
-              <item name="family" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -619,7 +637,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/userfamily" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../websocket-spring-demo-master" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -867,9 +885,10 @@
       <listeners />
     </configuration>
     <configuration name="tomcat8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.121" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8 (1)">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SmartHome/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="SmartHome:war exploded">
+        <artifact name="SmartHome:war">
           <settings>
             <option name="CONTEXT_PATH" value="/SmartHome" />
           </settings>
@@ -934,7 +953,7 @@
       </ConfigurationWrapper>
       <method>
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="SmartHome:war exploded" />
+          <artifact name="SmartHome:war" />
         </option>
       </method>
     </configuration>
@@ -1022,7 +1041,10 @@
       <workItem from="1523670338220" duration="389000" />
       <workItem from="1523689103663" duration="11582000" />
       <workItem from="1523748409664" duration="18521000" />
-      <workItem from="1523839831610" duration="29020000" />
+      <workItem from="1523839831610" duration="30393000" />
+      <workItem from="1523927465779" duration="18935000" />
+      <workItem from="1524036156338" duration="636000" />
+      <workItem from="1524185490486" duration="14819000" />
     </task>
     <task id="LOCAL-00001" summary="测试上传">
       <created>1521615040891</created>
@@ -1066,15 +1088,22 @@
       <option name="project" value="LOCAL" />
       <updated>1523768886246</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="设备管理接口测试完成&#10;家庭图片测试完成">
+      <created>1523874063731</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523874063731</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDevice_testSelect - 2018.04.16 at 15h 29m 30s.xml">
+    <history-entry file="TestDevice_testSelect - 2018.04.20 at 09h 48m 33s.xml">
       <configuration name="TestDevice.testSelect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFamily_testSelectById - 2018.04.16 at 10h 41m 28s.xml">
-      <configuration name="TestFamily.testSelectById" configurationId="JUnit" />
+    <history-entry file="TestDevice_testSelect - 2018.04.20 at 09h 50m 46s.xml">
+      <configuration name="TestDevice.testSelect" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestOperator_testAdd - 2018.04.16 at 14h 11m 02s.xml">
       <configuration name="TestOperator.testAdd" configurationId="JUnit" />
@@ -1102,7 +1131,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338266000" />
+    <option name="totallyTimeSpent" value="374029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="735" extended-state="0" />
@@ -1126,15 +1155,14 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7673667" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6688207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27407408" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1142,6 +1170,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1168,12 +1197,12 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39418417" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6688207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27407408" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27407408" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1194,127 +1223,70 @@
     <MESSAGE value="家庭管理部分前端调试完成" />
     <MESSAGE value="成员管理部分前端调试完成，权限还需要商讨" />
     <MESSAGE value="成员管理页面调试成功" />
-    <option name="LAST_COMMIT_MESSAGE" value="成员管理页面调试成功" />
+    <MESSAGE value="设备管理接口测试完成&#10;家庭图片测试完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="设备管理接口测试完成&#10;家庭图片测试完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="22" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/user/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3692">
-          <caret line="62" column="2" lean-forward="false" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
-          <folding>
-            <marker date="1523696466240" expanded="true" signature="1994:2525" ph="select f.id family" />
-            <marker date="1523696466240" expanded="true" signature="2641:2757" ph="select Base_... family" />
-            <marker date="1523696466240" expanded="true" signature="2872:3427" ph="select f.id family" />
-            <marker date="1523696466240" expanded="true" signature="3550:3678" ph="select WHERE... " />
-            <marker date="1523696466240" expanded="true" signature="3757:3813" ph="delete from " />
-            <marker date="1523696466240" expanded="true" signature="7202:8579" ph="update famil... " />
-            <marker date="1523696466240" expanded="true" signature="8680:9384" ph="update famil... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Sensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/FamilyImg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testFamilyImg/TestFamilyImg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1971">
-          <caret line="73" column="12" lean-forward="false" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/SmartHome/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testUserFamily/TestUserFamily.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="135" column="24" lean-forward="false" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
-          <folding>
-            <marker date="1523843232572" expanded="true" signature="1025:1517" ph="INSERT INTO userfamily... " />
-            <marker date="1523843232572" expanded="true" signature="3482:4213" ph="UPDATE userf... " />
-            <marker date="1523843232572" expanded="true" signature="4327:4444" ph="select from userfamily" />
-            <marker date="1523843232572" expanded="true" signature="4542:4724" ph="select from userfamily" />
-            <marker date="1523843232572" expanded="true" signature="4808:4950" ph="select from userfamily" />
-            <marker date="1523843232572" expanded="true" signature="5036:5180" ph="select from userfamily" />
-            <marker date="1523843232572" expanded="true" signature="5268:5413" ph="select from userfamily" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/UserFamily.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1355">
           <caret line="5" column="61" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="61" />
-          <folding>
-            <element signature="e#1634#1635#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1719#1720#0" expanded="true" />
-            <element signature="e#1763#1764#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1322,25 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding>
-            <element signature="method#getFaimlysByUser#0;class#FamilyServiceImpl#0" expanded="false" />
-            <element signature="e#1678#1686#0" expanded="true" />
-            <element signature="method#createFamily#0;class#FamilyServiceImpl#0" expanded="false" />
-            <element signature="method#joinFaimlyOfManager#0;class#FamilyServiceImpl#0" expanded="false" />
-            <element signature="method#joinFamilyOfMember#0;class#FamilyServiceImpl#0" expanded="false" />
-            <element signature="method#updateFamilyInfo#0;class#FamilyServiceImpl#0" expanded="false" />
-            <element signature="method#isFamilyManager#0;class#FamilyServiceImpl#0" expanded="false" />
-            <element signature="method#deleteFamily#0;class#FamilyServiceImpl#0" expanded="false" />
-            <element signature="method#getFamilyById#0;class#FamilyServiceImpl#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1348,15 +1301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="68" column="34" lean-forward="false" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Family.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1364,7 +1308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1161">
           <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,17 +1315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/deviceoperator/TestOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1390,15 +1322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
           <caret line="193" column="23" lean-forward="false" selection-start-line="193" selection-start-column="23" selection-end-line="193" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/sql/test-data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="78" column="15" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="84" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,7 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,23 +1336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
           <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="204" column="9" lean-forward="false" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,43 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/family/FamilyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
-          <folding>
-            <element signature="e#1102#1168#0" expanded="false" />
-            <element signature="method#createFamily#0;class#FamilyController#0" expanded="false" />
-            <element signature="e#1494#1560#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1909">
-          <caret line="162" column="15" lean-forward="false" selection-start-line="162" selection-start-column="15" selection-end-line="162" selection-end-column="15" />
-          <folding>
-            <marker date="1523860913034" expanded="true" signature="2103:2508" ph="select s.id sensor" />
-            <marker date="1523860913034" expanded="true" signature="2589:2645" ph="delete from " />
-            <marker date="1523860913034" expanded="true" signature="4782:5535" ph="update senso... " />
-            <marker date="1523860913034" expanded="true" signature="5641:6030" ph="update senso... " />
-            <marker date="1523860913034" expanded="true" signature="6147:6261" ph="select from sensor" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/device/TestDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1482,13 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1976">
           <caret line="49" column="2" lean-forward="false" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
-          <folding>
-            <marker date="1523858610245" expanded="true" signature="1748:1859" ph="select from device_operator" />
-            <marker date="1523858610245" expanded="true" signature="1937:2002" ph="delete from " />
-            <marker date="1523858610245" expanded="true" signature="4048:4750" ph="update devic... " />
-            <marker date="1523858610245" expanded="true" signature="4858:5233" ph="update devic... " />
-            <marker date="1523858610245" expanded="true" signature="5353:5476" ph="select from device_operator" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1496,7 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1504,7 +1364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1512,15 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-977">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,7 +1378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1536,7 +1385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1544,7 +1392,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1552,9 +1399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="19" column="61" lean-forward="false" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
-          <folding>
-            <element signature="e#631#632#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1562,15 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-353">
           <caret line="30" column="72" lean-forward="false" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="57" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1578,7 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
           <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1586,42 +1420,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="103" column="4" lean-forward="false" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
-          <folding>
-            <marker date="1523870470240" expanded="true" signature="839:1168" ph="INSERT INTO family_img... " />
-            <marker date="1523870470240" expanded="true" signature="2627:3120" ph="UPDATE famil... " />
-            <marker date="1523870470240" expanded="true" signature="3233:3350" ph="select from family_img" />
-            <marker date="1523870470240" expanded="true" signature="3470:3600" ph="select from family_img" />
-            <marker date="1523870470240" expanded="true" signature="3727:3875" ph="select from family_img" />
-            <marker date="1523870470240" expanded="true" signature="3963:4027" ph="delete from " />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-356">
+          <caret line="199" column="124" lean-forward="false" selection-start-line="199" selection-start-column="124" selection-end-line="199" selection-end-column="124" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="146" column="28" lean-forward="false" selection-start-line="146" selection-start-column="28" selection-end-line="146" selection-end-column="28" />
-          <folding>
-            <element signature="method#createDevice#0;class#DeviceServiceImpl#0" expanded="false" />
-            <element signature="method#deleteDevice#0;class#DeviceServiceImpl#0" expanded="false" />
-            <marker date="1523871470691" expanded="false" signature="2407:2415" ph="&lt;~&gt;" />
-          </folding>
+        <state relative-caret-position="-6">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1629,46 +1441,242 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/deviceoperator/TestOperator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="486">
+          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/FamilyService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="534">
+          <caret line="162" column="15" lean-forward="false" selection-start-line="162" selection-start-column="15" selection-end-line="162" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/sql/test-data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="119" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/log4j/TestLog4j.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/sql/test-data-version2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="241" column="0" lean-forward="true" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/mave-repository/org/springframework/spring-aop/4.3.5.RELEASE/spring-aop-4.3.5.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/familyimg/FamilyImgServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="124" column="31" lean-forward="false" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
+        <state relative-caret-position="267">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/mave-repository/org/springframework/spring-aop/4.3.5.RELEASE/spring-aop-4.3.5.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/mave-repository/org/springframework/spring-tx/4.3.5.RELEASE/spring-tx-4.3.5.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/mave-repository/org/springframework/spring-tx/4.3.5.RELEASE/spring-tx-4.3.5.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/mave-repository/org/springframework/spring-aop/4.3.5.RELEASE/spring-aop-4.3.5.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/device/TestDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/familyImg/FamilyImgController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="-410">
+          <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="63" column="23" lean-forward="false" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="45" selection-end-line="49" selection-end-column="45" />
+          <folding>
+            <marker date="1524191880329" expanded="true" signature="2672:3414" ph="SELECT d.id device" />
+            <marker date="1524191880329" expanded="true" signature="3491:3547" ph="delete from " />
+            <marker date="1524191880329" expanded="true" signature="6027:6964" ph="update devic... " />
+            <marker date="1524191880329" expanded="true" signature="7065:7537" ph="update devic... " />
+            <marker date="1524191880329" expanded="true" signature="7657:8422" ph="SELECT d.id device" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="111" column="80" lean-forward="false" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="80" />
+          <folding>
+            <element signature="method#insertSelective#0;class#DeviceServiceImpl#0" expanded="false" />
+            <element signature="method#operatorDevice#0;class#DeviceServiceImpl#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="34" column="72" lean-forward="false" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/FamilyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="33" column="11" lean-forward="false" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <marker date="1523696466240" expanded="true" signature="1994:2525" ph="select f.id family" />
+            <marker date="1523696466240" expanded="true" signature="2641:2757" ph="select FROM family" />
+            <marker date="1523696466240" expanded="true" signature="2872:3427" ph="select f.id family" />
+            <marker date="1523696466240" expanded="true" signature="3550:3678" ph="select FROM family" />
+            <marker date="1523696466240" expanded="true" signature="3757:3813" ph="delete from " />
+            <marker date="1523696466240" expanded="true" signature="7202:8579" ph="update famil... " />
+            <marker date="1523696466240" expanded="true" signature="8680:9384" ph="update famil... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/family/FamilyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/model/Family.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2962">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="25" />
+          <folding>
+            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="154" column="35" lean-forward="true" selection-start-line="154" selection-start-column="35" selection-end-line="154" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding />
         </state>
       </provider>

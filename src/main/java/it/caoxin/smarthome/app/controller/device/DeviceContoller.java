@@ -19,19 +19,26 @@ public class DeviceContoller {
     //添加设备
     @RequestMapping(value = "add_device",method = RequestMethod.POST)
     @ResponseBody
-    public String creatDevice( Integer familyId, Integer userId, String deviceName){
+    public String creatDevice( Integer familyId, Integer userId, Integer deviceId){
         System.out.println("familyId:"+familyId);
-        System.out.println("deviceName:"+deviceName);
+        System.out.println("deviceId:"+deviceId);
 
-        return deviceService.createDevice(familyId,userId,deviceName);
+        return deviceService.createDevice(familyId,userId,deviceId);
 
     }
 
     //删除设备
     @RequestMapping(value = "del_device",method = RequestMethod.POST)
     @ResponseBody
-    public String deleteDevice(Integer deviceId){
-        return deviceService.deleteDevice(deviceId);
+    public String deleteDevice(Integer familyId,Integer userId,Integer deviceId){
+
+        User user =new User();
+        user.setId(userId);
+
+        Family family = new Family();
+        family.setId(familyId);
+
+        return deviceService.deleteDevice(family,user,deviceId);
 
     }
 
@@ -61,6 +68,18 @@ public class DeviceContoller {
         family.setId(familyId);
 
         return deviceService.getCanAddDevices(user,family);
+
+    }
+
+    //同过家庭id获取这个家庭的设备
+    @RequestMapping(value = "get_family_device",method = RequestMethod.GET)
+    @ResponseBody
+    public String getFamilyDevices(Integer familyId){
+
+        Family family = new Family();
+        family.setId(familyId);
+
+        return deviceService.getDeviceByFamilyId(family);
 
     }
 

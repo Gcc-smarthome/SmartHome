@@ -194,9 +194,10 @@ public class UserServiceImpl implements UserService {
     public String uploadUserPhoto(MultipartFile file, HttpServletRequest request, User user) {
         //上传文件：
         String uploadPath = request.getServletContext().getRealPath("/upload/user");
-        String fileName = UUID.randomUUID().toString();
+
 
         String originalFilename = file.getOriginalFilename();
+        String fileName = UUID.randomUUID()+originalFilename.substring(originalFilename.length()-4,originalFilename.length());
         if (!originalFilename.endsWith(".jpg") &&
                 !originalFilename.endsWith(".bmp") &&
                 !originalFilename.endsWith(".jpeg")&&

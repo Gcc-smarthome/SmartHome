@@ -70,50 +70,7 @@ public class DeviceServiceImpl implements DeviceService {
         return deviceMapper.updateById(device);
     }
 
-//    @Override
-//    public String initDevice(Integer familyId) {
-//        //先查找到对应的家庭中用户的设备
-//        Family family = familyMapper.selectById(familyId);
-//        List<Device> deviceList = family.getDeviceList();
-//
-//        System.out.println("deviceList:"+deviceList);
-//        //可用DeviceList
-//        List<Device> onLiveDeviceList = new ArrayList<Device>();
-//        try {
-//            //通过id拿到对应的ip开始对客户端连接
-//            String familyIp = (String) ClientIpPool.getClientIpPoolMap().get(familyId);
-//            String host = familyIp;
-//            int port = 50001;
-//            EchoClient echoClient = new EchoClient(host, port,new DataOfCSResult(familyId,"init",null));
-//            echoClient.start();
-//
-//            String serverData = echoClient.getDataOfCSResult().getReturnData();
-//            List<String> serverDeviceList = new DataOfCSHandler().parseJsonToList(serverData);
-//
-//            for(int i = 0; i < serverDeviceList.size(); i++){
-//                String onLiveDevice = serverDeviceList.get(i);
-//                for(int j = 0; j < deviceList.size(); j++){
-//                    if (onLiveDevice.equals(deviceList.get(j).getName())){
-//                        onLiveDeviceList.add(deviceList.get(j));
-//                    }
-//                }
-//            }
-//
-//            if(onLiveDeviceList != null){
-//                JSONArray jsonDeviceList= JSONArray.fromObject(onLiveDeviceList);
-//                System.out.println(deviceList);
-//                return jsonDeviceList.toString();
-//
-//            }
-//
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return "No equipment available";
-//
-//    }
-//
+    //操作设备
     @Override
     public String operatorDevice(Integer familyId,Integer deviceId, String operator) {
         System.out.println("faimlyId："+familyId);
@@ -138,6 +95,7 @@ public class DeviceServiceImpl implements DeviceService {
         return "the operator fail";
     }
 
+    //获取可以添加的设备
     @Override
     public String getCanAddDevices(User user,Family family) {
 
@@ -149,8 +107,9 @@ public class DeviceServiceImpl implements DeviceService {
         return "can not get devices";
     }
 
+    //创建设备
     @Override
-    public String createDevice(Integer familyId,Integer userId, String deviceName) {
+    public String createDevice(Integer familyId,Integer userId, Integer deviceId) {
 
 
         if (familyId != null && userId != null){
@@ -170,7 +129,7 @@ public class DeviceServiceImpl implements DeviceService {
                     int rootDeviceId = 0;
                     for (Device device:deviceList
                             ) {
-                        if (device.getName().equals(deviceName)){
+                        if (device.getId().equals(deviceId)){
                             rootDeviceId = device.getId();
                             addDevice = device;
                             addDevice.setId(null);
@@ -220,27 +179,45 @@ public class DeviceServiceImpl implements DeviceService {
 
     }
 
+    //删除设备
     @Override
-    public String deleteDevice(Integer deviceId) {
-        if (deviceId != null){
-            //删除对应的设备传感器
-            List<DeviceOperator> deviceOperators = deviceOperatorMapper.selectOperatorByDeviceId(deviceId);
-            for (DeviceOperator deviceOperator:deviceOperators
-                 ) {
-                deviceOperatorMapper.deleteById(deviceOperator.getId());
-            }
-            //删除对应的设备操作
-            List<Sensor> sensors = sensorMapper.selectSensorByDeviceId(deviceId);
-            for (Sensor sensor:sensors
-                 ) {
-                sensorMapper.deleteById(sensor.getId());
-            }
-            //删除对应的设备
-            deviceMapper.deleteById(deviceId);
+    public String deleteDevice(Family family,User user,Integer deviceId) {
+        if(familyService.isFamilyManager(user,family)){
+            if (deviceId != null){
+                //删除对应的设备传感器
+                List<DeviceOperator> deviceOperators = deviceOperatorMapper.selectOperatorByDeviceId(deviceId);
+                for (DeviceOperator deviceOperator:deviceOperators
+                        ) {
+                    deviceOperatorMapper.deleteById(deviceOperator.getId());
+                }
+                //删除对应的设备操作
+                List<Sensor> sensors = sensorMapper.selectSensorByDeviceId(deviceId);
+                for (Sensor sensor:sensors
+                        ) {
+                    sensorMapper.deleteById(sensor.getId());
+                }
+                //删除对应的设备
+                deviceMapper.deleteById(deviceId);
 
-            return "delete Success";
+                return "delete Success";
+            }
+        }else {
+            return "you are not a manager";
         }
+
 
         return "delete Failure";
     }
+
+    //通过家庭id查询设备
+    @Override
+    public String getDeviceByFamilyId(Family family) {
+        if (family.getId() != null){
+            List<Device> devices = deviceMapper.selectDeviceByFamilyId(family.getId());
+            return JSONArray.fromObject(devices).toString();
+        }
+        return "searchDeviceFailure";
+    }
+
+
 }

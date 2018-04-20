@@ -2,6 +2,9 @@ package it.caoxin.smarthome.domain.mapper.device;
 
 
 import it.caoxin.smarthome.domain.model.Device;
+import org.apache.commons.fileupload.util.LimitedInputStream;
+
+import java.util.List;
 
 /**
  * @author Administrator
@@ -19,4 +22,5 @@ public interface DeviceMapper {
 
     int updateById(Device device);
 
+    List<Device> selectDeviceByFamilyId(Integer familyId);
 }

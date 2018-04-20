@@ -43,14 +43,14 @@
   </sql>
 
   <select id="selectById" parameterType="java.lang.Integer" resultMap="SelectResultMap">
- SELECT
+  SELECT
   d.id AS id, family_id, d.name AS NAME, d.description AS description, location, d.info AS info, d.registert_time AS register_time, d.status AS STATUS, d.control_mode AS control_mode,d.img AS img,
   s.id AS sensor_id, s.device_id AS device_id, sensor_type_id, s.name AS sensor_name, s.info AS sensor_info, s.description AS sensor_description, s.status AS sensor_status, s.register_time AS sensor_register_time,
   do.id AS operator_id, operator_name, operator_code, do.description AS operator_description, do.register_time AS operator_register_time, do.status AS operator_status
-  FROM device d LEFT JOIN device_operator DO ON d.id = do.device_id
-	             LEFT JOIN sensor s  ON do.device_id = s.device_id
-    WHERE d.id = #{id,jdbcType=INTEGER}
-  </select>
+  FROM device d LEFT JOIN device_operator do ON d.id = do.device_id
+  LEFT JOIN sensor s  ON do.device_id = s.device_id
+  WHERE d.id = #{id,jdbcType=INTEGER}
+</select>
 
   <delete id="deleteById" parameterType="java.lang.Integer">
     delete from device
@@ -182,5 +182,15 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
+
+  <select id="selectDeviceByFamilyId" parameterType="java.lang.Integer" resultMap="SelectResultMap">
+    SELECT
+    d.id AS id, family_id, d.name AS NAME, d.description AS description, location, d.info AS info, d.registert_time AS register_time, d.status AS STATUS, d.control_mode AS control_mode,d.img AS img,
+    s.id AS sensor_id, s.device_id AS device_id, sensor_type_id, s.name AS sensor_name, s.info AS sensor_info, s.description AS sensor_description, s.status AS sensor_status, s.register_time AS sensor_register_time,
+    do.id AS operator_id, operator_name, operator_code, do.description AS operator_description, do.register_time AS operator_register_time, do.status AS operator_status
+    FROM device d LEFT JOIN device_operator do ON d.id = do.device_id
+    LEFT JOIN sensor s  ON do.device_id = s.device_id
+    WHERE family_id = #{familyId,jdbcType=INTEGER}
+  </select>
 
 </mapper>

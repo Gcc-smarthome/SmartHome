@@ -32,10 +32,15 @@ public interface DeviceService {
     /*
     创建设备
      */
-    String createDevice(Integer familyId,Integer userId,String deviceName);
+    String createDevice(Integer familyId,Integer userId,Integer deviceId);
 
     /*
     删除设备
      */
-    String deleteDevice(Integer deviceId);
+    String deleteDevice(Family family,User user,Integer deviceId);
+
+    /*
+    通过家庭id查询家庭设备
+     */
+    String getDeviceByFamilyId(Family family);
 }

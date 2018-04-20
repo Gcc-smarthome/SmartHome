@@ -75,9 +75,8 @@ public class FamilyImgServiceImpl implements FamilyImgService{
                 }
                 uploadPath = request.getServletContext().getRealPath("/upload/family");
                 for (int i = 0; i < files.length; i++) {
-
-
-                    String fileName = UUID.randomUUID().toString();
+                    String originalFilename = files[i].getOriginalFilename();
+                    String fileName = UUID.randomUUID()+originalFilename.substring(originalFilename.length()-4,originalFilename.length());
                     try {
                         FileUtils.copyInputStreamToFile(files[i].getInputStream(), new File(uploadPath, fileName));
                     } catch (IOException e) {
@@ -92,7 +91,6 @@ public class FamilyImgServiceImpl implements FamilyImgService{
                     familyImg.setImgUrl(photoUrl);
                     familyImg.setStatus(FamilyImg.STATUS_NORMAL);
 
-//                    System.out.println("familyImg:"+familyImg);
                     familyImgMapper.insert(familyImg);
 
 

@@ -54,7 +54,7 @@ public class FamilyImgController {
         return familyImgService.deleteFamilyImg(user,family,familyImg);
     }
 
-    //获取家庭照片
+    //获取家庭照片:需要改的地方，不管是不是家庭管理员都可以查看
     @RequestMapping(value = "/get_familyimg",method = RequestMethod.GET)
     @ResponseBody
     public String getFamilyImg(Integer userId,Integer familyId){

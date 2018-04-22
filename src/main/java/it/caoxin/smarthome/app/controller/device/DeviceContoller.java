@@ -1,6 +1,7 @@
 package it.caoxin.smarthome.app.controller.device;
 
 
+import it.caoxin.smarthome.domain.model.Device;
 import it.caoxin.smarthome.domain.model.Family;
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.device.DeviceService;
@@ -80,6 +81,26 @@ public class DeviceContoller {
         family.setId(familyId);
 
         return deviceService.getDeviceByFamilyId(family);
+
+    }
+
+    //查看设备详情
+    @RequestMapping(value = "get_device/{id}",method = RequestMethod.POST)
+    @ResponseBody
+    public String getDeviceDetail(@PathVariable Integer id){
+        System.out.println("deviceId"+id);
+        Device device = new Device();
+        device.setId(id);
+        return deviceService.getDeviceById(device);
+
+    }
+
+    //更新设备设备
+    @RequestMapping(value = "up_device",method = RequestMethod.POST)
+    @ResponseBody
+    public String updateDevice(Device device){
+        System.out.println("device"+device);
+        return deviceService.updateDevice(device);
 
     }
 

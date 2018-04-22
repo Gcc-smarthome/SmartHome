@@ -20,7 +20,7 @@ public interface FamilyImgService{
     int updateSelect(FamilyImg familyImg);
 
     /*
-添加家庭图片
+    添加家庭图片
  */
     String addFamilyImg(User user, Family family,
                         MultipartFile[] files,
@@ -36,5 +36,13 @@ public interface FamilyImgService{
    */
     String getfamilyImgs(Family family,User user);
 
+    /*
+    查看某个家庭默认图片
+     */
+    String getDefaultPhoto(Family family);
 
+    /*
+    修改家庭默认图片
+     */
+    String updateFamilyImg(FamilyImg familyImg,Family family);
 }

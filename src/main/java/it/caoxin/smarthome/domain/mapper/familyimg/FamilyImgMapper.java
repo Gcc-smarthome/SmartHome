@@ -23,4 +23,5 @@ public interface FamilyImgMapper {
     FamilyImg selectByDefaultFamilyId(Integer familyId);
 
     int deleteById(Integer id);
+
 }

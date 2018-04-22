@@ -43,4 +43,16 @@ public interface DeviceService {
     通过家庭id查询家庭设备
      */
     String getDeviceByFamilyId(Family family);
+
+    /*
+    通过设备id查询对应的设备详情
+     */
+    String getDeviceById(Device device);
+
+    /*
+    更新设备
+     */
+    String updateDevice(Device device);
+
+
 }

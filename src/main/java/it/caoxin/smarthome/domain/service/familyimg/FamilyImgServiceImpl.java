@@ -131,4 +131,39 @@ public class FamilyImgServiceImpl implements FamilyImgService{
 
         return "you have not privilege";
     }
+
+    //查看家庭默认图片
+    @Override
+    public String getDefaultPhoto(Family family) {
+        if (family.getId() != null){
+            FamilyImg familyImg = familyImgMapper.selectByDefaultFamilyId(family.getId());
+            if (familyImg != null){
+                return familyImg.getImgUrl();
+            }
+            return "get photo failure";
+        }
+        return "get photo failure";
+    }
+    //修改家庭默认图片
+    @Override
+    public String updateFamilyImg(FamilyImg familyImg,Family family) {
+        if (familyImg.getId() != null &&
+                family.getId() != null){
+            FamilyImg defaultFamilyImg = familyImgMapper.selectByDefaultFamilyId(family.getId());
+            if (defaultFamilyImg != null){
+                defaultFamilyImg.setStatus(FamilyImg.STATUS_NORMAL);
+                familyImgMapper.insertSelective(defaultFamilyImg);
+
+            }
+            FamilyImg newFamilyImg = familyImgMapper.selectById(familyImg.getId());
+            newFamilyImg.setStatus(FamilyImg.STATUS_DEFAULT);
+            familyImgMapper.updateSelect(newFamilyImg);
+
+            return familyService.getFamilyById(family);
+        }
+        return "update failure";
+    }
+
+
+
 }

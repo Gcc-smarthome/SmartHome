@@ -219,5 +219,23 @@ public class DeviceServiceImpl implements DeviceService {
         return "searchDeviceFailure";
     }
 
+    @Override
+    public String getDeviceById(Device device) {
+        if (device.getId() != null){
+            Device selectDevice = deviceMapper.selectById(device.getId());
+            return JSONArray.fromObject(selectDevice).toString();
+        }
+        return "find device failure";
+    }
+
+    @Override
+    public String updateDevice(Device device) {
+        if (device.getId() != null){
+            updateByIdSelective(device);
+            return "update success";
+        }
+        return "update failure";
+    }
+
 
 }

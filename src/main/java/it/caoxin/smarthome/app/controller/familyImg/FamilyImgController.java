@@ -67,4 +67,17 @@ public class FamilyImgController {
 
         return familyImgService.getfamilyImgs(family,user);
     }
+
+    @RequestMapping(value = "/ud_familyimg",method = RequestMethod.POST)
+    @ResponseBody
+    public String updateFamilyImg(Integer familyImgId,Integer familyId){
+
+        FamilyImg familyImg = new FamilyImg();
+        familyImg.setId(familyImgId);
+
+        Family family = new Family();
+        family.setId(familyId);
+
+        return familyImgService.updateFamilyImg(familyImg,family);
+    }
 }

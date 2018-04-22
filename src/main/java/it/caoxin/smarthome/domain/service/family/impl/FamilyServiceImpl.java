@@ -56,7 +56,9 @@ public class FamilyServiceImpl implements FamilyService {
             Family family = familyMapper.selectById(userFamily.getFamilyId());
             FamilyImg img = familyImgMapper.selectByDefaultFamilyId(family.getId());
             if (img != null){
-                family.setPhoto(img.getImgUrl());
+                if (!img.getImgUrl().equals("get photo failure")){
+                    family.setPhoto(img.getImgUrl());
+                }
             }
             families.add(family);
         }

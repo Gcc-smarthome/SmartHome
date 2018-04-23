@@ -85,7 +85,7 @@ public class DeviceContoller {
     }
 
     //查看设备详情
-    @RequestMapping(value = "get_device/{id}",method = RequestMethod.POST)
+    @RequestMapping(value = "get_device/{id}",method = RequestMethod.GET)
     @ResponseBody
     public String getDeviceDetail(@PathVariable Integer id){
         System.out.println("deviceId"+id);

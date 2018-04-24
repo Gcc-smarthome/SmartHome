@@ -6,6 +6,8 @@ import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.family.FamilyService;
 import net.sf.json.JSONArray;
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
@@ -25,6 +27,8 @@ import org.springframework.web.multipart.MultipartFile;
 @Transactional
 @Service
 public class FamilyImgServiceImpl implements FamilyImgService{
+
+    public static final Logger logger = LoggerFactory.getLogger(FamilyImgServiceImpl.class);
 
     private static final String FamilyPhotoPath = "/upload/family/";
 
@@ -61,7 +65,7 @@ public class FamilyImgServiceImpl implements FamilyImgService{
                                HttpServletRequest request) {
         String uploadPath;
         if (familyService.isFamilyManager(user,family)) {
-            if (files != null) {
+            if (files != null && files.length != 0) {
 
                 for (MultipartFile file:files
                      ) {
@@ -73,9 +77,13 @@ public class FamilyImgServiceImpl implements FamilyImgService{
                         return "Illegal file format";
                     }
                 }
+                logger.debug("进入文件上传");
+
                 uploadPath = request.getServletContext().getRealPath("/upload/family");
+                logger.debug("files.length"+files.length);
                 for (int i = 0; i < files.length; i++) {
                     String originalFilename = files[i].getOriginalFilename();
+                    logger.debug("files:"+originalFilename);
                     String fileName = UUID.randomUUID()+originalFilename.substring(originalFilename.length()-4,originalFilename.length());
                     try {
                         FileUtils.copyInputStreamToFile(files[i].getInputStream(), new File(uploadPath, fileName));
@@ -90,7 +98,7 @@ public class FamilyImgServiceImpl implements FamilyImgService{
                     familyImg.setFamilyId(family.getId());
                     familyImg.setImgUrl(photoUrl);
                     familyImg.setStatus(FamilyImg.STATUS_NORMAL);
-
+                    logger.debug("添加家庭文件");
                     familyImgMapper.insert(familyImg);
 
 
@@ -152,7 +160,7 @@ public class FamilyImgServiceImpl implements FamilyImgService{
             FamilyImg defaultFamilyImg = familyImgMapper.selectByDefaultFamilyId(family.getId());
             if (defaultFamilyImg != null){
                 defaultFamilyImg.setStatus(FamilyImg.STATUS_NORMAL);
-                familyImgMapper.insertSelective(defaultFamilyImg);
+                familyImgMapper.updateSelect(defaultFamilyImg);
 
             }
             FamilyImg newFamilyImg = familyImgMapper.selectById(familyImg.getId());

@@ -17,6 +17,9 @@ public class TestFamilyImg {
     @Test
     public void testAdd(){
         FamilyImg img = new FamilyImg();
+//        familyImg.setFamilyId(family.getId());
+//        familyImg.setImgUrl(photoUrl);
+//        familyImg.setStatus(FamilyImg.STATUS_NORMAL);
         img.setFamilyId(1);
         img.setImgUrl("123");
         img.setStatus("正常");

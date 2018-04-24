@@ -1,9 +1,13 @@
 package it.caoxin.smarthome.domain.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class SensorData implements Serializable {
+    public static final String STATUS_NORMAL = "正常";
+
     private Integer id;
 
     private Integer sensorId;
@@ -12,6 +16,7 @@ public class SensorData implements Serializable {
 
     private String dataValue;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date collectionTime;
 
     private String info;

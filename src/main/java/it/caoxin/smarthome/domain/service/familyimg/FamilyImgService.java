@@ -23,7 +23,7 @@ public interface FamilyImgService{
     添加家庭图片
  */
     String addFamilyImg(User user, Family family,
-                        MultipartFile[] files,
+                            MultipartFile[] files,
                         HttpServletRequest request);
 
     /*

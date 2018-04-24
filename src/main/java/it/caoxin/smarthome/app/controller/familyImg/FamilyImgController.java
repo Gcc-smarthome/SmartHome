@@ -5,10 +5,13 @@ import it.caoxin.smarthome.domain.model.FamilyImg;
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.family.FamilyService;
 import it.caoxin.smarthome.domain.service.familyimg.FamilyImgService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -16,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class FamilyImgController {
+    public static final Logger logger = LoggerFactory.getLogger(FamilyImgController.class);
     @Autowired
     private FamilyImgService familyImgService;
 
@@ -23,10 +27,19 @@ public class FamilyImgController {
     @RequestMapping(value = "/add_familyimg",method = RequestMethod.POST)
     @ResponseBody
     public String addFamilyImg(Integer userId,Integer familyId,
-                               MultipartFile[] files,
+                              @RequestParam MultipartFile[] files,
                                HttpServletRequest request){
         System.out.println("userId:"+userId);
-        System.out.println("files:"+files);
+
+
+        if (files != null && files.length != 0){
+            logger.debug("添加图片的文件file不为空");
+            logger.debug("file:"+files);
+        }else {
+            logger.debug("files为空");
+        }
+
+
         User user = new User();
         user.setId(userId);
 
@@ -67,7 +80,7 @@ public class FamilyImgController {
 
         return familyImgService.getfamilyImgs(family,user);
     }
-
+    //更加家庭图片
     @RequestMapping(value = "/ud_familyimg",method = RequestMethod.POST)
     @ResponseBody
     public String updateFamilyImg(Integer familyImgId,Integer familyId){

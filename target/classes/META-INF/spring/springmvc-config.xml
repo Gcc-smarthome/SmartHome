@@ -13,7 +13,7 @@
 
     <!-- 扫描controller bean -->
     <context:component-scan base-package="it.caoxin.smarthome.app.controller" />
-
+    <context:component-scan base-package="it.caoxin.smarthome.domain.websocket"/>
     <!--注解开启-->
     <mvc:annotation-driven >
         <mvc:message-converters>

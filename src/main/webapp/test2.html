@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="stop">Stop</button>
+    <button id="send">Send</button>
+</body>
+
+
+<!--导入需要的js包-->
+<script src="static/js/jquery/jquery.min.js"></script>
+<script src="static/js/websocket/sockjs.min.js"></script>
+<script src="static/js/websocket/stomp.js"></script>
+
+<script type="text/javascript">
+    //stomp客户端
+    var stompClient = null;
+
+
+    function connect() {
+        var socket = new SockJS('/SmartHome/webSocketEndPoint');
+        stompClient = Stomp.over(socket);
+
+        var headers = {};
+        stompClient.connect(headers,function (frame) {
+            console.log('Connected: ' + frame);
+            stompClient.subscribe('/sensor/' +'2' + '/add_Data/sensordata', function (greeting) {
+                showGreeting(JSON.parse(greeting.body).userId, JSON.parse(greeting.body).content);
+            });
+        });
+
+    }
+
+    function showGreeting(userId, message) {
+        console.log("Hi, 这是来自 " + userId + " 的消息: " + message );
+    }
+    function send(){
+        stompClient.send("/app/add_sensordata", {},
+            JSON.stringify(
+                {"sensorId":1,
+                    "dataName":"xxxx",
+                    "dataValue":"123",
+                    "info":"xxxx"}));
+    }
+    $(function () {
+        connect();
+        $('#stop').click(function() {stompClient.disconnect()});
+        $('#send').click(function () {
+            send();
+            console.log(getTime());
+        })
+    });
+
+//    function getTime() {
+//        var myDate = new Date();
+//    //获取当前年
+//        var year=myDate.getFullYear();
+//    //获取当前月
+//        var month=myDate.getMonth()+1;
+//    //获取当前日
+//        var date=myDate.getDate();
+//        var h=myDate.getHours();       //获取当前小时数(0-23)
+//        var m=myDate.getMinutes();     //获取当前分钟数(0-59)
+//        var s=myDate.getSeconds();
+//        var ms = myDate.getMilliseconds();
+//
+//        var now=year+'-'+(month)+"-"+(date)+" "+(h)+':'+(m)+":"+(s);
+//        //"yyyy-MM-dd'T'HH:mm:ss.SSSZ
+//        return now.toString();
+//    }
+</script>
+</html>

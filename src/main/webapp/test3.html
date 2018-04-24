@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="stop">Stop</button>
+    <button id="send">Send</button>
+</body>
+<script src="static/js/jquery/jquery.min.js"></script>
+<script src="static/js/websocket/sockjs.min.js"></script>
+<script src="static/js/websocket/stomp.js"></script>
+
+<script type="text/javascript">
+    //stomp客户端
+    var stompClient = null;
+
+
+    function connect() {
+        var socket = new SockJS('/SmartHome/webSocketEndPoint');
+        stompClient = Stomp.over(socket);
+
+        var headers = {};
+        stompClient.connect(headers,function (frame) {
+            console.log('Connected: ' + frame);
+            stompClient.subscribe('/sensor/' +'1' + '/add_Data/sensordata', function (greeting) {
+                console.log(JSON.parse(greeting.body));
+            });
+        });
+
+    }
+
+    function showGreeting(userId, message) {
+        console.log("Hi, 这是来自 " + userId + " 的消息: " + message );
+    }
+    function send(){
+        stompClient.send("/app/add_sensordata", {}, JSON.stringify({'message': {}}));
+    }
+    $(function () {
+        connect();
+        $('#stop').click(function() {stompClient.disconnect()});
+        $('#send').click(function () {
+            send();
+        })
+    })
+</script>
+</html>

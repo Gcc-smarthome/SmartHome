@@ -58,7 +58,7 @@ public class SendValidateCode {
     public static String testCode(){
         String validateCode = "";
         Random random = new Random();
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 6; i++){
             int randomNumber = random.nextInt(10);
             validateCode += randomNumber;
         }

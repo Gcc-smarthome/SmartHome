@@ -5,6 +5,9 @@ import it.caoxin.smarthome.domain.model.Family;
 import it.caoxin.smarthome.domain.model.User;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
+
 public interface DeviceService {
     int deleteById(Integer id);
 
@@ -22,7 +25,7 @@ public interface DeviceService {
     /*
     控制设备
      */
-    String operatorDevice(Integer familyId,Integer deviceId,String operator);
+    String operatorDevice(Integer familyId,Integer deviceId,String operator) throws TimeoutException, ExecutionException;
 
     /*
     管理员添加可用设备

@@ -21,7 +21,7 @@ public class SeverTestListener implements ServletContextListener {
         @Override
         public void run() {
             System.out.println("启动测试服务器服务器....");
-            new EchoServer(20000).start();
+//            new EchoServer(20000).start();
         }
     }
 

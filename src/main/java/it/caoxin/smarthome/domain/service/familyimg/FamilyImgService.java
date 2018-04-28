@@ -45,4 +45,9 @@ public interface FamilyImgService{
     修改家庭默认图片
      */
     String updateFamilyImg(FamilyImg familyImg,Family family);
+
+    /*
+    获取系统照片
+     */
+    String getSystePhoto(Family family);
 }

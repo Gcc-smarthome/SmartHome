@@ -172,6 +172,15 @@ public class FamilyImgServiceImpl implements FamilyImgService{
         return "update failure";
     }
 
+    //获取系统照片
+    @Override
+    public String getSystePhoto(Family family) {
+        if (family.getId() != null){
+            List<FamilyImg> familyImgs = familyImgMapper.selectBySystemImgFamilyId(family.getId());
+            return JSONArray.fromObject(familyImgs).toString();
+        }
+        return "get not system photo";
+    }
 
 
 }

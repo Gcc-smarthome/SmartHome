@@ -1,9 +1,14 @@
 package it.caoxin.smarthome.app.controller;
 
 
+import io.netty.buffer.Unpooled;
+import io.netty.channel.Channel;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.util.CharsetUtil;
 import it.caoxin.smarthome.domain.common.ClientIpPool;
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.sensor.SensorService;
+import it.caoxin.smarthome.domain.socket.common.ChannelMap;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,11 +46,14 @@ public class HelloController {
     @RequestMapping("/toConnectServer")
     @ResponseBody
     public String toConnectServer() throws InterruptedException {
-        String host = (String) ClientIpPool.getClientIpPoolMap().get(1);
-        int port = 50001;
+//        String host = (String) ClientIpPool.getClientIpPoolMap().get(1);
+//        int port = 50001;
 //        EchoClient echoClient = new EchoClient(host, port,1,null);
 //        echoClient.start();
-
+        SocketChannel channel = (SocketChannel) ChannelMap.get(1);
+        if (channel != null){
+            channel.writeAndFlush(Unpooled.copiedBuffer("hello client i'm http", CharsetUtil.UTF_8));
+        }
 
         return "test...";
     }
@@ -54,13 +62,19 @@ public class HelloController {
     @RequestMapping("/testLogInfo")
     @ResponseBody
     public String testLogInfo() throws InterruptedException {
-        String res = "6 8 9 open";
-
-        String[] fields = res.split(" ");
-        Integer deviceId = Integer.parseInt(fields[0]);
-
-
-//        logger.info();
+//        String res = "6 8 9 open";
+//
+//        String[] fields = res.split(" ");
+//        Integer deviceId = Integer.parseInt(fields[0]);
+//
+//
+////        logger.info();
+        SocketChannel socketChannel = (SocketChannel) ClientIpPool.getFamilyIpSocketMap().get(1);
+        if (socketChannel.isActive()){
+            System.out.println("socket存活");
+        }else {
+            System.out.println("socket死了");
+        }
         return "test...";
     }
 }

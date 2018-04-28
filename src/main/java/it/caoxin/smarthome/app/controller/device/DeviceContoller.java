@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
+
 @Controller
 public class DeviceContoller {
     @Autowired
@@ -52,8 +55,15 @@ public class DeviceContoller {
         System.out.println("familyId:"+familyId);
         System.out.println("operator:"+operator);
 
-        return deviceService.operatorDevice(familyId,deviceId,operator);
-
+        String res=null;
+        try {
+             res = deviceService.operatorDevice(familyId,deviceId,operator);
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        return res;
     }
 
     //获取可以添加的设备 管理员才可以添加

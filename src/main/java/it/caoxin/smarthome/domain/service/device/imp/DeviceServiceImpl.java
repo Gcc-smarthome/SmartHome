@@ -1,7 +1,13 @@
 package it.caoxin.smarthome.domain.service.device.imp;
 
+
+import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.Channel;
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
+import io.netty.util.CharsetUtil;
 import it.caoxin.smarthome.domain.common.ClientIpPool;
-import it.caoxin.smarthome.domain.common.DataOfCSHandler;
 import it.caoxin.smarthome.domain.common.DataOfCSResult;
 import it.caoxin.smarthome.domain.mapper.device.DeviceMapper;
 import it.caoxin.smarthome.domain.mapper.deviceoperator.DeviceOperatorMapper;
@@ -12,18 +18,17 @@ import it.caoxin.smarthome.domain.service.SocketServer.client.EchoClient;
 import it.caoxin.smarthome.domain.service.device.DeviceService;
 import it.caoxin.smarthome.domain.service.family.FamilyService;
 import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Semaphore;
+import java.util.Map;
+
 
 
 @Service("deviceService")
 public class DeviceServiceImpl implements DeviceService {
+
     @Autowired
     DeviceOperatorMapper deviceOperatorMapper;
 
@@ -79,14 +84,14 @@ public class DeviceServiceImpl implements DeviceService {
         try {
             //通过id拿到对应的ip开始对客户端连接
             String familyIp = (String) ClientIpPool.getClientIpPoolMap().get(familyId);
-            String host = familyIp;
+            String host = "localhost";
             int port = 50001;
 
-            EchoClient echoClient = new EchoClient(host, port,new DataOfCSResult(familyId,operator,deviceId,null));
+            EchoClient echoClient = new EchoClient(host, port,new DataOfCSResult(familyId, operator, deviceId, null));
             echoClient.start();
 
             String serverData = echoClient.getDataOfCSResult().getReturnData();
-
+            System.out.println("serverData:"+serverData);
             return serverData;
         }catch (InterruptedException e) {
             e.printStackTrace();

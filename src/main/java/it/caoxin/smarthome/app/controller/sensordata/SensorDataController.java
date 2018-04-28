@@ -8,6 +8,10 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import java.util.Date;
@@ -20,15 +24,27 @@ public class SensorDataController {
 
 
     @MessageMapping("/add_sensordata")
-    @SendToUser("/add_Data/sensordata")
+    @SendToUser
     public void addSensorData(SensorData message){
 
        message.setCollectionTime(new Date());
        message.setStatus(SensorData.STATUS_NORMAL);
 
-       messagingTemplate.convertAndSendToUser(message.getSensorId()+"", "/add_Data/sensordata",new Message(new SensorData()));
+       messagingTemplate.convertAndSendToUser("1", "/add_Data/sensordata",new Message(new SensorData()));
 
        sensorDataService.insertSelective(message);
+    }
+
+    @PostMapping("/test")
+    @ResponseBody
+    public String add(@RequestBody SensorData message){
+
+        message.setCollectionTime(new Date());
+        message.setStatus(SensorData.STATUS_NORMAL);
+
+        messagingTemplate.convertAndSendToUser("1", "/add_Data/sensordata",new Message(message));
+        return "";
+//        sensorDataService.insertSelective(message);
     }
 
 

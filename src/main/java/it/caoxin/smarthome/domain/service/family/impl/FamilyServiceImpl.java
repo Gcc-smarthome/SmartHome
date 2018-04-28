@@ -1,5 +1,6 @@
 package it.caoxin.smarthome.domain.service.family.impl;
 
+import it.caoxin.smarthome.app.controller.family.FamilyController;
 import it.caoxin.smarthome.domain.common.SendValidateCode;
 import it.caoxin.smarthome.domain.mapper.family.FamilyMapper;
 import it.caoxin.smarthome.domain.mapper.familyimg.FamilyImgMapper;
@@ -12,6 +13,8 @@ import it.caoxin.smarthome.domain.model.UserFamily;
 import it.caoxin.smarthome.domain.service.family.FamilyService;
 import net.sf.json.JSONArray;
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,7 +32,7 @@ import java.util.*;
 @Service("familyService")
 public class FamilyServiceImpl implements FamilyService {
 
-
+    public static final Logger logger = LoggerFactory.getLogger(FamilyServiceImpl.class);
     @Autowired
     private FamilyMapper familyMapper;
 
@@ -44,6 +47,7 @@ public class FamilyServiceImpl implements FamilyService {
 
     private  SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd hh:mm;ss");
 
+    private static String defaultImg = "/upload/family/";
     //查看所有家庭
     @Override
     public String getFaimlysByUser(User user) {
@@ -86,6 +90,18 @@ public class FamilyServiceImpl implements FamilyService {
         userFamily.setFamilyRole(UserFamily.ROLE_MANAGER);
         userFamily.setStatus(UserFamily.STATUS_NORMAL);
 
+        //添加默认家庭图片
+//        http://120.79.21.193/SmartHome/upload/family/bg01.jpg
+        for (int i = 1; i < 6; i++){
+            FamilyImg familyImg = new FamilyImg();
+            familyImg.setStatus(FamilyImg.STATUS_SYSTEM);
+            familyImg.setFamilyId(family.getId());
+            String imgurl = "bg0";
+            String suffix = ".jpg";
+            familyImg.setImgUrl(defaultImg+imgurl+i+suffix);
+
+            familyImgMapper.insertSelective(familyImg);
+        }
         userFamilyMapper.insert(userFamily);
 
         return "createFamilySuccess";
@@ -153,6 +169,7 @@ public class FamilyServiceImpl implements FamilyService {
     //更新家庭信息
     @Override
     public String updateFamilyInfo(User user, Family family) {
+
         if (isFamilyManager(user,family)){
             familyMapper.updateByIdSelective(family);
             return "updateFamilyInfoSuccess";

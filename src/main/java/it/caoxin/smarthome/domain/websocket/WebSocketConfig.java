@@ -44,6 +44,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
         /*
               * 路径"/webSocketEndPoint"被注册为STOMP端点，对外暴露，客户端通过该路径接入WebSocket服务
               */
-        stompEndpointRegistry.addEndpoint("/webSocketEndPoint").setAllowedOrigins("*").withSockJS();
+        stompEndpointRegistry.addEndpoint("/webSocketEndPoint")
+                .setAllowedOrigins("*").withSockJS();
     }
 }

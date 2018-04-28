@@ -93,4 +93,16 @@ public class FamilyImgController {
 
         return familyImgService.updateFamilyImg(familyImg,family);
     }
+
+    //获取系统照片
+    @RequestMapping(value = "/get_sysimg",method = RequestMethod.GET)
+    @ResponseBody
+    public String getSysImg(Integer familyId){
+
+
+        Family family = new Family();
+        family.setId(familyId);
+
+        return familyImgService.getSystePhoto(family);
+    }
 }

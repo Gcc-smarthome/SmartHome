@@ -3,6 +3,7 @@ package it.caoxin.smarthome.domain.service.SocketServer.server;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
@@ -57,6 +58,11 @@ public class EchoServer {
                             socketChannel.pipeline().addLast(echoServerHandler);
                         }
                     });
+            serverBoot.option(ChannelOption.SO_BACKLOG, 0);
+            //通过NoDelay禁用Nagle,使消息立即发出去，不用等待到一定的数据量才发出去
+            serverBoot.option(ChannelOption.TCP_NODELAY, true);;
+//            异步地绑定服务器；调用sync()方法阻塞等待直到绑定完成
+            serverBoot.childOption(ChannelOption.SO_KEEPALIVE, true);
 //            异步地绑定服务器；调用sync()方法阻塞等待直到绑定完成
             ChannelFuture future = serverBoot.bind().sync();
 //            获取Channel的CloseFuture，并且阻塞当前线程直到它完成

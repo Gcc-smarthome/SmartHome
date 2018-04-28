@@ -10,7 +10,7 @@
 
     <context:property-placeholder location="classpath:/jdbc.properties"/>
 
-    <context:component-scan base-package="it.caoxin.smarthome.domain.service"  />
+    <context:component-scan base-package="it.caoxin.smarthome"  />
 
     <!-- 扫描mapper接口并自动导入 -->
     <mybatis:scan base-package="it.caoxin.smarthome.domain.mapper"/>

@@ -20,7 +20,7 @@ public class SendValidateCode {
     static final String accessKeyId = "LTAIgCEqX0wsVK86";
     static final String accessKeySecret = "fzaLFR1OI1qwtl3pr5hZ0SQfuHFMoC";
 
-    public static SendSmsResponse sendSms() throws ClientException {
+    public static SendSmsResponse sendSms(String phone)  {
 
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
@@ -28,13 +28,17 @@ public class SendValidateCode {
 
         //初始化acsClient,暂不支持region化
         IClientProfile profile = DefaultProfile.getProfile("cn-hangzhou", accessKeyId, accessKeySecret);
-        DefaultProfile.addEndpoint("cn-hangzhou", "cn-hangzhou", product, domain);
+        try {
+            DefaultProfile.addEndpoint("cn-hangzhou", "cn-hangzhou", product, domain);
+        } catch (ClientException e) {
+            e.printStackTrace();
+        }
         IAcsClient acsClient = new DefaultAcsClient(profile);
 
         //组装请求对象-具体描述见控制台-文档部分内容
         SendSmsRequest request = new SendSmsRequest();
         //必填:待发送手机号
-        request.setPhoneNumbers("18320338949");
+        request.setPhoneNumbers(phone);
         //必填:短信签名-可在短信控制台中找到
         request.setSignName("智能家居云平台");
         //必填:短信模板-可在短信控制台中找到
@@ -42,14 +46,19 @@ public class SendValidateCode {
 
         String validateCode = "";
         Random random = new Random();
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 6; i++){
             int randomNumber = random.nextInt(10);
             validateCode += randomNumber;
         }
         //可选:模板中的变量替换JSON串,如模板内容为"亲爱的${name},您的验证码为${code}"时,此处的值为
         request.setTemplateParam("{\"code\":"+validateCode+"}");
         //hint 此处可能会抛出异常，注意catch
-        SendSmsResponse sendSmsResponse = acsClient.getAcsResponse(request);
+        SendSmsResponse sendSmsResponse = null;
+        try {
+            sendSmsResponse = acsClient.getAcsResponse(request);
+        } catch (ClientException e) {
+            e.printStackTrace();
+        }
 
         return sendSmsResponse;
     }

@@ -4,6 +4,8 @@ import it.caoxin.smarthome.domain.model.Family;
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.family.FamilyService;
 import org.apache.poi.util.SystemOutLogger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +14,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 
 @Controller
 public class FamilyController {
-
+    public static final Logger logger = LoggerFactory.getLogger(FamilyController.class);
     @Autowired
     private FamilyService familyService;
 
@@ -66,13 +68,23 @@ public class FamilyController {
      */
     @RequestMapping(value = "/ud_family",method = RequestMethod.POST)
     @ResponseBody
-    public String ud_family(Integer userId,Family family){
+    public String ud_family(Integer userId,Integer familyId,String familyName,String familyAddress){
 
         System.out.println("userId:"+userId);
-        System.out.println("familyId:"+userId);
+
         System.out.println("更新i就爱听个");
         User user = new User();
         user.setId(userId);
+        logger.debug("userid:"+userId);
+        logger.debug("familyid:"+familyId);
+        logger.debug("familyName:"+familyName);
+        logger.debug("familyAddress:"+familyAddress);
+        Family family = new Family();
+        family.setId(familyId);
+        family.setFamilyAddress(familyAddress);
+        family.setFamilyName(familyName);
+        logger.debug("family----------------------------",family);
+        System.out.println("family:"+family);
         return familyService.updateFamilyInfo(user,family);
     }
 

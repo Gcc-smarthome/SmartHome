@@ -3,6 +3,7 @@ package it.caoxin.smarthome.domain.model;
 public class FamilyImg {
     public static final String STATUS_NORMAL = "正常";
     public static final String STATUS_DEFAULT = "默认";
+    public static final String STATUS_SYSTEM = "系统";
 
     private Integer id;
     private Integer familyId;

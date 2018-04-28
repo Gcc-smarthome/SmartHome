@@ -3,57 +3,53 @@ package it.caoxin.smarthome.domain.service.SocketServer.server;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
+import io.netty.channel.socket.SocketChannel;
 import io.netty.util.CharsetUtil;
-import it.caoxin.smarthome.domain.common.ClientIpPool;
-import net.sf.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
+import io.netty.util.ReferenceCountUtil;
+import it.caoxin.smarthome.domain.socket.common.ChannelMap;
+import it.caoxin.smarthome.domain.socket.socketmessage.BaseMsg;
 
 import java.net.InetSocketAddress;
-import java.util.Date;
-import java.util.Map;
+import java.nio.ByteBuffer;
+import java.util.Random;
 
 /**
  * @author Administrator
  */ //因为服务器会响应传入的信息--->所以需要实现ChannelInboundHandler
 @ChannelHandler.Sharable
-public class EchoServerHandler extends ChannelInboundHandlerAdapter {
+public class EchoServerHandler extends SimpleChannelInboundHandler<ByteBuf> {
 
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf in = (ByteBuf) msg;
-        //将消息记录到控制台
-        String clientIdAndIp = in.toString(CharsetUtil.UTF_8);
-        System.out.println("Server received:" + clientIdAndIp);
-        //将接收到的消息传递给ClientIpPool
-        JSONObject jsonObject = JSONObject.fromObject(clientIdAndIp);
-        String id = (String)jsonObject.get("id");
-        String ip  = (String) jsonObject.get("ip");
-
-
-        System.out.println("familyid:"+id);
-        System.out.println("ip:"+ip);
-
-        Map clientIpPool = ClientIpPool.getClientIpPoolMap();
-        //获取来源ip
+    protected void messageReceived(ChannelHandlerContext ctx, ByteBuf byteBuf) throws Exception {
+        System.out.println("终端系统接收到的指令:" + byteBuf.toString(CharsetUtil.UTF_8));
         InetSocketAddress insocket = (InetSocketAddress) ctx.channel().remoteAddress();
         String clientIP = insocket.getAddress().getHostAddress();
         System.out.println(clientIP);
+        //将接收到的消息写给发送者，而不冲刷入站的消息
+        Random random = new Random();
+        boolean b = random.nextBoolean();
+        String result = null;
 
-        clientIpPool.put(Integer.parseInt(id),clientIP);
+        System.out.println("result:"+result);
+        System.out.println("b:"+b);
+        if (b){
+            result = "Success";
+        }else {
+            result = "failure";
+        }
 
-        System.out.println("clientIpPool"+clientIpPool);
+        ChannelMap.add(1,(SocketChannel) ctx.channel());
+        ctx.writeAndFlush(Unpooled.copiedBuffer(result, CharsetUtil.UTF_8));
 
-        ByteBuf resp = Unpooled.copiedBuffer("SYN".getBytes());
-        ctx.write(resp);
-
-
+        ReferenceCountUtil.release(byteBuf);
     }
 
-    @Override
-    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-        ctx.flush();//刷新后才将数据发出到SocketChannel
-        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
-    }
+//    @Override
+//    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+////        ctx.flush();//刷新后才将数据发出到SocketChannel
+////        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
+//        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER);
+//    }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {

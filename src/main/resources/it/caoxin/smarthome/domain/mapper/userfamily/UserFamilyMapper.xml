@@ -135,5 +135,6 @@
         from userfamily
         where uniquecode = #{arg0,jdbcType=VARCHAR} AND status = '正常';
     </select>
+
 </mapper>
 

@@ -9,7 +9,7 @@ public class SeverListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
 
-        new ServerStart().start();
+//        new ServerStart().start();
     }
 
     @Override

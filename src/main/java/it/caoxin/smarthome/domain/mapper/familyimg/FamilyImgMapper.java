@@ -1,5 +1,6 @@
 package it.caoxin.smarthome.domain.mapper.familyimg;
 
+import it.caoxin.smarthome.domain.model.UserFamily;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -23,5 +24,7 @@ public interface FamilyImgMapper {
     FamilyImg selectByDefaultFamilyId(Integer familyId);
 
     int deleteById(Integer id);
+
+    List<FamilyImg> selectBySystemImgFamilyId(Integer familyId);
 
 }

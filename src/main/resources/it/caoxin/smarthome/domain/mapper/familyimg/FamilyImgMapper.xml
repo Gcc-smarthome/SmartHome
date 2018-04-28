@@ -105,5 +105,12 @@
         delete from family_img
         where id = #{id,jdbcType=INTEGER}
     </delete>
+
+    <select id="selectBySystemImgFamilyId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from family_img
+        where family_id = #{arg0,jdbcType=INTEGER} AND status = '系统';
+    </select>
 </mapper>
 

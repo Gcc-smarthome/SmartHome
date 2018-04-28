@@ -2,6 +2,7 @@ package it.caoxin.smarthome.domain.service.user.impl;
 
 
 
+import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import it.caoxin.smarthome.domain.common.SendValidateCode;
 import it.caoxin.smarthome.domain.mapper.family.FamilyMapper;
 import it.caoxin.smarthome.domain.mapper.user.UserMapper;
@@ -178,7 +179,9 @@ public class UserServiceImpl implements UserService {
             System.out.println("user:"+getValidateCodeUser);
             if (getValidateCodeUser != null){
 
-                String code = sendValidateCode();
+                SendSmsResponse sendSmsResponse = SendValidateCode.sendSms(phone);
+
+                String code = sendSmsResponse.getCode();
                 getValidateCodeUser.setCode(code);
 
                 userMapper.updateByIdSelective(getValidateCodeUser);

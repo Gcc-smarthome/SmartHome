@@ -26,4 +26,6 @@ public interface UserFamilyMapper {
     List<UserFamily> selectByFamilyId(Integer familyId);
 
     UserFamily selectByUniqueCode(String uniquecode);
+
+
 }

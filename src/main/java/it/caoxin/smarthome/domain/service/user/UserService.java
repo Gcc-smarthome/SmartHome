@@ -29,7 +29,7 @@ public interface UserService {
    /*
    发送验证码
     */
-   String sendValidateCode();
+   String sendValidateCode(String phone);
 
     /*
      用户退出

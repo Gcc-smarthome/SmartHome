@@ -31,7 +31,7 @@ public class UserController {
     @ResponseBody
     public String getCode(String phone){
         System.out.println("发送验证码...");
-        return userService.sendValidateCode();
+        return userService.sendValidateCode(phone);
     }
 
 

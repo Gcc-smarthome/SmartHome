@@ -124,8 +124,8 @@ public class UserServiceImpl implements UserService {
 
     //发送验证码
     @Override
-    public String sendValidateCode() {
-        return SendValidateCode.testCode();
+    public String sendValidateCode(String phone) {
+        return SendValidateCode.sendSms(phone);
     }
 
     //用户退出
@@ -179,9 +179,9 @@ public class UserServiceImpl implements UserService {
             System.out.println("user:"+getValidateCodeUser);
             if (getValidateCodeUser != null){
 
-                SendSmsResponse sendSmsResponse = SendValidateCode.sendSms(phone);
 
-                String code = sendSmsResponse.getCode();
+
+                String code = SendValidateCode.sendSms(phone);
                 getValidateCodeUser.setCode(code);
 
                 userMapper.updateByIdSelective(getValidateCodeUser);

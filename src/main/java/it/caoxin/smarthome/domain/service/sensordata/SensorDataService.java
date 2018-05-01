@@ -15,4 +15,6 @@ public interface SensorDataService {
     int updateByIdSelective(SensorData sensorData);
 
     int updateById(SensorData sensorData);
+
+    String getSensorsData(Integer sensorId);
 }

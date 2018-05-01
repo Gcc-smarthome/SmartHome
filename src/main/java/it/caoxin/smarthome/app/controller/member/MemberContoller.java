@@ -19,6 +19,8 @@ public class MemberContoller {
     @RequestMapping(value = "/add_family_uniquecode",method = RequestMethod.POST)
     @ResponseBody
     public String addFamilyUniquecode(Integer userId,Integer familyId,String uniqueCode){
+        //获取不到uniqueCode
+        System.out.println("uniqueCode:"+uniqueCode);
         User user = new User();
         user.setId(userId);
 

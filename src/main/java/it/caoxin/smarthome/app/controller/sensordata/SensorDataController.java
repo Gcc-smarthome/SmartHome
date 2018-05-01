@@ -8,10 +8,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.util.Date;
@@ -30,7 +27,7 @@ public class SensorDataController {
        message.setCollectionTime(new Date());
        message.setStatus(SensorData.STATUS_NORMAL);
 
-       messagingTemplate.convertAndSendToUser("1", "/add_Data/sensordata",new Message(new SensorData()));
+       messagingTemplate.convertAndSendToUser("1", "/add_Data/sensordata",new Message(message));
 
        sensorDataService.insertSelective(message);
     }
@@ -47,7 +44,12 @@ public class SensorDataController {
 //        sensorDataService.insertSelective(message);
     }
 
-
+    @RequestMapping(value = "/get_sensorsdata",method = RequestMethod.GET)
+    @ResponseBody
+    public String getSensorsData(Integer sensorsId){
+        System.out.println("sensorsId:"+sensorsId);
+        return sensorDataService.getSensorsData(sensorsId);
+    }
     private final SimpMessagingTemplate messagingTemplate;
 
     @Autowired

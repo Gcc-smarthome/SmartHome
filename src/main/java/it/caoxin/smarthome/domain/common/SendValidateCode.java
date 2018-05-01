@@ -20,7 +20,7 @@ public class SendValidateCode {
     static final String accessKeyId = "LTAIgCEqX0wsVK86";
     static final String accessKeySecret = "fzaLFR1OI1qwtl3pr5hZ0SQfuHFMoC";
 
-    public static SendSmsResponse sendSms(String phone)  {
+    public static String sendSms(String phone)  {
 
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
@@ -60,7 +60,7 @@ public class SendValidateCode {
             e.printStackTrace();
         }
 
-        return sendSmsResponse;
+        return validateCode;
     }
 
 

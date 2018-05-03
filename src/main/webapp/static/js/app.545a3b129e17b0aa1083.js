@@ -114,12 +114,13 @@ webpackJsonp([1], {
         }(l);
         var u = t("eEWV"), s = t("VU/8"), o = n, p = s(i.a, u.a, !1, o, "data-v-6c6a3813", null);
         a.default = p.exports
+    }, "4F3t": function (e, a) {
     }, "4MEb": function (e, a) {
     }, "4d+Q": function (e, a) {
-    }, "4lfr": function (e, a) {
     }, "5L68": function (e, a) {
     }, "5icT": function (e, a) {
         e.exports = "data:image/png;base64,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"
+    }, "5zKV": function (e, a) {
     }, "62KO": function (e, a, t) {
         "use strict";
 
@@ -226,6 +227,7 @@ webpackJsonp([1], {
             }, [e._v(e._s(e.confirmText || "确定"))])])], 2)], 1)
         }, u = [], s = {render: l, staticRenderFns: u}, o = s, p = t("VU/8"), m = n, v = p(i, o, !1, m, null, null);
         a.a = v.exports
+    }, "6aOv": function (e, a) {
     }, "76TK": function (e, a) {
         e.exports = "data:image/png;base64,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"
     }, "7VZx": function (e, a) {
@@ -5146,23 +5148,22 @@ webpackJsonp([1], {
             value: "--",
             parent: "659004"
         }, {name: "--", value: "--", parent: "659006"}]
-    }, FtUf: function (e, a) {
-    }, Fv3j: function (e, a) {
     }, "G+22": function (e, a) {
+    }, G1O0: function (e, a) {
+    }, GAvT: function (e, a) {
+    }, GXE1: function (e, a) {
+    }, INqg: function (e, a) {
     }, Jr60: function (e, a) {
     }, Js7q: function (e, a) {
-    }, K8YZ: function (e, a) {
     }, LDmP: function (e, a) {
     }, LYfB: function (e, a) {
         e.exports = "data:image/png;base64,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"
-    }, MA9E: function (e, a) {
     }, MsfF: function (e, a) {
-    }, NEaS: function (e, a) {
     }, NHnr: function (e, a, t) {
         "use strict";
 
         function n(e) {
-            t("FtUf")
+            t("ZYeL")
         }
 
         function r(e) {
@@ -5195,14 +5196,18 @@ webpackJsonp([1], {
         }
 
         function m(e) {
-            t("i5u+")
+            t("GAvT")
         }
 
         function v(e) {
-            t("rsRP")
+            t("i5u+")
         }
 
         function c(e) {
+            t("rsRP")
+        }
+
+        function d(e) {
             t("wXi2")
         }
 
@@ -5210,79 +5215,79 @@ webpackJsonp([1], {
             t("5L68")
         }
 
-        function d(e) {
+        function g(e) {
             t("VsnT")
         }
 
-        function g(e) {
+        function f(e) {
             t("Su2K")
         }
 
-        function f(e) {
+        function A(e) {
             t("Tdvb")
         }
 
-        function A(e) {
+        function w(e) {
             t("pski")
         }
 
-        function w(e) {
+        function x(e) {
             t("QPbS")
         }
 
-        function x(e) {
+        function C(e) {
             t("0nws")
         }
 
-        function C(e) {
+        function y(e) {
             t("cSM9")
         }
 
-        function y(e) {
+        function k(e) {
             t("iMmJ")
         }
 
-        function k(e) {
+        function I(e) {
             t("LDmP")
         }
 
-        function I(e) {
+        function S(e) {
             t("rtVI")
         }
 
-        function S(e) {
+        function b(e) {
             t("Jr60")
         }
 
-        function b(e) {
+        function E(e) {
             t("NeJJ")
         }
 
-        function E(e) {
+        function B(e) {
             t("DooM")
         }
 
-        function B(e) {
+        function Q(e) {
             t("c+sB")
         }
 
-        function Q(e) {
+        function R(e) {
             t("aCmI")
         }
 
-        function R(e) {
+        function V(e) {
             t("4MEb")
         }
 
-        function V(e) {
+        function D(e) {
             t("ozJa")
         }
 
-        function D(e) {
+        function O(e) {
             t("xQEh")
         }
 
-        function O(e) {
+        function F(e) {
             t("VrI9")
         }
 
@@ -5290,43 +5295,31 @@ webpackJsonp([1], {
             t("cC6l")
         }
 
-        function F(e) {
+        function J(e) {
             t("+BAp")
         }
 
         function T(e) {
-            t("Nw3b")
+            t("G1O0")
         }
 
-        function J(e) {
-            t("Fv3j")
-        }
-
-        function U(e, a) {
-            return Ee()(e) === Ee()(a)
+        function U(e) {
+            t("aFxf")
         }
 
         function H(e) {
-            t("4lfr")
-        }
-
-        function M(e) {
-            t("NKDC")
-        }
-
-        function K(e) {
             t("v9DZ")
         }
 
+        function M(e) {
+            t("hbqu")
+        }
+
         function L(e) {
-            t("yA5V")
+            t("fms8")
         }
 
-        function j(e) {
-            t("K8YZ")
-        }
-
-        function W(e) {
+        function K(e) {
             t("dVTW")
         }
 
@@ -5334,99 +5327,99 @@ webpackJsonp([1], {
             t("plZv")
         }
 
+        function W(e) {
+            t("6aOv")
+        }
+
+        function j(e) {
+            t("NSAv")
+        }
+
         function q(e) {
-            t("jrzm")
-        }
-
-        function Y(e) {
-            t("MA9E")
-        }
-
-        function X(e) {
             t("bWDP")
         }
 
-        function Z(e) {
+        function Y(e) {
             t("x2fE")
         }
 
-        function _(e) {
+        function X(e) {
             t("vA0B")
         }
 
+        function Z(e) {
+            t("5zKV")
+        }
+
         function P(e) {
-            t("zGkD")
+            t("INqg")
         }
 
-        function z(e) {
-            t("hzQE")
-        }
-
-        function $(e) {
+        function _(e) {
             return e.webkitBackingStorePixelRatio || e.mozBackingStorePixelRatio || e.msBackingStorePixelRatio || e.oBackingStorePixelRatio || e.backingStorePixelRatio || 1
         }
 
-        function ee(e) {
-            t("jxJD")
+        function z(e) {
+            t("k7wE")
         }
 
-        function ae(e) {
+        function $(e) {
             t("gYt2")
         }
 
+        function ee(e) {
+            t("O1db")
+        }
+
+        function ae(e) {
+            t("4F3t")
+        }
+
         function te(e) {
-            t("REN2")
-        }
-
-        function ne(e) {
-            t("b8X3")
-        }
-
-        function re(e) {
             t("YDYb")
         }
 
-        function ie(e) {
-            return JSON.parse(Ee()(e))
+        function ne(e) {
+            return JSON.parse(be()(e))
         }
 
-        function le(e) {
+        function re(e) {
             t("xqks")
         }
 
-        function ue(e) {
-            t("NEaS")
+        function ie(e) {
+            t("GXE1")
         }
 
-        function se(e) {
+        function le(e) {
             t("MsfF")
         }
 
-        function oe(e) {
+        function ue(e) {
             var a, t = new RegExp("(^| )" + e + "=([^;]*)(;|$)");
             return (a = document.cookie.match(t)) ? a[2] : null
         }
 
         Object.defineProperty(a, "__esModule", {value: !0});
-        var pe = t("7+uW"), me = t("NYxO"), ve = t("mtWM"), ce = t.n(ve), he = t("v5o6"), de = t.n(he), ge = {
+        var se, oe = t("7+uW"), pe = t("NYxO"), me = t("mtWM"), ve = t.n(me), ce = t("v5o6"), de = t.n(ce), he = {
                 data: function () {
                     return {}
                 }
-            }, fe = function () {
+            }, ge = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {attrs: {id: "app"}}, [t("router-view")], 1)
-            }, Ae = [], we = {render: fe, staticRenderFns: Ae}, xe = we, Ce = t("VU/8"), ye = n,
-            ke = Ce(ge, xe, !1, ye, null, null), Ie = ke.exports, Se = t("/ocq"), be = t("mvHQ"), Ee = t.n(be),
-            Be = t("rHil"), Qe = t("iRq5"), Re = t.n(Qe), Ve = t("p3QP"), De = t("OFgA"), Oe = {
+            }, fe = [], Ae = {render: ge, staticRenderFns: fe}, we = Ae, xe = t("VU/8"), Ce = n,
+            ye = xe(he, we, !1, Ce, null, null), ke = ye.exports, Ie = t("/ocq"), Se = t("mvHQ"), be = t.n(Se),
+            Ee = t("rHil"), Be = t("iRq5"), Qe = t.n(Be), Re = t("p3QP"), Ve = t("OFgA"), De = {
                 name: "x-img",
-                mixins: [De.a],
+                mixins: [Ve.a],
                 created: function () {
                     this.$vux && this.$vux.bus && this.$vux.bus.$on("vux:after-view-enter", this.init)
                 },
                 methods: {
                     init: function () {
                         var e = this;
-                        this.blazy && this.blazy.destroy(), this.$el.src = this.defaultSrc, this.$el.className = this.$el.className.replace("b-loaded", ""), this.blazy = new Re.a({
+                        this.blazy && this.blazy.destroy(), this.$el.src = this.defaultSrc, this.$el.className = this.$el.className.replace("b-loaded", ""), this.blazy = new Qe.a({
                             scroller: this.scroller,
                             container: this.container,
                             selector: "#vux-ximg-" + this.uuid,
@@ -5448,11 +5441,11 @@ webpackJsonp([1], {
                         setTimeout(function () {
                             e.init()
                         }, e.delay)
-                    }), Object(Ve.a)()
+                    }), Object(Re.a)()
                 },
                 computed: {
                     currentSrc: function () {
-                        return Object(Ve.b)() && this.webpSrc ? this.webpSrc : this.src
+                        return Object(Re.b)() && this.webpSrc ? this.webpSrc : this.src
                     }
                 },
                 props: {
@@ -5477,14 +5470,14 @@ webpackJsonp([1], {
                 beforeDestroy: function () {
                     this.blazy && this.blazy.destroy(), this.blazy = null, this.$vux && this.$vux.bus && this.$vux.bus.$off("vux:after-view-enter", this.init)
                 }
-            }, Ne = function () {
+            }, Oe = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("img", {
                     staticClass: "vux-x-img",
                     attrs: {src: e.defaultSrc, "data-src": e.currentSrc}
                 })
-            }, Fe = [], Te = {render: Ne, staticRenderFns: Fe}, Je = Te, Ue = t("VU/8"), He = r,
-            Me = Ue(Oe, Je, !1, He, null, null), Ke = Me.exports, Le = t("0FxO"), je = {
+            }, Fe = [], Ne = {render: Oe, staticRenderFns: Fe}, Je = Ne, Te = t("VU/8"), Ue = r,
+            He = Te(De, Je, !1, Ue, null, null), Me = He.exports, Le = t("0FxO"), Ke = {
                 name: "x-button",
                 props: {
                     type: {default: "default"},
@@ -5523,7 +5516,7 @@ webpackJsonp([1], {
                         }, this.plain ? "" : "weui-btn_" + this.type, this.plain ? "weui-btn_plain-" + this.type : "", this.showLoading ? "weui-btn_loading" : ""]
                     }
                 }
-            }, We = function () {
+            }, Ge = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("button", {
                     staticClass: "weui-btn",
@@ -5532,8 +5525,8 @@ webpackJsonp([1], {
                     attrs: {disabled: e.disabled, type: e.actionType},
                     on: {click: e.onClick}
                 }, [e.showLoading ? t("i", {staticClass: "weui-loading"}) : e._e(), e._v(" "), e._t("default", [e._v(e._s(e.text))])], 2)
-            }, Ge = [], qe = {render: We, staticRenderFns: Ge}, Ye = qe, Xe = t("VU/8"), Ze = i,
-            _e = Xe(je, Ye, !1, Ze, null, null), Pe = _e.exports, ze = t("BEQ0"), $e = t.n(ze), ea = {
+            }, We = [], je = {render: Ge, staticRenderFns: We}, qe = je, Ye = t("VU/8"), Xe = i,
+            Ze = Ye(Ke, qe, !1, Xe, null, null), Pe = Ze.exports, _e = t("BEQ0"), ze = t.n(_e), $e = {
                 name: "x-header",
                 props: {
                     leftOptions: Object,
@@ -5550,7 +5543,7 @@ webpackJsonp([1], {
                 },
                 computed: {
                     _leftOptions: function () {
-                        return $e()({showBack: !0, preventGoBack: !1}, this.leftOptions || {})
+                        return ze()({showBack: !0, preventGoBack: !1}, this.leftOptions || {})
                     }
                 },
                 methods: {
@@ -5561,7 +5554,7 @@ webpackJsonp([1], {
                 data: function () {
                     return {shouldOverWriteTitle: !1}
                 }
-            }, aa = function () {
+            }, ea = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {staticClass: "vux-header"}, [t("div", {staticClass: "vux-header-left"}, [e._t("overwrite-left", [t("transition", {attrs: {name: e.transition}}, [t("a", {
                     directives: [{
@@ -5605,17 +5598,17 @@ webpackJsonp([1], {
                         }]
                     }
                 }) : e._e(), e._v(" "), e._t("right")], 2)])
-            }, ta = [], na = {render: aa, staticRenderFns: ta}, ra = na, ia = t("VU/8"), la = l,
-            ua = ia(ea, ra, !1, la, null, null), sa = ua.exports, oa = t("f6Hi"), pa = t("q5lo"), ma = t("Zor0"), va = {
+            }, aa = [], ta = {render: ea, staticRenderFns: aa}, na = ta, ra = t("VU/8"), ia = l,
+            la = ra($e, na, !1, ia, null, null), ua = la.exports, sa = t("f6Hi"), oa = t("q5lo"), pa = t("Zor0"), ma = {
                 name: "radio",
-                mixins: [oa.a],
-                filters: {getValue: pa.e, getKey: pa.b},
-                props: Object(ma.a)(),
+                mixins: [sa.a],
+                filters: {getValue: oa.e, getKey: oa.b},
+                props: Object(pa.a)(),
                 created: function () {
                     this.handleChangeEvent = !0
                 },
                 methods: {
-                    getValue: pa.e, getKey: pa.b, onFocus: function () {
+                    getValue: oa.e, getKey: oa.b, onFocus: function () {
                         this.currentValue = this.fillValue || "", this.isFocus = !0
                     }
                 },
@@ -5624,7 +5617,7 @@ webpackJsonp([1], {
                         this.currentValue = e
                     }, currentValue: function (e) {
                         var a = u(this.options, e);
-                        "" !== e && a && (this.fillValue = ""), this.$emit("on-change", e, Object(pa.c)(this.options, e)), this.$emit("input", e)
+                        "" !== e && a && (this.fillValue = ""), this.$emit("on-change", e, Object(oa.c)(this.options, e)), this.$emit("input", e)
                     }, fillValue: function (e) {
                         this.fillMode && this.isFocus && (this.currentValue = e)
                     }
@@ -5632,7 +5625,7 @@ webpackJsonp([1], {
                 data: function () {
                     return {fillValue: "", isFocus: !1, currentValue: this.value}
                 }
-            }, ca = function () {
+            }, va = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {
                     staticClass: "weui-cells_radio",
@@ -5709,16 +5702,16 @@ webpackJsonp([1], {
                         expression: "value==='' && !isFocus"
                     }], staticClass: "weui-cell__ft"
                 }, [t("i", {staticClass: "weui-icon-warn"})])])], 2)
-            }, ha = [], da = {render: ca, staticRenderFns: ha}, ga = da, fa = t("VU/8"), Aa = s,
-            wa = fa(va, ga, !1, Aa, null, null), xa = wa.exports, Ca = t("piuB"), ya = {
+            }, ca = [], da = {render: va, staticRenderFns: ca}, ha = da, ga = t("VU/8"), fa = s,
+            Aa = ga(ma, ha, !1, fa, null, null), wa = Aa.exports, xa = t("piuB"), Ca = {
                 mounted: function () {
-                }, name: "tabbar", mixins: [Ca.b], props: {iconClass: String}
-            }, ka = function () {
+                }, name: "tabbar", mixins: [xa.b], props: {iconClass: String}
+            }, ya = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("div", {staticClass: "weui-tabbar"}, [e._t("default")], 2)
-            }, Ia = [], Sa = {render: ka, staticRenderFns: Ia}, ba = Sa, Ea = t("VU/8"), Ba = o,
-            Qa = Ea(ya, ba, !1, Ba, null, null), Ra = Qa.exports, Va = {name: "badge", props: {text: [String, Number]}},
-            Da = function () {
+            }, ka = [], Ia = {render: ya, staticRenderFns: ka}, Sa = Ia, ba = t("VU/8"), Ea = o,
+            Ba = ba(Ca, Sa, !1, Ea, null, null), Qa = Ba.exports, Ra = {name: "badge", props: {text: [String, Number]}},
+            Va = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("span", {
                     class: ["vux-badge", {
@@ -5726,14 +5719,14 @@ webpackJsonp([1], {
                         "vux-badge-single": void 0 !== e.text && 1 === e.text.toString().length
                     }], domProps: {textContent: e._s(e.text)}
                 })
-            }, Oa = [], Na = {render: Da, staticRenderFns: Oa}, Fa = Na, Ta = t("VU/8"), Ja = p,
-            Ua = Ta(Va, Fa, !1, Ja, null, null), Ha = Ua.exports, Ma = {
+            }, Da = [], Oa = {render: Va, staticRenderFns: Da}, Fa = Oa, Na = t("VU/8"), Ja = p,
+            Ta = Na(Ra, Fa, !1, Ja, null, null), Ua = Ta.exports, Ha = {
                 name: "tabbar-item",
-                components: {Badge: Ha},
+                components: {Badge: Ua},
                 beforeMount: function () {
                     this.$slots.icon || (this.simple = !0), this.$slots["icon-active"] && (this.hasActiveIcon = !0)
                 },
-                mixins: [Ca.a],
+                mixins: [xa.a],
                 props: {showDot: {type: Boolean, default: !1}, badge: String, link: [String, Object], iconClass: String},
                 computed: {
                     isActive: function () {
@@ -5743,7 +5736,7 @@ webpackJsonp([1], {
                 data: function () {
                     return {simple: !1, hasActiveIcon: !1}
                 }
-            }, Ka = function () {
+            }, Ma = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("a", {
                     staticClass: "weui-tabbar__item",
@@ -5758,15 +5751,14 @@ webpackJsonp([1], {
                     staticClass: "weui-tabbar__icon",
                     class: [e.iconClass || e.$parent.iconClass, {"vux-reddot": e.showDot}]
                 }, [e.simple || e.hasActiveIcon && e.isActive ? e._e() : e._t("icon"), e._v(" "), !e.simple && e.hasActiveIcon && e.isActive ? e._t("icon-active") : e._e(), e._v(" "), e.badge ? t("sup", [t("badge", {attrs: {text: e.badge}})], 1) : e._e()], 2), e._v(" "), t("p", {staticClass: "weui-tabbar__label"}, [e._t("label")], 2)])
-            }, La = [], ja = {render: Ka, staticRenderFns: La}, Wa = ja, Ga = t("VU/8"),
-            qa = Ga(Ma, Wa, !1, null, null, null), Ya = qa.exports, Xa = {
+            }, La = [], Ka = {render: Ma, staticRenderFns: La}, Ga = Ka, Wa = t("VU/8"),
+            ja = Wa(Ha, Ga, !1, null, null, null), qa = ja.exports, Ya = {
                 data: function () {
                     return {
                         showFamliyList: !1,
-                        showFamilyName: "我的家庭",
+                        familyName: "",
                         showFamily: !1,
                         myImage: "",
-                        familyName: [],
                         familyData: [],
                         currentFamily: [],
                         familyId: "",
@@ -5774,26 +5766,27 @@ webpackJsonp([1], {
                         bgImg: ""
                     }
                 },
-                components: {Group: Be.a, XImg: Ke, XButton: Pe, XHeader: sa, Radio: xa, Tabbar: Ra, TabbarItem: Ya},
+                components: {Group: Ee.a, XImg: Me, XButton: Pe, XHeader: ua, Radio: wa, Tabbar: Qa, TabbarItem: qa},
                 watch: {
                     type: function (e) {
                         e && (this.showFamily = !this.showFamily)
                     }
                 },
                 created: function () {
-                    this.clickInit(), this.myImage = "http://120.79.21.193/SmartHome" + JSON.parse(localStorage.mydata).user.photo
+                    this.clickInit()
                 },
                 methods: {
                     clickInit: function () {
                         var e = this, a = JSON.parse(localStorage.mydata).user.id;
                         this.$axios.get("/SmartHome/get_family?id=" + a).then(function (a) {
+                            e.myImage = "http://120.79.21.193/SmartHome" + JSON.parse(localStorage.mydata).user.photo;
                             var t = JSON.parse(localStorage.getItem("currentFamily"));
-                            e.familyData = a.data, e.bgImg = "http://120.79.21.193/SmartHome" + t.photo, e.familyId = t.id
+                            e.familyData = a.data, e.bgImg = "http://120.79.21.193/SmartHome" + t.photo, e.familyName = t.familyName, e.familyId = t.id
                         })
                     }, clickFamilyId: function (e, a) {
-                        this.currentFamily = this.familyData[a], localStorage.setItem("currentFamily", Ee()(this.currentFamily));
+                        this.currentFamily = this.familyData[a], localStorage.setItem("currentFamily", be()(this.currentFamily));
                         var t = JSON.parse(localStorage.getItem("currentFamily"));
-                        this.bgImg = "http://120.79.21.193/SmartHome" + t.photo, this.showFamilyName = t.familyName, this.familyId = t.id, this.showFamliyList = !1
+                        this.bgImg = "http://120.79.21.193/SmartHome" + t.photo, this.familyName = t.familyName, this.familyId = t.id, this.showFamliyList = !1
                     }, clickChangeBg: function () {
                         this.showFamliyList = !0
                     }, clickDevice: function () {
@@ -5802,21 +5795,21 @@ webpackJsonp([1], {
                         this.$router.push({path: "/all_device", query: {familyId: this.familyId}})
                     }
                 }
-            }, Za = function () {
+            }, Xa = function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
-                return n("div", {style: "height: 100%;background: url(" + e.bgImg + ");background-position: center;opacity:.85;"}, [n("x-header", {
+                return n("div", {
+                    staticClass: "home",
+                    style: "height: 100%;background-image: url(" + e.bgImg + ");"
+                }, [n("x-header", {attrs: {"left-options": {showBack: !1}, title: "首页"}}, [n("x-img", {
                     attrs: {
-                        "left-options": {showBack: !1},
-                        title: "首页"
-                    }
-                }, [n("x-img", {
-                    attrs: {slot: "right", width: "20", src: "http://www.xiaoxiangba.com/assets/img/add.png"},
-                    nativeOn: {
+                        slot: "right",
+                        width: "20",
+                        src: "http://www.xiaoxiangba.com/assets/img/add.png"
+                    }, nativeOn: {
                         click: function (a) {
                             e.clickMore(a)
                         }
-                    },
-                    slot: "right"
+                    }, slot: "right"
                 })], 1), e._v(" "), n("div", {
                     staticStyle: {
                         margin: "10px 0 0 10px",
@@ -5834,7 +5827,7 @@ webpackJsonp([1], {
                         "font-size": "16px",
                         color: "#fff"
                     }
-                }, [e._v(e._s(e.showFamilyName))]), e._v(" "), e.showFamliyList ? n("group", {
+                }, [e._v(e._s(e.familyName))]), e._v(" "), e.showFamliyList ? n("group", {
                     staticStyle: {
                         position: "absolute",
                         width: "180px",
@@ -5887,9 +5880,9 @@ webpackJsonp([1], {
                         src: t("TN3P")
                     }, slot: "icon"
                 }), e._v(" "), n("span", {attrs: {slot: "label"}, slot: "label"}, [e._v("个人中心")])])], 1)], 1)], 1)
-            }, _a = [], Pa = {render: Za, staticRenderFns: _a}, za = Pa, $a = t("VU/8"),
-            et = $a(Xa, za, !1, null, null, null), at = et.exports, tt = t("kbG3"), nt = t("2IIR"), rt = t("wmxo"),
-            it = t.n(rt), lt = t("vLYD"), ut = {
+            }, Za = [], Pa = {render: Xa, staticRenderFns: Za}, _a = Pa, za = t("VU/8"), $a = m,
+            et = za(Ya, _a, !1, $a, "data-v-430d6104", null), at = et.exports, tt = t("kbG3"), nt = t("2IIR"),
+            rt = t("wmxo"), it = t.n(rt), lt = t("vLYD"), ut = {
                 name: "cell", components: {InlineDesc: tt.a}, props: Object(nt.a)(), created: function () {
                 }, beforeMount: function () {
                     this.hasTitleSlot = !!this.$slots.title, this.$slots.value
@@ -5943,14 +5936,14 @@ webpackJsonp([1], {
                     staticClass: "weui-cell__ft",
                     class: e.valueClass
                 }, [e._t("value"), e._v(" "), e._t("default", [e._v(e._s(e.value))]), e._v(" "), e.isLoading ? t("i", {staticClass: "weui-loading"}) : e._e()], 2), e._v(" "), e._t("child")], 2)
-            }, ot = [], pt = {render: st, staticRenderFns: ot}, mt = pt, vt = t("VU/8"), ct = m,
-            ht = vt(ut, mt, !1, ct, null, null), dt = ht.exports, gt = {
+            }, ot = [], pt = {render: st, staticRenderFns: ot}, mt = pt, vt = t("VU/8"), ct = v,
+            dt = vt(ut, mt, !1, ct, null, null), ht = dt.exports, gt = {
                 data: function () {
                     return {nickname: "", myImage: ""}
                 }, created: function () {
                     var e = JSON.parse(localStorage.mydata).user;
                     e.nickname = this.nickname = e.nickname, this.myImage = "http://120.79.21.193/SmartHome" + e.photo
-                }, methods: {}, components: {XButton: Pe, XHeader: sa, Tabbar: Ra, TabbarItem: Ya, Group: Be.a, Cell: dt}
+                }, methods: {}, components: {XButton: Pe, XHeader: ua, Tabbar: Qa, TabbarItem: qa, Group: Ee.a, Cell: ht}
             }, ft = function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
                 return n("div", [n("x-header", {
@@ -6012,11 +6005,11 @@ webpackJsonp([1], {
                     attrs: {slot: "icon", src: t("kJBn")},
                     slot: "icon"
                 }), e._v(" "), n("span", {attrs: {slot: "label"}, slot: "label"}, [e._v("个人中心")])])], 1)], 1)], 1)
-            }, At = [], wt = {render: ft, staticRenderFns: At}, xt = wt, Ct = t("VU/8"), yt = v,
+            }, At = [], wt = {render: ft, staticRenderFns: At}, xt = wt, Ct = t("VU/8"), yt = c,
             kt = Ct(gt, xt, !1, yt, "data-v-629a526d", null), It = kt.exports, St = {
                 data: function () {
                     return {demo: "我的设备", list: [], name: [], src: []}
-                }, components: {XButton: Pe, XHeader: sa, Tabbar: Ra, TabbarItem: Ya, Group: Be.a, Cell: dt}
+                }, components: {XButton: Pe, XHeader: ua, Tabbar: Qa, TabbarItem: qa, Group: Ee.a, Cell: ht}
             }, bt = function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
                 return n("div", [n("tabbar", {staticStyle: {position: "fixed"}}, [n("tabbar-item", {attrs: {link: "/Home"}}, [n("img", {
@@ -6041,10 +6034,10 @@ webpackJsonp([1], {
                         src: t("TN3P")
                     }, slot: "icon"
                 }), e._v(" "), n("span", {attrs: {slot: "label"}, slot: "label"}, [e._v("个人中心")])])], 1)], 1)
-            }, Et = [], Bt = {render: bt, staticRenderFns: Et}, Qt = Bt, Rt = t("VU/8"), Vt = c,
+            }, Et = [], Bt = {render: bt, staticRenderFns: Et}, Qt = Bt, Rt = t("VU/8"), Vt = d,
             Dt = Rt(St, Qt, !1, Vt, "data-v-584a583d", null), Ot = Dt.exports,
-            Nt = {components: {Nav: Ot, XButton: Pe, XHeader: sa, Tabbar: Ra, TabbarItem: Ya, Group: Be.a, Cell: dt}},
-            Ft = function () {
+            Ft = {components: {Nav: Ot, XButton: Pe, XHeader: ua, Tabbar: Qa, TabbarItem: qa, Group: Ee.a, Cell: ht}},
+            Nt = function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
                 return n("div", [n("x-header", {
                     attrs: {
@@ -6182,9 +6175,9 @@ webpackJsonp([1], {
                         src: t("TN3P")
                     }, slot: "icon"
                 }), e._v(" "), n("span", {attrs: {slot: "label"}, slot: "label"}, [e._v("个人中心")])])], 1)], 1)], 1)
-            }, Tt = [], Jt = {render: Ft, staticRenderFns: Tt}, Ut = Jt, Ht = t("VU/8"), Mt = h,
-            Kt = Ht(Nt, Ut, !1, Mt, "data-v-4613b5ea", null), Lt = Kt.exports, jt = t("62KO"), Wt = t("UNGY"),
-            Gt = t("Bfwr"), qt = {
+            }, Jt = [], Tt = {render: Nt, staticRenderFns: Jt}, Ut = Tt, Ht = t("VU/8"), Mt = h,
+            Lt = Ht(Ft, Ut, !1, Mt, "data-v-4613b5ea", null), Kt = Lt.exports, Gt = t("62KO"), Wt = t("UNGY"),
+            jt = t("Bfwr"), qt = {
                 name: "x-switch",
                 components: {InlineDesc: tt.a},
                 computed: {
@@ -6264,8 +6257,8 @@ webpackJsonp([1], {
                     staticClass: "vux-x-switch-overlay",
                     on: {click: e.onClick}
                 }) : e._e()])])
-            }, Xt = [], Zt = {render: Yt, staticRenderFns: Xt}, _t = Zt, Pt = t("VU/8"), zt = d,
-            $t = Pt(qt, _t, !1, zt, null, null), en = $t.exports, an = t("dH7R"), tn = t("NE4E"), nn = t("pFYg"),
+            }, Xt = [], Zt = {render: Yt, staticRenderFns: Xt}, Pt = Zt, _t = t("VU/8"), zt = g,
+            $t = _t(qt, Pt, !1, zt, null, null), en = $t.exports, an = t("dH7R"), tn = t("NE4E"), nn = t("pFYg"),
             rn = t.n(nn), ln = t("+geU"), un = t("F3HL"), sn = t("zDi5"), on = (t("cEdU"), {
                 name: "picker",
                 components: {Flexbox: un.a, FlexboxItem: un.b},
@@ -6345,18 +6338,18 @@ webpackJsonp([1], {
                 },
                 watch: {
                     value: function (e) {
-                        Ee()(e) !== Ee()(this.currentValue) && (this.currentValue = e)
+                        be()(e) !== be()(this.currentValue) && (this.currentValue = e)
                     }, currentValue: function (e, a) {
-                        if (this.$emit("input", e), 0 !== this.columns) e.length > 0 && Ee()(e) !== Ee()(a) && (this.currentData = this.store.getColumns(e), this.$nextTick(function () {
+                        if (this.$emit("input", e), 0 !== this.columns) e.length > 0 && be()(e) !== be()(a) && (this.currentData = this.store.getColumns(e), this.$nextTick(function () {
                             this.render(this.currentData, e)
                         })); else if (e.length) for (var t = 0; t < e.length; t++) this.scroller[t] && this.scroller[t].value !== e[t] && this.scroller[t].select(e[t]); else this.render(this.currentData, [])
                     }, data: function (e) {
-                        Ee()(e) !== Ee()(this.currentData) && (this.currentData = e)
+                        be()(e) !== be()(this.currentData) && (this.currentData = e)
                     }, currentData: function (e) {
                         var a = this;
                         if ("[object Array]" === Object.prototype.toString.call(e[0])) this.$nextTick(function () {
                             a.render(e, a.currentValue), a.$nextTick(function () {
-                                a.emitValueChange(a.getValue()), Ee()(a.getValue()) !== Ee()(a.currentValue) && (!a.columns || a.columns && a.getValue().length === a.store.count) && (a.currentValue = a.getValue())
+                                a.emitValueChange(a.getValue()), be()(a.getValue()) !== be()(a.currentValue) && (!a.columns || a.columns && a.getValue().length === a.store.count) && (a.currentValue = a.getValue())
                             })
                         }); else if (0 !== this.columns) {
                             if (!e.length) return;
@@ -6377,8 +6370,8 @@ webpackJsonp([1], {
                         attrs: {span: e.columnWidth && e.columnWidth[n]}
                     }, [t("div", {staticClass: "vux-picker-item", attrs: {id: "vux-picker-" + e.uuid + "-" + n}})])
                 }))], 1)
-            }, mn = [], vn = {render: pn, staticRenderFns: mn}, cn = vn, hn = t("VU/8"), dn = g,
-            gn = hn(on, cn, !1, dn, null, null), fn = gn.exports, An = t("fZjL"), wn = t.n(An), xn = t("+v63"),
+            }, mn = [], vn = {render: pn, staticRenderFns: mn}, cn = vn, dn = t("VU/8"), hn = f,
+            gn = dn(on, cn, !1, hn, null, null), fn = gn.exports, An = t("fZjL"), wn = t.n(An), xn = t("+v63"),
             Cn = t("te2A"), yn = {
                 name: "popup",
                 props: {
@@ -6461,7 +6454,7 @@ webpackJsonp([1], {
                     class: ["vux-popup-" + e.position, e.show ? "vux-popup-show" : ""],
                     style: e.styles
                 }, [e._t("default")], 2)])
-            }, In = [], Sn = {render: kn, staticRenderFns: In}, bn = Sn, En = t("VU/8"), Bn = f,
+            }, In = [], Sn = {render: kn, staticRenderFns: In}, bn = Sn, En = t("VU/8"), Bn = A,
             Qn = En(yn, bn, !1, Bn, null, null), Rn = Qn.exports, Vn = {
                 name: "popup-header",
                 props: {leftText: String, rightText: String, title: String, showBottomBorder: {type: Boolean, default: !0}}
@@ -6484,20 +6477,20 @@ webpackJsonp([1], {
                         }
                     }
                 }, [e._t("right-text", [e._v(e._s(e.rightText))])], 2)])
-            }, On = [], Nn = {render: Dn, staticRenderFns: On}, Fn = Nn, Tn = t("VU/8"), Jn = A,
-            Un = Tn(Vn, Fn, !1, Jn, null, null), Hn = Un.exports, Mn = t("LsKW"), Kn = t("63CM"), Ln = t.n(Kn),
-            jn = function (e) {
-                return JSON.parse(Ee()(e))
+            }, On = [], Fn = {render: Dn, staticRenderFns: On}, Nn = Fn, Jn = t("VU/8"), Tn = w,
+            Un = Jn(Vn, Nn, !1, Tn, null, null), Hn = Un.exports, Mn = t("LsKW"), Ln = t("63CM"), Kn = t.n(Ln),
+            Gn = function (e) {
+                return JSON.parse(be()(e))
             }, Wn = {
                 name: "popup-picker",
-                directives: {TransferDom: Ln.a},
+                directives: {TransferDom: Kn.a},
                 created: function () {
                     void 0 !== this.show && (this.showValue = this.show)
                 },
-                mixins: [De.a],
+                mixins: [Ve.a],
                 components: {
                     Picker: fn,
-                    Cell: dt,
+                    Cell: ht,
                     Popup: Rn,
                     PopupHeader: Hn,
                     Flexbox: un.a,
@@ -6551,25 +6544,25 @@ webpackJsonp([1], {
                     }, onClick: function () {
                         this.showValue = !0
                     }, onHide: function (e) {
-                        this.showValue = !1, e && (this.closeType = !0, this.currentValue = jn(this.tempValue)), e || (this.closeType = !1, this.value.length > 0 && (this.tempValue = jn(this.currentValue)))
+                        this.showValue = !1, e && (this.closeType = !0, this.currentValue = Gn(this.tempValue)), e || (this.closeType = !1, this.value.length > 0 && (this.tempValue = Gn(this.currentValue)))
                     }, onPopupShow: function () {
                         this.closeType = !1, this.$emit("on-show")
                     }, onPopupHide: function (e) {
-                        this.value.length > 0 && (this.tempValue = jn(this.currentValue)), this.$emit("on-hide", this.closeType)
+                        this.value.length > 0 && (this.tempValue = Gn(this.currentValue)), this.$emit("on-hide", this.closeType)
                     }, onPickerChange: function (e) {
-                        if (Ee()(this.currentValue) !== Ee()(e) && this.value.length) {
-                            var a = Ee()(this.data);
-                            a !== this.currentData && "[]" !== this.currentData && (this.tempValue = jn(e)), this.currentData = a
+                        if (be()(this.currentValue) !== be()(e) && this.value.length) {
+                            var a = be()(this.data);
+                            a !== this.currentData && "[]" !== this.currentData && (this.tempValue = Gn(e)), this.currentData = a
                         }
-                        var t = jn(e);
+                        var t = Gn(e);
                         this.$emit("on-shadow-change", t, Object(tn.a)(t, this.data).split(" "))
                     }
                 },
                 watch: {
                     value: function (e) {
-                        Ee()(e) !== Ee()(this.tempValue) && (this.tempValue = jn(e), this.currentValue = jn(e))
+                        be()(e) !== be()(this.tempValue) && (this.tempValue = Gn(e), this.currentValue = Gn(e))
                     }, currentValue: function (e) {
-                        this.$emit("input", jn(e)), this.$emit("on-change", jn(e))
+                        this.$emit("input", Gn(e)), this.$emit("on-change", Gn(e))
                     }, show: function (e) {
                         this.showValue = e
                     }, showValue: function (e) {
@@ -6579,14 +6572,14 @@ webpackJsonp([1], {
                 data: function () {
                     return {
                         onShowProcess: !1,
-                        tempValue: jn(this.value),
+                        tempValue: Gn(this.value),
                         closeType: !1,
-                        currentData: Ee()(this.data),
+                        currentData: be()(this.data),
                         showValue: !1,
                         currentValue: this.value
                     }
                 }
-            }, Gn = function () {
+            }, jn = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {staticClass: "vux-cell-box"}, [t("div", {
                     directives: [{
@@ -6651,8 +6644,8 @@ webpackJsonp([1], {
                         }, expression: "tempValue"
                     }
                 })], 1)])], 1)])
-            }, qn = [], Yn = {render: Gn, staticRenderFns: qn}, Xn = Yn, Zn = t("VU/8"), _n = w,
-            Pn = Zn(Wn, Xn, !1, _n, null, null), zn = Pn.exports, $n = {
+            }, qn = [], Yn = {render: jn, staticRenderFns: qn}, Xn = Yn, Zn = t("VU/8"), Pn = x,
+            _n = Zn(Wn, Xn, !1, Pn, null, null), zn = _n.exports, $n = {
                 name: "x-address",
                 components: {PopupPicker: zn},
                 props: {
@@ -6792,7 +6785,7 @@ webpackJsonp([1], {
                     }, emitEvent: function (e, a, t) {
                         if ("on-click-menu" === e && !/.noop/.test(a)) {
                             var n = t;
-                            "object" === (void 0 === n ? "undefined" : rn()(n)) && (n = JSON.parse(Ee()(n))), this.$emit(e, a, n), this.$emit(e + "-" + a), this.closeOnClickingMenu && (this.show = !1)
+                            "object" === (void 0 === n ? "undefined" : rn()(n)) && (n = JSON.parse(be()(n))), this.$emit(e, a, n), this.$emit(e + "-" + a), this.closeOnClickingMenu && (this.show = !1)
                         }
                     }, fixIos: function (e) {
                         this.$el.parentNode && -1 !== this.$el.parentNode.className.indexOf("v-transfer-dom") || this.$tabbar && /iphone/i.test(navigator.userAgent) && (this.$tabbar.style.zIndex = e)
@@ -6860,9 +6853,9 @@ webpackJsonp([1], {
                         }
                     }
                 }, [t("div", {staticClass: "weui-actionsheet__cell"}, [e._v(e._s(e.cancelText || "取消"))])]) : e._e()])], 1)
-            }, mr = [], vr = {render: pr, staticRenderFns: mr}, cr = vr, hr = t("VU/8"), dr = x,
-            gr = hr(or, cr, !1, dr, null, null), fr = gr.exports, Ar = t("9gqI"), wr = t.n(Ar), xr = {
-                directives: {TransferDom: Ln.a},
+            }, mr = [], vr = {render: pr, staticRenderFns: mr}, cr = vr, dr = t("VU/8"), hr = C,
+            gr = dr(or, cr, !1, hr, null, null), fr = gr.exports, Ar = t("9gqI"), wr = t.n(Ar), xr = {
+                directives: {TransferDom: Kn.a},
                 data: function () {
                     return {
                         userInfo: [],
@@ -6925,7 +6918,7 @@ webpackJsonp([1], {
                         i.append("file", r, r.name), i.append("id", t.id);
                         var l = {headers: {"Content-Type": "multipart/form-data"}};
                         n.$axios.post("/SmartHome/uploadUserPhoto", i, l).then(function (e) {
-                            localStorage.setItem("mydata", Ee()(e.data[0])), n.myImage = "http://192.168.43.27:8080/SmartHome" + e.data[0].user.photo, a.clickInit()
+                            localStorage.setItem("mydata", be()(e.data[0])), n.myImage = "http://192.168.43.27:8080/SmartHome" + e.data[0].user.photo, a.clickInit()
                         })
                     }, clickBrithday: function (e) {
                         this.brithday = e
@@ -6949,16 +6942,16 @@ webpackJsonp([1], {
                     }
                 },
                 components: {
-                    Confirm: jt.a,
+                    Confirm: Gt.a,
                     Datetime: Wt.a,
-                    Loading: Gt.a,
+                    Loading: jt.a,
                     Actionsheet: fr,
                     XSwitch: en,
                     XButton: Pe,
-                    XImg: Ke,
-                    Cell: dt,
-                    Group: Be.a,
-                    XHeader: sa,
+                    XImg: Me,
+                    Cell: ht,
+                    Group: Ee.a,
+                    XHeader: ua,
                     XAddress: lr,
                     ChinaAddressV4Data: sr.a,
                     Uploader: wr.a
@@ -7058,9 +7051,9 @@ webpackJsonp([1], {
                         }, expression: "show4"
                     }
                 })], 1)], 1)
-            }, yr = [], kr = {render: Cr, staticRenderFns: yr}, Ir = kr, Sr = t("VU/8"), br = C,
+            }, yr = [], kr = {render: Cr, staticRenderFns: yr}, Ir = kr, Sr = t("VU/8"), br = y,
             Er = Sr(xr, Ir, !1, br, null, null), Br = Er.exports, Qr = t("/kga"), Rr = {
-                directives: {TransferDom: Ln.a}, props: ["isShow"], data: function () {
+                directives: {TransferDom: Kn.a}, props: ["isShow"], data: function () {
                     return {showTodo: !0}
                 }, methods: {
                     showDialog: function () {
@@ -7111,8 +7104,8 @@ webpackJsonp([1], {
                     staticClass: "st0",
                     attrs: {d: "M340.2 160l-84.4 84.2-84-83.8-11.8 11.8 84 83.8-84 83.8 11.8 11.8 84-83.8 84.4 84.2 11.8-11.8-84.4-84.2 84.4-84.2z"}
                 })])])])], 1)
-            }, Dr = [], Or = {render: Vr, staticRenderFns: Dr}, Nr = Or, Fr = t("VU/8"), Tr = y,
-            Jr = Fr(Rr, Nr, !1, Tr, "data-v-b1226b2e", null), Ur = Jr.exports, Hr = {
+            }, Dr = [], Or = {render: Vr, staticRenderFns: Dr}, Fr = Or, Nr = t("VU/8"), Jr = k,
+            Tr = Nr(Rr, Fr, !1, Jr, "data-v-b1226b2e", null), Ur = Tr.exports, Hr = {
                 name: "cell-box",
                 props: {
                     isLink: Boolean,
@@ -7145,8 +7138,8 @@ webpackJsonp([1], {
                     style: e.style,
                     on: {click: e.onClick}
                 }, [e._t("default")], 2)
-            }, Kr = [], Lr = {render: Mr, staticRenderFns: Kr}, jr = Lr, Wr = t("VU/8"), Gr = k,
-            qr = Wr(Hr, jr, !1, Gr, null, null), Yr = qr.exports,
+            }, Lr = [], Kr = {render: Mr, staticRenderFns: Lr}, Gr = Kr, Wr = t("VU/8"), jr = I,
+            qr = Wr(Hr, Gr, !1, jr, null, null), Yr = qr.exports,
             Xr = {name: "cell-form-preview", props: {list: Array, borderIntent: {type: Boolean, default: !0}}},
             Zr = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
@@ -7162,13 +7155,13 @@ webpackJsonp([1], {
                         domProps: {innerHTML: e._s(a.value)}
                     })])
                 }))])
-            }, _r = [], Pr = {render: Zr, staticRenderFns: _r}, zr = Pr, $r = t("VU/8"), ei = I,
+            }, Pr = [], _r = {render: Zr, staticRenderFns: Pr}, zr = _r, $r = t("VU/8"), ei = S,
             ai = $r(Xr, zr, !1, ei, null, null), ti = ai.exports, ni = {
                 name: "panel",
                 props: {header: String, footer: Object, list: Array, type: {type: String, default: "1"}},
                 methods: {
                     onImgError: function (e, a) {
-                        this.$emit("on-img-error", JSON.parse(Ee()(e)), a), e.fallbackSrc && (a.target.src = e.fallbackSrc)
+                        this.$emit("on-img-error", JSON.parse(be()(e)), a), e.fallbackSrc && (a.target.src = e.fallbackSrc)
                     }, getUrl: function (e) {
                         return Object(Le.a)(e, this.$router)
                     }, onClickFooter: function () {
@@ -7300,7 +7293,7 @@ webpackJsonp([1], {
                         }
                     }
                 }, [t("div", {staticClass: "weui-cell__bd", domProps: {innerHTML: e._s(e.footer.title)}})]) : e._e()])])
-            }, ii = [], li = {render: ri, staticRenderFns: ii}, ui = li, si = t("VU/8"), oi = S,
+            }, ii = [], li = {render: ri, staticRenderFns: ii}, ui = li, si = t("VU/8"), oi = b,
             pi = si(ni, ui, !1, oi, null, null), mi = pi.exports, vi = {
                 data: function () {
                     return {todoStatus: !1, data: []}
@@ -7310,9 +7303,14 @@ webpackJsonp([1], {
                 },
                 methods: {
                     clickInit: function () {
-                        var e = this, a = JSON.parse(localStorage.mydata).user.id, t = this.$route.query.familyId;
-                        this.$axios.get("/SmartHome/get_device?userId=" + a + "&familyId=" + t).then(function (a) {
-                            "can not get devices" !== a.data && (e.data = a.data)
+                        var e = this, a = this, t = JSON.parse(localStorage.mydata).user.id, n = this.$route.query.familyId;
+                        this.$axios.get("/SmartHome/get_device?userId=" + t + "&familyId=" + n).then(function (t) {
+                            console.log(t), "can not get devices" == t.data ? e.$vux.alert.show({
+                                content: "您不是管理员,不能添加设备！",
+                                onShow: function () {
+                                    a.$router.go(-1)
+                                }
+                            }) : e.data = t.data
                         })
                     }, clickAddDevice: function (e) {
                         var a = this, t = JSON.parse(localStorage.mydata).user.id, n = this.$route.query.familyId;
@@ -7324,15 +7322,15 @@ webpackJsonp([1], {
                     }
                 },
                 components: {
-                    XHeader: sa,
-                    Tabbar: Ra,
-                    TabbarItem: Ya,
-                    Cell: dt,
+                    XHeader: ua,
+                    Tabbar: Qa,
+                    TabbarItem: qa,
+                    Cell: ht,
                     CellBox: Yr,
                     CellFormPreview: ti,
                     Panel: mi,
-                    Group: Be.a,
-                    Radio: xa,
+                    Group: Ee.a,
+                    Radio: wa,
                     TODO: Ur
                 }
             }, ci = function () {
@@ -7386,7 +7384,7 @@ webpackJsonp([1], {
                         slot: "icon"
                     })])], 1)
                 }))], 1)
-            }, hi = [], di = {render: ci, staticRenderFns: hi}, gi = di, fi = t("VU/8"),
+            }, di = [], hi = {render: ci, staticRenderFns: di}, gi = hi, fi = t("VU/8"),
             Ai = fi(vi, gi, !1, null, null, null), wi = Ai.exports, xi = t("oWtu"), Ci = t("xNvf"), yi = {
                 name: "toast",
                 mixins: [Ci.a],
@@ -7461,12 +7459,12 @@ webpackJsonp([1], {
                     style: e.style,
                     domProps: {innerHTML: e._s(e.text)}
                 }) : t("p", {staticClass: "weui-toast__content", style: e.style}, [e._t("default")], 2)])])], 1)
-            }, Ii = [], Si = {render: ki, staticRenderFns: Ii}, bi = Si, Ei = t("VU/8"), Bi = b,
+            }, Ii = [], Si = {render: ki, staticRenderFns: Ii}, bi = Si, Ei = t("VU/8"), Bi = E,
             Qi = Ei(yi, bi, !1, Bi, null, null), Ri = Qi.exports, Vi = t("2LX0"), Di = t.n(Vi), Oi = t("Ewe+"),
-            Ni = t.n(Oi), Fi = t("nror"), Ti = t("lFEC"), Ji = t.n(Ti), Ui = {
+            Fi = t.n(Oi), Ni = t("nror"), Ji = t("lFEC"), Ti = t.n(Ji), Ui = {
                 email: {fn: Di.a, msg: "邮箱格式"}, "china-mobile": {
                     fn: function (e) {
-                        return Ni()(e, "zh-CN")
+                        return Fi()(e, "zh-CN")
                     }, msg: "手机号码"
                 }, "china-name": {
                     fn: function (e) {
@@ -7477,7 +7475,7 @@ webpackJsonp([1], {
                 name: "x-input",
                 created: function () {
                     var e = this;
-                    this.currentValue = void 0 === this.value || null === this.value ? "" : this.mask ? this.maskValue(this.value) : this.value, this.required && void 0 === this.currentValue && (this.valid = !1), this.handleChangeEvent = !0, this.debounce && (this._debounce = Object(Fi.a)(function () {
+                    this.currentValue = void 0 === this.value || null === this.value ? "" : this.mask ? this.maskValue(this.value) : this.value, this.required && void 0 === this.currentValue && (this.valid = !1), this.handleChangeEvent = !0, this.debounce && (this._debounce = Object(Ni.a)(function () {
                         e.$emit("on-change", e.currentValue)
                     }, this.debounce))
                 },
@@ -7487,7 +7485,7 @@ webpackJsonp([1], {
                 beforeDestroy: function () {
                     this._debounce && this._debounce.cancel()
                 },
-                mixins: [oa.a],
+                mixins: [sa.a],
                 components: {Icon: xi.a, InlineDesc: tt.a, Toast: Ri},
                 props: {
                     title: {type: String, default: ""},
@@ -7543,7 +7541,7 @@ webpackJsonp([1], {
                     onClickErrorIcon: function () {
                         this.shouldToastError && this.firstError && (this.showErrorToast = !0), this.$emit("on-click-error-icon", this.firstError)
                     }, maskValue: function (e) {
-                        return this.mask ? Ji.a.toPattern(e, this.mask) : e
+                        return this.mask ? Ti.a.toPattern(e, this.mask) : e
                     }, reset: function () {
                         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
                         this.dirty = !1, this.currentValue = e, this.firstError = "", this.valid = !0
@@ -7846,8 +7844,8 @@ webpackJsonp([1], {
                         }, expression: "showErrorToast"
                     }
                 }, [e._v(e._s(e.firstError))])], 1)
-            }, Ki = [], Li = {render: Mi, staticRenderFns: Ki}, ji = Li, Wi = t("VU/8"), Gi = E,
-            qi = Wi(Hi, ji, !1, Gi, null, null), Yi = qi.exports, Xi = {
+            }, Li = [], Ki = {render: Mi, staticRenderFns: Li}, Gi = Ki, Wi = t("VU/8"), ji = B,
+            qi = Wi(Hi, Gi, !1, ji, null, null), Yi = qi.exports, Xi = {
                 name: "x-circle",
                 props: {
                     strokeWidth: {type: Number, default: 1},
@@ -7891,7 +7889,7 @@ webpackJsonp([1], {
                         "fill-opacity": "0"
                     }
                 })]), e._v(" "), t("div", {staticClass: "vux-circle-content"}, [e._t("default")], 2)])
-            }, _i = [], Pi = {render: Zi, staticRenderFns: _i}, zi = Pi, $i = t("VU/8"), el = B,
+            }, Pi = [], _i = {render: Zi, staticRenderFns: Pi}, zi = _i, $i = t("VU/8"), el = Q,
             al = $i(Xi, zi, !1, el, null, null), tl = al.exports,
             nl = {name: "flow", props: {orientation: {type: String, default: "horizontal"}}}, rl = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
@@ -7899,7 +7897,7 @@ webpackJsonp([1], {
                     staticClass: "weui-wepay-flow",
                     class: {"weui-wepay-flow_vertical": "vertical" === e.orientation}
                 }, [t("div", {staticClass: "weui-wepay-flow__bd"}, [e._t("default")], 2)])
-            }, il = [], ll = {render: rl, staticRenderFns: il}, ul = ll, sl = t("VU/8"), ol = Q,
+            }, il = [], ll = {render: rl, staticRenderFns: il}, ul = ll, sl = t("VU/8"), ol = R,
             pl = sl(nl, ul, !1, ol, null, null), ml = pl.exports, vl = {
                 name: "flow-state",
                 props: {state: [String, Number], title: String, isDone: Boolean},
@@ -7914,7 +7912,7 @@ webpackJsonp([1], {
                     staticClass: "weui-wepay-flow__li",
                     class: {"weui-wepay-flow__li_done": e.isDone}
                 }, [t("div", {staticClass: "weui-wepay-flow__state"}, [e._v(e._s(e.state))]), e._v(" "), t("p", {class: "weui-wepay-flow__title-" + e.titlePosition}, [e._t("title", [e._v(e._s(e.title))])], 2)])
-            }, hl = [], dl = {render: cl, staticRenderFns: hl}, gl = dl, fl = t("VU/8"),
+            }, dl = [], hl = {render: cl, staticRenderFns: dl}, gl = hl, fl = t("VU/8"),
             Al = fl(vl, gl, !1, null, null, null), wl = Al.exports, xl = {
                 name: "flow-line",
                 props: {
@@ -7956,7 +7954,7 @@ webpackJsonp([1], {
                 }, [e._v(e._s(e.tip))]) : e._e()])
             }, yl = [], kl = {render: Cl, staticRenderFns: yl}, Il = kl, Sl = t("VU/8"),
             bl = Sl(xl, Il, !1, null, null, null), El = bl.exports, Bl = {
-                directives: {TransferDom: Ln.a},
+                directives: {TransferDom: Kn.a},
                 created: function () {
                 },
                 data: function () {
@@ -7988,9 +7986,9 @@ webpackJsonp([1], {
                     XCircle: tl,
                     XInput: Yi,
                     XDialog: Qr.a,
-                    XImg: Ke,
+                    XImg: Me,
                     XButton: Pe,
-                    XHeader: sa
+                    XHeader: ua
                 }
             }, Ql = function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
@@ -8119,8 +8117,8 @@ webpackJsonp([1], {
             }, Rl = [function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("a", [t("p", {staticStyle: {"text-align": "center"}}, [e._v("如何将指示灯设置为快闪")])])
-            }], Vl = {render: Ql, staticRenderFns: Rl}, Dl = Vl, Ol = t("VU/8"), Nl = R,
-            Fl = Ol(Bl, Dl, !1, Nl, "data-v-292f41fe", null), Tl = Fl.exports, Jl = t("oCMX"), Ul = {
+            }], Vl = {render: Ql, staticRenderFns: Rl}, Dl = Vl, Ol = t("VU/8"), Fl = V,
+            Nl = Ol(Bl, Dl, !1, Fl, "data-v-292f41fe", null), Jl = Nl.exports, Tl = t("oCMX"), Ul = {
                 name: "range",
                 props: {
                     decimal: Boolean,
@@ -8155,7 +8153,7 @@ webpackJsonp([1], {
                             disabledOpacity: e.disabledOpacity,
                             initialBarWidth: window.getComputedStyle(e.$el.parentNode).width.replace("px", "") - 80
                         };
-                        0 !== e.step && (t.step = e.step), e.range = new Jl.a(e.$el.querySelector(".vux-range-input"), t);
+                        0 !== e.step && (t.step = e.step), e.range = new Tl.a(e.$el.querySelector(".vux-range-input"), t);
                         var n = (e.rangeHandleHeight - e.rangeBarHeight) / 2;
                         e.$el.querySelector(".range-handle").style.top = "-" + n + "px", e.$el.querySelector(".range-bar").style.height = e.rangeBarHeight + "px", e.handleOrientationchange = function () {
                             e.update()
@@ -8213,8 +8211,8 @@ webpackJsonp([1], {
                         }
                     }
                 })])
-            }, Ml = [], Kl = {render: Hl, staticRenderFns: Ml}, Ll = Kl, jl = t("VU/8"), Wl = V,
-            Gl = jl(Ul, Ll, !1, Wl, null, null), ql = Gl.exports, Yl = {
+            }, Ml = [], Ll = {render: Hl, staticRenderFns: Ml}, Kl = Ll, Gl = t("VU/8"), Wl = D,
+            jl = Gl(Ul, Kl, !1, Wl, null, null), ql = jl.exports, Yl = {
                 data: function () {
                     return {percent1: 0, data: []}
                 },
@@ -8245,10 +8243,10 @@ webpackJsonp([1], {
                     XCircle: tl,
                     XButton: Pe,
                     Range: ql,
-                    XHeader: sa,
+                    XHeader: ua,
                     Actionsheet: fr,
-                    Group: Be.a,
-                    Cell: dt,
+                    Group: Ee.a,
+                    Cell: ht,
                     XSwitch: en,
                     Toast: Ri
                 }
@@ -8284,8 +8282,8 @@ webpackJsonp([1], {
                         }
                     }
                 }, [e._v("移除设备")]), e._v(" "), t("p", {staticStyle: {"text-align": "center"}}, [e._v("恢复出厂设置")])], 1)
-            }, Zl = [], _l = {render: Xl, staticRenderFns: Zl}, Pl = _l, zl = t("VU/8"), $l = D,
-            eu = zl(Yl, Pl, !1, $l, "data-v-417ec62e", null), au = eu.exports, tu = {
+            }, Zl = [], Pl = {render: Xl, staticRenderFns: Zl}, _l = Pl, zl = t("VU/8"), $l = O,
+            eu = zl(Yl, _l, !1, $l, "data-v-417ec62e", null), au = eu.exports, tu = {
                 data: function () {
                     return {
                         value2: !1,
@@ -8308,15 +8306,15 @@ webpackJsonp([1], {
                 },
                 components: {
                     XSwitch: en,
-                    XHeader: sa,
-                    Tabbar: Ra,
-                    TabbarItem: Ya,
-                    Cell: dt,
+                    XHeader: ua,
+                    Tabbar: Qa,
+                    TabbarItem: qa,
+                    Cell: ht,
                     CellBox: Yr,
                     CellFormPreview: ti,
                     Panel: mi,
-                    Group: Be.a,
-                    Radio: xa
+                    Group: Ee.a,
+                    Radio: wa
                 }
             }, nu = function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
@@ -8365,10 +8363,10 @@ webpackJsonp([1], {
                     clickInit: function () {
                         var e = this;
                         this.familyId = this.$route.query.familyId, this.$axios.get("/SmartHome/get_family_device?familyId=" + this.familyId).then(function (a) {
-                            a.data.length > 0 && (e.data = a.data)
+                            console.log(a), "searchDeviceFailure" != a.data && (e.data = a.data)
                         })
                     }, clickControl: function (e) {
-                        this.$router.push({path: "/device_control", query: {deviceId: e}})
+                        this.$router.push({path: "/device_detail", query: {deviceId: e}})
                     }, clickAddDevice: function () {
                         this.$router.push({path: "/all_device", query: {familyId: this.familyId}})
                     }, showTodo: function () {
@@ -8376,15 +8374,15 @@ webpackJsonp([1], {
                     }
                 },
                 components: {
-                    XHeader: sa,
-                    Tabbar: Ra,
-                    TabbarItem: Ya,
-                    Cell: dt,
+                    XHeader: ua,
+                    Tabbar: Qa,
+                    TabbarItem: qa,
+                    Cell: ht,
                     CellBox: Yr,
                     CellFormPreview: ti,
                     Panel: mi,
-                    Group: Be.a,
-                    Radio: xa,
+                    Group: Ee.a,
+                    Radio: wa,
                     TODO: Ur
                 }
             }, mu = function () {
@@ -8450,8 +8448,8 @@ webpackJsonp([1], {
                     attrs: {slot: "icon", width: "20", src: t("Dgxh")},
                     slot: "icon"
                 }), e._v("\n      添加新设备\n    ")])], 1)], 1)
-            }, vu = [], cu = {render: mu, staticRenderFns: vu}, hu = cu, du = t("VU/8"),
-            gu = du(pu, hu, !1, null, null, null), fu = gu.exports, Au = t("NjrX"), wu = {
+            }, vu = [], cu = {render: mu, staticRenderFns: vu}, du = cu, hu = t("VU/8"),
+            gu = hu(pu, du, !1, null, null, null), fu = gu.exports, Au = t("NjrX"), wu = {
                 name: "swiper", created: function () {
                     this.index = this.value || 0, this.index && (this.current = this.index)
                 }, mounted: function () {
@@ -8463,7 +8461,7 @@ webpackJsonp([1], {
                     hasTwoLoopItem: function () {
                         2 === this.list.length && this.loop ? this.listTwoLoopItem = this.list : this.listTwoLoopItem = []
                     }, clickListItem: function (e) {
-                        Object(Le.b)(e.url, this.$router), this.$emit("on-click-list-item", JSON.parse(Ee()(e)))
+                        Object(Le.b)(e.url, this.$router), this.$emit("on-click-list-item", JSON.parse(be()(e)))
                     }, buildBackgroundUrl: function (e) {
                         return e.fallbackImg ? "url(" + e.img + "), url(" + e.fallbackImg + ")" : "url(" + e.img + ")"
                     }, render: function () {
@@ -8582,7 +8580,7 @@ webpackJsonp([1], {
                         class: {active: a - 1 === e.current}
                     })])
                 }))])
-            }, Cu = [], yu = {render: xu, staticRenderFns: Cu}, ku = yu, Iu = t("VU/8"), Su = O,
+            }, Cu = [], yu = {render: xu, staticRenderFns: Cu}, ku = yu, Iu = t("VU/8"), Su = F,
             bu = Iu(wu, ku, !1, Su, null, null), Eu = bu.exports, Bu = {
                 name: "swiper-item", mounted: function () {
                     var e = this;
@@ -8599,14 +8597,14 @@ webpackJsonp([1], {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("div", {staticClass: "vux-swiper-item"}, [e._t("default")], 2)
             }, Ru = [], Vu = {render: Qu, staticRenderFns: Ru}, Du = Vu, Ou = t("VU/8"),
-            Nu = Ou(Bu, Du, !1, null, null, null), Fu = Nu.exports, Tu = {
+            Fu = Ou(Bu, Du, !1, null, null, null), Nu = Fu.exports, Ju = {
                 name: "x-table",
                 props: {
                     fullBordered: Boolean,
                     cellBordered: {type: Boolean, default: !0},
                     contentBordered: {type: Boolean, default: !0}
                 }
-            }, Ju = function () {
+            }, Tu = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("table", {
                     staticClass: "vux-table",
@@ -8616,9 +8614,9 @@ webpackJsonp([1], {
                         "vux-table-no-content-bordered": !e.contentBordered
                     }
                 }, [e._t("default")], 2)
-            }, Uu = [], Hu = {render: Ju, staticRenderFns: Uu}, Mu = Hu, Ku = t("VU/8"), Lu = N,
-            ju = Ku(Tu, Mu, !1, Lu, null, null), Wu = ju.exports,
-            Gu = {name: "load-more", props: {showLoading: {type: Boolean, default: !0}, tip: String}},
+            }, Uu = [], Hu = {render: Tu, staticRenderFns: Uu}, Mu = Hu, Lu = t("VU/8"), Ku = N,
+            Gu = Lu(Ju, Mu, !1, Ku, null, null), Wu = Gu.exports,
+            ju = {name: "load-more", props: {showLoading: {type: Boolean, default: !0}, tip: String}},
             qu = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {
@@ -8632,10 +8630,8 @@ webpackJsonp([1], {
                         expression: "tip || !showLoading"
                     }], staticClass: "weui-loadmore__tips"
                 }, [e._v(e._s(e.tip))])])
-            }, Yu = [], Xu = {render: qu, staticRenderFns: Yu}, Zu = Xu, _u = t("VU/8"), Pu = F,
-            zu = _u(Gu, Zu, !1, Pu, null, null), $u = zu.exports, es = t("Icdr");
-        t("GbHy"), t("Oq2I"), t("miEh");
-        var as, ts = {
+            }, Yu = [], Xu = {render: qu, staticRenderFns: Yu}, Zu = Xu, Pu = t("VU/8"), _u = J,
+            zu = Pu(ju, Zu, !1, _u, null, null), $u = zu.exports, es = {
                 data: function () {
                     return {
                         index: 0,
@@ -8646,7 +8642,86 @@ webpackJsonp([1], {
                         }, {imgUrl: "http://xiaoxiangba.com/assets/img/me.png", name: "设备信息"}],
                         demo2: "设备操作",
                         data: [],
-                        switchStatus: !1
+                        sensorList: [],
+                        switchStatus: !1,
+                        options: {
+                            color: ["#ff7f50", "#87cefa", "#da70d6", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0"],
+                            backgroundColor: "#f8f8f8",
+                            title: {
+                                x: "center",
+                                y: "top",
+                                backgroundColor: "rgba(0,0,0,0)",
+                                borderColor: "#ccc",
+                                borderWidth: 0,
+                                padding: 5,
+                                itemGap: 10,
+                                textStyle: {fontSize: 18, fontWeight: "bolder", color: "#ff6666"},
+                                text: "设备传感器信息"
+                            },
+                            tooltip: {trigger: "axis", triggerOn: "click", axisPointer: {type: "line"}},
+                            legend: {
+                                x: "center",
+                                y: "30",
+                                borderColor: "#6699FF",
+                                textStyle: {color: "#1e90ff"},
+                                data: ["大修金额", "中修沥青砼金额", "预防性养护金额", "金额总计"]
+                            },
+                            xAxis: {
+                                name: "商品",
+                                nameLocation: "start",
+                                nameGap: "50",
+                                boundaryGap: !0,
+                                data: ["0:00", "6:00", "6:00", "6:00", "6:00", "6:00", "6:00"]
+                            },
+                            yAxis: {type: "value", scale: !0, name: "销量", max: 100, min: 0, boundaryGap: [.2, .2]},
+                            series: [{
+                                name: "销量",
+                                type: "bar",
+                                data: [5, 20, 36, 60, 10, 55],
+                                smooth: !0,
+                                hoverAnimation: !1,
+                                symbol: "rect",
+                                itemStyle: {normal: {color: "#9f9fa0"}},
+                                lineStyle: {normal: {color: "#9f9fa0", type: "dashed"}}
+                            }]
+                        },
+                        option: {
+                            title: {
+                                x: "150",
+                                y: "top",
+                                backgroundColor: "rgba(0,0,0,0)",
+                                borderColor: "#ccc",
+                                borderWidth: 0,
+                                padding: 5,
+                                itemGap: 10,
+                                textStyle: {fontSize: 18, fontWeight: "bolder", color: "#ff6666"},
+                                text: "全省大中修资金统计"
+                            },
+                            color: ["#ff7f50", "#87cefa", "#da70d6", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0"],
+                            tooltip: {trigger: "axis"},
+                            legend: {
+                                x: "center",
+                                y: "30",
+                                borderColor: "#6699FF",
+                                textStyle: {color: "#1e90ff"},
+                                data: ["大修金额", "中修沥青砼金额", "预防性养护金额", "金额总计"]
+                            },
+                            toolbox: {
+                                x: "80%",
+                                y: "top",
+                                show: !0,
+                                feature: {mark: {show: !0}, saveAsImage: {show: !0}, dataView: {show: !0}}
+                            },
+                            calculable: !0,
+                            xAxis: {data: []},
+                            yAxis: [{type: "value", name: "单位：万元", min: "0", max: "", splitNumber: 20}],
+                            series: [{type: "line", name: "大修金额", data: []}, {
+                                type: "line",
+                                name: "中修沥青砼金额",
+                                data: []
+                            }, {type: "line", name: "预防性养护金额", data: []}, {type: "line", name: "金额总计", data: []}]
+                        },
+                        lightClass: !0
                     }
                 },
                 created: function () {
@@ -8656,76 +8731,96 @@ webpackJsonp([1], {
                     clickInit: function () {
                         var e = this, a = this.$route.query.deviceId;
                         this.$axios.get("/SmartHome/get_device/" + a).then(function (a) {
-                            e.data = a.data[0]
+                            console.log(a), e.sensorList = a.data[0].sensorList, e.data = a.data[0]
                         })
                     }, clickMore: function () {
                         var e = this.$route.query.deviceId;
                         this.$router.push({path: "del_device", query: {deviceId: e}})
+                    }, clickSensorList: function (e, a) {
+                        this.$router.push({path: "/device_sensors", query: {sensorsId: e, name: a}})
                     }, drawLine: function () {
-                        es.init(document.getElementById("myChart")).setOption({
-                            title: {text: "ECharts 入门示例"},
-                            tooltip: {},
-                            xAxis: {data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]},
-                            yAxis: {},
-                            series: [{name: "销量", type: "bar", data: [5, 20, 36, 10, 10, 20]}]
-                        })
-                    }, onItemClick: function (e) {
-                        console.log("on item click:", e)
+                        var e = this;
+                        this.$echarts.init(document.getElementById("myEchart")).setOption(e.option);
+                        for (var a = [], t = 0; t < 6; t++) a.push(Math.floor(95 * Math.random() + 5));
+                        e.options.series[0].data = a, setTimeout(e.drawLine, 3e3)
                     }, clickCode: function (e) {
                         var a = this;
-                        this.$vux.loading.show({text: "loading"}), this.$axios.post("/SmartHome/up_device", {
-                            id: e,
-                            status: "关闭"
-                        }).then(function (e) {
-                            console.log(e)
-                        }).catch(function (e) {
-                            console.log(e)
-                        }), setTimeout(function () {
-                            a.$vux.loading.hide()
+                        this.$vux.loading.show({text: "Loading"}), setTimeout(function () {
+                            a.$axios.post("/SmartHome/control_device", {
+                                familyId: a.data.familyId,
+                                deviceId: a.$route.query.deviceId,
+                                operator: e
+                            }).then(function (e) {
+                                console.log(e), "Success" == e.data ? a.$vux.alert.show({content: "发送成功!"}) : a.$vux.alert.show({content: "发送失败!"})
+                            }), a.$vux.loading.hide()
+                        }, 3e3)
+                    }, showLight: function () {
+                        var e = this;
+                        this.$vux.loading.show({text: "Loading"}), setTimeout(function () {
+                            e.$vux.loading.hide(), e.lightClass = !e.lightClass
                         }, 3e3)
                     }
                 },
                 mounted: function () {
-                    this.drawLine()
                 },
                 components: {
+                    Group: Ee.a,
+                    Cell: ht,
                     Swiper: Eu,
-                    SwiperItem: Fu,
-                    Tabbar: Ra,
-                    TabbarItem: Ya,
-                    XHeader: sa,
+                    SwiperItem: Nu,
+                    Tabbar: Qa,
+                    TabbarItem: qa,
+                    XHeader: ua,
                     XTable: Wu,
                     XButton: Pe,
                     XSwitch: en,
                     LoadMore: $u
                 }
-            }, ns = function () {
+            }, as = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
-                return t("div", {
-                    staticStyle: {
-                        height: "660px",
-                        background: "#333",
-                        color: "#fff"
-                    }
-                }, [t("x-header", {
-                    staticStyle: {position: "fixed", background: "#333", color: "#fff"},
+                return t("div", {staticClass: "control"}, [t("x-header", {
+                    staticClass: "header",
                     attrs: {"left-options": {showBack: !0}, "right-options": {showMore: !0}},
                     on: {"on-click-more": e.clickMore}
-                }, [t("span", {staticStyle: {color: "#fff"}}, [e._v(e._s(e.data.name))])]), e._v(" "), t("div", {
-                    staticStyle: {
-                        position: "relative",
-                        top: "40px",
-                        height: "90%"
-                    }
-                }, [t("load-more", {
-                    attrs: {
-                        tip: "请点击列表指令操作",
-                        "show-loading": !1,
-                        "background-color": "#fbf9fe"
-                    }
-                }), e._v(" "), t("div", [t("tabbar", {
-                    staticStyle: {position: "fixed"},
+                }, [t("span", [e._v(e._s(e.data.name))])]), e._v(" "), t("div", {staticStyle: {height: "100%"}}, [t("swiper", {
+                    staticClass: "swiper",
+                    attrs: {height: "100%", "show-dots": !1},
                     model: {
+                        value: e.index, callback: function (a) {
+                            e.index = a
+                        }, expression: "index"
+                    }
+                }, e._l(e.list2, function (a, n) {
+                    return t("swiper-item", {
+                        key: n,
+                        staticClass: "swiper-item"
+                    }, [0 == n ? t("div", {staticClass: "item-0"}, [t("load-more", {
+                        attrs: {
+                            tip: "请点击列表指令操作",
+                            "show-loading": !1,
+                            "background-color": "#fbf9fe"
+                        }
+                    }), e._v(" "), t("x-table", [t("thead", [t("tr", [t("th", [e._v("指令名称")]), e._v(" "), t("th", [e._v("指令")])])]), e._v(" "), t("tbody", e._l(e.data.operatorList, function (a) {
+                        return t("tr", {
+                            key: a.id, on: {
+                                click: function (t) {
+                                    e.clickCode(a.operatorCode)
+                                }
+                            }
+                        }, [t("td", [e._v(e._s(a.description))]), e._v(" "), t("td", {attrs: {width: "200"}}, [e._v("\n                点击发送\n              ")])])
+                    }))])], 1) : 1 == n ? t("div", {staticStyle: {color: "#333"}}, [t("p", {staticStyle: {color: "#fff"}}, [e._v("当前设备传感器")]), e._v(" "), t("group", e._l(e.sensorList, function (a) {
+                        return t("cell", {
+                            key: a.id,
+                            attrs: {title: a.description, "is-link": ""},
+                            nativeOn: {
+                                click: function (t) {
+                                    e.clickSensorList(a.id, a.description)
+                                }
+                            }
+                        })
+                    }))], 1) : e._e()])
+                })), e._v(" "), t("tabbar", {
+                    staticStyle: {position: "fixed"}, model: {
                         value: e.index, callback: function (a) {
                             e.index = a
                         }, expression: "index"
@@ -8741,396 +8836,132 @@ webpackJsonp([1], {
                         attrs: {slot: "icon", src: a.imgUrl},
                         slot: "icon"
                     }), e._v(" "), t("span", {attrs: {slot: "label"}, slot: "label"}, [e._v(e._s(a.name))])])
-                })), e._v(" "), t("swiper", {
-                    staticStyle: {position: "relative", height: "400px"},
-                    attrs: {height: "400", "show-dots": !1},
-                    model: {
-                        value: e.index, callback: function (a) {
-                            e.index = a
-                        }, expression: "index"
-                    }
-                }, e._l(e.list2, function (a, n) {
-                    return t("swiper-item", {
-                        key: n,
-                        staticStyle: {height: "100%", overflow: "scroll", position: "relative !important"},
-                        attrs: {height: "400"}
-                    }, [0 == n ? t("div", {staticStyle: {padding: "0 15px"}}, [t("x-table", [t("thead", [t("tr", [t("th", [e._v("指令名称")]), e._v(" "), t("th", [e._v("指令")])])]), e._v(" "), t("tbody", e._l(e.data.operatorList, function (a) {
-                        return t("tr", {
-                            key: a.id, on: {
-                                click: function (t) {
-                                    e.clickCode(a.id)
-                                }
-                            }
-                        }, [t("td", [e._v(e._s(a.id) + " : " + e._s(a.description))]), e._v(" "), t("td", {attrs: {width: "200"}}, [e._v("\n                  " + e._s(a.status) + "\n                ")])])
-                    }))])], 1) : 1 == n ? t("div", {
-                        staticStyle: {width: "100%", height: "300px"},
-                        attrs: {id: "myChart"}
-                    }) : e._e()])
-                }))], 1)], 1)], 1)
-            }, rs = [], is = {render: ns, staticRenderFns: rs}, ls = is, us = t("VU/8"), ss = T,
-            os = us(ts, ls, !1, ss, "data-v-2cdcb641", null), ps = os.exports, ms = {
-                name: "checker",
-                props: {
-                    defaultItemClass: String,
-                    selectedItemClass: String,
-                    disabledItemClass: String,
-                    type: {type: String, default: "radio"},
-                    value: [String, Number, Array, Object],
-                    max: Number,
-                    radioRequired: Boolean
-                },
-                watch: {
-                    value: function (e) {
-                        this.currentValue = e
-                    }, currentValue: function (e) {
-                        this.$emit("input", e), this.$emit("on-change", e)
-                    }
-                },
-                data: function () {
-                    return {currentValue: this.value}
-                }
-            }, vs = function () {
-                var e = this, a = e.$createElement;
-                return (e._self._c || a)("div", {staticClass: "vux-checker-box"}, [e._t("default")], 2)
-            }, cs = [], hs = {render: vs, staticRenderFns: cs}, ds = hs, gs = t("VU/8"), fs = J,
-            As = gs(ms, ds, !1, fs, null, null), ws = As.exports, xs = {
-                name: "checker-item",
-                props: {value: {type: [String, Number, Object], required: !0}, disabled: Boolean},
-                watch: {
-                    disabled: function (e) {
-                        e && "radio" === this.$parent.type && this.value === this.$parent.currentValue && (this.$parent.currentValue = "")
-                    }
-                },
-                computed: {
-                    classNames: function () {
-                        var e = this, a = "string" == typeof this.value || "number" == typeof this.value,
-                            t = {"vux-tap-active": !this.disabled};
-                        if (this.$parent.defaultItemClass && (t[this.$parent.defaultItemClass] = !0), this.$parent.selectedItemClass) {
-                            var n = !1;
-                            if ("radio" === this.$parent.type) a && this.$parent.currentValue === this.value ? n = !0 : "object" === rn()(this.value) && U(this.$parent.currentValue, this.value) && (n = !0); else if ("string" == typeof this.value) this.$parent.currentValue.indexOf(this.value) > -1 && (n = !0); else if (this.$parent.currentValue && this.$parent.currentValue.length) {
-                                var r = this.$parent.currentValue.filter(function (a) {
-                                    return U(a, e.value)
-                                });
-                                n = r.length > 0
-                            }
-                            t[this.$parent.selectedItemClass] = n
-                        }
-                        return this.$parent.disabledItemClass && (t[this.$parent.disabledItemClass] = this.disabled), t
-                    }
-                },
-                methods: {
-                    select: function () {
-                        "radio" === this.$parent.type ? this.selectRadio() : this.selectCheckbox()
-                    }, selectRadio: function () {
-                        this.disabled || (this.$parent.currentValue === this.value ? this.$parent.radioRequired || (this.$parent.currentValue = "") : this.$parent.currentValue = this.value), this.$emit("on-item-click", this.value, this.disabled)
-                    }, selectCheckbox: function () {
-                        this.$parent.currentValue && null !== this.$parent.currentValue || (this.$parent.currentValue = []);
-                        var e = "string" == typeof this.value || "number" == typeof this.value;
-                        if (!this.disabled) {
-                            var a = -1;
-                            a = e ? this.$parent.currentValue.indexOf(this.value) : this.$parent.currentValue.map(function (e) {
-                                return Ee()(e)
-                            }).indexOf(Ee()(this.value)), a > -1 ? this.$parent.currentValue.splice(a, 1) : (!this.$parent.max || this.$parent.max && null !== this.$parent.currentValue && this.$parent.currentValue.length < this.$parent.max) && (this.$parent.currentValue && this.$parent.currentValue.length || (this.$parent.currentValue = []), this.$parent.currentValue.push(this.value))
-                        }
-                        this.$emit("on-item-click", this.value, this.disabled)
-                    }
-                }
-            }, Cs = function () {
-                var e = this, a = e.$createElement;
-                return (e._self._c || a)("div", {
-                    staticClass: "vux-checker-item",
-                    class: e.classNames,
-                    on: {click: e.select}
-                }, [e._t("default")], 2)
-            }, ys = [], ks = {render: Cs, staticRenderFns: ys}, Is = ks, Ss = t("VU/8"), bs = H,
-            Es = Ss(xs, Is, !1, bs, null, null), Bs = Es.exports, Qs = {
-                name: "countdown", props: {value: Number, start: {type: Boolean, default: !0}}, created: function () {
-                    this.currentTime = this.time, this.value && (this.currentTime = this.value)
-                }, methods: {
-                    tick: function () {
-                        var e = this;
-                        this.interval = setInterval(function () {
-                            e.currentTime > 0 ? e.currentTime-- : (e.stop(), e.index++, e.$emit("on-finish", e.index))
-                        }, 1e3)
-                    }, stop: function () {
-                        clearInterval(this.interval)
-                    }
-                }, watch: {
-                    value: function (e) {
-                        this.currentTime = e
-                    }, currentTime: function (e) {
-                        this.$emit("input", e)
-                    }, start: function (e, a) {
-                        !0 === e && !1 === a && this.currentTime > 0 && this.tick(), !1 === e && !0 === a && this.stop()
-                    }
-                }, mounted: function () {
-                    this.start && this.tick()
-                }, data: function () {
-                    return {interval: null, index: 0, currentTime: 60}
-                }
-            }, Rs = function () {
-                var e = this, a = e.$createElement;
-                return (e._self._c || a)("span", [e._v(e._s(e.currentTime))])
-            }, Vs = [], Ds = {render: Rs, staticRenderFns: Vs}, Os = Ds, Ns = t("VU/8"),
-            Fs = Ns(Qs, Os, !1, null, null, null), Ts = Fs.exports, Js = t("EbL4"), Us = t.n(Js), Hs = {
-                name: "countup",
-                mounted: function () {
-                    var e = this;
-                    this.$nextTick(function () {
-                        e._countup = new Us.a(e.$el, e.startVal, e.endVal, e.decimals, e.duration, e.options), e.start && e._countup.start()
-                    })
-                },
-                props: {
-                    tag: {type: String, default: "span"},
-                    start: {type: Boolean, default: !0},
-                    startVal: {type: Number, default: 0},
-                    endVal: {type: Number, required: !0},
-                    decimals: {type: Number, default: 0},
-                    duration: {type: Number, default: 2},
-                    options: {
-                        type: Object, default: function () {
-                            return {}
-                        }
-                    }
-                },
-                render: function (e) {
-                    return e(this.tag, {}, [this.startVal])
-                },
-                watch: {
-                    start: function (e) {
-                        e && this._countup.start()
-                    }, endVal: function (e) {
-                        this._countup.update(e)
-                    }
-                }
-            }, Ms = t("VU/8"), Ks = Ms(Hs, null, !1, null, null, null), Ls = Ks.exports, js = {
-                directives: {TransferDom: Ln.a},
+                }))], 1)], 1)
+            }, ts = [], ns = {render: as, staticRenderFns: ts}, rs = ns, is = t("VU/8"), ls = T,
+            us = is(es, rs, !1, ls, "data-v-8aba3dac", null), ss = us.exports, os = {
                 data: function () {
                     return {
-                        list: [{PowerStatus: "1"}, {
-                            ID: "SN001",
-                            Name: "智能热水壶",
-                            Type: "家电",
-                            Icon: "http://xiaoxiangba.com/assets/img/waterBettle.png",
-                            Title: "这是一款......",
-                            DateTime: "2018-01-18",
-                            workerTime: "30",
-                            Functions: {
-                                BoilMode: {
-                                    Name: "煮水",
-                                    Icon: "http://xiaoxiangba.com/assets/img/waterBettle.png",
-                                    BoilSwitch: "B1",
-                                    LED: "L0"
-                                },
-                                KeepWarm: {
-                                    Name: "保温",
-                                    Icon: "http://xiaoxiangba.com/assets/img/waterBettle.png",
-                                    WarmSwitch: "K1",
-                                    Attemperation: "95"
-                                },
-                                Adjustment: {
-                                    Name: "调节",
-                                    Icon: "http://xiaoxiangba.com/assets/img/waterBettle.png",
-                                    AdjustSwitch: "A1",
-                                    Attemperation: "100"
-                                },
-                                ManualMode: {
-                                    Name: "手动",
-                                    Icon: "http://xiaoxiangba.com/assets/img/waterBettle.png",
-                                    Manual: "M1"
-                                }
-                            }
-                        }],
-                        todoStatus: !1,
-                        doStart: !1,
-                        show: !1,
-                        lightClass: !1,
-                        time: 1800,
-                        start: !1,
-                        items: [{key: "0", value: "开关"}, {key: "1", value: "煮水"}, {key: "2", value: "保温"}, {
-                            key: "3",
-                            value: "定时"
-                        }],
-                        demo: 0,
-                        demo2: "0",
-                        menus: {menu1: "Take Photo", menu2: "Choose from photos"},
-                        showMenus: !1
+                        options: {
+                            color: ["#ff7f50", "#87cefa", "#da70d6", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0"],
+                            backgroundColor: "#f8f8f8",
+                            title: {
+                                x: "center",
+                                y: "top",
+                                backgroundColor: "rgba(0,0,0,0)",
+                                borderColor: "#ccc",
+                                borderWidth: 0,
+                                padding: 5,
+                                itemGap: 10,
+                                textStyle: {fontSize: 18, fontWeight: "bolder", color: "#ff6666"},
+                                text: "设备传感器信息"
+                            },
+                            tooltip: {trigger: "axis", triggerOn: "click", axisPointer: {type: "line"}},
+                            legend: {
+                                x: "center",
+                                y: "30",
+                                borderColor: "#6699FF",
+                                textStyle: {color: "#1e90ff"},
+                                data: ["大修金额", "中修沥青砼金额", "预防性养护金额", "金额总计"]
+                            },
+                            xAxis: {
+                                name: "商品",
+                                nameLocation: "start",
+                                nameGap: "50",
+                                boundaryGap: !0,
+                                data: ["0:00", "6:00", "6:00", "6:00", "6:00", "6:00", "6:00"]
+                            },
+                            yAxis: {type: "value", scale: !0, name: "销量", max: 100, min: 0, boundaryGap: [1, 1]},
+                            series: [{
+                                name: "销量",
+                                type: "bar",
+                                data: [5, 20, 36, 60, 10, 55],
+                                smooth: !0,
+                                hoverAnimation: !1,
+                                symbol: "rect",
+                                itemStyle: {normal: {color: "#9f9fa0"}},
+                                lineStyle: {normal: {color: "#9f9fa0", type: "dashed"}}
+                            }]
+                        },
+                        option: {
+                            title: {
+                                x: "150",
+                                y: "top",
+                                backgroundColor: "rgba(0,0,0,0)",
+                                borderColor: "#ccc",
+                                borderWidth: 0,
+                                padding: 5,
+                                itemGap: 10,
+                                textStyle: {fontSize: 18, fontWeight: "bolder", color: "#ff6666"},
+                                text: "设备传感器信息"
+                            },
+                            color: ["#ff7f50", "#87cefa", "#da70d6", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0"],
+                            tooltip: {trigger: "axis"},
+                            legend: {
+                                x: "center",
+                                y: "30",
+                                borderColor: "#6699FF",
+                                textStyle: {color: "#1e90ff"},
+                                data: ["光照"]
+                            },
+                            toolbox: {
+                                x: "80%",
+                                y: "top",
+                                show: !0,
+                                feature: {mark: {show: !0}, saveAsImage: {show: !0}, dataView: {show: !0}}
+                            },
+                            calculable: !0,
+                            xAxis: {
+                                name: "时间段/min",
+                                nameLocation: "middle",
+                                nameTextStyle: {padding: -10},
+                                axisLabel: {interval: 0, rotate: "45"},
+                                nameGap: "50",
+                                boundaryGap: !0,
+                                data: []
+                            },
+                            yAxis: {type: "value", scale: !0, name: "", boundaryGap: [1, 1], splitNumber: 20, min: 0},
+                            series: [{type: "line", name: "光照", data: []}]
+                        },
+                        data: [],
+                        topName: this.$route.query.name
                     }
-                },
-                created: function () {
-                },
-                methods: {
-                    clickMore: function () {
-                        this.$router.push("/del_device")
-                    }, showLight: function () {
-                        var e = this, a = this.$route.query.deviceId;
-                        this.$vux.loading.show({text: "loading"}), setTimeout(function () {
-                            e.$router.push({path: "/device_detail", query: {deviceId: a}}), e.$vux.loading.hide()
-                        }, 3e3)
-                    }, finish: function () {
-                        this.start = !this.start
+                }, created: function () {
+                }, methods: {
+                    drawLine: function () {
+                        var e = this;
+                        this.$echarts.init(document.getElementById("myEchart")).setOption(e.option), this.$axios.get("/SmartHome/get_sensorsdata?sensorsId=" + this.$route.query.sensorsId).then(function (a) {
+                            var t = [], n = [], r = 0;
+                            for (var i in a.data) a.data[i].dataValue > r && (r = a.data[i].dataValue), t.push(a.data[i].collectionTime.hours + ":" + a.data[i].collectionTime.minutes), n.push(Number(a.data[i].dataValue));
+                            e.option.yAxis.name = a.data[0].dataName, console.log(a.data[0].dataName), e.option.xAxis.data = t, e.option.series[0].data = n, e.option.yAxis.max = Math.max.apply(Math, n), console.log(e.option.xAxis.data), console.log(e.option.series[0].data)
+                        }), setTimeout(e.drawLine, 3e3)
+                    }, clickMore: function () {
                     }
-                },
-                components: {
-                    TODO: Ur,
-                    Actionsheet: fr,
-                    Countup: Ls,
-                    Countdown: Ts,
-                    Cell: dt,
-                    XButton: Pe,
-                    XHeader: sa,
-                    XCircle: tl,
-                    XSwitch: en,
-                    Tabbar: Ra,
-                    TabbarItem: Ya,
-                    Checker: ws,
-                    CheckerItem: Bs
-                }
-            }, Ws = function () {
+                }, mounted: function () {
+                    this.drawLine()
+                }, components: {XHeader: ua}
+            }, ps = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {
                     staticStyle: {
-                        height: "660px",
-                        background: "#333",
-                        color: "#fff"
+                        position: "fixed",
+                        width: "100%",
+                        height: "100%"
                     }
                 }, [t("x-header", {
-                    staticStyle: {background: "#333", color: "#fff"},
-                    attrs: {"left-options": {showBack: !0}}
-                }, [t("span", {staticStyle: {color: "#fff"}}, [e._v("SN001")])]), e._v(" "), t("div", {
-                    directives: [{
-                        name: "show",
-                        rawName: "v-show",
-                        value: e.lightClass,
-                        expression: "lightClass"
-                    }], class: {"open-button": !e.lightClass}
-                }, [t("div", {
-                    staticStyle: {
-                        width: "150px",
-                        height: "120px",
-                        margin: "150px auto",
-                        "margin-bottom": "40px"
-                    }
-                }, [t("x-circle", {
-                    attrs: {
-                        "stroke-width": 3,
-                        "stroke-color": "#fff"
-                    }
-                }, [t("div", {
-                    staticStyle: {
-                        "padding-top": "50%",
-                        "margin-top": "-40px"
-                    }
-                }, [t("p", {staticStyle: {"font-size": "12px"}}, [e._v("当前温度")]), e._v(" "), "自冷" != e.demo2 ? t("p", {staticStyle: {"font-size": "30px"}}, [e._v(e._s(e.demo2) + "°C")]) : t("p", {staticStyle: {"font-size": "30px"}}, [e._v(e._s(e.demo2))]), e._v(" "), t("p", {staticStyle: {"font-size": "12px"}}, [e._v("00:\n            "), t("countdown", {
-                    directives: [{
-                        name: "show",
-                        rawName: "v-show",
-                        value: e.show,
-                        expression: "show"
-                    }], attrs: {start: e.start}, on: {"on-finish": e.finish}, model: {
-                        value: e.time, callback: function (a) {
-                            e.time = a
-                        }, expression: "time"
-                    }
-                }), e._v("\n            " + e._s(parseInt(e.time / 60)) + "\n          ")], 1), e._v(" "), t("p", {staticStyle: {"font-size": "12px"}}, [e._v(e._s(e.items[e.demo].value))])])])], 1), e._v(" "), t("div", {staticClass: "box"}, [t("checker", {
-                    attrs: {
-                        "default-item-class": "demo2-item",
-                        "selected-item-class": "demo2-item-selected",
-                        "radio-required": ""
-                    }, model: {
-                        value: e.demo2, callback: function (a) {
-                            e.demo2 = a
-                        }, expression: "demo2"
-                    }
-                }, [t("checker-item", {attrs: {value: "100"}}, [e._v("100")]), e._v(" "), t("checker-item", {attrs: {value: "80"}}, [e._v("80")]), e._v(" "), t("checker-item", {attrs: {value: "60"}}, [e._v("60")]), e._v(" "), t("checker-item", {attrs: {value: "40"}}, [e._v("40")]), e._v(" "), t("checker-item", {attrs: {value: "自冷"}}, [e._v("自")])], 1)], 1)]), e._v(" "), t("tabbar", {
-                    staticStyle: {
-                        background: "#333",
-                        color: "#ccc"
-                    },
-                    attrs: {
-                        "default-item-class": "demo-item",
-                        "selected-item-class": "demo-item-selected",
-                        "radio-required": ""
-                    },
-                    model: {
-                        value: e.demo, callback: function (a) {
-                            e.demo = a
-                        }, expression: "demo"
-                    }
-                }, [t("tabbar-item", {
-                    attrs: {value: "开关"}, nativeOn: {
-                        click: function (a) {
-                            e.showLight(a)
-                        }
-                    }
-                }, [t("img", {
-                    attrs: {slot: "icon", src: "http://xiaoxiangba.com/assets/img/waterSwitch.png"},
-                    slot: "icon"
-                }), e._v(" "), t("span", {
-                    attrs: {slot: "label"},
-                    slot: "label"
-                }, [e._v("开关")])]), e._v(" "), t("tabbar-item", {
-                    directives: [{
-                        name: "show",
-                        rawName: "v-show",
-                        value: e.lightClass,
-                        expression: "lightClass"
-                    }], attrs: {value: "煮水"}
-                }, [t("img", {
-                    attrs: {slot: "icon", src: "http://xiaoxiangba.com/assets/img/boilWater.png"},
-                    slot: "icon"
-                }), e._v(" "), t("span", {
-                    attrs: {slot: "label"},
-                    slot: "label"
-                }, [e._v("煮水")])]), e._v(" "), t("tabbar-item", {
-                    directives: [{
-                        name: "show",
-                        rawName: "v-show",
-                        value: e.lightClass,
-                        expression: "lightClass"
-                    }], attrs: {value: "保温"}
-                }, [t("img", {
-                    attrs: {slot: "icon", src: "http://xiaoxiangba.com/assets/img/keepWarm.png"},
-                    slot: "icon"
-                }), e._v(" "), t("span", {
-                    attrs: {slot: "label"},
-                    slot: "label"
-                }, [e._v("保温")])]), e._v(" "), t("tabbar-item", {
-                    directives: [{
-                        name: "show",
-                        rawName: "v-show",
-                        value: e.lightClass,
-                        expression: "lightClass"
-                    }], attrs: {value: "定时"}, nativeOn: {
-                        click: function (a) {
-                            e.finish(a)
-                        }
-                    }
-                }, [t("img", {
-                    attrs: {slot: "icon", src: "http://xiaoxiangba.com/assets/img/waterTiming.png"},
-                    slot: "icon"
-                }), e._v(" "), t("span", {
-                    attrs: {slot: "label"},
-                    slot: "label"
-                }, [e._v("定时")])])], 1), e._v(" "), t("TODO", {
-                    directives: [{
-                        name: "show",
-                        rawName: "v-show",
-                        value: e.todoStatus,
-                        expression: "todoStatus"
-                    }], on: {
-                        close: function (a) {
-                            e.todoStatus = !1
-                        }
-                    }
+                    staticClass: "header",
+                    attrs: {"left-options": {showBack: !0}, "right-options": {showMore: !0}},
+                    on: {"on-click-more": e.clickMore}
+                }, [t("span", [e._v(e._s(e.topName))])]), e._v(" "), t("div", {
+                    staticStyle: {width: "100%", height: "80%"},
+                    attrs: {id: "myEchart"}
                 })], 1)
-            }, Gs = [], qs = {render: Ws, staticRenderFns: Gs}, Ys = qs, Xs = t("VU/8"), Zs = M,
-            _s = Xs(js, Ys, !1, Zs, "data-v-6f16438e", null), Ps = _s.exports, zs = {
-                directives: {TransferDom: Ln.a},
+            }, ms = [], vs = {render: ps, staticRenderFns: ms}, cs = vs, ds = t("VU/8"), hs = U,
+            gs = ds(os, cs, !1, hs, "data-v-68448a80", null), fs = gs.exports, As = {
+                directives: {TransferDom: Kn.a},
                 data: function () {
                     return {show4: !1}
                 },
-                components: {XSwitch: en, Confirm: jt.a, XButton: Pe, XHeader: sa, Group: Be.a, Cell: dt},
+                components: {XSwitch: en, Confirm: Gt.a, XButton: Pe, XHeader: ua, Group: Ee.a, Cell: ht},
                 methods: {
                     onConfirm4: function () {
                         var e = this;
@@ -9154,7 +8985,7 @@ webpackJsonp([1], {
                         })
                     }
                 }
-            }, $s = function () {
+            }, ws = function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
                 return n("div", [n("x-header", {
                     staticStyle: {background: "#fff"},
@@ -9226,8 +9057,8 @@ webpackJsonp([1], {
                         }, expression: "show4"
                     }
                 }, [n("p", {staticStyle: {"text-align": "center"}}, [e._v("确定")])])], 1)], 1)
-            }, eo = [], ao = {render: $s, staticRenderFns: eo}, to = ao, no = t("VU/8"), ro = K,
-            io = no(zs, to, !1, ro, "data-v-09c4f4da", null), lo = io.exports, uo = {
+            }, xs = [], Cs = {render: ws, staticRenderFns: xs}, ys = Cs, ks = t("VU/8"), Is = H,
+            Ss = ks(As, ys, !1, Is, "data-v-09c4f4da", null), bs = Ss.exports, Es = {
                 data: function () {
                     return {showLogin: !1}
                 }, created: function () {
@@ -9242,53 +9073,37 @@ webpackJsonp([1], {
                         this.$router.push("/register")
                     }
                 }, components: {XButton: Pe}
-            }, so = function () {
+            }, Bs = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
-                return t("div", {staticStyle: {height: "100%"}}, [t("img", {
-                    staticStyle: {margin: "200px auto 0"},
-                    attrs: {src: "http://www.xiaoxiangba.com/assets/img/scan1.png", width: "60", alt: ""}
-                }), e._v(" "), t("p", {
-                    staticStyle: {
-                        "text-align": "center",
-                        "font-size": "18px",
-                        color: "#000",
-                        "font-weight": "bold"
+                return t("div", {staticClass: "login"}, [t("img", {
+                    attrs: {
+                        src: "http://www.xiaoxiangba.com/assets/img/scan1.png",
+                        alt: "logo"
                     }
-                }, [e._v("智能生活")]), e._v(" "), t("div", {
+                }), e._v(" "), t("p", [e._v("智能生活")]), e._v(" "), t("div", {
                     directives: [{
                         name: "show",
                         rawName: "v-show",
                         value: e.showLogin,
                         expression: "showLogin"
-                    }], staticStyle: {position: "fixed", bottom: "20px", width: "100%"}
+                    }], staticClass: "login-btn"
                 }, [t("x-button", {
-                    staticStyle: {
-                        width: "300px",
-                        background: "#00ee00",
-                        color: "#ffffff",
-                        "padding-top": "0",
-                        "padding-bottom": "0"
-                    }, nativeOn: {
+                    staticClass: "btn-1", nativeOn: {
                         click: function (a) {
                             e.clickLogin()
                         }
                     }
                 }, [e._v("登录\n    ")]), e._v(" "), t("x-button", {
-                    staticStyle: {
-                        width: "300px",
-                        margin: "20px auto",
-                        color: "#00ee00",
-                        "padding-top": "0",
-                        "padding-bottom": "0"
-                    }, nativeOn: {
+                    staticClass: "btn-2", nativeOn: {
                         click: function (a) {
                             e.clickRegister()
                         }
                     }
                 }, [e._v("注册\n    ")])], 1)])
-            }, oo = [], po = {render: so, staticRenderFns: oo}, mo = po, vo = t("VU/8"), co = L,
-            ho = vo(uo, mo, !1, co, null, null), go = ho.exports, fo = t("bOdI"), Ao = t.n(fo), wo = t("mzja"), xo = {
-                directives: {TransferDom: Ln.a}, data: function () {
+            }, Qs = [], Rs = {render: Bs, staticRenderFns: Qs}, Vs = Rs, Ds = t("VU/8"), Os = M,
+            Fs = Ds(Es, Vs, !1, Os, "data-v-62a1be80", null), Ns = Fs.exports, Js = t("bOdI"), Ts = t.n(Js),
+            Us = t("mzja"), Hs = {
+                directives: {TransferDom: Kn.a}, data: function () {
                     return {
                         showLogin: !1,
                         showErr: !1,
@@ -9303,9 +9118,9 @@ webpackJsonp([1], {
                         phoneCode: "",
                         isCode: !0,
                         isGetCode: !0,
-                        username: ""
+                        username: "",
+                        count: 0
                     }
-                }, created: function () {
                 }, methods: {
                     login: function () {
                         "" !== this.phone && "" !== this.password ? (this.toLogin(), this.isLogin = !1) : this.showErr = !0
@@ -9315,7 +9130,7 @@ webpackJsonp([1], {
                             phone: a.phone,
                             password: a.password
                         }).then(function (a) {
-                            e.$vux.loading.show(), localStorage.setItem("mydata", Ee()(a.data[0]));
+                            e.$vux.loading.show(), localStorage.setItem("mydata", be()(a.data[0]));
                             JSON.parse(localStorage.mydata);
                             200 === a.status && "loginFailure" != a.data ? setTimeout(function () {
                                 e.setCookie("session", a.body, 1296e6), e.$vux.loading.hide(), e.$router.push("/Home")
@@ -9350,7 +9165,7 @@ webpackJsonp([1], {
                                 phone: e.username,
                                 code: e.code
                             }).then(function (a) {
-                                e.$vux.loading.show(), localStorage.setItem("mydata", Ee()(a.data[0]));
+                                e.$vux.loading.show(), localStorage.setItem("mydata", be()(a.data[0]));
                                 JSON.parse(localStorage.mydata);
                                 200 === a.status && "loginFailure" != a.data && setTimeout(function () {
                                     e.setCookie("session", a.body, 1296e6), e.$vux.loading.hide(), e.$router.push("/Home")
@@ -9358,7 +9173,7 @@ webpackJsonp([1], {
                             }) : e.$vux.alert.show({content: "验证码错误!"})
                         }, 1e3)
                     }
-                }, watch: (as = {
+                }, watch: (se = {
                     phone: function (e, a) {
                         "" !== this.phone && "" !== this.password ? this.isLogin = !1 : this.isLogin = !0
                     }, password: function (e, a) {
@@ -9366,73 +9181,54 @@ webpackJsonp([1], {
                     }, username: function (e, a) {
                         11 == this.username.length ? this.isCode = !1 : this.isCode = !0
                     }
-                }, Ao()(as, "phone", function () {
+                }, Ts()(se, "phone", function () {
                     "" !== this.phone ? this.isCode = !1 : this.isCode = !0
-                }), Ao()(as, "code", function () {
-                    4 == this.code.length && 11 == this.username.length ? this.isGetCode = !1 : this.isGetCode = !0
-                }), as), components: {XHeader: sa, Alert: wo.a, Group: Be.a, XInput: Yi, XButton: Pe, Popup: Rn}
-            }, Co = function () {
+                }), Ts()(se, "code", function () {
+                    6 == this.code.length && 11 == this.username.length ? this.isGetCode = !1 : this.isGetCode = !0
+                }), se), components: {XHeader: ua, Alert: Us.a, Group: Ee.a, XInput: Yi, XButton: Pe, Popup: Rn}
+            }, Ms = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
-                return t("div", [t("div", [t("x-header", {
-                    staticStyle: {background: "#fff"},
+                return t("div", {staticClass: "login"}, [t("x-header", {
+                    staticClass: "header",
                     attrs: {"left-options": {showBack: !0}}
-                }, [t("span", {staticStyle: {color: "#aaa"}}, [e._v("登录")])]), e._v(" "), t("group", {
-                    staticStyle: {
-                        width: "90%",
-                        "margin-left": "5%",
-                        border: "1px solid inherit",
-                        "border-radius": "20px"
-                    }
-                }, [t("x-input", {
-                    staticStyle: {width: "90%", border: "1px solid inherit", "border-radius": "20px"},
+                }, [t("span", {staticClass: "title"}, [e._v("登录")])]), e._v(" "), t("group", {staticClass: "phone"}, [t("x-input", {
+                    staticClass: "input",
                     attrs: {type: "tel", placeholder: "手机号"},
                     model: {
                         value: e.phone, callback: function (a) {
                             e.phone = a
                         }, expression: "phone"
                     }
-                })], 1), e._v(" "), t("group", {
-                    staticStyle: {
-                        width: "90%",
-                        "margin-left": "5%"
-                    }
-                }, [t("x-input", {
-                    attrs: {type: e.isPwd, placeholder: "密码"}, model: {
+                })], 1), e._v(" "), t("group", {staticClass: "password"}, [t("x-input", {
+                    attrs: {
+                        type: e.isPwd,
+                        placeholder: "密码"
+                    }, model: {
                         value: e.password, callback: function (a) {
                             e.password = a
                         }, expression: "password"
                     }
                 }, [e.isShow ? t("img", {
-                    staticStyle: {"vertical-align": "middle"},
-                    attrs: {slot: "right", src: "http://www.xiaoxiangba.com/assets/img/show.png", width: "20px"},
-                    on: {click: e.clickShow},
-                    slot: "right"
+                    attrs: {
+                        slot: "right",
+                        src: "http://www.xiaoxiangba.com/assets/img/show.png",
+                        width: "20px"
+                    }, on: {click: e.clickShow}, slot: "right"
                 }) : e._e(), e._v(" "), e.isShow ? e._e() : t("img", {
-                    staticStyle: {"vertical-align": "middle"},
-                    attrs: {slot: "right", src: "http://www.xiaoxiangba.com/assets/img/hide.png", width: "20px"},
-                    on: {click: e.clickShow},
-                    slot: "right"
+                    attrs: {
+                        slot: "right",
+                        src: "http://www.xiaoxiangba.com/assets/img/hide.png",
+                        width: "20px"
+                    }, on: {click: e.clickShow}, slot: "right"
                 })])], 1), e._v(" "), t("x-button", {
-                    staticStyle: {
-                        width: "90%",
-                        "margin-left": "5%",
-                        "margin-top": "20px",
-                        "margin-bottom": "20px"
-                    }, attrs: {type: "primary", disabled: e.isLogin}, nativeOn: {
+                    staticClass: "login-btn",
+                    attrs: {type: "primary", disabled: e.isLogin},
+                    nativeOn: {
                         click: function (a) {
                             e.login(a)
                         }
                     }
-                }, [e._v("登录\n    ")]), e._v(" "), t("div", [t("a", {
-                    staticStyle: {
-                        "margin-left": "5%",
-                        float: "left",
-                        color: "#777"
-                    }, on: {click: e.clickNewsLogin}
-                }, [e._v("通过短信验证码登录")]), e._v(" "), t("a", {
-                    staticStyle: {"margin-right": "5%", float: "right", color: "#777"},
-                    on: {click: e.clickForgetPwd}
-                }, [e._v("忘记密码")])]), e._v(" "), e._m(0), e._v(" "), t("div", {
+                }, [e._v("登录\n  ")]), e._v(" "), t("div", {staticClass: "login-sms"}, [t("a", {on: {click: e.clickNewsLogin}}, [e._v("通过短信验证码登录")]), e._v(" "), t("a", {on: {click: e.clickForgetPwd}}, [e._v("忘记密码")])]), e._v(" "), e._m(0), e._v(" "), t("div", {
                     directives: [{
                         name: "transfer-dom",
                         rawName: "v-transfer-dom"
@@ -9443,7 +9239,7 @@ webpackJsonp([1], {
                             e.showErr = a
                         }, expression: "showErr"
                     }
-                }, [e._v("\n        用户名或账户错误！\n      ")])], 1)], 1), e._v(" "), t("popup", {
+                }, [e._v("\n      用户名或账户错误！\n    ")])], 1), e._v(" "), t("popup", {
                     staticStyle: {height: "100%"},
                     attrs: {position: "bottom"},
                     model: {
@@ -9502,6 +9298,10 @@ webpackJsonp([1], {
                         disabled: "",
                         type: "primary",
                         mini: ""
+                    }, nativeOn: {
+                        click: function (a) {
+                            e.clickGetCode(a)
+                        }
                     }, slot: "right"
                 }, [e._v("重新获取(" + e._s(e.count) + ")")])], 1)], 1), e._v(" "), t("x-button", {
                     staticStyle: {
@@ -9515,38 +9315,23 @@ webpackJsonp([1], {
                         }
                     }
                 }, [e._v("\n        登录\n      ")])], 1)])], 1)
-            }, yo = [function () {
+            }, Ls = [function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
-                return n("div", {
-                    staticStyle: {
-                        position: "absolute",
-                        bottom: "20px",
-                        left: "50%",
-                        "margin-left": "-70px",
-                        "font-size": "12px",
-                        color: "#aaa"
+                return n("div", {staticClass: "login-sal"}, [n("p", [e._v("社交账号登录")]), e._v(" "), n("span", {staticClass: "sal-qq"}, [n("img", {
+                    attrs: {
+                        width: "40",
+                        src: t("mTCC")
                     }
-                }, [n("p", [e._v("社交账号登录")]), e._v(" "), n("span", {
-                    staticStyle: {
-                        display: "inline-block",
-                        "margin-right": "10px"
+                }), e._v(" "), n("p", [e._v("QQ")])]), e._v(" "), n("span", {staticClass: "sal-wx"}, [n("img", {
+                    attrs: {
+                        width: "40",
+                        src: t("qSza")
                     }
-                }, [n("img", {
-                    staticStyle: {padding: "10px", "border-radius": "50%", background: "#fff"},
-                    attrs: {width: "40", src: t("mTCC")}
-                }), e._v(" "), n("p", [e._v("QQ")])]), e._v(" "), n("span", {
-                    staticStyle: {
-                        display: "inline-block",
-                        "margin-left": "10px"
-                    }
-                }, [n("img", {
-                    staticStyle: {padding: "10px", "border-radius": "50%", background: "#fff"},
-                    attrs: {width: "40", src: t("qSza")}
                 }), e._v(" "), n("p", [e._v("微信")])])])
-            }], ko = {render: Co, staticRenderFns: yo}, Io = ko, So = t("VU/8"), bo = j,
-            Eo = So(xo, Io, !1, bo, "data-v-b515a1a0", null), Bo = Eo.exports, Qo = t("KRg4"), Ro = {
+            }], Ks = {render: Ms, staticRenderFns: Ls}, Gs = Ks, Ws = t("VU/8"), js = L,
+            qs = Ws(Hs, Gs, !1, js, "data-v-8f47deba", null), Ys = qs.exports, Xs = t("KRg4"), Zs = {
                 name: "search",
-                mixins: [Qo.a],
+                mixins: [Xs.a],
                 props: {
                     required: {type: Boolean, default: !1},
                     placeholder: String,
@@ -9608,7 +9393,7 @@ webpackJsonp([1], {
                         this.currentValue = e
                     }
                 }
-            }, Vo = function () {
+            }, Ps = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {
                     staticClass: "vux-search-box",
@@ -9694,10 +9479,10 @@ webpackJsonp([1], {
                         }
                     }, [t("div", {staticClass: "weui-cell__bd weui-cell_primary"}, [t("p", [e._v(e._s(a.title))])])])
                 })], 2)])
-            }, Do = [], Oo = {render: Vo, staticRenderFns: Do}, No = Oo, Fo = t("VU/8"), To = W,
-            Jo = Fo(Ro, No, !1, To, null, null), Uo = Jo.exports, Ho = {
-                directives: {TransferDom: Ln.a},
-                components: {XHeader: sa, Group: Be.a, Cell: dt, XInput: Yi, XButton: Pe, Popup: Rn, Search: Uo},
+            }, _s = [], zs = {render: Ps, staticRenderFns: _s}, $s = zs, eo = t("VU/8"), ao = K,
+            to = eo(Zs, $s, !1, ao, null, null), no = to.exports, ro = {
+                directives: {TransferDom: Kn.a},
+                components: {XHeader: ua, Group: Ee.a, Cell: ht, XInput: Yi, XButton: Pe, Popup: Rn, Search: no},
                 data: function () {
                     return {
                         phoneNum: "",
@@ -9731,7 +9516,7 @@ webpackJsonp([1], {
                         "" !== this.phoneNum ? this.isNext = !1 : this.isNext = !0
                     }
                 }
-            }, Mo = function () {
+            }, io = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("x-header", {
                     staticStyle: {background: "#fff"},
@@ -9828,9 +9613,9 @@ webpackJsonp([1], {
                         }
                     }, [e._v(e._s(String.fromCharCode(64 + a)))])
                 }))], 2)], 1)], 1)
-            }, Ko = [], Lo = {render: Mo, staticRenderFns: Ko}, jo = Lo, Wo = t("VU/8"), Go = G,
-            qo = Wo(Ho, jo, !1, Go, "data-v-5bc31d53", null), Yo = qo.exports, Xo = {
-                components: {XHeader: sa, XButton: Pe, XInput: Yi, Group: Be.a}, data: function () {
+            }, lo = [], uo = {render: io, staticRenderFns: lo}, so = uo, oo = t("VU/8"), po = G,
+            mo = oo(ro, so, !1, po, "data-v-5bc31d53", null), vo = mo.exports, co = {
+                data: function () {
                     return {
                         code: "",
                         password: "",
@@ -9857,9 +9642,9 @@ webpackJsonp([1], {
                                 phone: e.phoneNum,
                                 code: e.code,
                                 password: e.password
-                            }).then(function (e) {
-                                console.log(e)
-                            }), e.$vux.loading.hide(), e.$router.push("/login")
+                            }).then(function (a) {
+                                console.log(a), "updatePwdFailure" == a.data ? e.$vux.alert.show({content: "验证码错误！"}) : e.$router.push("/login")
+                            }), e.$vux.loading.hide()
                         }, 500)
                     }, clickShow: function () {
                         this.isShow = !this.isShow, 0 == this.isShow ? this.isPwd = "text" : this.isPwd = "password"
@@ -9870,19 +9655,13 @@ webpackJsonp([1], {
                     }, password: function () {
                         "" !== this.code && "" !== this.password ? this.isOk = !1 : this.isOk = !0
                     }
-                }
-            }, Zo = function () {
+                }, components: {XHeader: ua, XButton: Pe, XInput: Yi, Group: Ee.a}
+            }, ho = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
-                return t("div", [t("x-header", {
-                    staticStyle: {background: "#fff"},
+                return t("div", {staticClass: "login"}, [t("x-header", {
+                    staticClass: "header",
                     attrs: {"left-options": {showBack: !0}}
-                }, [t("span", {staticStyle: {color: "#aaa"}}, [e._v("找回密码")])]), e._v(" "), t("p", [e._v("验证码已经发送到你的手机")]), e._v(" "), t("p", [e._v("+86 " + e._s(e.phoneNum))]), e._v(" "), t("group", {
-                    staticStyle: {
-                        width: "90%",
-                        "margin-left": "5%",
-                        "text-align": "left"
-                    }
-                }, [t("x-input", {
+                }, [t("span", [e._v("找回密码")])]), e._v(" "), t("p", [e._v("验证码已经发送到你的手机")]), e._v(" "), t("p", [e._v("+86 " + e._s(e.phoneNum))]), e._v(" "), t("group", {staticClass: "code"}, [t("x-input", {
                     staticClass: "weui-vcode",
                     attrs: {placeholder: "输入验证码"},
                     model: {
@@ -9905,45 +9684,41 @@ webpackJsonp([1], {
                         type: "primary",
                         mini: ""
                     }, slot: "right"
-                }, [e._v("重新获取(" + e._s(e.count) + ")")])], 1)], 1), e._v(" "), t("group", {
-                    staticStyle: {
-                        width: "90%",
-                        "margin-left": "5%",
-                        "text-align": "left"
-                    }
-                }, [t("x-input", {
-                    attrs: {type: e.isPwd, name: "password", placeholder: "请输入密码"},
-                    model: {
+                }, [e._v("重新获取(" + e._s(e.count) + ")")])], 1)], 1), e._v(" "), t("group", {staticClass: "password"}, [t("x-input", {
+                    attrs: {
+                        type: e.isPwd,
+                        name: "password",
+                        placeholder: "请输入密码"
+                    }, model: {
                         value: e.password, callback: function (a) {
                             e.password = a
                         }, expression: "password"
                     }
                 }, [e.isShow ? t("img", {
-                    staticStyle: {"vertical-align": "middle"},
-                    attrs: {slot: "right", src: "http://www.xiaoxiangba.com/assets/img/show.png", width: "20px"},
-                    on: {click: e.clickShow},
-                    slot: "right"
+                    attrs: {
+                        slot: "right",
+                        src: "http://www.xiaoxiangba.com/assets/img/show.png",
+                        width: "20px"
+                    }, on: {click: e.clickShow}, slot: "right"
                 }) : e._e(), e._v(" "), e.isShow ? e._e() : t("img", {
-                    staticStyle: {"vertical-align": "middle"},
-                    attrs: {slot: "right", src: "http://www.xiaoxiangba.com/assets/img/hide.png", width: "20px"},
-                    on: {click: e.clickShow},
-                    slot: "right"
+                    attrs: {
+                        slot: "right",
+                        src: "http://www.xiaoxiangba.com/assets/img/hide.png",
+                        width: "20px"
+                    }, on: {click: e.clickShow}, slot: "right"
                 })])], 1), e._v(" "), t("x-button", {
-                    staticStyle: {
-                        width: "90%",
-                        "margin-left": "5%",
-                        "margin-top": "20px",
-                        "margin-bottom": "20px"
-                    }, attrs: {disabled: e.isOk, type: "primary"}, nativeOn: {
+                    staticClass: "login-btn",
+                    attrs: {disabled: e.isOk, type: "primary"},
+                    nativeOn: {
                         click: function (a) {
                             e.clickOk(a)
                         }
                     }
                 }, [e._v("确定\n  ")])], 1)
-            }, _o = [], Po = {render: Zo, staticRenderFns: _o}, zo = Po, $o = t("VU/8"), ep = q,
-            ap = $o(Xo, zo, !1, ep, "data-v-2cc86ba0", null), tp = ap.exports, np = {
-                directives: {TransferDom: Ln.a},
-                components: {XHeader: sa, Group: Be.a, Cell: dt, XInput: Yi, XButton: Pe, Popup: Rn, Search: Uo},
+            }, go = [], fo = {render: ho, staticRenderFns: go}, Ao = fo, wo = t("VU/8"), xo = W,
+            Co = wo(co, Ao, !1, xo, "data-v-293b59da", null), yo = Co.exports, ko = {
+                directives: {TransferDom: Kn.a},
+                components: {XHeader: ua, Group: Ee.a, Cell: ht, XInput: Yi, XButton: Pe, Popup: Rn, Search: no},
                 data: function () {
                     return {
                         phoneNum: "",
@@ -9982,9 +9757,9 @@ webpackJsonp([1], {
                         11 == this.phoneNum.length ? this.isNext = !1 : this.isNext = !0
                     }
                 }
-            }, rp = function () {
+            }, Io = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
-                return t("div", [t("x-header", {
+                return t("div", {staticClass: "register"}, [t("x-header", {
                     staticStyle: {background: "#fff"},
                     attrs: {"left-options": {showBack: !0}}
                 }, [t("span", {staticStyle: {color: "#aaa"}}, [e._v("注册")])]), e._v(" "), t("group", {
@@ -10079,9 +9854,9 @@ webpackJsonp([1], {
                         }
                     }, [e._v(e._s(String.fromCharCode(64 + a)))])
                 }))], 2)], 1)], 1)
-            }, ip = [], lp = {render: rp, staticRenderFns: ip}, up = lp, sp = t("VU/8"), op = Y,
-            pp = sp(np, up, !1, op, "data-v-51b4e5f2", null), mp = pp.exports, vp = {
-                components: {XHeader: sa, XButton: Pe, XInput: Yi, Group: Be.a}, data: function () {
+            }, So = [], bo = {render: Io, staticRenderFns: So}, Eo = bo, Bo = t("VU/8"), Qo = j,
+            Ro = Bo(ko, Eo, !1, Qo, "data-v-cd423688", null), Vo = Ro.exports, Do = {
+                components: {XHeader: ua, XButton: Pe, XInput: Yi, Group: Ee.a}, data: function () {
                     return {
                         phoneNum: "",
                         phoneCode: "",
@@ -10135,7 +9910,7 @@ webpackJsonp([1], {
                         "" != this.code.length && this.password.length >= 6 ? this.isOk = !1 : this.isOk = !0
                     }
                 }
-            }, cp = function () {
+            }, Oo = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("x-header", {
                     staticStyle: {background: "#fff"},
@@ -10204,13 +9979,13 @@ webpackJsonp([1], {
                         }
                     }
                 }, [e._v("确定\n  ")])], 1)
-            }, hp = [], dp = {render: cp, staticRenderFns: hp}, gp = dp, fp = t("VU/8"), Ap = X,
-            wp = fp(vp, gp, !1, Ap, "data-v-92a84faa", null), xp = wp.exports, Cp = {name: "swipeout"},
-            yp = function () {
+            }, Fo = [], No = {render: Oo, staticRenderFns: Fo}, Jo = No, To = t("VU/8"), Uo = q,
+            Ho = To(Do, Jo, !1, Uo, "data-v-92a84faa", null), Mo = Ho.exports, Lo = {name: "swipeout"},
+            Ko = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("div", {staticClass: "vux-swipeout"}, [e._t("default")], 2)
-            }, kp = [], Ip = {render: yp, staticRenderFns: kp}, Sp = Ip, bp = t("VU/8"), Ep = Z,
-            Bp = bp(Cp, Sp, !1, Ep, null, null), Qp = Bp.exports, Rp = {
+            }, Go = [], Wo = {render: Ko, staticRenderFns: Go}, jo = Wo, qo = t("VU/8"), Yo = Y,
+            Xo = qo(Lo, jo, !1, Yo, null, null), Zo = Xo.exports, Po = {
                 name: "swipeout-item",
                 props: {
                     sensitivity: {type: Number, default: 0},
@@ -10315,14 +10090,14 @@ webpackJsonp([1], {
                     }, buttonBoxStyle: function () {
                         return {backgroundColor: this.underlayColor}
                     }, leftButtonBoxStyle: function () {
-                        var e = JSON.parse(Ee()(this.buttonBoxStyle));
+                        var e = JSON.parse(be()(this.buttonBoxStyle));
                         if ("follow" === this.transitionMode) {
                             var a = -1 === this.styles.transform.indexOf("(0px, 0, 0)") ? this.leftMenuWidth - this.distX : this.leftMenuWidth;
                             e.transform = "translate3d(-" + a + "px, 0, 0)"
                         }
                         return e
                     }, rightButtonBoxStyle: function () {
-                        var e = JSON.parse(Ee()(this.buttonBoxStyle));
+                        var e = JSON.parse(be()(this.buttonBoxStyle));
                         if ("follow" === this.transitionMode) {
                             var a = -1 === this.styles.transform.indexOf("(0px, 0, 0)") ? this.rightMenuWidth - Math.abs(this.distX) : this.rightMenuWidth;
                             a < 0 && (a = 0), this.isAnimated && (e.transition = "transform 0.2s"), e.transform = "translate3d(" + a + "px, 0, 0)"
@@ -10352,7 +10127,7 @@ webpackJsonp([1], {
                         !0 !== e || a || this.setOffset(0, !0, !0)
                     }
                 }
-            }, Vp = function () {
+            }, _o = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {
                     staticClass: "vux-swipeout-item",
@@ -10382,8 +10157,8 @@ webpackJsonp([1], {
                     style: e.styles,
                     on: {mousedown: e.onContentClick, touchstart: e.onContentClick}
                 }, [e._t("content")], 2)])
-            }, Dp = [], Op = {render: Vp, staticRenderFns: Dp}, Np = Op, Fp = t("VU/8"),
-            Tp = Fp(Rp, Np, !1, null, null, null), Jp = Tp.exports, Up = {
+            }, zo = [], $o = {render: _o, staticRenderFns: zo}, ep = $o, ap = t("VU/8"),
+            tp = ap(Po, ep, !1, null, null, null), np = tp.exports, rp = {
                 name: "swipeout-button",
                 props: {text: String, backgroundColor: String, type: String, width: {type: Number, default: 80}},
                 methods: {
@@ -10391,7 +10166,7 @@ webpackJsonp([1], {
                         "swipeout-item" === this.$parent.$options._componentTag && this.$parent.onItemClick(this.text)
                     }
                 }
-            }, Hp = function () {
+            }, ip = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("button", {
                     staticClass: "vux-swipeout-button",
@@ -10404,8 +10179,8 @@ webpackJsonp([1], {
                     attrs: {type: "button"},
                     on: {click: e.onButtonClick}
                 }, [e._t("default", [e._v(e._s(e.text))])], 2)
-            }, Mp = [], Kp = {render: Hp, staticRenderFns: Mp}, Lp = Kp, jp = t("VU/8"),
-            Wp = jp(Up, Lp, !1, null, null, null), Gp = Wp.exports, qp = {
+            }, lp = [], up = {render: ip, staticRenderFns: lp}, sp = up, op = t("VU/8"),
+            pp = op(rp, sp, !1, null, null, null), mp = pp.exports, vp = {
                 data: function () {
                     return {showMore: !1, data: [], familyImg: "http://www.xiaoxiangba.com/assets/img/bg01.jpg"}
                 }, created: function () {
@@ -10428,8 +10203,8 @@ webpackJsonp([1], {
                     }, joinFamily: function () {
                         this.$router.push("/my_family/join_family")
                     }
-                }, components: {XHeader: sa, Group: Be.a, Cell: dt, Swipeout: Qp, SwipeoutItem: Jp, SwipeoutButton: Gp}
-            }, Yp = function () {
+                }, components: {XHeader: ua, Group: Ee.a, Cell: ht, Swipeout: Zo, SwipeoutItem: np, SwipeoutButton: mp}
+            }, cp = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("div", {staticStyle: {color: "#fff"}}, [t("x-header", {
                     attrs: {
@@ -10517,8 +10292,8 @@ webpackJsonp([1], {
                         slot: "icon"
                     })])], 1)])
                 }))], 1)
-            }, Xp = [], Zp = {render: Yp, staticRenderFns: Xp}, _p = Zp, Pp = t("VU/8"), zp = _,
-            $p = Pp(qp, _p, !1, zp, "data-v-74060920", null), em = $p.exports, am = {
+            }, dp = [], hp = {render: cp, staticRenderFns: dp}, gp = hp, fp = t("VU/8"), Ap = X,
+            wp = fp(vp, gp, !1, Ap, "data-v-74060920", null), xp = wp.exports, Cp = {
                 data: function () {
                     return {familyName: "我的家庭"}
                 }, created: function () {
@@ -10529,8 +10304,8 @@ webpackJsonp([1], {
                             e.$router.go(-1)
                         })
                     }
-                }, components: {XHeader: sa, XInput: Yi, XButton: Pe, Group: Be.a}
-            }, tm = function () {
+                }, components: {XHeader: ua, XInput: Yi, XButton: Pe, Group: Ee.a}
+            }, yp = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("div", {staticStyle: {color: "#fff"}}, [t("x-header", {
                     attrs: {
@@ -10555,8 +10330,8 @@ webpackJsonp([1], {
                         }
                     }
                 }, [e._v("\n      创建\n    ")])], 1)], 1)
-            }, nm = [], rm = {render: tm, staticRenderFns: nm}, im = rm, lm = t("VU/8"),
-            um = lm(am, im, !1, null, null, null), sm = um.exports, om = {
+            }, kp = [], Ip = {render: yp, staticRenderFns: kp}, Sp = Ip, bp = t("VU/8"),
+            Ep = bp(Cp, Sp, !1, null, null, null), Bp = Ep.exports, Qp = {
                 data: function () {
                     return {joinCode: "", familyId: ""}
                 }, methods: {
@@ -10570,13 +10345,13 @@ webpackJsonp([1], {
                         this.$vux.loading.show(), setTimeout(function () {
                             e.$vux.loading.hide();
                             var a = JSON.parse(localStorage.mydata).user.id;
-                            e.$axios.post("/SmartHome/add_member", {userId: a, uniqueCode: e.joinCode}).then(function (e) {
-                                console.log(e)
+                            e.$axios.post("/SmartHome/add_member", {userId: a, uniqueCode: e.joinCode}).then(function (a) {
+                                console.log(a.data), "已加入家庭，不能重复加入" == a.data ? e.$vux.alert.show({content: "已加入家庭，不能重复加入！"}) : "joinFamilySuccess" == a.data ? e.$router.push("/my_family") : "can not find family by uniquecode" == a.data && e.$vux.alert.show({content: "邀请码错误,请重新输入！"})
                             })
                         }, 1e3)
                     }
-                }, components: {XButton: Pe, XHeader: sa, XInput: Yi, Group: Be.a}
-            }, pm = function () {
+                }, components: {XButton: Pe, XHeader: ua, XInput: Yi, Group: Ee.a}
+            }, Rp = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("div", {staticStyle: {color: "#fff"}}, [t("x-header", {
                     attrs: {
@@ -10603,8 +10378,8 @@ webpackJsonp([1], {
                         }
                     }
                 }, [e._v("确定")])], 1)], 1)
-            }, mm = [], vm = {render: pm, staticRenderFns: mm}, cm = vm, hm = t("VU/8"), dm = P,
-            gm = hm(om, cm, !1, dm, "data-v-60d8cf1c", null), fm = gm.exports, Am = {
+            }, Vp = [], Dp = {render: Rp, staticRenderFns: Vp}, Op = Dp, Fp = t("VU/8"), Np = Z,
+            Jp = Fp(Qp, Op, !1, Np, "data-v-61c5bb6c", null), Tp = Jp.exports, Up = {
                 data: function () {
                     return {joinCode: "", familyId: ""}
                 }, methods: {
@@ -10621,8 +10396,8 @@ webpackJsonp([1], {
                             e.$axios.post("/SmartHome/add_member", {userId: a, uniqueCode: e.joinCode})
                         }, 1e3)
                     }
-                }, components: {XButton: Pe, XHeader: sa, XInput: Yi, Group: Be.a}
-            }, wm = function () {
+                }, components: {XButton: Pe, XHeader: ua, XInput: Yi, Group: Ee.a}
+            }, Hp = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("div", {staticStyle: {color: "#fff"}}, [t("x-header", {
                     attrs: {
@@ -10649,17 +10424,16 @@ webpackJsonp([1], {
                         }
                     }
                 }, [e._v("确定")])], 1)], 1)
-            }, xm = [], Cm = {render: wm, staticRenderFns: xm}, ym = Cm, km = t("VU/8"), Im = z,
-            Sm = km(Am, ym, !1, Im, "data-v-6e9aae1f", null), bm = Sm.exports, Em = {
+            }, Mp = [], Lp = {render: Hp, staticRenderFns: Mp}, Kp = Lp, Gp = t("VU/8"), Wp = P,
+            jp = Gp(Up, Kp, !1, Wp, "data-v-4e5c9e5f", null), qp = jp.exports, Yp = {
                 data: function () {
                     return {
                         data: [],
                         familyName: "",
-                        showAddress: !1,
-                        addressData: sr.a,
                         value: [],
                         familyId: "",
-                        familyImg: "http://www.xiaoxiangba.com/assets/img/bg01.jpg"
+                        familyImg: "http://www.xiaoxiangba.com/assets/img/bg01.jpg",
+                        familyPhoto: ""
                     }
                 }, created: function () {
                     this.clickInit()
@@ -10667,7 +10441,7 @@ webpackJsonp([1], {
                     clickInit: function () {
                         var e = this, a = this.$route.query.id;
                         this.$axios.get("/SmartHome/get_family/" + a).then(function (a) {
-                            e.data = a.data[0], e.address = a.data[0].familyAddress, e.familyId = a.data[0].id
+                            e.data = a.data[0], e.address = a.data[0].familyAddress, e.familyId = a.data[0].id, e.familyPhoto = "http://120.79.21.193/SmartHome" + e.data.photo
                         })
                     }, clickPhoto: function () {
                         this.$router.push({path: "/my_family/family_photo", query: {familyId: this.familyId}})
@@ -10676,8 +10450,8 @@ webpackJsonp([1], {
                     }, clickAddress: function () {
                         this.$router.push({path: "/my_family/family_roles", query: {familyId: this.familyId}})
                     }
-                }, components: {XAddress: lr, XHeader: sa, Group: Be.a, Cell: dt}
-            }, Bm = function () {
+                }, components: {XHeader: ua, Group: Ee.a, Cell: ht}
+            }, Xp = function () {
                 var e = this, a = e.$createElement, n = e._self._c || a;
                 return n("div", [n("div", {staticStyle: {color: "#fff"}}, [n("x-header", {
                     attrs: {
@@ -10711,13 +10485,24 @@ webpackJsonp([1], {
                         }
                     }
                 }, [n("img", {
+                    directives: [{
+                        name: "show",
+                        rawName: "v-show",
+                        value: "" != e.data.photo,
+                        expression: "data.photo != ''"
+                    }],
                     staticStyle: {"margin-right": "10px", opacity: ".6"},
-                    attrs: {
-                        slot: "icon",
-                        width: "120",
-                        height: "60",
-                        src: "" !== e.data.photo ? "http://120.79.21.193/SmartHome" + e.data.photo : e.familyImg
-                    },
+                    attrs: {slot: "icon", width: "120", height: "60", src: e.familyPhoto},
+                    slot: "icon"
+                }), e._v(" "), n("img", {
+                    directives: [{
+                        name: "show",
+                        rawName: "v-show",
+                        value: "" == e.data.photo,
+                        expression: "data.photo == ''"
+                    }],
+                    staticStyle: {"margin-right": "10px", opacity: ".6"},
+                    attrs: {slot: "icon", width: "120", height: "60", src: e.familyImg},
                     slot: "icon"
                 })]), e._v(" "), n("cell", {
                     attrs: {title: "家庭成员", "is-link": ""}, nativeOn: {
@@ -10725,23 +10510,10 @@ webpackJsonp([1], {
                             e.clickAddress(a)
                         }
                     }
-                }), e._v(" "), n("x-address", {
-                    staticStyle: {display: "none"},
-                    attrs: {title: "当前家庭住址", list: e.addressData, placeholder: "请选择地址", show: e.showAddress},
-                    on: {
-                        "update:show": function (a) {
-                            e.showAddress = a
-                        }
-                    },
-                    model: {
-                        value: e.value, callback: function (a) {
-                            e.value = a
-                        }, expression: "value"
-                    }
                 })], 1)], 1)
-            }, Qm = [], Rm = {render: Bm, staticRenderFns: Qm}, Vm = Rm, Dm = t("VU/8"),
-            Om = Dm(Em, Vm, !1, null, null, null), Nm = Om.exports, Fm = t("YxJB"), Tm = t("3Lt7"), Jm = t("0k+n"),
-            Um = t.n(Jm), Hm = t("LpmL"), Mm = t.n(Hm), Km = {
+            }, Zp = [], Pp = {render: Xp, staticRenderFns: Zp}, _p = Pp, zp = t("VU/8"),
+            $p = zp(Yp, _p, !1, null, null, null), em = $p.exports, am = t("YxJB"), tm = t("3Lt7"), nm = t("0k+n"),
+            rm = t.n(nm), im = t("LpmL"), lm = t.n(im), um = {
                 name: "qrcode",
                 props: {
                     value: String,
@@ -10777,10 +10549,10 @@ webpackJsonp([1], {
                     render: function () {
                         var e = this;
                         if (void 0 !== this.value) {
-                            var a = new Um.a(-1, Mm.a[this.level]);
+                            var a = new rm.a(-1, lm.a[this.level]);
                             a.addData(this.value), a.make();
                             var t = this.$refs.canvas, n = t.getContext("2d"), r = a.modules, i = this.size / r.length,
-                                l = this.size / r.length, u = (window.devicePixelRatio || 1) / $(n);
+                                l = this.size / r.length, u = (window.devicePixelRatio || 1) / _(n);
                             t.height = t.width = this.size * u, n.scale(u, u), r.forEach(function (a, t) {
                                 a.forEach(function (a, r) {
                                     n.fillStyle = a ? e.fgColor : e.bgColor;
@@ -10792,7 +10564,7 @@ webpackJsonp([1], {
                         }
                     }
                 }
-            }, Lm = function () {
+            }, sm = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("canvas", {
                     directives: [{
@@ -10808,60 +10580,71 @@ webpackJsonp([1], {
                     style: {height: e.size + "px", width: e.size + "px"},
                     attrs: {src: e.imgData}
                 }) : e._e()])
-            }, jm = [], Wm = {render: Lm, staticRenderFns: jm}, Gm = Wm, qm = t("VU/8"),
-            Ym = qm(Km, Gm, !1, null, null, null), Xm = Ym.exports, Zm = {
+            }, om = [], pm = {render: sm, staticRenderFns: om}, mm = pm, vm = t("VU/8"),
+            cm = vm(um, mm, !1, null, null, null), dm = cm.exports, hm = {
                 data: function () {
-                    return {joinCode: "", familyId: "", data: []}
+                    return {joinCode: "", familyId: "", familyName: "", familyAddress: "", data: []}
                 },
                 created: function () {
-                    this.clickInit(), this.clickGetCode()
+                    this.isManager()
                 },
                 methods: {
-                    clickInit: function () {
+                    isManager: function () {
+                        var e = this, a = this;
+                        this.$axios.post("/SmartHome/is_manager", {
+                            familyId: this.$route.query.familyId,
+                            userId: JSON.parse(localStorage.mydata).user.id
+                        }).then(function (t) {
+                            console.log(t), 0 == t.data ? e.$vux.alert.show({
+                                content: "你不是管理员,不能操作！", onShow: function () {
+                                    a.$router.go(-1)
+                                }
+                            }) : (e.clickInit(), e.clickGetCode())
+                        })
+                    }, clickInit: function () {
                         var e = this, a = this.$route.query.familyId;
                         this.$axios.get("/SmartHome/get_family/" + a).then(function (a) {
-                            e.data = a.data[0]
+                            e.data = a.data[0], e.familyName = a.data[0].familyName, e.familyAddress = a.data[0].familyAddress
                         })
                     }, clickGetCode: function () {
                         var e = this;
-                        setTimeout(function () {
-                            e.joinCode = Number(Math.random().toString().substr(3, 6) + Date.now()).toString(36)
-                        }, 1e3);
-                        var a = JSON.parse(localStorage.mydata).user.id, t = this.$route.query.familyId;
-                        this.$axios.post("/SmartHome/add_family_uniquecode", {
-                            userId: a,
-                            familyId: t,
-                            uniqueCode: this.joinCode
-                        }).then(function (e) {
-                            console.log(e)
-                        })
+                        this.joinCode = Number(Math.random().toString().substr(3, 6) + Date.now()).toString(36), console.log(this.joinCode), setTimeout(function () {
+                            var a = JSON.parse(localStorage.mydata).user.id, t = e.$route.query.familyId;
+                            e.$axios.post("/SmartHome/add_family_uniquecode", {
+                                userId: a,
+                                familyId: t,
+                                uniqueCode: e.joinCode
+                            }).then(function (e) {
+                                console.log(e)
+                            })
+                        }, 1e3)
                     }, clickSave: function () {
-                        var e = this, a = this.$route.query.id, t = JSON.parse(localStorage.mydata).user.id;
+                        var e = this, a = this, t = this.$route.query.familyId, n = JSON.parse(localStorage.mydata).user.id;
                         this.$axios.post("/SmartHome/ud_family", {
-                            userId: t,
-                            id: a,
-                            familyAddress: address
+                            userId: n,
+                            familyId: t,
+                            familyAddress: a.familyAddress,
+                            familyName: a.familyName
                         }).then(function (a) {
                             e.clickInit()
                         }), this.$vux.loading.show({text: "加载中"}), setTimeout(function () {
                             var a = e;
-                            e.$vux.loading.hide(function () {
-                            }), a.$router.push("/my_family")
+                            e.$vux.loading.hide(), a.$router.push("/my_family")
                         }, 1e3)
                     }
                 },
                 components: {
                     Actionsheet: fr,
-                    XHeader: sa,
-                    Qrcode: Xm,
-                    Group: Be.a,
-                    Cell: dt,
+                    XHeader: ua,
+                    Qrcode: dm,
+                    Group: Ee.a,
+                    Cell: ht,
                     XButton: Pe,
                     XInput: Yi,
-                    Flexbox: Fm.a,
-                    FlexboxItem: Tm.a
+                    Flexbox: am.a,
+                    FlexboxItem: tm.a
                 }
-            }, _m = function () {
+            }, gm = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("div", {staticStyle: {color: "#fff"}}, [t("x-header", {
                     attrs: {
@@ -10904,25 +10687,33 @@ webpackJsonp([1], {
                     attrs: {text: "复制邀请码"}
                 })], 1)], 1)], 1), e._v(" "), t("group", {attrs: {title: "家庭名称"}}, [t("x-input", {
                     attrs: {
-                        placeholder: "",
-                        value: e.data.familyName,
+                        placeholder: e.familyName,
+                        value: e.familyName,
                         "show-clear": !1
+                    }, model: {
+                        value: e.familyName, callback: function (a) {
+                            e.familyName = a
+                        }, expression: "familyName"
                     }
                 })], 1), e._v(" "), t("group", {attrs: {title: "家庭地址"}}, [t("x-input", {
                     attrs: {
-                        placeholder: "地址为空",
-                        value: e.data.familyAddress,
+                        placeholder: e.familyAddress,
+                        value: e.familyAddress,
                         "show-clear": !1
+                    }, model: {
+                        value: e.familyAddress, callback: function (a) {
+                            e.familyAddress = a
+                        }, expression: "familyAddress"
                     }
                 })], 1)], 1)
-            }, Pm = [], zm = {render: _m, staticRenderFns: Pm}, $m = zm, ev = t("VU/8"), av = ee,
-            tv = ev(Zm, $m, !1, av, "data-v-22ca91b1", null), nv = tv.exports,
-            rv = {name: "button-tab", mixins: [Ca.b], props: {height: Number}}, iv = function () {
+            }, fm = [], Am = {render: gm, staticRenderFns: fm}, wm = Am, xm = t("VU/8"), Cm = z,
+            ym = xm(hm, wm, !1, Cm, "data-v-20d8253b", null), km = ym.exports,
+            Im = {name: "button-tab", mixins: [xa.b], props: {height: Number}}, Sm = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("div", {staticClass: "vux-button-group"}, [e._t("default")], 2)
-            }, lv = [], uv = {render: iv, staticRenderFns: lv}, sv = uv, ov = t("VU/8"), pv = ae,
-            mv = ov(rv, sv, !1, pv, null, null), vv = mv.exports, cv = {
-                name: "button-tab-item", mixins: [Ca.a], computed: {
+            }, bm = [], Em = {render: Sm, staticRenderFns: bm}, Bm = Em, Qm = t("VU/8"), Rm = $,
+            Vm = Qm(Im, Bm, !1, Rm, null, null), Dm = Vm.exports, Om = {
+                name: "button-tab-item", mixins: [xa.a], computed: {
                     classes: function () {
                         return {
                             "vux-button-group-current": this.currentIndex === this.$parent.currentIndex,
@@ -10937,7 +10728,7 @@ webpackJsonp([1], {
                         }
                     }
                 }
-            }, hv = function () {
+            }, Fm = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("a", {
                     staticClass: "vux-button-tab-item",
@@ -10946,16 +10737,18 @@ webpackJsonp([1], {
                     attrs: {href: "javascript:"},
                     on: {click: e.onItemClick}
                 }, [e._t("default")], 2)
-            }, dv = [], gv = {render: hv, staticRenderFns: dv}, fv = gv, Av = t("VU/8"),
-            wv = Av(cv, fv, !1, null, null, null), xv = wv.exports, Cv = {
+            }, Nm = [], Jm = {render: Fm, staticRenderFns: Nm}, Tm = Jm, Um = t("VU/8"),
+            Hm = Um(Om, Tm, !1, null, null, null), Mm = Hm.exports, Lm = {
                 data: function () {
                     return {
-                        bgImg: ["http://www.xiaoxiangba.com/assets/img/bg01.jpg", "http://www.xiaoxiangba.com/assets/img/bg02.jpg", "http://www.xiaoxiangba.com/assets/img/bg03.jpg", "http://www.xiaoxiangba.com/assets/img/bg04.jpg", "http://www.xiaoxiangba.com/assets/img/bg05.jpg"],
+                        bgImg: ["/upload/family/bg01.jpg", "/upload/family/bg02.jpg", "/upload/family/bg03.jpg", "/upload/family/bg04.jpg", "/upload/family/bg05.jpg"],
                         showDetail: !1,
                         photo: [],
                         demo01: 0,
                         showComplete: !1,
-                        edit: "编辑"
+                        edit: "编辑",
+                        lightClass: !1,
+                        data: []
                     }
                 }, created: function () {
                     this.clickInit()
@@ -10964,6 +10757,16 @@ webpackJsonp([1], {
                         var e = this, a = JSON.parse(localStorage.mydata).user.id, t = parseInt(this.$route.query.familyId);
                         this.$axios.get("/SmartHome/get_familyimg?userId=" + a + "&familyId=" + t).then(function (a) {
                             "you have not privilege" === a.data || (e.photo = a.data)
+                        }), this.$axios.get("/SmartHome/get_sysimg?familyId=" + t).then(function (a) {
+                            e.data = a.data, console.log(a)
+                        })
+                    }, clickChooseDefImg: function (e) {
+                        var a = this, t = this.$route.query.familyId;
+                        this.$axios.post("/SmartHome/ud_familyimg", {
+                            familyImgId: familyImgId,
+                            familyId: t
+                        }).then(function (e) {
+                            a.$router.push("/home")
                         })
                     }, clickChooseImg: function (e) {
                         var a = this, t = this.$route.query.familyId;
@@ -10999,8 +10802,8 @@ webpackJsonp([1], {
                     }, click: function (e) {
                         console.log(e)
                     }
-                }, components: {ButtonTab: vv, ButtonTabItem: xv, XHeader: sa, Actionsheet: fr}
-            }, yv = function () {
+                }, components: {ButtonTab: Dm, ButtonTabItem: Mm, XHeader: ua, Actionsheet: fr}
+            }, Km = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("div", {staticStyle: {color: "#fff"}}, [t("x-header", {
                     attrs: {
@@ -11062,9 +10865,11 @@ webpackJsonp([1], {
                         value: !e.demo01,
                         expression: "!demo01"
                     }]
-                }, e._l(e.bgImg, function (a, n) {
+                }, e._l(e.data, function (a, n) {
                     return t("img", {
-                        key: a, attrs: {width: "120", height: "120", src: a, alt: a}, on: {
+                        key: a.id,
+                        attrs: {width: "120", height: "120", src: "http://120.79.21.193/SmartHome" + a.imgUrl, alt: a},
+                        on: {
                             click: function (t) {
                                 e.clickChooseImg(a.id)
                             }
@@ -11102,10 +10907,11 @@ webpackJsonp([1], {
                             "font-size": "12px",
                             "border-radius": "2px",
                             padding: "2px",
-                            color: "#fff"
+                            color: "#fff",
+                            "z-index": "999"
                         }, on: {
                             click: function (t) {
-                                e.clickDetail(a.id)
+                                t.stopPropagation(), t.preventDefault(), e.clickDetail(a.id)
                             }
                         }
                     }, [e._v("删除")]) : e._e()])
@@ -11135,26 +10941,38 @@ webpackJsonp([1], {
                     attrs: {name: "files", type: "file", accept: "image/png,image/gif,image/jpeg", multiple: "multiple"},
                     on: {change: e.upload}
                 })])], 2)])], 1)
-            }, kv = [], Iv = {render: yv, staticRenderFns: kv}, Sv = Iv, bv = t("VU/8"), Ev = te,
-            Bv = bv(Cv, Sv, !1, Ev, "data-v-dc1ffb7c", null), Qv = Bv.exports, Rv = {
+            }, Gm = [], Wm = {render: Km, staticRenderFns: Gm}, jm = Wm, qm = t("VU/8"), Ym = ee,
+            Xm = qm(Lm, jm, !1, Ym, "data-v-65cff734", null), Zm = Xm.exports, Pm = {
                 data: function () {
-                    return {rootManage: "管理员", nickName: "hws", familyId: "", admin: [], role: [], data: []}
+                    return {rootManage: "管理员", nickname: "", familyId: "", admin: [], role: [], data: []}
                 }, created: function () {
-                    this.clickInit()
+                    this.isManager()
                 }, methods: {
-                    clickInit: function () {
+                    isManager: function () {
+                        var e = this, a = this;
+                        this.$axios.post("/SmartHome/is_manager", {
+                            familyId: a.$route.query.familyId,
+                            userId: JSON.parse(localStorage.mydata).user.id
+                        }).then(function (t) {
+                            0 == t.data ? e.$vux.alert.show({
+                                content: "你不是管理员,不能操作！", onShow: function () {
+                                    a.$router.go(-1)
+                                }
+                            }) : e.clickInit()
+                        })
+                    }, clickInit: function () {
                         var e = this, a = this, t = JSON.parse(localStorage.mydata).user.id;
                         this.$axios.get("/SmartHome/get_family?id=" + t).then(function (t) {
-                            a.familyId = t.data[0].id, e.$axios.get("/SmartHome/get_member?id=" + a.familyId).then(function (e) {
-                                a.admin = e.data[0].创建者, a.role = e.data[0].普通成员
+                            a.familyId = t.data[0].id, e.$axios.get("/SmartHome/get_member?id=" + a.$route.query.familyId).then(function (e) {
+                                a.admin = e.data[0].创建者, a.role = e.data[0].普通成员, a.nickname = e.data[0].创建者[0].nickname
                             })
                         })
                     }, clickManage: function () {
                         var e = this;
-                        this.$router.push({path: "/my_family/roles_manage", query: {familyId: e.familyId}})
+                        this.$router.push({path: "/my_family/roles_manage", query: {familyId: e.$route.query.familyId}})
                     }
-                }, components: {XHeader: sa, Group: Be.a, Cell: dt}
-            }, Vv = function () {
+                }, components: {XHeader: ua, Group: Ee.a, Cell: ht}
+            }, _m = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("div", {staticStyle: {color: "#fff"}}, [t("x-header", {
                     attrs: {
@@ -11167,7 +10985,7 @@ webpackJsonp([1], {
                         staticStyle: {width: "30%", "text-align": "center", margin: "20px 0", display: "inline-block"}
                     }, [t("img", {
                         staticStyle: {"border-radius": "50%", margin: "0 20px"},
-                        attrs: {width: "60", height: "60", src: "http://192.168.3.8:8080/SmartHome" + a.photo, alt: ""}
+                        attrs: {width: "60", height: "60", src: "http://120.79.21.193/SmartHome" + a.photo}
                     }), e._v(" "), t("span", [e._v(e._s(a.nickname))])])
                 }), e._v(" "), e._l(e.role, function (a) {
                     return t("div", {
@@ -11175,12 +10993,12 @@ webpackJsonp([1], {
                         staticStyle: {width: "30%", "text-align": "center", margin: "20px 0", display: "inline-block"}
                     }, [t("img", {
                         staticStyle: {"border-radius": "50%", margin: "0 20px"},
-                        attrs: {width: "60", height: "60", src: "http://192.168.3.8:8080/SmartHome" + a.photo, alt: ""}
+                        attrs: {width: "60", height: "60", src: "http://120.79.21.193/SmartHome" + a.photo}
                     }), e._v(" "), t("span", [e._v(e._s(a.nickname))])])
                 })], 2), e._v(" "), t("group", [t("cell", {
                     attrs: {
                         title: e.rootManage,
-                        value: e.nickName,
+                        value: e.nickname,
                         "is-link": ""
                     }
                 })], 1), e._v(" "), t("group", [t("cell", {
@@ -11191,20 +11009,20 @@ webpackJsonp([1], {
                         }
                     }
                 })], 1)], 1)
-            }, Dv = [], Ov = {render: Vv, staticRenderFns: Dv}, Nv = Ov, Fv = t("VU/8"), Tv = ne,
-            Jv = Fv(Rv, Nv, !1, Tv, "data-v-c596615c", null), Uv = Jv.exports,
-            Hv = {name: "tip", props: {align: {type: String, default: "left"}}}, Mv = function () {
+            }, zm = [], $m = {render: _m, staticRenderFns: zm}, ev = $m, av = t("VU/8"), tv = ae,
+            nv = av(Pm, ev, !1, tv, "data-v-4ff6310f", null), rv = nv.exports,
+            iv = {name: "tip", props: {align: {type: String, default: "left"}}}, lv = function () {
                 var e = this, a = e.$createElement;
                 return (e._self._c || a)("div", {
                     staticClass: "vux-group-tip",
                     style: {"text-align": e.align}
                 }, [e._t("default")], 2)
-            }, Kv = [], Lv = {render: Mv, staticRenderFns: Kv}, jv = Lv, Wv = t("VU/8"), Gv = re,
-            qv = Wv(Hv, jv, !1, Gv, null, null), Yv = qv.exports, Xv = t("HHx2"), Zv = t.n(Xv), _v = {
+            }, uv = [], sv = {render: lv, staticRenderFns: uv}, ov = sv, pv = t("VU/8"), mv = te,
+            vv = pv(iv, ov, !1, mv, null, null), cv = vv.exports, dv = t("HHx2"), hv = t.n(dv), gv = {
                 name: "checklist",
-                components: {Tip: Yv, Icon: xi.a, InlineDesc: tt.a},
-                filters: {getValue: pa.e, getKey: pa.b},
-                mixins: [oa.a],
+                components: {Tip: cv, Icon: xi.a, InlineDesc: tt.a},
+                filters: {getValue: oa.e, getKey: oa.b},
+                mixins: [sa.a],
                 props: {
                     name: String,
                     showError: Boolean,
@@ -11231,16 +11049,16 @@ webpackJsonp([1], {
                     if (this.isRadio) {
                         var e = this.currentValue.length;
                         e > 1 && (this.currentValue = [this.currentValue[e - 1]]);
-                        var a = ie(this.currentValue);
+                        var a = ne(this.currentValue);
                         this.tempValue = a.length ? a[0] : ""
                     }
                 },
                 created: function () {
-                    this.handleChangeEvent = !0, this.value && (this.currentValue = this.value, this.isRadio && (this.tempValue = this.isRadio ? this.value[0] : this.value)), this.randomOrder ? this.currentOptions = Zv()(this.options) : this.currentOptions = this.options
+                    this.handleChangeEvent = !0, this.value && (this.currentValue = this.value, this.isRadio && (this.tempValue = this.isRadio ? this.value[0] : this.value)), this.randomOrder ? this.currentOptions = hv()(this.options) : this.currentOptions = this.options
                 },
                 methods: {
-                    getValue: pa.e, getKey: pa.b, getInlineDesc: pa.a, getFullValue: function () {
-                        var e = Object(pa.d)(this.options, this.value);
+                    getValue: oa.e, getKey: oa.b, getInlineDesc: oa.a, getFullValue: function () {
+                        var e = Object(oa.d)(this.options, this.value);
                         return this.currentValue.map(function (a, t) {
                             return {value: a, label: e[t]}
                         })
@@ -11272,21 +11090,21 @@ webpackJsonp([1], {
                 watch: {
                     tempValue: function (e) {
                         var a = e ? [e] : [];
-                        this.$emit("input", a), this.$emit("on-change", a, Object(pa.d)(this.options, a))
+                        this.$emit("input", a), this.$emit("on-change", a, Object(oa.d)(this.options, a))
                     }, value: function (e) {
-                        Ee()(e) !== Ee()(this.currentValue) && (this.currentValue = e)
+                        be()(e) !== be()(this.currentValue) && (this.currentValue = e)
                     }, options: function (e) {
                         this.currentOptions = e
                     }, currentValue: function (e) {
-                        var a = ie(e);
+                        var a = ne(e);
                         if (!this.isRadio) {
-                            this.$emit("input", a), this.$emit("on-change", a, Object(pa.d)(this.options, a));
+                            this.$emit("input", a), this.$emit("on-change", a, Object(oa.d)(this.options, a));
                             var t = {};
                             this._min && (this.required ? this.currentValue.length < this._min && (t = {min: this._min}) : this.currentValue.length && this.currentValue.length < this._min && (t = {min: this._min})), !this.valid && this.dirty && wn()(t).length ? this.$emit("on-error", t) : this.$emit("on-clear-error")
                         }
                     }
                 }
-            }, Pv = function () {
+            }, fv = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", {class: e.disabled ? "vux-checklist-disabled" : ""}, [t("div", {
                     directives: [{
@@ -11329,19 +11147,19 @@ webpackJsonp([1], {
                         }
                     }), e._v(" "), t("i", {staticClass: "weui-icon-checked vux-checklist-icon-checked"})]), e._v(" "), t("div", {staticClass: "weui-cell__bd"}, [t("p", {domProps: {innerHTML: e._s(e.getValue(a))}}), e._v(" "), e.getInlineDesc(a) ? t("inline-desc", [e._v(e._s(e.getInlineDesc(a)))]) : e._e()], 1)])
                 })), e._v(" "), e._t("footer")], 2)
-            }, zv = [], $v = {render: Pv, staticRenderFns: zv}, ec = $v, ac = t("VU/8"), tc = le,
-            nc = ac(_v, ec, !1, tc, null, null), rc = nc.exports, ic = {
+            }, Av = [], wv = {render: fv, staticRenderFns: Av}, xv = wv, Cv = t("VU/8"), yv = re,
+            kv = Cv(gv, xv, !1, yv, null, null), Iv = kv.exports, Sv = {
                 data: function () {
                     return {data: []}
                 },
                 created: function () {
-                    this.clickInit()
+                    this.isManager()
                 },
                 methods: {
                     clickInit: function () {
                         var e = this, a = JSON.parse(localStorage.mydata).user.id, t = parseInt(this.$route.query.familyId);
                         this.$axios.get("/SmartHome/get_normal_member?userId=" + a + "&familyId=" + t).then(function (a) {
-                            e.data = a.data
+                            "getUserFail" !== a.data && (e.data = a.data)
                         })
                     }, clickDetele: function (e) {
                         var a = this, t = JSON.parse(localStorage.mydata).user.id, n = this.$route.query.familyId;
@@ -11355,17 +11173,17 @@ webpackJsonp([1], {
                     }
                 },
                 components: {
-                    XHeader: sa,
+                    XHeader: ua,
                     XButton: Pe,
-                    Checklist: rc,
-                    Cell: dt,
+                    Checklist: Iv,
+                    Cell: ht,
                     CellBox: Yr,
-                    Group: Be.a,
-                    Swipeout: Qp,
-                    SwipeoutItem: Jp,
-                    SwipeoutButton: Gp
+                    Group: Ee.a,
+                    Swipeout: Zo,
+                    SwipeoutItem: np,
+                    SwipeoutButton: mp
                 }
-            }, lc = function () {
+            }, bv = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("div", {staticStyle: {color: "#fff"}}, [t("x-header", {
                     attrs: {
@@ -11381,6 +11199,7 @@ webpackJsonp([1], {
                         staticClass: "vux-1px-tb",
                         attrs: {"transition-mode": "follow"}
                     }, [t("div", {
+                        directives: [{name: "show", rawName: "v-show", value: a, expression: "item"}],
                         attrs: {slot: "right-menu"},
                         slot: "right-menu"
                     }, [t("swipeout-button", {
@@ -11393,89 +11212,84 @@ webpackJsonp([1], {
                         staticStyle: {padding: "4px"},
                         attrs: {slot: "content"},
                         slot: "content"
-                    }, [t("cell", {attrs: {"inline-desc": a.nickname}}, [e._v("\n          " + e._s(a.phone) + "\n          "), t("img", {
+                    }, [t("cell", {attrs: {"inline-desc": a.nickname}}, [e._v("\n          " + e._s(a.phone) + "\n          "), a.photo ? t("img", {
                         staticStyle: {
                             "margin-right": "10px",
                             opacity: ".8",
                             "border-radius": "50%"
                         },
-                        attrs: {
-                            slot: "icon",
-                            width: "60",
-                            height: "60",
-                            src: "http://192.168.3.8:8080/SmartHome" + a.photo
-                        },
+                        attrs: {slot: "icon", width: "60", height: "60", src: "http://120.79.21.193/SmartHome" + a.photo},
                         slot: "icon"
-                    })])], 1)])
+                    }) : e._e()])], 1)])
                 }))], 1)
-            }, uc = [], sc = {render: lc, staticRenderFns: uc}, oc = sc, pc = t("VU/8"), mc = ue,
-            vc = pc(ic, oc, !1, mc, "data-v-4f3b568e", null), cc = vc.exports, hc = {components: {XHeader: sa}},
-            dc = function () {
+            }, Ev = [], Bv = {render: bv, staticRenderFns: Ev}, Qv = Bv, Rv = t("VU/8"), Vv = ie,
+            Dv = Rv(Sv, Qv, !1, Vv, "data-v-5a5a2532", null), Ov = Dv.exports, Fv = {components: {XHeader: ua}},
+            Nv = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("div", [t("x-header", {
                     staticStyle: {background: "#fff"},
                     attrs: {"left-options": {showBack: !0}}
                 }, [t("span", {staticStyle: {color: "#aaa"}}, [e._v("温馨提示")])]), e._v("\n\n  对不起，你找的网页不存在！\n")], 1)
-            }, gc = [], fc = {render: dc, staticRenderFns: gc}, Ac = fc, wc = t("VU/8"), xc = se,
-            Cc = wc(hc, Ac, !1, xc, "data-v-52bfef91", null), yc = Cc.exports;
-        pe.a.use(Se.a);
-        var kc = [{path: "/home", name: "home", component: at}, {
+            }, Jv = [], Tv = {render: Nv, staticRenderFns: Jv}, Uv = Tv, Hv = t("VU/8"), Mv = le,
+            Lv = Hv(Fv, Uv, !1, Mv, "data-v-52bfef91", null), Kv = Lv.exports;
+        oe.a.use(Ie.a);
+        var Gv = [{path: "/home", name: "home", component: at}, {
             path: "/user_device",
             name: "user_device",
             component: fu
-        }, {path: "/device_detail", name: "device_detail", component: ps}, {
+        }, {path: "/device_detail", name: "device_detail", component: ss}, {
             path: "/add_device",
             name: "adddevice",
-            component: Tl
+            component: Jl
         }, {path: "/del_device", name: "deldevice", component: au}, {
             path: "/all_device",
             name: "mydevice",
             component: wi
-        }, {path: "/device_control", name: "device_control", component: Ps}, {
+        }, {path: "/device_sensors", name: "device_sensors", component: fs}, {
             path: "/scene",
             name: "scene",
-            component: Lt
-        }, {path: "/scene/gohome", name: "gohome", component: lo}, {
+            component: Kt
+        }, {path: "/scene/gohome", name: "gohome", component: bs}, {
             path: "/device_type",
             name: "deviceType",
             component: ou
-        }, {path: "/login", name: "login", component: go}, {
+        }, {path: "/login", name: "login", component: Ns}, {
             path: "/userlogin",
             name: "userlogin",
-            component: Bo
-        }, {path: "/forget_password", name: "forget_password", component: Yo}, {
+            component: Ys
+        }, {path: "/forget_password", name: "forget_password", component: vo}, {
             path: "/SMS_password",
             name: "SMS_password",
-            component: tp
-        }, {path: "/register", name: "register", component: mp}, {
+            component: yo
+        }, {path: "/register", name: "register", component: Vo}, {
             path: "/register/SMS",
             name: "SMS",
-            component: xp
+            component: Mo
         }, {path: "/me", name: "me", component: It}, {
             path: "/me/info",
             name: "me_info",
             component: Br
-        }, {path: "/my_family", name: "my_family", component: em}, {
+        }, {path: "/my_family", name: "my_family", component: xp}, {
             path: "/my_family/create_family",
             name: "create_Family",
-            component: sm
-        }, {path: "/my_family/join_family", name: "join_family", component: fm}, {
+            component: Bp
+        }, {path: "/my_family/join_family", name: "join_family", component: Tp}, {
             path: "/my_family/join_code",
             name: "join_code",
-            component: bm
-        }, {path: "/my_family/family_info", name: "family_info", component: Nm}, {
+            component: qp
+        }, {path: "/my_family/family_info", name: "family_info", component: em}, {
             path: "/my_family/info_qrcode",
             name: "info_qrcode",
-            component: nv
-        }, {path: "/my_family/family_photo", name: "family_photo", component: Qv}, {
+            component: km
+        }, {path: "/my_family/family_photo", name: "family_photo", component: Zm}, {
             path: "/my_family/family_roles",
             name: "family_roles",
-            component: Uv
-        }, {path: "/my_family/roles_manage", name: "roles_manage", component: cc}, {
+            component: rv
+        }, {path: "/my_family/roles_manage", name: "roles_manage", component: Ov}, {
             path: "/*",
             name: "NotFound",
-            component: yc
-        }], Ic = new Se.a({linkActiveClass: "active", routes: kc}), Sc = {
+            component: Kv
+        }], Wv = new Ie.a({linkActiveClass: "active", routes: Gv}), jv = {
             isLogin: function (e, a) {
                 e.user = a
             }, updateUserInfo: function (e, a) {
@@ -11483,11 +11297,11 @@ webpackJsonp([1], {
             }, undataFamilyInfo: function (e, a) {
                 e.familyInfo = a
             }
-        }, bc = {
+        }, qv = {
             updateLoadingStatus: function (e, a) {
                 e.isLoading = a.isLoading
             }
-        }, Ec = {
+        }, Yv = {
             showComplete: function (e, a) {
                 e.completeStatus = a
             }, showWifiIcon: function (e, a) {
@@ -11495,7 +11309,7 @@ webpackJsonp([1], {
             }, showLight: function (e, a) {
                 e.isLight = a
             }
-        }, Bc = {
+        }, Xv = {
             familyInfo: function (e, a) {
                 e.familyInfo = a
             }, houseManage: function (e, a) {
@@ -11503,53 +11317,53 @@ webpackJsonp([1], {
             }, createdManage: function (e, a) {
                 e.name = a
             }
-        }, Qc = {
+        }, Zv = {
             deviceInfo: function (e, a) {
                 e.deviceList = a
             }
-        }, Rc = {
+        }, Pv = {
             isRegister: function (e, a) {
                 e.code = a
             }
         };
-        pe.a.use(me.a);
-        var Vc = {
+        oe.a.use(pe.a);
+        var _v = {
                 state: {
                     user: [],
                     domain: "http://test.example.com",
                     userInfo: {nick: null, ulevel: null, uid: null, portrait: null}
-                }, mutations: Sc
-            }, Dc = {state: {code: ""}, mutations: Rc}, Oc = {state: {isLoading: !1}, mutations: bc},
-            Nc = {state: {completeStatus: !1, wifiIconStatus: !0, isLight: !1}, mutations: Ec},
-            Fc = {state: {house: 0, createdName: "我的家庭", familyInfo: ""}, mutations: Bc},
-            Tc = {state: {deviceList: ""}, mutations: Qc}, Jc = new me.a.Store({
+                }, mutations: jv
+            }, zv = {state: {code: ""}, mutations: Pv}, $v = {state: {isLoading: !1}, mutations: qv},
+            ec = {state: {completeStatus: !1, wifiIconStatus: !0, isLight: !1}, mutations: Yv},
+            ac = {state: {house: 0, createdName: "我的家庭", familyInfo: ""}, mutations: Xv},
+            tc = {state: {deviceList: ""}, mutations: Zv}, nc = new pe.a.Store({
                 modules: {
-                    login: Vc,
-                    loading: Oc,
-                    showComplete: Nc,
-                    family: Fc,
-                    device: Tc,
-                    register: Dc
+                    login: _v,
+                    loading: $v,
+                    showComplete: ec,
+                    family: ac,
+                    device: tc,
+                    register: zv
                 }
-            }), Uc = t("n6Wb"), Hc = t("yD8N"), Mc = t("Y+qm"), Kc = t("Peep"), Lc = t("NXWw"), jc = t("oVYx"),
-            Wc = t("XLwt"), Gc = t.n(Wc);
-        pe.a.use(Kc.a), pe.a.use(Mc.a), pe.a.use(Hc.a), pe.a.use(Uc.a), pe.a.use(Lc.a), pe.a.use(jc.a), pe.a.use(me.a), pe.a.prototype.$echarts = Gc.a, ce.a.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded", pe.a.prototype.$axios = ce.a, Ic.beforeEach(function (e, a, t) {
-            Jc.commit("updateLoadingStatus", {isLoading: !0}), t()
-        }), Ic.afterEach(function (e) {
-            Jc.commit("updateLoadingStatus", {isLoading: !1})
-        }), pe.a.prototype.setCookie = function (e, a, t) {
+            }), rc = t("n6Wb"), ic = t("yD8N"), lc = t("Y+qm"), uc = t("Peep"), sc = t("NXWw"), oc = t("oVYx"),
+            pc = t("XLwt"), mc = t.n(pc);
+        oe.a.use(uc.a), oe.a.use(lc.a), oe.a.use(ic.a), oe.a.use(rc.a), oe.a.use(sc.a), oe.a.use(oc.a), oe.a.use(pe.a), oe.a.prototype.$echarts = mc.a, ve.a.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8", oe.a.prototype.$axios = ve.a, Wv.beforeEach(function (e, a, t) {
+            nc.commit("updateLoadingStatus", {isLoading: !0}), t()
+        }), Wv.afterEach(function (e) {
+            nc.commit("updateLoadingStatus", {isLoading: !1})
+        }), oe.a.prototype.setCookie = function (e, a, t) {
             var n = new Date;
             n.setDate(n.getDate() + t), document.cookie = e + "=" + escape(a) + (null == t ? "" : ";expires=" + n.toGMTString())
-        }, pe.a.prototype.getCookie = oe, pe.a.prototype.delCookie = function (e) {
+        }, oe.a.prototype.getCookie = ue, oe.a.prototype.delCookie = function (e) {
             var a = new Date;
             a.setTime(a.getTime() - 1);
-            var t = oe(e);
+            var t = ue(e);
             null != t && (document.cookie = e + "=" + t + ";expires=" + a.toGMTString())
-        }, de.a.attach(document.body), pe.a.config.productionTip = !1, new pe.a({
-            store: Jc,
-            router: Ic,
+        }, de.a.attach(document.body), oe.a.config.productionTip = !1, new oe.a({
+            store: nc,
+            router: Wv,
             render: function (e) {
-                return e(Ie)
+                return e(ke)
             },
             created: function () {
                 this.checkLogin()
@@ -11560,11 +11374,10 @@ webpackJsonp([1], {
                 }
             }
         }).$mount("#app-box")
-    }, NKDC: function (e, a) {
+    }, NSAv: function (e, a) {
     }, NeJJ: function (e, a) {
-    }, Nw3b: function (e, a) {
+    }, O1db: function (e, a) {
     }, QPbS: function (e, a) {
-    }, REN2: function (e, a) {
     }, Rqyq: function (e, a, t) {
         "use strict";
         var n = function () {
@@ -11735,7 +11548,7 @@ webpackJsonp([1], {
                 beforeDestroy: function () {
                     this.picker && this.picker.destroy()
                 }
-            }, h = function () {
+            }, d = function () {
                 var e = this, a = e.$createElement, t = e._self._c || a;
                 return t("a", {
                     staticClass: "vux-datetime weui-cell",
@@ -11760,7 +11573,7 @@ webpackJsonp([1], {
                         expression: "!valid"
                     }], staticClass: "vux-input-icon", attrs: {type: "warn", title: e.firstError}
                 })], 1)])], 2)
-            }, d = [], g = {render: h, staticRenderFns: d}, f = g, A = t("VU/8"), w = n, x = A(c, f, !1, w, null, null);
+            }, h = [], g = {render: d, staticRenderFns: h}, f = g, A = t("VU/8"), w = n, x = A(c, f, !1, w, null, null);
         a.a = x.exports
     }, VmEy: function (e, a) {
     }, VrI9: function (e, a) {
@@ -11809,6 +11622,7 @@ webpackJsonp([1], {
         a.a = m.exports
     }, ZGth: function (e, a) {
         e.exports = "data:image/png;base64,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"
+    }, ZYeL: function (e, a) {
     }, aCmI: function (e, a) {
     }, aEZN: function (e, a, t) {
         "use strict";
@@ -11821,11 +11635,11 @@ webpackJsonp([1], {
         }(i);
         var l = t("Rqyq"), u = t("VU/8"), s = u(r.a, l.a, !1, null, null, null);
         a.default = s.exports
+    }, aFxf: function (e, a) {
     }, aN9Q: function (e, a) {
     }, auFa: function (e, a) {
     }, "b+F5": function (e, a) {
         e.exports = "data:image/png;base64,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"
-    }, b8X3: function (e, a) {
     }, bWDP: function (e, a) {
     }, "c+sB": function (e, a) {
     }, cC6l: function (e, a) {
@@ -11886,13 +11700,13 @@ webpackJsonp([1], {
         }, r = [], i = {render: n, staticRenderFns: r};
         a.a = i
     }, "fZR+": function (e, a) {
+    }, fms8: function (e, a) {
     }, gYt2: function (e, a) {
-    }, hzQE: function (e, a) {
+    }, hbqu: function (e, a) {
     }, "i5u+": function (e, a) {
     }, iMmJ: function (e, a) {
     }, iz3p: function (e, a) {
-    }, jrzm: function (e, a) {
-    }, jxJD: function (e, a) {
+    }, k7wE: function (e, a) {
     }, kJBn: function (e, a) {
         e.exports = "data:image/png;base64,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"
     }, kbG3: function (e, a, t) {
@@ -12090,10 +11904,8 @@ webpackJsonp([1], {
     }, x2fE: function (e, a) {
     }, xQEh: function (e, a) {
     }, xqks: function (e, a) {
-    }, yA5V: function (e, a) {
     }, yvNz: function (e, a) {
         e.exports = "data:image/png;base64,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"
-    }, zGkD: function (e, a) {
     }
 }, ["NHnr"]);
-//# sourceMappingURL=app.08554d2f6a355f585e21.js.map
+//# sourceMappingURL=app.545a3b129e17b0aa1083.js.map

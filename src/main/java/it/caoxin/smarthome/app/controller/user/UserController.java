@@ -48,6 +48,7 @@ public class UserController {
     @ResponseBody
     public String loginForPhone(User user, HttpSession session){
         System.out.println("用户登录...");
+        System.out.println("user:"+user);
         System.out.println("username:"+user.getUsername());
         System.out.println("passoword:"+user.getPassword());
         return userService.userLoginUsePassword(user,session);

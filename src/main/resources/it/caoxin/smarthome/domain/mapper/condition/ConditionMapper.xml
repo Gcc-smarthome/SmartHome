@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="it.caoxin.smarthome.domain.mapper.condition.ConditionMapper">
+    <!--auto generated Code-->
+    <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.Condition">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="scene_id" property="sceneId" jdbcType="INTEGER"/>
+        <result column="condition_value" property="conditionValue" jdbcType="VARCHAR"/>
+        <result column="desc" property="desc" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="Base_Column_List">
+        id,
+        scene_id,
+        condition_value,
+        desc,
+        status
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="condition.id">
+        INSERT INTO condition (
+            id,
+            scene_id,
+            condition_value,
+            desc,
+            status
+        ) VALUES (
+            #{condition.id,jdbcType=INTEGER},
+            #{condition.sceneId,jdbcType=INTEGER},
+            #{condition.conditionValue,jdbcType=VARCHAR},
+            #{condition.desc,jdbcType=VARCHAR},
+            #{condition.status,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="condition.id">
+        INSERT INTO condition
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="condition.id!=null"> id,</if>
+            <if test="condition.sceneId!=null"> scene_id,</if>
+            <if test="condition.conditionValue!=null"> condition_value,</if>
+            <if test="condition.desc!=null"> desc,</if>
+            <if test="condition.status!=null"> status,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="condition.id!=null">#{condition.id,jdbcType=INTEGER},
+            </if>
+            <if test="condition.sceneId!=null">#{condition.sceneId,jdbcType=INTEGER},
+            </if>
+            <if test="condition.conditionValue!=null">#{condition.conditionValue,jdbcType=VARCHAR},
+            </if>
+            <if test="condition.desc!=null">#{condition.desc,jdbcType=VARCHAR},
+            </if>
+            <if test="condition.status!=null">#{condition.status,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO condition (
+        <include refid="Base_Column_List"/>
+        )VALUES
+        <foreach collection="conditions" item="condition" index="index" separator=",">
+            (
+            #{condition.id,jdbcType=INTEGER},
+            #{condition.sceneId,jdbcType=INTEGER},
+            #{condition.conditionValue,jdbcType=VARCHAR},
+            #{condition.desc,jdbcType=VARCHAR},
+            #{condition.status,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE condition
+        <set>
+            <if test="condition.id != null"> id= #{condition.id,jdbcType=INTEGER},</if>
+            <if test="condition.sceneId != null"> scene_id= #{condition.sceneId,jdbcType=INTEGER},</if>
+            <if test="condition.conditionValue != null"> condition_value= #{condition.conditionValue,jdbcType=VARCHAR},</if>
+            <if test="condition.desc != null"> desc= #{condition.desc,jdbcType=VARCHAR},</if>
+            <if test="condition.status != null"> status= #{condition.status,jdbcType=VARCHAR}</if>
+        </set>
+        WHERE id = #{condition.id,jdbcType=INTEGER}
+    </update>
+</mapper>
+

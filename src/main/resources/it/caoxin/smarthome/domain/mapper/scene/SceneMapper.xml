@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="it.caoxin.smarthome.domain.mapper.scene.SceneMapper">
+    <!--auto generated Code-->
+    <resultMap id="BaseResultMap" type="it.caoxin.smarthome.domain.model.Scene">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="family_id" property="familyId" jdbcType="INTEGER"/>
+        <result column="device_id" property="deviceId" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="scene_name" property="sceneName" jdbcType="VARCHAR"/>
+        <result column="pattern" property="pattern" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="desc" property="desc" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="Base_Column_List">
+        id,
+        family_id,
+        device_id,
+        user_id,
+        scene_name,
+        pattern,
+        status,
+        desc
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="scene.id">
+        INSERT INTO scene (
+            id,
+            family_id,
+            device_id,
+            user_id,
+            scene_name,
+            pattern,
+            status,
+            desc
+        ) VALUES (
+            #{scene.id,jdbcType=INTEGER},
+            #{scene.familyId,jdbcType=INTEGER},
+            #{scene.deviceId,jdbcType=INTEGER},
+            #{scene.userId,jdbcType=INTEGER},
+            #{scene.sceneName,jdbcType=VARCHAR},
+            #{scene.pattern,jdbcType=VARCHAR},
+            #{scene.status,jdbcType=VARCHAR},
+            #{scene.desc,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="scene.id">
+        INSERT INTO scene
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="scene.id!=null"> id,</if>
+            <if test="scene.familyId!=null"> family_id,</if>
+            <if test="scene.deviceId!=null"> device_id,</if>
+            <if test="scene.userId!=null"> user_id,</if>
+            <if test="scene.sceneName!=null"> scene_name,</if>
+            <if test="scene.pattern!=null"> pattern,</if>
+            <if test="scene.status!=null"> status,</if>
+            <if test="scene.desc!=null"> desc,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="scene.id!=null">#{scene.id,jdbcType=INTEGER},
+            </if>
+            <if test="scene.familyId!=null">#{scene.familyId,jdbcType=INTEGER},
+            </if>
+            <if test="scene.deviceId!=null">#{scene.deviceId,jdbcType=INTEGER},
+            </if>
+            <if test="scene.userId!=null">#{scene.userId,jdbcType=INTEGER},
+            </if>
+            <if test="scene.sceneName!=null">#{scene.sceneName,jdbcType=VARCHAR},
+            </if>
+            <if test="scene.pattern!=null">#{scene.pattern,jdbcType=VARCHAR},
+            </if>
+            <if test="scene.status!=null">#{scene.status,jdbcType=VARCHAR},
+            </if>
+            <if test="scene.desc!=null">#{scene.desc,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO scene (
+        <include refid="Base_Column_List"/>
+        )VALUES
+        <foreach collection="scenes" item="scene" index="index" separator=",">
+            (
+            #{scene.id,jdbcType=INTEGER},
+            #{scene.familyId,jdbcType=INTEGER},
+            #{scene.deviceId,jdbcType=INTEGER},
+            #{scene.userId,jdbcType=INTEGER},
+            #{scene.sceneName,jdbcType=VARCHAR},
+            #{scene.pattern,jdbcType=VARCHAR},
+            #{scene.status,jdbcType=VARCHAR},
+            #{scene.desc,jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE scene
+        <set>
+            <if test="scene.id != null"> id= #{scene.id,jdbcType=INTEGER},</if>
+            <if test="scene.familyId != null"> family_id= #{scene.familyId,jdbcType=INTEGER},</if>
+            <if test="scene.deviceId != null"> device_id= #{scene.deviceId,jdbcType=INTEGER},</if>
+            <if test="scene.userId != null"> user_id= #{scene.userId,jdbcType=INTEGER},</if>
+            <if test="scene.sceneName != null"> scene_name= #{scene.sceneName,jdbcType=VARCHAR},</if>
+            <if test="scene.pattern != null"> pattern= #{scene.pattern,jdbcType=VARCHAR},</if>
+            <if test="scene.status != null"> status= #{scene.status,jdbcType=VARCHAR},</if>
+            <if test="scene.desc != null"> desc= #{scene.desc,jdbcType=VARCHAR}</if>
+        </set>
+        WHERE id = #{scene.id,jdbcType=INTEGER}
+    </update>
+</mapper>
+

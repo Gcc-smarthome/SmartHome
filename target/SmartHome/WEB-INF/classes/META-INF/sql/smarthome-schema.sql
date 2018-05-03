@@ -192,3 +192,34 @@ CREATE TABLE `family_img` (
   KEY `FK_family_family_img` (`family_id`),
   CONSTRAINT `FK_family_family_img` FOREIGN KEY (`family_id`) REFERENCES `family` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `scene`;
+CREATE TABLE `scene` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `family_id` int(11) NOT NULL,
+  `device_id` int(11) NOT NULL,
+  `user_id`   int(11) NOT NULL,
+  `scene_name` VARCHAR(255) DEFAULT NULL,
+  `pattern`   varchar(255) DEFAULT NULL,
+  `desc`      varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '正常',
+  PRIMARY KEY (`id`),
+  KEY `FK_family_scene` (`family_id`),
+  CONSTRAINT `FK_family_scene` FOREIGN KEY (`family_id`) REFERENCES `family` (`id`),
+  KEY `FK_device_scene` (`device_id`),
+  CONSTRAINT `FK_device_scene` FOREIGN KEY (`device_id`) REFERENCES `device` (`id`),
+   KEY `FK_user_scene` (`user_id`),
+  CONSTRAINT `FK_user_scene` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `condition`;
+CREATE TABLE `condition` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `scene_id` int(11) NOT NULL,
+  `condition_value` VARCHAR(255) DEFAULT NULL,
+  `desc`      varchar(255) DEFAULT NULL,
+  `status` varchar(255) NOT NULL DEFAULT '正常',
+  PRIMARY KEY (`id`),
+  KEY `FK_condition_scene` (`scene_id`),
+  CONSTRAINT `FK_condition_scene` FOREIGN KEY (`scene_id`) REFERENCES `scene` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -73,4 +73,17 @@ public class MemberContoller {
         return familyService.deleteNormalMember(user,family,deleteUserId);
     }
 
+    @RequestMapping(value = "/is_manager",method = RequestMethod.POST)
+    @ResponseBody
+    public String deleteMemer(Integer userId,Integer familyId){
+        User user = new User();
+        user.setId(userId);
+
+        Family family = new Family();
+        family.setId(familyId);
+
+        return familyService.isFamilyManager(user,family)+"";
+    }
+
+
 }

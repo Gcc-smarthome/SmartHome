@@ -15,17 +15,17 @@
         id,
         scene_id,
         condition_value,
-        desc,
+        `desc`,
         status
     </sql>
 
     <!--auto generated Code-->
     <insert id="insert" useGeneratedKeys="true" keyProperty="condition.id">
-        INSERT INTO condition (
+        INSERT INTO `condition` (
             id,
             scene_id,
             condition_value,
-            desc,
+            `desc`,
             status
         ) VALUES (
             #{condition.id,jdbcType=INTEGER},
@@ -38,12 +38,12 @@
 
     <!--auto generated Code-->
     <insert id="insertSelective" useGeneratedKeys="true" keyProperty="condition.id">
-        INSERT INTO condition
+        INSERT INTO `condition`
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="condition.id!=null"> id,</if>
             <if test="condition.sceneId!=null"> scene_id,</if>
             <if test="condition.conditionValue!=null"> condition_value,</if>
-            <if test="condition.desc!=null"> desc,</if>
+            <if test="condition.desc!=null"> `desc`,</if>
             <if test="condition.status!=null"> status,</if>
         </trim>
         VALUES
@@ -63,7 +63,7 @@
 
     <!--auto generated Code-->
     <insert id="insertList">
-        INSERT INTO condition (
+        INSERT INTO `condition` (
         <include refid="Base_Column_List"/>
         )VALUES
         <foreach collection="conditions" item="condition" index="index" separator=",">
@@ -79,7 +79,7 @@
 
     <!--auto generated Code-->
     <update id="update">
-        UPDATE condition
+        UPDATE `condition``
         <set>
             <if test="condition.id != null"> id= #{condition.id,jdbcType=INTEGER},</if>
             <if test="condition.sceneId != null"> scene_id= #{condition.sceneId,jdbcType=INTEGER},</if>
@@ -89,5 +89,16 @@
         </set>
         WHERE id = #{condition.id,jdbcType=INTEGER}
     </update>
+
+    <select id="selectScenesById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from `condition`
+        where scene_id = #{arg0,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        DELETE from `condition` where id  =  #{arg0,jdbcType=INTEGER}
+    </delete>
 </mapper>
 

@@ -15,4 +15,8 @@ public interface ConditionMapper {
     int insertList(@Param("conditions") List<Condition> conditions);
 
     int update(@Param("condition") Condition condition);
+
+    List<Condition> selectScenesById(Integer sceneId);
+
+    int deleteById(Integer conditionId);
 }

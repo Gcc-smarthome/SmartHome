@@ -2,6 +2,8 @@ package it.caoxin.smarthome.domain.service.condition;
 
 import java.util.List;
 import it.caoxin.smarthome.domain.model.Condition;
+import it.caoxin.smarthome.domain.model.Scene;
+
 public interface ConditionService{
 
     int insert(Condition condition);
@@ -11,4 +13,10 @@ public interface ConditionService{
     int insertList(List<Condition> conditions);
 
     int update(Condition condition);
+
+    List<Condition> getConditionsBySceneId(Scene scene);
+
+    int deleteConditionById(Condition condition);
+
+    String addCondition(Condition condition);
 }

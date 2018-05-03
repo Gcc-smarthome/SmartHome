@@ -22,7 +22,7 @@
         scene_name,
         pattern,
         status,
-        desc
+        `desc`
     </sql>
 
     <!--auto generated Code-->
@@ -116,5 +116,18 @@
         </set>
         WHERE id = #{scene.id,jdbcType=INTEGER}
     </update>
+
+    <select id="selectByUserIdAndFamilyIdAndDeviceId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from scene
+        where family_id = #{arg0,jdbcType=INTEGER} AND
+               device_id = #{arg1,jdbcType=INTEGER} AND
+               user_id  =  #{arg2,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteSceneById" parameterType="java.lang.Integer">
+        DELETE from scene where id  =  #{arg0,jdbcType=INTEGER}
+    </delete>
 </mapper>
 

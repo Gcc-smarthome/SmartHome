@@ -11,4 +11,12 @@ public interface SceneService{
     int insertList(List<Scene> scenes);
 
     int update(Scene scene);
+
+    String  addScene(Scene scene);
+
+    String findSceneByOtherId(Scene scene);
+
+    String deleteScene(Scene scene);
+
+
 }

@@ -22,4 +22,8 @@ public interface SceneMapper {
 
     int deleteSceneById(Integer sceneId);
 
+    List<Scene> selectSceneByUserId(Integer userId);
+
+    Scene selectSceneById(Integer id);
+
 }

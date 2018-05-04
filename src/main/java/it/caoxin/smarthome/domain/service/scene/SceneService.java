@@ -14,9 +14,11 @@ public interface SceneService{
 
     String  addScene(Scene scene);
 
-    String findSceneByOtherId(Scene scene);
+    String findSceneById(Scene scene);
 
     String deleteScene(Scene scene);
+
+    String findSceneByUserId(Integer userId);
 
 
 }

@@ -129,5 +129,21 @@
     <delete id="deleteSceneById" parameterType="java.lang.Integer">
         DELETE from scene where id  =  #{arg0,jdbcType=INTEGER}
     </delete>
+
+
+    <select id="selectSceneByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from scene
+        where user_id  =  #{arg0,jdbcType=INTEGER}
+    </select>
+
+
+    <select id="selectSceneById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from scene
+        where id  =  #{arg0,jdbcType=INTEGER}
+    </select>
 </mapper>
 

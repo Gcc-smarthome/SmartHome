@@ -26,14 +26,24 @@ public class SceneContoller {
        return  sceneService.addScene(scene);
     }
 
-    //查找场景通过家庭id，设备id，用户id
-    @RequestMapping(value = "/get_scenebyotherid",method = RequestMethod.POST)
+    //查找场景通过场景id
+    @RequestMapping(value = "/get_scenebyid",method = RequestMethod.GET)
     @ResponseBody
     public String getSceneByOtherId(Scene scene){
         //获取不到uniqueCode
         System.out.println("Scene:"+scene);
 
-        return  sceneService.findSceneByOtherId(scene);
+        return  sceneService.findSceneById(scene);
+    }
+
+    //查找场景通过user_id
+    @RequestMapping(value = "/get_scenebyuserid",method = RequestMethod.GET)
+    @ResponseBody
+    public String getSceneByUserId(Integer userId){
+        //获取不到uniqueCode
+        System.out.println("id:"+userId);
+
+        return  sceneService.findSceneByUserId(userId);
     }
 
     //删除场景

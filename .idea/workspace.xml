@@ -10,187 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7828dbea-28f9-4b6e-b4dd-2bf33413e149" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dyuproject_protostuff_protostuff_api_1_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dyuproject_protostuff_protostuff_collectionschema_1_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dyuproject_protostuff_protostuff_core_1_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dyuproject_protostuff_protostuff_runtime_1_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_19_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/ClientApp/TerminalControlServices.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/client/SmartHomeRpcClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/client/SmartHomeRpcProxy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/common/DataOfCSResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/common/RpcDecoder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/common/RpcEncoder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/common/RpcRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/common/RpcResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/common/SerializationUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/discovery/Constant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/SmartHomeServer/discovery/ServerDiscovery.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/manager/device/DeviceManagerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/manager/deviceoperator/DeviceOperatorManagerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/manager/family/FamilyManagerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/manager/member/MemberManagerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/manager/sensor/SensorManagerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/manager/sensortype/SensorTypeManagerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/manager/user/UserManagerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/common/PageBean.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/member/MemberService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/member/impl/MemberServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/sensortype/SensorTypeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/sensortype/impl/SensorTypeImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/rpc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/app.01ef7bbeb1c3cde73933.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/app.01ef7bbeb1c3cde73933.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/testMybatisPageHelper/TEst.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_5_0_0_Alpha1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/app.7a44353150d109b6d36e.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/app.7a44353150d109b6d36e.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/listener/SeverListener$ServerStart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/listener/SeverTestListener$ServerStart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/listener/SeverTestListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServer$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/lib/pagehelper-5.0.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/lib/slf4j-api-1.7.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/listener/SeverListener$ServerStart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/listener/SeverTestListener$ServerStart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/listener/SeverTestListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServer$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/HelloController.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/HelloController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/device/DeviceContoller.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/device/DeviceContoller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/user/UserController.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/controller/user/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/listener/SeverListener.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/app/listener/SeverListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/user/UserMapper.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/user/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/device/DeviceService.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/device/DeviceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/deviceoperator/DeviceOperatorService.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/deviceoperator/DeviceOperatorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/deviceoperator/impl/DeviceOperatorServiceImpl.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/deviceoperator/impl/DeviceOperatorServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/family/FamilyService.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/family/FamilyService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/sensor/SensorService.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/sensor/SensorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/sensor/impl/SensorServiceImpl.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/sensor/impl/SensorServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/user/UserService.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/user/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/HelloController.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/HelloController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/device/DeviceContoller.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/device/DeviceContoller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/user/UserController.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/controller/user/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/listener/SeverListener.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/app/listener/SeverListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/user/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/user/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/device/DeviceService.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/device/DeviceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/deviceoperator/DeviceOperatorService.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/deviceoperator/DeviceOperatorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/deviceoperator/impl/DeviceOperatorServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/deviceoperator/impl/DeviceOperatorServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/family/FamilyService.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/family/FamilyService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/sensor/SensorService.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/sensor/SensorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/sensor/impl/SensorServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/sensor/impl/SensorServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/user/UserService.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/user/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/device/TestDevice.class" afterPath="$PROJECT_DIR$/target/test-classes/device/TestDevice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/family/TestFamily.class" afterPath="$PROJECT_DIR$/target/test-classes/family/TestFamily.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/sensortype/SensorTypeTest.class" afterPath="$PROJECT_DIR$/target/test-classes/sensortype/SensorTypeTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/user/TestUser.class" afterPath="$PROJECT_DIR$/target/test-classes/user/TestUser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/SmartHome_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/SmartHome_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmartHome.iml" afterPath="$PROJECT_DIR$/SmartHome.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/HelloController.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/HelloController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/device/DeviceContoller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/user/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/controller/user/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/listener/SeverListener.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/listener/SeverListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/listener/SeverTestListener.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/app/listener/SeverTestListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/user/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/user/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/client/EchoClientHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServer.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/SocketServer/server/EchoServerHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/DeviceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/device/imp/DeviceServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/deviceoperator/DeviceOperatorService.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/deviceoperator/DeviceOperatorService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/deviceoperator/impl/DeviceOperatorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/deviceoperator/impl/DeviceOperatorServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/FamilyService.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/FamilyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/family/impl/FamilyServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/scene/SceneService.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/scene/SceneService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/sensor/SensorService.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/sensor/SensorService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/sensor/impl/SensorServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/sensor/impl/SensorServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/socket/socketServer/ServerBootstrap.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/socket/socketServer/ServerBootstrap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/socket/socketServer/ServerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/socket/socketServer/ServerHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/spring-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/spring-service.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/spring-service.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensordata/SensorDataMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensordata/SensorDataMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/user/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/user/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/it/caoxin/smarthome/domain/mapper/userfamily/UserFamilyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/device/TestDevice.java" afterPath="$PROJECT_DIR$/src/test/device/TestDevice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/family/TestFamily.java" afterPath="$PROJECT_DIR$/src/test/family/TestFamily.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/sensortype/SensorTypeTest.java" afterPath="$PROJECT_DIR$/src/test/sensortype/SensorTypeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/user/TestUser.java" afterPath="$PROJECT_DIR$/src/test/user/TestUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/META-INF/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/META-INF/spring/spring-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/META-INF/spring/spring-service.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/META-INF/spring/spring-service.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensordata/SensorDataMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensordata/SensorDataMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/user/UserMapper.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/it/caoxin/smarthome/domain/mapper/user/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/mybatis-config.xml" afterPath="$PROJECT_DIR$/target/SmartHome/WEB-INF/classes/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SmartHome/index.jsp" afterPath="$PROJECT_DIR$/target/SmartHome/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/spring/spring-dao.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring/spring-dao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/spring/spring-service.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring/spring-service.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/device/DeviceMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/deviceoperator/DeviceOperatorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/family/FamilyMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensor/SensorMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensordata/SensorDataMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensordata/SensorDataMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/sensortype/SensorTypeMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/user/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/it/caoxin/smarthome/domain/mapper/user/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_4_1_6.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_19.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/static/css/app.a8d17204e178c880be0555eaec75551d.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/app.fde51d7791eb34f766bd9556343a01d1.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/static/css/app.a8d17204e178c880be0555eaec75551d.css.map" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/app.fde51d7791eb34f766bd9556343a01d1.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/manifest.d32a154fb10ea5c04f74.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/manifest.adaeba310b83789668f3.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/manifest.d32a154fb10ea5c04f74.js.map" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/manifest.adaeba310b83789668f3.js.map" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -296,8 +116,8 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="310" column="46" lean-forward="false" selection-start-line="310" selection-start-column="46" selection-end-line="310" selection-end-column="46" />
+            <state relative-caret-position="340">
+              <caret line="307" column="8" lean-forward="true" selection-start-line="307" selection-start-column="8" selection-end-line="307" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -1325,7 +1145,7 @@
       <workItem from="1526697937604" duration="7776000" />
       <workItem from="1526725186202" duration="1220000" />
       <workItem from="1526784024501" duration="2681000" />
-      <workItem from="1526868797282" duration="1709000" />
+      <workItem from="1526868797282" duration="2137000" />
     </task>
     <task id="LOCAL-00001" summary="测试上传">
       <created>1521615040891</created>
@@ -1460,7 +1280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525434425024</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="添加管理员端">
+      <created>1526886716515</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1526886716515</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1496,7 +1323,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="735836000" />
+    <option name="totallyTimeSpent" value="736264000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1534,7 +1361,7 @@
       <window_info id="Mybatis datasource" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5063694" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29648608" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29648608" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1573,7 +1400,8 @@
     <MESSAGE value="添加场景管理接口" />
     <MESSAGE value="场景管理修改" />
     <MESSAGE value="待测试版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="待测试版本" />
+    <MESSAGE value="添加管理员端" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加管理员端" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1725,6 +1553,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1860,6 +1689,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2187">
           <caret line="89" column="15" lean-forward="false" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1867,6 +1697,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1161">
           <caret line="74" column="39" lean-forward="false" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
+          <folding>
+            <element signature="method#createDevice#0;class#DeviceServiceImpl#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1972,8 +1805,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/caoxin/smarthome/domain/service/user/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="310" column="46" lean-forward="false" selection-start-line="310" selection-start-column="46" selection-end-line="310" selection-end-column="46" />
+        <state relative-caret-position="340">
+          <caret line="307" column="8" lean-forward="true" selection-start-line="307" selection-start-column="8" selection-end-line="307" selection-end-column="8" />
           <folding />
         </state>
       </provider>

@@ -163,4 +163,16 @@
     from sensor
     where device_id = #{deviceId,jdbcType=INTEGER}
   </select>
+
+  <select id="getAllSensor"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sensor
+  </select>
+
+  <select id="getCount"  resultType="java.lang.Integer">
+    select
+    count(*)
+    from sensor
+  </select>
 </mapper>

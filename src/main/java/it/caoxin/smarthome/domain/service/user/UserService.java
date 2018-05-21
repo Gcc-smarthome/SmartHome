@@ -61,4 +61,58 @@ public interface UserService {
      */
     String uploadUserPhoto(MultipartFile file, HttpServletRequest request,User user);
 
+    /*
+    管理员获取用户
+     */
+    String getAllUser(Integer page);
+
+    /*
+    管理员获取管理员列表
+     */
+    String getAllManager(Integer index);
+
+    /*
+    通过名字模糊查询模糊查询
+     */
+    String getFuzzyUserByNickName(String name,Integer index);
+
+    /*
+    查询总数
+     */
+    Integer getUserCount();
+
+    /*
+    管理员添加用户
+     */
+    String mAddUser(User user);
+
+    /*
+    管理员删除用户
+     */
+    String mDeleteUser(Integer userIds);
+
+    /*
+    管理员修改用户
+     */
+    String mUpdateUser(User user);
+
+    /*
+    管理员验证手机能否注册注册
+     */
+    String managerIsRegister(String username);
+
+    /*
+    管理员注册
+     */
+    String managerRegister(User user);
+
+    /*
+    管理员登陆
+     */
+    String mLogin(User user,HttpSession session);
+
+    /*
+    管理员上传图片
+     */
+    String uploadManagerPhoto(MultipartFile file, HttpServletRequest request);
 }

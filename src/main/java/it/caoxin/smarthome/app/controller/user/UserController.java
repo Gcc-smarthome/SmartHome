@@ -2,6 +2,8 @@ package it.caoxin.smarthome.app.controller.user;
 
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.user.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +16,7 @@ import javax.servlet.http.HttpSession;
 public class UserController {
     @Autowired
     private UserService userService;
+
 
     //判断是否能注册
     @RequestMapping(value = "/isRegister",method = RequestMethod.POST)
@@ -67,6 +70,8 @@ public class UserController {
         System.out.println("用户登录...");
         System.out.println("username:"+user.getUsername());
         System.out.println("passoword:"+user.getPassword());
+
+
         return userService.userLoginUseValidateCode(user,session,code);
     }
     //获取更新密码
@@ -97,13 +102,7 @@ public class UserController {
         System.out.println("用户退出...");
         return userService.userLogOut(session);
     }
-    //用户上传图片
-    @RequestMapping(value = "/uploadUserPhoto",method = RequestMethod.POST)
-    @ResponseBody
-    public String logout(MultipartFile file, HttpServletRequest request, User user){
-        System.out.println("用户上传图片...");
-        return userService.uploadUserPhoto(file,request,user);
-    }
+
 
 
 

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:META-INF/spring/spring-dao.xml","classpath:META-INF/spring/spring-service.xml"})
 public class SensorTypeTest {
@@ -46,5 +48,20 @@ public class SensorTypeTest {
     public void select(){
         SensorType sensorType = sensorTypeMapper.selectById(1);
         System.out.println("sensorType:"+sensorType);
+    }
+
+    @Test
+    public void testGetAll(){
+        List<SensorType> allSensorType =
+                sensorTypeMapper.getAllSensorType();
+
+        System.out.println("啊："+allSensorType);
+    }
+
+
+    @Test
+    public void testFuzzyGet(){
+        List<SensorType> allList = sensorTypeMapper.getAllSensorTypeLikeName("光");
+        System.out.println("啊："+allList);
     }
 }

@@ -106,4 +106,17 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
 
+  <select id="getAllSensorType"  resultMap="BaseResultMap">
+    select
+    id,name,info,description,status
+    from
+    sensor_type
+  </select>
+
+  <select id="getAllSensorTypeLikeName"  resultMap="BaseResultMap">
+    select
+    id,name,info,description,status
+    from sensor_type
+     where name LIKE  CONCAT('%',#{name},'%')
+  </select>
 </mapper>

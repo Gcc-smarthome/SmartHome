@@ -240,5 +240,25 @@
       register_time = #{registerTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <select id="getAllFamily"  resultMap="BaseResultMap">
+      select
+      id,family_name,family_address,control_mode,status,register_time
+       from family
+       where id != 1
+  </select>
+
+  <select id="getAllFamilyLikeName" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
+    select
+     id,family_name,family_address,control_mode,status,register_time
+    from family
+    where family_name LIKE  CONCAT('%',#{name},'%')
+  </select>
+
+  <select id="getCount"  resultType="java.lang.Integer">
+    select
+    count(*)
+    from family
+  </select>
 
 </mapper>

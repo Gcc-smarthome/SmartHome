@@ -136,5 +136,21 @@
         where uniquecode = #{arg0,jdbcType=VARCHAR} AND status = '正常';
     </select>
 
+    <select id="getAllMember" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from userfamily
+    </select>
+
+
+    <select id="getCount"  resultType="java.lang.Integer">
+        select
+        count(*)
+        from userfamily
+
+    </select>
+
+
+
 </mapper>
 

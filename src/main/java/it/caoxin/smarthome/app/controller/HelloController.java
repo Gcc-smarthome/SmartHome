@@ -6,6 +6,7 @@ import io.netty.channel.Channel;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.util.CharsetUtil;
 import it.caoxin.smarthome.domain.common.ClientIpPool;
+import it.caoxin.smarthome.domain.common.DataOfCSResult;
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.sensor.SensorService;
 import it.caoxin.smarthome.domain.socket.common.ChannelMap;
@@ -69,12 +70,7 @@ public class HelloController {
 //
 //
 ////        logger.info();
-        SocketChannel socketChannel = (SocketChannel) ClientIpPool.getFamilyIpSocketMap().get(1);
-        if (socketChannel.isActive()){
-            System.out.println("socket存活");
-        }else {
-            System.out.println("socket死了");
-        }
-        return "test...";
+
+        return "";
     }
 }

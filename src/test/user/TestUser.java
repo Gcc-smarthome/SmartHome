@@ -1,5 +1,7 @@
 package user;
 
+import com.github.pagehelper.PageHelper;
+import it.caoxin.smarthome.domain.common.PageBean;
 import it.caoxin.smarthome.domain.mapper.user.UserMapper;
 import it.caoxin.smarthome.domain.model.User;
 import net.sf.json.JSONArray;
@@ -26,14 +28,18 @@ public class TestUser {
 
     @Test
     public void testAddUser(){
-        User user = new User();
-        user.setUsername("test");
-        user.setPassword("test");
-        user.setPhone("test");
-        user.setStatus("正常");
+        for (int i = 0; i < 10; i++){
+            User user = new User();
+            user.setUsername("test");
+            user.setPassword("test");
+            user.setPhone("test");
+            user.setStatus("正常");
+            user.setRole("用户");
 
 
-        userMapper.insert(user);
+            userMapper.insert(user);
+        }
+
     }
 
     @Test
@@ -138,5 +144,27 @@ public class TestUser {
     public void testSelectByPhone(){
         User user = userMapper.selectUserByPhone("1");
         System.out.println("user"+user);
+    }
+
+    @Test
+    public void testSelectUser(){
+        Integer count = userMapper.getCount();
+        System.out.println("count:"+count);
+    }
+
+    @Test
+    public void page(){
+        PageBean<User> pageBean = new PageBean<>();
+        pageBean.setTotal(userMapper.getCount());
+
+
+        PageHelper.startPage(1, pageBean.getPageSize());//指定开始分页
+        List<User> allUser = userMapper.getAllUser();
+        pageBean.setPage(1);
+        pageBean.setBeanList(allUser);
+
+        JSONArray bean = JSONArray.fromObject(pageBean);
+
+
     }
 }

@@ -113,6 +113,9 @@
       <if test="description != null">
         #{description,jdbcType=VARCHAR},
       </if>
+      <if test="img != null">
+        #{img,jdbcType=VARCHAR},
+      </if>
       <if test="location != null">
         #{location,jdbcType=VARCHAR},
       </if>
@@ -128,9 +131,7 @@
       <if test="controlMode != null">
         #{controlMode,jdbcType=VARCHAR},
       </if>
-      <if test="img != null">
-        #{controlMode,jdbcType=VARCHAR},
-      </if>
+
     </trim>
   </insert>
 
@@ -193,4 +194,40 @@
     WHERE family_id = #{familyId,jdbcType=INTEGER}
   </select>
 
+  <select id="getManagerDevice" parameterType="java.lang.Integer" resultMap="SelectResultMap">
+    SELECT
+    id,family_id,name,img,description,info,registert_time,status
+    FROM device
+    WHERE family_id = 1
+  </select>
+
+
+  <select id="fuzzyGetManagerDevice"  resultMap="BaseResultMap">
+    select
+    id,family_id,name,img,description,info,registert_time,status
+    from    (SELECT * FROM device
+    WHERE family_id = 1) devicetmp
+    where  devicetmp.name LIKE  CONCAT('%',#{name},'%')
+  </select>
+
+  <select id="getAllDevice" parameterType="java.lang.Integer" resultMap="SelectResultMap">
+    SELECT
+    id,family_id,name,img,description,info,registert_time,status
+    FROM device
+  </select>
+
+
+  <select id="fuzzyGetDevice"  resultMap="BaseResultMap">
+    select
+    id,family_id,name,img,description,info,registert_time,status
+    from device
+    where name LIKE  CONCAT('%',#{name},'%')
+  </select>
+
+
+  <select id="getCount"  resultType="java.lang.Integer">
+    select
+    count(*)
+    from device
+  </select>
 </mapper>

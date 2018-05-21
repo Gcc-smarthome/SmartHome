@@ -5,6 +5,8 @@ import it.caoxin.smarthome.domain.model.Device;
 import it.caoxin.smarthome.domain.model.Family;
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.device.DeviceService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +21,8 @@ import java.util.concurrent.TimeoutException;
 public class DeviceContoller {
     @Autowired
     private DeviceService deviceService;
+
+
 
     //添加设备
     @RequestMapping(value = "add_device",method = RequestMethod.POST)
@@ -51,18 +55,23 @@ public class DeviceContoller {
     @ResponseBody
     public String operatorDevice(Integer familyId,
                                   String operator,
+                                  Integer userId,
                                   Integer deviceId ){
         System.out.println("familyId:"+familyId);
         System.out.println("operator:"+operator);
+        System.out.println("userId:"+userId);
+        System.out.println("deviceId:"+deviceId);
 
-        String res=null;
+        String res="failure";
+
         try {
-             res = deviceService.operatorDevice(familyId,deviceId,operator);
+            res = deviceService.operatorDevice(familyId,userId,deviceId,operator);
         } catch (TimeoutException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+
         return res;
     }
 

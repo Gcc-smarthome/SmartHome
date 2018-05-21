@@ -127,6 +127,6 @@
     <include refid="Base_Column_List" />
     from sensor_data
     where sensor_id  = #{id,jdbcType=INTEGER}
-    GROUP BY collection_time DESC LIMIT 7
+    ORDER BY collection_time DESC LIMIT 7
   </select>
 </mapper>

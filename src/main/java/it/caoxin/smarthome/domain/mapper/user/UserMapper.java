@@ -23,4 +23,18 @@ public interface UserMapper {
     User selectByPhoneAndPassword(User user);
 
     User selectByUsernameAndPassword(User user);
+
+    //查询所有用户
+    List<User> getAllUser();
+    //通过姓名模糊查询
+    List<User> getAllUserLikeName(String name);
+    //查询全部管理员
+    List<User> getAllManager();
+
+    Integer getCount();
+
+    Integer getCountManager();
+
+    User selectManagerByPhone(String phone);
+
 }

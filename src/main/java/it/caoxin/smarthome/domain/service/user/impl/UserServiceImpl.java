@@ -3,6 +3,8 @@ package it.caoxin.smarthome.domain.service.user.impl;
 
 
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
+import com.github.pagehelper.PageHelper;
+import it.caoxin.smarthome.domain.common.PageBean;
 import it.caoxin.smarthome.domain.common.SendValidateCode;
 import it.caoxin.smarthome.domain.mapper.family.FamilyMapper;
 import it.caoxin.smarthome.domain.mapper.user.UserMapper;
@@ -10,7 +12,10 @@ import it.caoxin.smarthome.domain.model.Family;
 import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.service.user.UserService;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,9 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * @author caoxin
@@ -32,6 +35,8 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     private static final String userPhotoPath = "/upload/user/";
+
+    public static final Logger logger = LoggerFactory.getLogger("DeviceContoller");
     //手机验证
     @Override
     public String isRegister(String phone) {
@@ -85,6 +90,9 @@ public class UserServiceImpl implements UserService {
             valueStack.put("user",loginUser);
             valueStack.put("session", UUID.randomUUID().toString());
             JSONArray json = JSONArray.fromObject(valueStack);
+
+//            logger.info("user_login"+" "+Integer.MIN_VALUE+" "+Integer.MIN_VALUE+" "+user.getPhone()+" "+"login");
+
             return json.toString();//登录成功返回User对象
         }
 
@@ -113,6 +121,9 @@ public class UserServiceImpl implements UserService {
                     valueStack.put("user",loginUser);
                     valueStack.put("session", UUID.randomUUID().toString());
                     JSONArray json = JSONArray.fromObject(valueStack);
+
+//                    logger.info("user_login"+" "+Integer.MIN_VALUE+" "+Integer.MIN_VALUE+" "+user.getPhone()+" "+"login");
+
                     return json.toString();//登录成功返回User对象
                 }
 
@@ -224,6 +235,149 @@ public class UserServiceImpl implements UserService {
         valueStack.put("user",updateUser);
         return JSONArray.fromObject(valueStack).toString();
 
+    }
+
+    @Override
+    public String getAllUser(Integer index) {
+
+
+        PageBean<User> pageBean = new PageBean<>();
+        pageBean.setTotal(userMapper.getCount());
+
+        if (index == null){
+            index = 1;
+        }
+        PageHelper.startPage(index, pageBean.getPageSize());//指定开始分页
+        List<User> allUser = userMapper.getAllUser();
+        pageBean.setPage(index);
+        pageBean.setBeanList(allUser);
+
+        JSONObject bean = JSONObject.fromObject(pageBean);
+
+        return bean.toString();
+    }
+
+    @Override
+    public String getAllManager(Integer index) {
+        PageBean<User> pageBean = new PageBean<>();
+        pageBean.setTotal(userMapper.getCountManager());
+
+        if (index == null){
+            index = 1;
+        }
+        PageHelper.startPage(index, pageBean.getPageSize());//指定开始分页
+        List<User> allUser = userMapper.getAllManager();
+        pageBean.setPage(index);
+        pageBean.setBeanList(allUser);
+
+        JSONObject bean = JSONObject.fromObject(pageBean);
+
+        return bean.toString();
+    }
+
+    @Override
+    public String getFuzzyUserByNickName(String name,Integer index) {
+
+
+        PageBean<User> pageBean = new PageBean<>();
+        pageBean.setTotal(userMapper.getAllUserLikeName(name).size());
+
+        if (index == null){
+            index = 1;
+        }
+        PageHelper.startPage(index, pageBean.getPageSize());//指定开始分页
+        List<User> allUser = userMapper.getAllUserLikeName(name);
+        pageBean.setPage(index);
+        pageBean.setBeanList(allUser);
+
+        JSONObject bean = JSONObject.fromObject(pageBean);
+
+        return bean.toString();
+    }
+
+    @Override
+    public Integer getUserCount() {
+        return userMapper.getCount();
+    }
+
+    @Override
+    public String mAddUser(User user) {
+        //判断用户是否已经注册
+        if (user != null){
+            String register = isRegister(user.getPhone());
+            if (register.equals("validSuccess")){
+                user.setSex("男");
+                user.setNickname("管理员"+UUID.randomUUID().toString());
+                user.setRegisterTime(new Date());
+                userMapper.insertSelective(user);
+                return "add Success";
+            }else {
+                return "the phone is registered";
+            }
+        }
+        return "user is null";
+    }
+
+    @Override
+    public String mDeleteUser(Integer userIds) {
+        if (userIds != null) {
+            System.out.println("userIds:"+userIds);
+            userMapper.deleteById(userIds);
+            return "delete Success";
+        }
+        return "id can not be null";
+    }
+
+    @Override
+    public String mUpdateUser(User user) {
+        if (user.getId() != null){
+            userMapper.updateByIdSelective(user);
+            return "update Success";
+        }
+        return "id can not be null";
+    }
+
+    @Override
+    public String managerIsRegister(String phone) {
+        return isRegister(phone);
+    }
+
+    @Override
+    public String managerRegister(User user) {
+        //添加插入用户信息，图片上传。
+        //将用户设置成管理员
+        return null;
+    }
+
+    @Override
+    public String mLogin(User user, HttpSession session) {
+        return userLoginUsePassword(user,session);
+    }
+
+    @Override
+    public String uploadManagerPhoto(MultipartFile file, HttpServletRequest request) {
+        //上传文件：
+        String uploadPath = request.getServletContext().getRealPath("/upload/user");
+
+
+        String originalFilename = file.getOriginalFilename();
+        String fileName = UUID.randomUUID()+originalFilename.substring(originalFilename.length()-4,originalFilename.length());
+        if (!originalFilename.endsWith(".jpg") &&
+                !originalFilename.endsWith(".bmp") &&
+                !originalFilename.endsWith(".jpeg")&&
+                !originalFilename.endsWith(".png")){
+            return "Illegal file format";
+        }
+        try {
+            FileUtils.copyInputStreamToFile(file.getInputStream(),new File(uploadPath,fileName));
+            System.out.print("上传路径是："+uploadPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("添加图片出错。。。");
+        }
+
+        String photoUrl = userPhotoPath + fileName;
+        return photoUrl;
     }
 
 

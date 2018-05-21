@@ -4,7 +4,9 @@ import it.caoxin.smarthome.domain.model.Device;
 import it.caoxin.smarthome.domain.model.Family;
 import it.caoxin.smarthome.domain.model.User;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
@@ -25,7 +27,7 @@ public interface DeviceService {
     /*
     控制设备
      */
-    String operatorDevice(Integer familyId,Integer deviceId,String operator) throws TimeoutException, ExecutionException;
+    String operatorDevice(Integer familyId,Integer userId,Integer deviceId,String operator) throws TimeoutException, ExecutionException;
 
     /*
     管理员添加可用设备
@@ -57,5 +59,41 @@ public interface DeviceService {
      */
     String updateDevice(Device device);
 
+    /*
+    获取所有管理的设备
+     */
+    String getAllDeive();
+
+    /*
+    模糊查询管理员设备
+     */
+    String  fuzzyGetDevice(String name);
+
+    /*
+    获取所有设备
+     */
+    String getAllMemberDevice(Integer index);
+
+    /*
+    模糊查询所有成员设备
+     */
+    String fuzzyGetAllMemberDevice(String name,Integer index);
+
+    /*
+    删除设备
+     */
+    String mDeleteDevice(Integer deviceId);
+
+    /*
+    管理员上传设备图片
+     */
+    String mAddDevice(Device device);
+
+    String uploadDevicePhoto(MultipartFile file, HttpServletRequest request);
+
+    /*
+    获取所有设备
+     */
+    String getDevices();
 
 }

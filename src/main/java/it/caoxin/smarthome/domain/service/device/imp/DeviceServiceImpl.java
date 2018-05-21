@@ -1,29 +1,34 @@
 package it.caoxin.smarthome.domain.service.device.imp;
 
 
-import io.netty.bootstrap.Bootstrap;
-import io.netty.buffer.Unpooled;
-import io.netty.channel.Channel;
-import io.netty.channel.EventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
-import io.netty.util.CharsetUtil;
-import it.caoxin.smarthome.domain.common.ClientIpPool;
-import it.caoxin.smarthome.domain.common.DataOfCSResult;
+import com.github.pagehelper.PageHelper;
+import it.caoxin.SmartHomeServer.ClientApp.TerminalControlServices;
+import it.caoxin.SmartHomeServer.client.SmartHomeRpcProxy;
+import it.caoxin.SmartHomeServer.common.DataOfCSResult;
+import it.caoxin.smarthome.domain.common.PageBean;
 import it.caoxin.smarthome.domain.mapper.device.DeviceMapper;
 import it.caoxin.smarthome.domain.mapper.deviceoperator.DeviceOperatorMapper;
 import it.caoxin.smarthome.domain.mapper.family.FamilyMapper;
 import it.caoxin.smarthome.domain.mapper.sensor.SensorMapper;
+import it.caoxin.smarthome.domain.mapper.user.UserMapper;
 import it.caoxin.smarthome.domain.model.*;
-import it.caoxin.smarthome.domain.service.SocketServer.client.EchoClient;
 import it.caoxin.smarthome.domain.service.device.DeviceService;
 import it.caoxin.smarthome.domain.service.family.FamilyService;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import org.apache.commons.io.FileUtils;
+import org.apache.ibatis.annotations.Mapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
-import java.util.List;
-import java.util.Map;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import java.util.UUID;
 
 
 @Service("deviceService")
@@ -42,8 +47,18 @@ public class DeviceServiceImpl implements DeviceService {
     FamilyMapper familyMapper;
 
     @Autowired
+    UserMapper userMapper;
+
+    @Autowired
     FamilyService familyService;
 
+
+    @Autowired
+    SmartHomeRpcProxy smartHomeRpcProxy;
+
+    public static final Logger logger = LoggerFactory.getLogger("DeviceContoller");
+
+    private static final String devicePhotoPath = "/upload/device/";
     @Override
     public int deleteById(Integer id) {
         return deviceMapper.deleteById(id);
@@ -77,24 +92,22 @@ public class DeviceServiceImpl implements DeviceService {
 
     //操作设备
     @Override
-    public String operatorDevice(Integer familyId,Integer deviceId, String operator) {
-        System.out.println("faimlyId："+familyId);
-        System.out.println("deviceId："+deviceId);
-        System.out.println("operator："+operator);
-        try {
-            //通过id拿到对应的ip开始对客户端连接
-            String familyIp = (String) ClientIpPool.getClientIpPoolMap().get(familyId);
-            String host = "localhost";
-            int port = 50001;
+    public String operatorDevice(Integer familyId,Integer userId,Integer deviceId, String operator) {
 
-            EchoClient echoClient = new EchoClient(host, port,new DataOfCSResult(familyId, operator, deviceId, null));
-            echoClient.start();
+        User user = userMapper.selectById(userId);
 
-            String serverData = echoClient.getDataOfCSResult().getReturnData();
-            System.out.println("serverData:"+serverData);
-            return serverData;
-        }catch (InterruptedException e) {
-            e.printStackTrace();
+        String userPhone = null;
+        if (user != null){
+            userPhone = user.getPhone();
+        }
+        logger.info("control_device"+" "+familyId+" "+deviceId+" "+userPhone+" "+operator);
+
+        TerminalControlServices helloService
+                = smartHomeRpcProxy.create(TerminalControlServices.class);
+        String result = helloService.controlDevice(new DataOfCSResult(familyId, deviceId, operator, null));
+
+        if (result != null){
+            return result;
         }
 
         return "the operator fail";
@@ -241,6 +254,106 @@ public class DeviceServiceImpl implements DeviceService {
         }
         return "update failure";
     }
+
+    @Override
+    public String getAllDeive() {
+        List<Device> deviceList = deviceMapper.getManagerDevice();
+        return JSONArray.fromObject(deviceList).toString();
+    }
+
+    @Override
+    public String fuzzyGetDevice(String name) {
+        List<Device> deviceList = deviceMapper.fuzzyGetManagerDevice(name);
+        return JSONArray.fromObject(deviceList).toString();
+    }
+
+    @Override
+    public String getAllMemberDevice(Integer index) {
+        PageBean<Device> pageBean = new PageBean<>();
+        pageBean.setTotal(deviceMapper.getCount());
+
+        if (index == null){
+            index = 1;
+        }
+        PageHelper.startPage(index, pageBean.getPageSize());//指定开始分页
+        List<Device> allDevice = deviceMapper.getAllDevice();
+        pageBean.setPage(index);
+        pageBean.setBeanList(allDevice);
+
+        JSONObject bean = JSONObject.fromObject(pageBean);
+        return bean.toString();
+    }
+
+    @Override
+    public String fuzzyGetAllMemberDevice(String name,Integer index) {
+        PageBean<Device> pageBean = new PageBean<>();
+        pageBean.setTotal(deviceMapper.fuzzyGetDevice(name).size());
+
+        if (index == null){
+            index = 1;
+        }
+        PageHelper.startPage(index, pageBean.getPageSize());//指定开始分页
+        List<Device> devices = deviceMapper.fuzzyGetDevice(name);
+        pageBean.setPage(index);
+        pageBean.setBeanList(devices);
+
+        JSONObject bean = JSONObject.fromObject(pageBean);
+
+        return bean.toString();
+
+    }
+
+    @Override
+    public String mDeleteDevice(Integer deviceId) {
+        if (deviceId != null) {
+            System.out.println("sensorId:"+deviceId);
+            deviceMapper.deleteById(deviceId);
+            return "delete Success";
+        }
+        return "id can not be null";
+    }
+
+    @Override
+    public String mAddDevice(Device device) {
+        if (device != null && device.getFamilyId() != null){
+            insertSelective(device);
+            return "add success";
+        }
+        return "add failure";
+    }
+
+    @Override
+    public String uploadDevicePhoto(MultipartFile file, HttpServletRequest request) {
+        //上传文件：
+        String uploadPath = request.getServletContext().getRealPath("/upload/device");
+
+
+        String originalFilename = file.getOriginalFilename();
+        String fileName = UUID.randomUUID()+originalFilename.substring(originalFilename.length()-4,originalFilename.length());
+        if (!originalFilename.endsWith(".jpg") &&
+                !originalFilename.endsWith(".bmp") &&
+                !originalFilename.endsWith(".jpeg")&&
+                !originalFilename.endsWith(".png")){
+            return "Illegal file format";
+        }
+        try {
+            FileUtils.copyInputStreamToFile(file.getInputStream(),new File(uploadPath,fileName));
+            System.out.print("上传路径是："+uploadPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("添加图片出错。。。");
+        }
+
+        String photoUrl = devicePhotoPath + fileName;
+        return photoUrl;
+    }
+
+    @Override
+    public String getDevices() {
+        List<Device> allDevice = deviceMapper.getAllDevice();
+        return JSONArray.fromObject(allDevice).toString();
+    }
+
 
 
 }

@@ -19,4 +19,8 @@ public interface SensorMapper {
     int updateById(Sensor sensor);
 
     List<Sensor> selectSensorByDeviceId(Integer deviceId);
+
+    List<Sensor> getAllSensor();
+
+    Integer getCount();
 }

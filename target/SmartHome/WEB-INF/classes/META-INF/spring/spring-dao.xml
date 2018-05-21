@@ -6,6 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
+    <context:component-scan base-package="it.caoxin.smarthome"  />
     <!-- 将SqlSessionFactroy工厂对象注入到Spring容器所管理 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!-- 注入数据库连接池 -->
@@ -26,6 +27,6 @@
         <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
     </bean>
 
-    <!--<bean class="it.caoxin.smarthome.model.service.SocketServer.server.ServerStart"></bean>-->
+
 
 </beans>

@@ -8,12 +8,22 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
-    <context:property-placeholder location="classpath:/jdbc.properties"/>
+    <context:property-placeholder location="classpath:/jdbc.properties" ignore-unresolvable="true"/>
+    <context:property-placeholder location="classpath:/rpc.properties" ignore-unresolvable="true"/>
 
-    <context:component-scan base-package="it.caoxin.smarthome"  />
+    <context:component-scan base-package="it.caoxin"  />
+
 
     <!-- 扫描mapper接口并自动导入 -->
     <mybatis:scan base-package="it.caoxin.smarthome.domain.mapper"/>
+    <!--配置rpc服务发现-->
+    <bean id="serverDiscovery" class="it.caoxin.SmartHomeServer.discovery.ServerDiscovery">
+        <constructor-arg name="registryAddress" value="${registry.address}"/>
+    </bean>
+
+    <bean id="smartHomeRpcProxy" class="it.caoxin.SmartHomeServer.client.SmartHomeRpcProxy">
+        <constructor-arg name="serviceDiscovery" ref="serverDiscovery" />
+    </bean>
 
     <!-- 配置数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.List;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:META-INF/spring/spring-dao.xml","classpath:META-INF/spring/spring-service.xml"})
 public class TestFamily {
@@ -69,5 +71,18 @@ public class TestFamily {
         System.out.println("family:"+family.toString());
     }
 
+    @Test
+    public void testGetAllFamily(){
+        List<Family> allFamily =
+                familyMapper.getAllFamily();
+        System.out.println("啊："+allFamily);
+    }
+
+    @Test
+    public void testFuzzyGet(){
+        List<Family> allFamily =
+                familyMapper.getAllFamilyLikeName("曹");
+        System.out.println("啊："+allFamily);
+    }
 
 }

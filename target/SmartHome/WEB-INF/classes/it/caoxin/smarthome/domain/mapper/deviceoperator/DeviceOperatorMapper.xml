@@ -135,4 +135,18 @@
     from device_operator
     where device_id = #{deviceId,jdbcType=INTEGER}
   </select>
+
+  <select id="getAllDevice"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from device_operator
+  </select>
+
+
+  <select id="getCount"  resultType="java.lang.Integer">
+    select
+    count(*)
+    from device_operator
+  </select>
+
 </mapper>

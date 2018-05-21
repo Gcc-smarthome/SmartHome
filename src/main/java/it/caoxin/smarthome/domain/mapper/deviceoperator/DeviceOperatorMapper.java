@@ -19,4 +19,8 @@ public interface DeviceOperatorMapper {
     int updateById(DeviceOperator deviceOperator);
 
     List<DeviceOperator> selectOperatorByDeviceId(Integer deviceId);
+
+    List<DeviceOperator> getAllDevice();
+
+    Integer getCount();
 }

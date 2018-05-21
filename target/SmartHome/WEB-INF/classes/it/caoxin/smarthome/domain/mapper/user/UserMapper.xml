@@ -231,4 +231,49 @@
     from user
     where phone = #{phone,jdbcType=VARCHAR} AND password = #{password,jdbcType=VARCHAR}
   </select>
+
+
+  <select id="getAllUser" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
+    select
+    id,username,nickname,sex,email,phone,photo,birthday,address,register_time
+    from user
+    where role = '用户'
+  </select>
+
+  <select id="getAllUserLikeName" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
+    select
+    id,username,nickname,sex,email,phone,photo,birthday,address,register_time
+    from user
+    where nickname LIKE  CONCAT('%',#{name},'%')
+  </select>
+
+
+  <select id="getAllManager" parameterType="it.caoxin.smarthome.domain.model.User" resultMap="BaseResultMap">
+    select
+    id,username,nickname,sex,email,phone,photo,birthday,address,register_time
+    from user
+    where role = '管理员'
+  </select>
+
+  <select id="getCount"  resultType="java.lang.Integer">
+    select
+    count(*)
+    from user
+    where role = '用户'
+  </select>
+
+  <select id="getCountManager"  resultType="java.lang.Integer">
+    select
+    count(*)
+    from user
+    where role = '管理员'
+  </select>
+
+
+  <select id="selectManagerByPhone" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where phone = #{arg0,jdbcType=VARCHAR} AND role = '管理员'
+  </select>
 </mapper>

@@ -69,4 +69,21 @@ public interface FamilyService {
      */
     String deleteNormalMember(User user,Family family,Integer delUserId);
 
+    /*
+    获取所有家庭
+     */
+    String getAllFamily(Integer index);
+
+    /*
+    通过家庭名称模糊查询
+     */
+    String fuzzyGetFamilyByName(String name,Integer index);
+
+    /*
+    删除家庭
+     */
+    String mDeleteFamily(Integer familyId);
+
+    String getFamilys();
+
 }

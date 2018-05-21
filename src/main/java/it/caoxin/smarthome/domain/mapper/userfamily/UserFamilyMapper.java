@@ -27,5 +27,10 @@ public interface UserFamilyMapper {
 
     UserFamily selectByUniqueCode(String uniquecode);
 
+    /*
+    管理员获取所有家庭
+     */
+    List<UserFamily> getAllMember();
 
+    Integer getCount();
 }

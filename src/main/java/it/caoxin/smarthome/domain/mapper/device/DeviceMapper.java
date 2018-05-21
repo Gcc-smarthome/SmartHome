@@ -23,4 +23,14 @@ public interface DeviceMapper {
     int updateById(Device device);
 
     List<Device> selectDeviceByFamilyId(Integer familyId);
+
+    List<Device> getManagerDevice();
+
+    List<Device> fuzzyGetManagerDevice(String name);
+
+    List<Device> getAllDevice();
+
+    List<Device> fuzzyGetDevice(String name);
+
+    Integer getCount();
 }

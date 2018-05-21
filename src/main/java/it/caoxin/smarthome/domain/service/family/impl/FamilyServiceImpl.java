@@ -1,6 +1,8 @@
 package it.caoxin.smarthome.domain.service.family.impl;
 
+import com.github.pagehelper.PageHelper;
 import it.caoxin.smarthome.app.controller.family.FamilyController;
+import it.caoxin.smarthome.domain.common.PageBean;
 import it.caoxin.smarthome.domain.common.SendValidateCode;
 import it.caoxin.smarthome.domain.mapper.family.FamilyMapper;
 import it.caoxin.smarthome.domain.mapper.familyimg.FamilyImgMapper;
@@ -12,6 +14,7 @@ import it.caoxin.smarthome.domain.model.User;
 import it.caoxin.smarthome.domain.model.UserFamily;
 import it.caoxin.smarthome.domain.service.family.FamilyService;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -322,6 +325,58 @@ public class FamilyServiceImpl implements FamilyService {
         return "delete member failure";
     }
 
+    @Override
+    public String getAllFamily(Integer index) {
+        PageBean<Family> pageBean = new PageBean<>();
+        pageBean.setTotal(familyMapper.getCount());
+
+        if (index == null){
+            index = 1;
+        }
+        PageHelper.startPage(index, pageBean.getPageSize());//指定开始分页
+        List<Family> allFamily = familyMapper.getAllFamily();
+        pageBean.setPage(index);
+        pageBean.setBeanList(allFamily);
+
+        JSONObject bean = JSONObject.fromObject(pageBean);
+        return bean.toString();
+    }
+
+    @Override
+    public String fuzzyGetFamilyByName(String name,Integer index) {
+
+        PageBean<Family> pageBean = new PageBean<>();
+        pageBean.setTotal(familyMapper.getAllFamilyLikeName(name).size());
+
+        if (index == null){
+            index = 1;
+        }
+        PageHelper.startPage(index, pageBean.getPageSize());//指定开始分页
+        List<Family> allFamilyLikeName = familyMapper.getAllFamilyLikeName(name);
+        pageBean.setPage(index);
+        pageBean.setBeanList(allFamilyLikeName);
+
+        JSONObject bean = JSONObject.fromObject(pageBean);
+
+        return bean.toString();
+
+    }
+
+    @Override
+    public String mDeleteFamily(Integer familyId) {
+        if (familyId != null) {
+            System.out.println("familyId:"+familyId);
+            familyMapper.deleteById(familyId);
+            return "delete Success";
+        }
+        return "id can not be null";
+    }
+
+    @Override
+    public String getFamilys() {
+        List<Family> allFamily = familyMapper.getAllFamily();
+        return JSONArray.fromObject(allFamily).toString();
+    }
 
 
 }

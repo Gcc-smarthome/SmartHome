@@ -105,7 +105,12 @@ public class UserController {
 
 
 
-
+    @RequestMapping(value = "/uploadUserPhoto",method = RequestMethod.POST)
+    @ResponseBody
+    public String managerUploadPhoto(MultipartFile file, HttpServletRequest request,User user){
+        System.out.println("file:"+file);
+        return  userService.uploadUserPhoto(file,request,user);
+    }
 
 
 

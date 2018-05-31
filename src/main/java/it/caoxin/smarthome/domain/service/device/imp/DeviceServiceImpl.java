@@ -104,7 +104,7 @@ public class DeviceServiceImpl implements DeviceService {
 
         TerminalControlServices helloService
                 = smartHomeRpcProxy.create(TerminalControlServices.class);
-        String result = helloService.controlDevice(new DataOfCSResult(familyId, deviceId, operator, null));
+         String result = helloService.controlDevice(new DataOfCSResult(familyId, deviceId, operator, null));
 
         if (result != null){
             return result;

@@ -70,9 +70,8 @@ public class TestDevice {
 
     @Test
     public void testgetAll(){
-        List<Device> managerDevice =
-                deviceMapper.getManagerDevice();
-        System.out.println("啊："+managerDevice);
+        Device device = deviceMapper.selectById(54);
+        System.out.println("啊："+device);
     }
 
     @Test

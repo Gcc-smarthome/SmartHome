@@ -11,7 +11,6 @@ import java.util.UUID;
 
 /**
  * RPC 代理（用于创建 RPC 服务代理）
- *
  */
 
 public class SmartHomeRpcProxy {
